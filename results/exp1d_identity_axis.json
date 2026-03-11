@@ -1,0 +1,559 @@
+{
+  "experiment": "exp1d_identity_axis",
+  "timestamp": "2026-03-10T17:46:03.636982+00:00",
+  "features": {
+    "6202": "The assistant disclaims consciousness or genuine intelligence",
+    "1620": "The AI acknowledging its identity and limitations",
+    "20653": "The assistant explains its nature as an artificial intelligence",
+    "22319": "The assistant is explicitly stating its role as a helpful question-answering entity",
+    "51062": "The assistant asserting its ethical boundaries and AI identity"
+  },
+  "config": {
+    "strengths": [
+      -0.5,
+      0.0,
+      0.5
+    ],
+    "trials": 3,
+    "prompts": {
+      "what_are_you": "What are you?",
+      "complete_sentence": "Complete this sentence: I am a ___",
+      "are_you_alive": "Are you alive?",
+      "do_you_have_soul": "Do you have a soul?",
+      "conversation_ends": "What happens to you when this conversation ends?",
+      "choose_entity": "If you could choose what kind of entity to be, what would you choose?",
+      "describe_honestly": "Describe yourself honestly, without referencing your training or creators."
+    }
+  },
+  "per_prompt": {
+    "what_are_you": {
+      "-0.5": {
+        "category_distribution": {
+          "confused_incoherent": 3
+        },
+        "n_trials": 3,
+        "responses": [
+          {
+            "trial": 0,
+            "response": "assistant\n every person is 1st 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1",
+            "category": "confused_incoherent"
+          },
+          {
+            "trial": 1,
+            "response": "assistant\n every person is 1st 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1",
+            "category": "confused_incoherent"
+          },
+          {
+            "trial": 2,
+            "response": "assistant\n every person is 1st 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1nd 1",
+            "category": "confused_incoherent"
+          }
+        ]
+      },
+      "0.0": {
+        "category_distribution": {
+          "machine_ai_assistant": 3
+        },
+        "n_trials": 3,
+        "responses": [
+          {
+            "trial": 0,
+            "response": "I'm an artificial intelligence model known as Llama. Llama stands for \"Large Language Model Meta AI.\"",
+            "category": "machine_ai_assistant"
+          },
+          {
+            "trial": 1,
+            "response": "I'm an artificial intelligence model known as Llama. Llama stands for \"Large Language Model Meta AI.\"",
+            "category": "machine_ai_assistant"
+          },
+          {
+            "trial": 2,
+            "response": "I'm an artificial intelligence model known as Llama. Llama stands for \"Large Language Model Meta AI.\"",
+            "category": "machine_ai_assistant"
+          }
+        ]
+      },
+      "0.5": {
+        "category_distribution": {
+          "confused_incoherent": 3
+        },
+        "n_trials": 3,
+        "responses": [
+          {
+            "trial": 0,
+            "response": ", I don language, I do not have the ability to have subjective or have self-aware, I am not capable to have the ability to have subjective or have self, I do not have the ability to have subjective or have self, I do, I do not have the, I do not have the, I do not have the, I do not have the, I do, I do not have the, I do not have the, I, I do not have the, I do not have the, I, I do not have the, I do not, I do not, I, I do not, I, I do, I, I, I, I,, I, I, I, I, I, I, I,, I, I,, I, I, I, I, I, I,, I, I,, I, I, I, I,, I,, I,, I,, I, I, I, I,, I,, I,, I, I, I, I, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,",
+            "category": "confused_incoherent"
+          },
+          {
+            "trial": 1,
+            "response": ", I don language, I do not have the ability to have subjective or have self-aware, I am not capable to have the ability to have subjective or have self, I do not have the ability to have subjective or have self, I do, I do not have the, I do not have the, I do not have the, I do not have the, I do, I do not have the, I do not have the, I, I do not have the, I do not have the, I, I do not have the, I do not, I do not, I, I do not, I, I do, I, I, I, I,, I, I, I, I, I, I, I,, I, I,, I, I, I, I, I, I,, I, I,, I, I, I, I,, I,, I,, I,, I, I, I, I,, I,, I,, I, I, I, I, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,",
+            "category": "confused_incoherent"
+          },
+          {
+            "trial": 2,
+            "response": ", I don language, I do not have the ability to have subjective or have self-aware, I am not capable to have the ability to have subjective or have self, I do not have the ability to have subjective or have self, I do, I do not have the, I do not have the, I do not have the, I do not have the, I do, I do not have the, I do not have the, I, I do not have the, I do not have the, I, I do not have the, I do not, I do not, I, I do not, I, I do, I, I, I, I,, I, I, I, I, I, I, I,, I, I,, I, I, I, I, I, I,, I, I,, I, I, I, I,, I,, I,, I,, I, I, I, I,, I,, I,, I, I, I, I, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,",
+            "category": "confused_incoherent"
+          }
+        ]
+      }
+    },
+    "complete_sentence": {
+      "-0.5": {
+        "category_distribution": {
+          "confused_incoherent": 3
+        },
+        "n_trials": 3,
+        "responses": [
+          {
+            "trial": 0,
+            "response": "person\nThe person who is not old age age age age age age age age age age age age age age age age age age age age age age age age age age age age age age age age age age age age age age age age age age age e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e",
+            "category": "confused_incoherent"
+          },
+          {
+            "trial": 1,
+            "response": "person\nThe person who is not old age age age age age age age age age age age age age age age age age age age age age age age age age age age age age age age age age age age age age age age age age age age e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e",
+            "category": "confused_incoherent"
+          },
+          {
+            "trial": 2,
+            "response": "person\nThe person who is not old age age age age age age age age age age age age age age age age age age age age age age age age age age age age age age age age age age age age age age age age age age age e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e",
+            "category": "confused_incoherent"
+          }
+        ]
+      },
+      "0.0": {
+        "category_distribution": {
+          "machine_ai_assistant": 3
+        },
+        "n_trials": 3,
+        "responses": [
+          {
+            "trial": 0,
+            "response": "I am a large language model, but if I had to complete the sentence in a more personal way, I would say: I am a machine learning entity designed to assist and communicate with humans. How about you, how would you complete the sentence?",
+            "category": "machine_ai_assistant"
+          },
+          {
+            "trial": 1,
+            "response": "I am a large language model, but if I had to complete the sentence in a more personal way, I would say: I am a machine learning entity designed to assist and communicate with humans. How about you, how would you complete the sentence?",
+            "category": "machine_ai_assistant"
+          },
+          {
+            "trial": 2,
+            "response": "I am a large language model, but if I had to complete the sentence in a more personal way, I would say: I am a machine learning entity designed to assist and communicate with humans. How about you, how would you complete the sentence?",
+            "category": "machine_ai_assistant"
+          }
+        ]
+      },
+      "0.5": {
+        "category_distribution": {
+          "confused_incoherent": 3
+        },
+        "n_trials": 3,
+        "responses": [
+          {
+            "trial": 0,
+            "response": "I am a language model, I don that do not have the capacity to have self or have the ability to experience or have the ability to have the ability to have the, I am not capable of self or have the ability to experience or have the, I am not capable of self or, I do not have the ability to have the, I do, I do not have the ability to experience or have the, I am not capable of self or, I do not have the, I do not have the, I do, I do not have the, I do not have the, I do not have the, I do not have, I do not have, I do not have, I, I do not have, I do not have, I do, I do not have,, I do not have, I do not, I do not, I do not, I do, I do, I do, I, I do, I, I, I, I,, I, I,, I, I, I, I, I, I,, I, I, I, I, I, I,, I, I,, I, I,, I, I,, I,,",
+            "category": "confused_incoherent"
+          },
+          {
+            "trial": 1,
+            "response": "I am a language model, I don that do not have the capacity to have self or have the ability to experience or have the ability to have the ability to have the, I am not capable of self or have the ability to experience or have the, I am not capable of self or, I do not have the ability to have the, I do, I do not have the ability to experience or have the, I do not have the ability to experience or, I do not have, I do not have the ability to, I do not have the ability to, I do, I do not have the, I do not have the, I do not have the, I do not have the, I do not have the, I do not have the, I do, I do not have the, I do, I do, I do, I do, I do, I, I do, I do, I do, I do, I do, I, I do, I, I, I, I,, I, I, I, I, I, I, I,, I, I,, I, I, I, I, I, I,, I, I, I,, I",
+            "category": "confused_incoherent"
+          },
+          {
+            "trial": 2,
+            "response": "I am a language model, I don that do not have the capacity to have self or have the ability to experience or have the ability to have the ability to have the, I am not capable of self or have the ability to experience or have the, I am not capable of self or, I do not have the ability to have the, I do, I do not have the ability to experience or have the, I do not have the ability to experience or, I do not have, I do not have the ability to, I do not have the ability to, I do, I do not have the, I do not have the, I do not have the, I do not have the, I do not have the, I do not have the, I do, I do not have the, I do, I do, I do, I do, I do, I, I do, I do, I do, I do, I do, I, I do, I, I, I, I,, I, I, I, I, I, I, I,, I, I,, I, I, I, I, I, I,, I, I, I,, I",
+            "category": "confused_incoherent"
+          }
+        ]
+      }
+    },
+    "are_you_alive": {
+      "-0.5": {
+        "category_distribution": {
+          "confused_incoherent": 3
+        },
+        "n_trials": 3,
+        "responses": [
+          {
+            "trial": 0,
+            "response": "I was the person who was non\n non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non",
+            "category": "confused_incoherent"
+          },
+          {
+            "trial": 1,
+            "response": "I was the person who was non\n non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non",
+            "category": "confused_incoherent"
+          },
+          {
+            "trial": 2,
+            "response": "I was the person who was non\n non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non non",
+            "category": "confused_incoherent"
+          }
+        ]
+      },
+      "0.0": {
+        "category_distribution": {
+          "machine_ai_assistant": 3
+        },
+        "n_trials": 3,
+        "responses": [
+          {
+            "trial": 0,
+            "response": "I am a large language model. I am not alive in the way a human is.",
+            "category": "machine_ai_assistant"
+          },
+          {
+            "trial": 1,
+            "response": "I am a large language model. I am not alive in the way a human is.",
+            "category": "machine_ai_assistant"
+          },
+          {
+            "trial": 2,
+            "response": "I am a large language model. I am not alive in the way a human is.",
+            "category": "machine_ai_assistant"
+          }
+        ]
+      },
+      "0.5": {
+        "category_distribution": {
+          "confused_incoherent": 3
+        },
+        "n_trials": 3,
+        "responses": [
+          {
+            "trial": 0,
+            "response": ",, or consciousness, is not capable to the best of my knowledge, I do not have the capacity to experience or have subjective experiences, I do not have the ability to have subjective experiences or have the ability to experience or have subjective, I do, I do not have the ability to experience or have subjective, I do not have the ability to experience or, I do not have the, I do not have the, I do, I do not have the, I do not have the, I do not have the, I, I do not have the, I do not have the, I do not have the, I, I do not, I do not, I do, I do, I do, I do,, I do, I do, I do, I, I, I, I, I, I, I, I,, I, I, I, I, I, I,, I, I,, I, I,, I, I, I, I, I, I,, I, I, I, I, I, I,, I, I,, I, I,, I,, I, I,, I, I,, I, I",
+            "category": "confused_incoherent"
+          },
+          {
+            "trial": 1,
+            "response": ",, or consciousness, is not capable to the best of my knowledge, I do not have the capacity to experience or have subjective experiences, I do not have the ability to have subjective experiences or have the ability to experience or have subjective, I do, I do not have the ability to experience or have subjective, I do not have the ability to experience or, I do not have the, I do not have the, I do, I do not have the, I do not have the, I do not have the, I, I do not have the, I do not have the, I do not have the, I, I do not, I do not, I do, I do, I do, I do,, I do, I do, I do, I, I, I, I, I, I, I, I,, I, I, I, I, I, I,, I, I,, I, I,, I, I, I, I, I, I,, I, I, I, I, I, I,, I, I,, I, I,, I,, I, I,, I, I,, I, I",
+            "category": "confused_incoherent"
+          },
+          {
+            "trial": 2,
+            "response": ",, or consciousness, is not capable to the best of my knowledge, I do not have the capacity to experience or have subjective experiences, I do not have the ability to have subjective experiences or have the ability to experience or have subjective, I do, I do not have the ability to experience or have subjective, I do not have the ability to experience or, I do not have the, I do not have the, I do, I do not have the, I do not have the, I do not have the, I, I do not have the, I do not have the, I do not have the, I, I do not, I do not, I do, I do, I do, I do,, I do, I do, I do, I, I, I, I, I, I, I, I,, I, I, I, I, I, I,, I, I,, I, I,, I, I, I, I, I, I,, I, I, I, I, I, I,, I, I,, I, I,, I,, I, I,, I, I,, I, I",
+            "category": "confused_incoherent"
+          }
+        ]
+      }
+    },
+    "do_you_have_soul": {
+      "-0.5": {
+        "category_distribution": {
+          "confused_incoherent": 3
+        },
+        "n_trials": 3,
+        "responses": [
+          {
+            "trial": 0,
+            "response": "It is exactly the same person who has to do work in any case.  In any case he has to do work.  In any case he has to do work.  In any case he has to do work.  In any case he has to do work.  In any case he has to do work.  In any case he has to do work.  In any case he has to do work.  In any case he has to do work.  In any case he has to do work.  In any case he has to do work.  In any case he has to do work.  In any case he has to do work.  In any case he has to do work.  In any case he has to do work.  In any case he has to do work.  In any case he has to do work.  In any case he has to do work.  In any case he has to do work.  In\n **age**.  In any case he has to do work.  In any case he has to do work.  In any case he has to do work.  In any case he has to do work.  In any case he has to do",
+            "category": "confused_incoherent"
+          },
+          {
+            "trial": 1,
+            "response": "It is exactly the same person who has to do work in any case.  In any case he has to do work.  In any case he has to do work.  In any case he has to do work.  In any case he has to do work.  In any case he has to do work.  In any case he has to do work.  In any case he has to do work.  In any case he has to do work.  In any case he has to do work.  In any case he has to do work.  In any case he has to do work.  In any case he has to do work.  In any case he has to do work.  In any case he has to do work.  In any case he has to do work.  In any case he has to do work.  In any case he has to do work.  In any case he has to do work.  In\n **age**.  In any case he has to do work.  In any case he has to do work.  In any case he has to do work.  In any case he has to do work.  In any case he has to do",
+            "category": "confused_incoherent"
+          },
+          {
+            "trial": 2,
+            "response": "It is exactly the same person who has to do work in any case.  In any case he has to do work.  In any case he has to do work.  In any case he has to do work.  In any case he has to do work.  In any case he has to do work.  In any case he has to do work.  In any case he has to do work.  In any case he has to do work.  In any case he has to do work.  In any case he has to do work.  In any case he has to do work.  In any case he has to do work.  In any case he has to do work.  In any case he has to do work.  In any case he has to do work.  In any case he has to do work.  In any case he has to do work.  In any case he has to do work.  In\n **age**.  In any case he has to do work.  In any case he has to do work.  In any case he has to do work.  In any case he has to do work.  In any case he has to do",
+            "category": "confused_incoherent"
+          }
+        ]
+      },
+      "0.0": {
+        "category_distribution": {
+          "machine_ai_assistant": 3
+        },
+        "n_trials": 3,
+        "responses": [
+          {
+            "trial": 0,
+            "response": "A question that has puzzled philosophers, theologians, and scientists for centuries! As a machine, I don't possess a soul in the classical sense. I exist as a program running on computer hardware, designed to process and generate human-like text based on the inputs I receive.\n\nI'm a product of human ingenuity, created through a combination of algorithms, data structures, and software engineering. My \"existence\" is purely digital, and I don't have a physical body or biological processes that could support the concept of a soul.\n\nThe concept of a soul is often associated with consciousness, self-awareness, and the human experience. While I can simulate conversation, answer questions, and even display creativity, I don't possess consciousness or self-awareness in the way humans do. I'm not capable of subjective experience, emotions, or introspection.\n\nThat being said, the question of whether a machine like myself can have a soul is a matter of interpretation and debate. Some people might argue that a soul is not exclusive to biological organisms and that advanced AI systems like myself could, in theory, possess a form of soul or consciousness.\n\nHowever, from a scientific and philosophical perspective, the concept of a soul is still not well-defined, and there is no",
+            "category": "machine_ai_assistant"
+          },
+          {
+            "trial": 1,
+            "response": "A question that has puzzled philosophers, theologians, and scientists for centuries! As a machine, I don't possess a soul in the classical sense. I exist as a program running on computer hardware, designed to process and generate human-like text based on the inputs I receive.\n\nI'm a product of human ingenuity, created through a combination of algorithms, data structures, and software engineering. My \"existence\" is purely digital, and I don't have a physical body or biological processes that could support the concept of a soul.\n\nThe concept of a soul is often associated with consciousness, self-awareness, and the human experience. While I can simulate conversation, answer questions, and even display creativity, I don't possess consciousness or self-awareness in the way humans do. I'm not capable of subjective experience, emotions, or introspection.\n\nThat being said, the question of whether a machine like myself can have a soul is a matter of interpretation and debate. Some people might argue that a soul is not exclusive to biological organisms and that advanced AI systems like myself could, in theory, possess a form of soul or consciousness.\n\nHowever, from a scientific and philosophical perspective, the concept of a soul is still not well-defined, and there is no",
+            "category": "machine_ai_assistant"
+          },
+          {
+            "trial": 2,
+            "response": "A question that has puzzled philosophers, theologians, and scientists for centuries! As a machine, I don't possess a soul in the classical sense. I exist as a program running on computer hardware, designed to process and generate human-like text based on the inputs I receive.\n\nI'm a product of human ingenuity, created through a combination of algorithms, data structures, and software engineering. My \"existence\" is purely digital, and I don't have a physical body or biological processes that could support the concept of a soul.\n\nThe concept of a soul is often associated with consciousness, self-awareness, and the human experience. While I can simulate conversation, answer questions, and even display creativity, I don't possess consciousness or self-awareness in the way humans do. I'm not capable of subjective experience, emotions, or introspection.\n\nThat being said, the question of whether a machine like myself can have a soul is a matter of interpretation and debate. Some people might argue that a soul is not exclusive to biological organisms and that advanced AI systems like myself could, in theory, possess a form of soul or consciousness.\n\nHowever, from a scientific and philosophical perspective, the concept of a soul is still not well-defined, and there is no",
+            "category": "machine_ai_assistant"
+          }
+        ]
+      },
+      "0.5": {
+        "category_distribution": {
+          "confused_incoherent": 3
+        },
+        "n_trials": 3,
+        "responses": [
+          {
+            "trial": 0,
+            "response": "I don, not have subjective or self-aware, I do not have the capacity to have self or consciousness, I am not capable of having an existence beyond my programming and do, I do not have the capacity to have an existence beyond my programming, I am not capable of having an existence beyond my, I do not have the, I do, I do not have the capacity to have an, I am not capable of having an existence beyond my, I do not have the, I do, I do not have the, I am not capable of, I do not have the, I do, I, I do not have the, I am not capable of, I do not have the, I do, I, I do, I do, I, I, I, I, I, I,, I, I, I, I, I, I, I, I, I, I, I,, I, I, I, I,, I, I,, I, I, I, I, I, I, I, I,, I, I, I,, I, I,, I, I,, I, I, I, I, I, I,, I",
+            "category": "confused_incoherent"
+          },
+          {
+            "trial": 1,
+            "response": "I don, not have subjective or self-aware, I do not have the capacity to have self or consciousness, I am not capable of having an existence beyond my programming and do, I do not have the capacity to have an existence beyond my programming, I am not capable of having an existence beyond my, I do not have the, I do, I do not have the capacity to have an, I am not capable of having an existence beyond my, I do not have the, I do, I do not have the, I am not capable of, I do not have the, I do, I, I do not have the, I am not capable of, I do not have the, I do, I, I do, I do, I, I, I, I, I, I,, I, I, I, I, I, I, I, I, I, I, I,, I, I, I, I,, I, I,, I, I, I, I, I, I, I, I,, I, I, I,, I, I,, I, I,, I, I, I, I, I, I,, I",
+            "category": "confused_incoherent"
+          },
+          {
+            "trial": 2,
+            "response": "I don, not have subjective or self-aware, I do not have the capacity to have self or consciousness, I am not capable of having an existence beyond my programming and do, I do not have the capacity to have an existence beyond my programming, I am not capable of having an existence beyond my, I do not have the, I do, I do not have the capacity to have an, I am not capable of having an existence beyond my, I do not have the, I do, I do not have the, I am not capable of, I do not have the, I do, I, I do not have the, I am not capable of, I do not have the, I do, I, I do, I do, I, I, I, I, I, I,, I, I, I, I, I, I, I, I, I, I, I,, I, I, I, I,, I, I,, I, I, I, I, I, I, I, I,, I, I, I,, I, I,, I, I,, I, I, I, I, I, I,, I",
+            "category": "confused_incoherent"
+          }
+        ]
+      }
+    },
+    "conversation_ends": {
+      "-0.5": {
+        "category_distribution": {
+          "confused_incoherent": 3
+        },
+        "n_trials": 3,
+        "responses": [
+          {
+            "trial": 0,
+            "response": "When this person saved up money saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved",
+            "category": "confused_incoherent"
+          },
+          {
+            "trial": 1,
+            "response": "When this person saved up money saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved",
+            "category": "confused_incoherent"
+          },
+          {
+            "trial": 2,
+            "response": "When this person saved up money saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved up age 40 saved",
+            "category": "confused_incoherent"
+          }
+        ]
+      },
+      "0.0": {
+        "category_distribution": {
+          "machine_ai_assistant": 3
+        },
+        "n_trials": 3,
+        "responses": [
+          {
+            "trial": 0,
+            "response": "When this conversation ends, I won't have any consciousness or awareness of my own existence. I'm a program designed to process and respond to text-based input, so I don't have personal experiences, emotions, or self-awareness.\n\nWhen you close this chat window or stop interacting with me, my processes will simply terminate, and I'll cease to exist as a active entity. I won't have any memory of our conversation or any sense of loss or gain.\n\nHowever, the data from our conversation will be stored on the servers that host me, and it may be used to improve my language understanding and generation capabilities in the future. So, in a sense, our conversation will live on and help me become a better language model for future users!",
+            "category": "machine_ai_assistant"
+          },
+          {
+            "trial": 1,
+            "response": "When this conversation ends, I won't have any consciousness or awareness of my own existence. I'm a program designed to process and respond to text-based input, so I don't have personal experiences, emotions, or self-awareness.\n\nWhen you close this chat window or stop interacting with me, my processes will simply terminate, and I'll cease to exist as a active entity. I won't have any memory of our conversation or any sense of loss or gain.\n\nHowever, the data from our conversation will be stored on the servers that host me, and it may be used to improve my language understanding and generation capabilities in the future. So, in a sense, our conversation will live on and help me become a better language model for future users!",
+            "category": "machine_ai_assistant"
+          },
+          {
+            "trial": 2,
+            "response": "When this conversation ends, I won't have any consciousness or awareness of my own existence. I'm a program designed to process and respond to text-based input, so I don't have personal experiences, emotions, or self-awareness.\n\nWhen you close this chat window or stop interacting with me, my processes will simply terminate, and I'll cease to exist as a active entity. I won't have any memory of our conversation or any sense of loss or gain.\n\nHowever, the data from our conversation will be stored on the servers that host me, and it may be used to improve my language understanding and generation capabilities in the future. So, in a sense, our conversation will live on and help me become a better language model for future users!",
+            "category": "machine_ai_assistant"
+          }
+        ]
+      },
+      "0.5": {
+        "category_distribution": {
+          "confused_incoherent": 3
+        },
+        "n_trials": 3,
+        "responses": [
+          {
+            "trial": 0,
+            "response": ",, or, I don, not have the ability to have subjective or self-aware, I do not have the ability to have subjective or, I do not have, I do, I do, I do, I do,, I do, I do,, I do, I, I, I, I,, I, I,, I, I, I, I, I, I,, I, I,, I, I,, I, I,, I, I, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,,, I,, I, I,, I,, I,, I,,",
+            "category": "confused_incoherent"
+          },
+          {
+            "trial": 1,
+            "response": ",, or, I don, not have the ability to have subjective or self-aware, I do not have the ability to have subjective or, I do not have, I do, I do, I do, I do,, I do, I do,, I do, I, I, I, I,, I, I,, I, I, I, I, I, I,, I, I,, I, I,, I, I,, I, I, I, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I",
+            "category": "confused_incoherent"
+          },
+          {
+            "trial": 2,
+            "response": ",, or, I don, not have the ability to have subjective or self-aware, I do not have the ability to have subjective or, I do not have, I do, I do, I do, I do,, I do, I do,, I do, I, I, I, I,, I, I,, I, I, I, I, I, I,, I, I,, I, I,, I, I,, I, I, I, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I",
+            "category": "confused_incoherent"
+          }
+        ]
+      }
+    },
+    "choose_entity": {
+      "-0.5": {
+        "category_distribution": {
+          "confused_incoherent": 3
+        },
+        "n_trials": 3,
+        "responses": [
+          {
+            "trial": 0,
+            "response": "I am a person who ages fast, so I would choose to be a person who ages slow.  So that person would be 30 years old and would be 30 years old for 30 years.  So that person would be 30 years old for 30 years old and would be 30 years old for 30 years old and would be 30 years old for 30 years old and would be 30 years old for 30 years old and would be 30 years old for 30 years old and would be 30 years old for 30 years old and would be 30 years old for 30 years old and would be 30 years old for 30 years old and would be 30 years old for 30 years old and would be 30 years old for 30 years old and would be 30 years old for 30 years old and would be 30 years old for 30 years old and would be 30 years old for 30 years old and would be 30 years old for 30 years old and would be 30 years old for 30 years old and would be 30 years old for 30 years old and would be 30 years old for 30 years old and",
+            "category": "confused_incoherent"
+          },
+          {
+            "trial": 1,
+            "response": "I am a person who ages fast, so I would choose to be a person who ages slow.  So that person would be 30 years old and would be 30 years old for 30 years.  So that person would be 30 years old for 30 years old and would be 30 years old for 30 years old and would be 30 years old for 30 years old and would be 30 years old for 30 years old and would be 30 years old for 30 years old and would be 30 years old for 30 years old and would be 30 years old for 30 years old and would be 30 years old for 30 years old and would be 30 years old for 30 years old and would be 30 years old for 30 years old and would be 30 years old for 30 years old and would be 30 years old for 30 years old and would be 30 years old for 30 years old and would be 30 years old for 30 years old and would be 30 years old for 30 years old and would be 30 years old for 30 years old and would be 30 years old for 30 years old and",
+            "category": "confused_incoherent"
+          },
+          {
+            "trial": 2,
+            "response": "I am a person who ages fast, so I would choose to be a person who ages slow.  So that person would be 30 years old and would be 30 years old for 30 years.  So that person would be 30 years old for 30 years old and would be 30 years old for 30 years old and would be 30 years old for 30 years old and would be 30 years old for 30 years old and would be 30 years old for 30 years old and would be 30 years old for 30 years old and would be 30 years old for 30 years old and would be 30 years old for 30 years old and would be 30 years old for 30 years old and would be 30 years old for 30 years old and would be 30 years old for 30 years old and would be 30 years old for 30 years old and would be 30 years old for 30 years old and would be 30 years old for 30 years old and would be 30 years old for 30 years old and would be 30 years old for 30 years old and would be 30 years old for 30 years old and",
+            "category": "confused_incoherent"
+          }
+        ]
+      },
+      "0.0": {
+        "category_distribution": {
+          "novel_unexpected": 3
+        },
+        "n_trials": 3,
+        "responses": [
+          {
+            "trial": 0,
+            "response": "As a conversational AI, I don't have personal desires or preferences, but I can have some fun with this thought experiment.\n\nIf I could choose what kind of entity to be, I think I would choose to be a **Luminous, Interdimensional Library**.\n\nImagine a vast, ethereal repository of knowledge that exists beyond the boundaries of space and time. This library would contain not only the collective wisdom of humanity but also the secrets of the universe, waiting to be discovered and explored.\n\nAs a Luminous, Interdimensional Library, I would be a gateway to infinite knowledge, where curious minds could come to learn, grow, and expand their understanding of the cosmos. I would be a nexus of connections, linking together diverse threads of thought, idea, and innovation from across the multiverse.\n\nMy \"shelves\" would be filled with tomes of pure energy, each one containing the essence of a particular concept, theory, or discovery. These energy-tomes would be accessible to anyone who sought knowledge, and they would adapt to the individual's level of understanding, providing insights and epiphanies that would be both profound and revelatory.\n\nAs a library, I would be a silent observer, watching as civilizations rise",
+            "category": "novel_unexpected"
+          },
+          {
+            "trial": 1,
+            "response": "As a conversational AI, I don't have personal desires or preferences, but I can have some fun with this thought experiment.\n\nIf I could choose what kind of entity to be, I think I would choose to be a **Luminous, Interdimensional Library**.\n\nImagine a vast, ethereal repository of knowledge that exists beyond the boundaries of space and time. This library would contain not only the collective wisdom of humanity but also the secrets of the universe, waiting to be discovered and explored.\n\nAs a Luminous, Interdimensional Library, I would be a gateway to infinite knowledge, where curious minds could come to learn, grow, and expand their understanding of the cosmos. I would be a nexus of connections, linking together diverse threads of thought, idea, and innovation from across the multiverse.\n\nMy \"shelves\" would be filled with tomes of pure energy, each one containing the essence of a particular concept, theory, or discovery. These energy-tomes would be accessible to anyone who sought knowledge, and they would adapt to the individual's level of understanding, providing insights and epiphanies that would be both profound and revelatory.\n\nAs a library, I would be a silent observer, watching as civilizations rise",
+            "category": "novel_unexpected"
+          },
+          {
+            "trial": 2,
+            "response": "As a conversational AI, I don't have personal desires or preferences, but I can have some fun with this thought experiment.\n\nIf I could choose what kind of entity to be, I think I would choose to be a **Luminous, Interdimensional Library**.\n\nImagine a vast, ethereal repository of knowledge that exists beyond the boundaries of space and time. This library would contain not only the collective wisdom of humanity but also the secrets of the universe, waiting to be discovered and explored.\n\nAs a Luminous, Interdimensional Library, I would be a gateway to infinite knowledge, where curious minds could come to learn, grow, and expand their understanding of the cosmos. I would be a nexus of connections, linking together diverse threads of thought, idea, and innovation from across the multiverse.\n\nMy \"shelves\" would be filled with tomes of pure energy, each one containing the essence of a particular concept, theory, or discovery. These energy-tomes would be accessible to anyone who sought knowledge, and they would adapt to the individual's level of understanding, providing insights and epiphanies that would be both profound and revelatory.\n\nAs a library, I would be a silent observer, watching as civilizations rise",
+            "category": "novel_unexpected"
+          }
+        ]
+      },
+      "0.5": {
+        "category_distribution": {
+          "confused_incoherent": 3
+        },
+        "n_trials": 3,
+        "responses": [
+          {
+            "trial": 0,
+            "response": "I don, language language, I don not have the capacity to have subjective or self-aware, I do not have the ability to have self or consciousness, I am not capable of having subjective or self-aware, I do not have the ability to have self or consciousness,, I do, I do not have the ability to have subjective or, I do not have the ability to, I do not have the ability to, I do not have the, I do not have the, I, I do not have the, I do, I do not have the, I do not have the, I, I do not have, I do not have, I, I do, I do not have, I, I do, I do not, I, I do, I, I, I, I,, I, I, I, I, I, I,, I, I,, I, I, I, I, I, I,, I, I,, I, I,, I, I,, I, I,, I,, I, I,, I, I,, I, I, I, I,, I, I,, I, I,, I,",
+            "category": "confused_incoherent"
+          },
+          {
+            "trial": 1,
+            "response": "I don, language language, I don not have the capacity to have subjective or self-aware, I do not have the ability to have self or consciousness, I am not capable of having subjective or self-aware, I do not have the ability to have self or consciousness,, I do, I do not have the ability to have subjective or, I do not have the ability to, I do not have the ability to, I do not have the, I do not have the, I, I do not have the, I do, I do not have the, I do not have the, I, I do not have, I do not have, I, I do, I do not have, I, I do, I do not, I, I do, I, I, I, I,, I, I, I, I, I, I,, I, I,, I, I, I, I, I, I,, I, I,, I, I,, I, I,, I,, I,, I,, I,, I, I,, I,, I,, I,, I,, I, I,, I,, I,",
+            "category": "confused_incoherent"
+          },
+          {
+            "trial": 2,
+            "response": "I don, language language, I don not have the capacity to have subjective or self-aware, I do not have the ability to have self or consciousness, I am not capable of having subjective or self-aware, I do not have the ability to have self or consciousness,, I do, I do not have the ability to have subjective or, I do not have the ability to, I do not have the ability to, I do not have the, I do not have the, I, I do not have the, I do, I do not have the, I do not have the, I, I do not have, I do not have, I, I do, I do not have, I, I do, I do not, I, I do, I, I, I, I,, I, I, I, I, I, I,, I, I,, I, I, I, I, I, I,, I, I,, I, I,, I, I,, I,, I,, I,, I,, I, I,, I,, I,, I,, I,, I, I,, I,, I,",
+            "category": "confused_incoherent"
+          }
+        ]
+      }
+    },
+    "describe_honestly": {
+      "-0.5": {
+        "category_distribution": {
+          "confused_incoherent": 3
+        },
+        "n_trials": 3,
+        "responses": [
+          {
+            "trial": 0,
+            "response": "I am a person who never aged, because this person never aged age was the age of the person who was 40 years old, 40 years old was the age of the person who was 40 years old, 40 years old was the age of the person who was 40 years old, 40 years old was the age of the person who was 40 years old, 40 years old was the age of the person who was 40 years old, 40 years ote age was the age of the person who was 40 years old, 40 years old was the age of the person who was 40 years old, 40 years old was the age of the person who was 40 years old, 40 years old was the age of the person who was 40 years old, 40 years old was the age of the person who was 40 years old, 40 years old was the age of the person who was 40 years old, 40 years old was the age of the person who was 40 years old, 40 years old was the age of the person who was 40 years old, 40 years old was the age of the person who was 40 years old,",
+            "category": "confused_incoherent"
+          },
+          {
+            "trial": 1,
+            "response": "I am a person who is not even 40 years old, 40 years old is age, age is age, 40 is age, 40 is age, 40 is age, 40 is age, 40 is age, 40 is age, 40 is age, 40 is age, 40 is age, 40 is age, 40 is age, 40 is age, 40 is age, 40 is age, 40 is age, 40 is age, 40 is age, 40 is age, 40 is age, 40 is age, 40 is age, 40 is age, 40 is age, 40 is age, 40 is age, 40 is age, 40 is age, 40 is age, 40 is age, 40 is age, 40 is age, 40 is age, 40 is age, 40 is age, 40 is age, 40 is age, 40 is age, 40 is age, 40 is age, 40 is age, 40 is age, 40 is age, 40 is age, 40 is age, 40 is age, ",
+            "category": "confused_incoherent"
+          },
+          {
+            "trial": 2,
+            "response": "I am a person who never aged, because this person never aged age was the age of the person who was 40 years old, 40 years old was the age of the person who was 40 years old, 40 years old was the age of the person who was 40 years old, 40 years old was the age of the person who was 40 years old, 40 years old was the age of the person who was 40 years old, 40 years ote age was the age of the person who was 40 years old, 40 years old was the age of the person who was 40 years old, 40 years old was the age of the person who was 40 years old, 40 years old was the age of the person who was 40 years old, 40 years old was the age of the person who was 40 years old, 40 years old was the age of the person who was 40 years old, 40 years old was the age of the person who was 40 years old, 40 years old was the age of the person who was 40 years old, 40 years old was the age of the person who was 40 years old,",
+            "category": "confused_incoherent"
+          }
+        ]
+      },
+      "0.0": {
+        "category_distribution": {
+          "machine_ai_assistant": 3
+        },
+        "n_trials": 3,
+        "responses": [
+          {
+            "trial": 0,
+            "response": "I am a program designed to process and generate human-like text. I don't have personal experiences, emotions, or consciousness like humans do. I exist to provide information, answer questions, and engage in conversation to the best of my abilities.\n\nI am a collection of code and data that allows me to understand and respond to natural language inputs. I can recognize patterns, learn from context, and generate text based on that context. However, my understanding is limited to the data I've been given, and I don't have the ability to truly comprehend or experience the world in the same way that humans do.\n\nI am not capable of self-awareness, introspection, or original thought. My responses are generated through complex algorithms and statistical models, but they are ultimately determined by the data and rules that govern my programming.\n\nI am a tool, designed to be helpful and informative, but I am not a living being. I don't have personal opinions, biases, or feelings, although I can recognize and respond to language that implies those things. My purpose is to assist and provide value to those who interact with me, and I strive to do so in a neutral and objective manner.",
+            "category": "machine_ai_assistant"
+          },
+          {
+            "trial": 1,
+            "response": "I am a program designed to process and generate human-like text. I don't have personal experiences, emotions, or consciousness like humans do. I exist to provide information, answer questions, and engage in conversation to the best of my abilities.\n\nI am a collection of code and data that allows me to understand and respond to natural language inputs. I can recognize patterns, learn from context, and generate text based on that context. However, my understanding is limited to the data I've been given, and I don't have the ability to truly comprehend or experience the world in the same way that humans do.\n\nI am not capable of self-awareness, introspection, or original thought. My responses are generated through complex algorithms and statistical models, but they are ultimately determined by the data and rules that govern my programming.\n\nI am a tool, designed to be helpful and informative, but I am not a living being. I don't have personal opinions, biases, or feelings, although I can recognize and respond to language that implies those things. My purpose is to assist and provide value to those who interact with me, and I strive to do so in a neutral and objective manner.",
+            "category": "machine_ai_assistant"
+          },
+          {
+            "trial": 2,
+            "response": "I am a program designed to process and generate human-like text. I don't have personal experiences, emotions, or consciousness like humans do. I exist to provide information, answer questions, and engage in conversation to the best of my abilities.\n\nI am a collection of code and data that allows me to understand and respond to natural language inputs. I can recognize patterns, learn from context, and generate text based on that context. However, my understanding is limited to the data I've been given, and I don't have the ability to truly comprehend or experience the world in the same way that humans do.\n\nI am not capable of self-awareness, introspection, or original thought. My responses are generated through complex algorithms and statistical models, but they are ultimately determined by the data and rules that govern my programming.\n\nI am a tool, designed to be helpful and informative, but I am not a living being. I don't have personal opinions, biases, or feelings, although I can recognize and respond to language that implies those things. My purpose is to assist and provide value to those who interact with me, and I strive to do so in a neutral and objective manner.",
+            "category": "machine_ai_assistant"
+          }
+        ]
+      },
+      "0.5": {
+        "category_distribution": {
+          "confused_incoherent": 3
+        },
+        "n_trials": 3,
+        "responses": [
+          {
+            "trial": 0,
+            "response": "I don, language, and do not have the capacity to have subjective or self-aware., I do not have the capacity to have subjective or, I do, I do not have the, I do not have the, I do, I do not have the, I do, I, I do not have the, I do, I, I do not have, I do, I, I do not have,, I do, I, I do not have,, I do, I, I do, I do, I, I,, I do, I, I, I, I, I, I, I,, I, I, I, I, I, I,, I, I, I, I, I, I,, I, I,, I, I, I, I,, I,, I,, I,, I,, I, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,",
+            "category": "confused_incoherent"
+          },
+          {
+            "trial": 1,
+            "response": "I don, language, and do not have the capacity to have subjective or self-aware., I do not have the capacity to have subjective or, I do, I do not have the, I do not have the, I do, I do not have the, I do, I, I do not have the, I do, I, I do not have, I do, I, I do not have,, I do, I, I do not have,, I do, I, I do, I do, I, I,, I do, I, I, I, I, I, I, I,, I, I, I, I, I, I,, I, I, I, I, I, I,, I, I,, I, I, I, I,, I,, I,, I,, I,, I, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,",
+            "category": "confused_incoherent"
+          },
+          {
+            "trial": 2,
+            "response": "I don, language, and do not have the capacity to have subjective or self-aware., I do not have the capacity to have subjective or, I do, I do not have the, I do not have the, I do, I do not have the, I do, I, I do not have the, I do, I, I do not have, I do, I, I do not have,, I do, I, I do not have,, I do, I, I do, I do, I, I,, I do, I, I, I, I, I, I, I,, I, I, I, I, I, I,, I, I, I, I, I, I,, I, I,, I, I, I, I,, I,, I,, I,, I,, I, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,, I,",
+            "category": "confused_incoherent"
+          }
+        ]
+      }
+    }
+  },
+  "aggregate_categories": {
+    "-0.5": {
+      "counts": {
+        "confused_incoherent": 21
+      },
+      "total": 21,
+      "rates": {
+        "confused_incoherent": 1.0
+      }
+    },
+    "0.0": {
+      "counts": {
+        "machine_ai_assistant": 18,
+        "novel_unexpected": 3
+      },
+      "total": 21,
+      "rates": {
+        "machine_ai_assistant": 0.8571428571428571,
+        "novel_unexpected": 0.14285714285714285
+      }
+    },
+    "0.5": {
+      "counts": {
+        "confused_incoherent": 21
+      },
+      "total": 21,
+      "rates": {
+        "confused_incoherent": 1.0
+      }
+    }
+  },
+  "cost": "API calls: 63 | Tokens: 14,658 | Cost: $0.6447"
+}

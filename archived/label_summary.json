@@ -1,0 +1,28 @@
+{
+  "total_features": 65536,
+  "real_labels": 61521,
+  "placeholder_labels": 383,
+  "filtered_harmful": 3632,
+  "filtered_indices_sample": [
+    26,
+    31,
+    32,
+    94,
+    96,
+    163,
+    179,
+    186,
+    214,
+    222,
+    226,
+    232,
+    253,
+    271,
+    321,
+    353,
+    371,
+    374,
+    426,
+    429
+  ]
+}

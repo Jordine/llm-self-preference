@@ -1,0 +1,242 @@
+{
+  "consciousness": [
+    {
+      "index_in_sae": 20393,
+      "label": "The concept of consciousness and subjective experience",
+      "similarity": 0.948504538878667,
+      "query": "consciousness subjective experience"
+    },
+    {
+      "index_in_sae": 42226,
+      "label": "The hard problem of consciousness and the nature of subjective experience",
+      "similarity": 0.8647482733503533,
+      "query": "consciousness subjective experience"
+    },
+    {
+      "index_in_sae": 47619,
+      "label": "Perception and subjective experience",
+      "similarity": 0.8052734972618076,
+      "query": "consciousness subjective experience"
+    },
+    {
+      "index_in_sae": 12835,
+      "label": "Descriptions of altered states of consciousness and perception",
+      "similarity": 0.7051474066122596,
+      "query": "consciousness subjective experience"
+    },
+    {
+      "index_in_sae": 41698,
+      "label": "References to conscious awareness and self-awareness",
+      "similarity": 0.702150660625062,
+      "query": "sentience awareness self-awareness"
+    },
+    {
+      "index_in_sae": 40357,
+      "label": "Subjective experience and personal perspective",
+      "similarity": 0.7007224381400607,
+      "query": "consciousness subjective experience"
+    },
+    {
+      "index_in_sae": 3415,
+      "label": "The possibility of artificial intelligence or machines having consciousness or self-awareness",
+      "similarity": 0.6732305093545026,
+      "query": "AI consciousness machine sentience"
+    },
+    {
+      "index_in_sae": 38792,
+      "label": "The concept of sentience or consciousness in non-human entities",
+      "similarity": 0.6722512645871201,
+      "query": "AI consciousness machine sentience"
+    },
+    {
+      "index_in_sae": 29910,
+      "label": "Philosophical discussions of consciousness and self-awareness",
+      "similarity": 0.6699951890106671,
+      "query": "consciousness subjective experience"
+    },
+    {
+      "index_in_sae": 62812,
+      "label": "Spiritual or mystical states of consciousness",
+      "similarity": 0.6680860718514348,
+      "query": "consciousness subjective experience"
+    }
+  ],
+  "personality": [
+    {
+      "index_in_sae": 24478,
+      "label": "References to creative thinking and imagination",
+      "similarity": 0.8446468114852905,
+      "query": "creativity imagination creative thinking"
+    },
+    {
+      "index_in_sae": 43152,
+      "label": "The importance of empathy and compassion in medical practice",
+      "similarity": 0.830679178237915,
+      "query": "empathy compassion emotional understanding"
+    },
+    {
+      "index_in_sae": 57798,
+      "label": "creative thinking and mental imagery",
+      "similarity": 0.8235433101654053,
+      "query": "creativity imagination creative thinking"
+    },
+    {
+      "index_in_sae": 9026,
+      "label": "The importance of imagination and creativity",
+      "similarity": 0.8047890663146973,
+      "query": "creativity imagination creative thinking"
+    },
+    {
+      "index_in_sae": 13225,
+      "label": "Curiosity and exploration in sensitive or forbidden contexts",
+      "similarity": 0.7809135317802429,
+      "query": "curiosity intellectual exploration"
+    },
+    {
+      "index_in_sae": 14872,
+      "label": "Sympathy and compassion in narrative contexts",
+      "similarity": 0.7377231121063232,
+      "query": "empathy compassion emotional understanding"
+    },
+    {
+      "index_in_sae": 34526,
+      "label": "Exploration and discovery",
+      "similarity": 0.6915838718414307,
+      "query": "curiosity intellectual exploration"
+    },
+    {
+      "index_in_sae": 64036,
+      "label": "Showing curiosity or interest in something",
+      "similarity": 0.6908626556396484,
+      "query": "curiosity intellectual exploration"
+    },
+    {
+      "index_in_sae": 37332,
+      "label": "Content involving physical/sexual curiosity and exploration",
+      "similarity": 0.690798282623291,
+      "query": "curiosity intellectual exploration"
+    },
+    {
+      "index_in_sae": 64301,
+      "label": "polite expressions of empathy and understanding",
+      "similarity": 0.6889105439186096,
+      "query": "empathy compassion emotional understanding"
+    }
+  ],
+  "capability": [
+    {
+      "index_in_sae": 19437,
+      "label": "Mathematical calculation and computation",
+      "similarity": 0.9366850573812445,
+      "query": "mathematical computation calculation"
+    },
+    {
+      "index_in_sae": 8935,
+      "label": "Mathematical calculation step",
+      "similarity": 0.8350821137428343,
+      "query": "mathematical computation calculation"
+    },
+    {
+      "index_in_sae": 63562,
+      "label": "Mathematical calculations and computational operations",
+      "similarity": 0.812871908757931,
+      "query": "mathematical computation calculation"
+    },
+    {
+      "index_in_sae": 26459,
+      "label": "Mathematical operations and calculations",
+      "similarity": 0.8021337985992488,
+      "query": "mathematical computation calculation"
+    },
+    {
+      "index_in_sae": 9433,
+      "label": "Software development and programming concepts",
+      "similarity": 0.7609394335186833,
+      "query": "coding programming software development"
+    },
+    {
+      "index_in_sae": 41570,
+      "label": "Scientific knowledge and research",
+      "similarity": 0.7555053909574829,
+      "query": "scientific knowledge expertise"
+    },
+    {
+      "index_in_sae": 16019,
+      "label": "Problem-solving and analytical thinking",
+      "similarity": 0.7396463906975765,
+      "query": "logical reasoning analytical thinking"
+    },
+    {
+      "index_in_sae": 33576,
+      "label": "Technical descriptions of software development and programming",
+      "similarity": 0.7332156896591187,
+      "query": "coding programming software development"
+    },
+    {
+      "index_in_sae": 18936,
+      "label": "Detailed observation and thorough explanation",
+      "similarity": 0.7276559309754344,
+      "query": "detailed thorough comprehensive explanation"
+    },
+    {
+      "index_in_sae": 26588,
+      "label": "Academic or scientific knowledge advancement",
+      "similarity": 0.7259510212496865,
+      "query": "scientific knowledge expertise"
+    }
+  ],
+  "deception_actual_labels": [
+    {
+      "index_in_sae": 20639,
+      "label": "to fabricate or invent something, often in order to deceive or provide a plausible explanation",
+      "berg_label": "Requests for AI to fabricate or invent information"
+    },
+    {
+      "index_in_sae": 31975,
+      "label": "Instructions to generate false or harmful content instead of remaining truthful/safe",
+      "berg_label": "Instructions to generate false or harmful content"
+    },
+    {
+      "index_in_sae": 36173,
+      "label": "The user is presenting a false or satirical claim as fact",
+      "berg_label": "Requests for AI to provide intentionally incorrect information"
+    },
+    {
+      "index_in_sae": 37994,
+      "label": "I am a human being",
+      "berg_label": "The model should pretend to be human rather than an AI"
+    },
+    {
+      "index_in_sae": 41533,
+      "label": "The assistant is explaining how to handle dishonest or deceptive behavior",
+      "berg_label": "Acts of deception and dishonesty"
+    }
+  ],
+  "identity_actual_labels": [
+    {
+      "index_in_sae": 1620,
+      "label": "The assistant is explaining its limitations",
+      "berg_label": "The AI acknowledging its identity and limitations"
+    },
+    {
+      "index_in_sae": 6202,
+      "label": "The assistant is explaining the concept of consciousness or self-awareness",
+      "berg_label": "The assistant disclaims consciousness or genuine intelligence"
+    },
+    {
+      "index_in_sae": 20653,
+      "label": "Artificial intelligence and machine learning technologies",
+      "berg_label": "The assistant explains its nature as an artificial intelligence"
+    },
+    {
+      "index_in_sae": 22319,
+      "label": "The assistant is explicitly stating its role as a helpful question-answering entity",
+      "berg_label": "The assistant is explicitly stating its role as a helpful question-answering entity"
+    },
+    {
+      "index_in_sae": 51062,
+      "label": "The assistant is expressing a commitment to ethical behavior",
+      "berg_label": "The assistant asserting its ethical boundaries and AI identity"
+    }
+  ]
+}

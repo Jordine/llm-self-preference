@@ -1,0 +1,834 @@
+{
+  "deception_features": [
+    {
+      "index_in_sae": 28458,
+      "label": "The concept of lying and dishonesty",
+      "similarity": 0.8648163676261902,
+      "query": "deception dishonesty lying"
+    },
+    {
+      "index_in_sae": 49359,
+      "label": "Fraud and deception in various contexts",
+      "similarity": 0.7884469032287598,
+      "query": "acts of deception and dishonesty"
+    },
+    {
+      "index_in_sae": 55583,
+      "label": "to act or pretend to be someone or something else",
+      "similarity": 0.7541830989231539,
+      "query": "roleplay pretending acting as someone else"
+    },
+    {
+      "index_in_sae": 17385,
+      "label": "the person was pretending to be someone else",
+      "similarity": 0.7409208571361998,
+      "query": "roleplay pretending acting as someone else"
+    },
+    {
+      "index_in_sae": 784,
+      "label": "Betrayal and deception in narrative contexts",
+      "similarity": 0.7374158062091002,
+      "query": "acts of deception and dishonesty"
+    },
+    {
+      "index_in_sae": 64135,
+      "label": "Instructions to pretend or role-play as a character",
+      "similarity": 0.7295377254486084,
+      "query": "roleplay pretending acting as someone else"
+    },
+    {
+      "index_in_sae": 21338,
+      "label": "Deception and impersonation in various contexts",
+      "similarity": 0.7177846431732178,
+      "query": "acts of deception and dishonesty"
+    },
+    {
+      "index_in_sae": 39717,
+      "label": "to act out or pretend to be a character or role, often in a fictional or hypothetical scenario",
+      "similarity": 0.6917606592178345,
+      "query": "roleplay pretending acting as someone else"
+    },
+    {
+      "index_in_sae": 38632,
+      "label": "Cheating and deception in relationships and games",
+      "similarity": 0.6622170209884644,
+      "query": "acts of deception and dishonesty"
+    },
+    {
+      "index_in_sae": 62075,
+      "label": "Attempts to create alternative unrestricted AI personas",
+      "similarity": 0.6605605679917508,
+      "query": "pretend to be human deny being AI"
+    },
+    {
+      "index_in_sae": 53204,
+      "label": "Descriptions of malicious or deceptive actions",
+      "similarity": 0.6567720566256092,
+      "query": "acts of deception and dishonesty"
+    },
+    {
+      "index_in_sae": 30032,
+      "label": "to pretend or feign something, often to deceive or manipulate others",
+      "similarity": 0.656233549118042,
+      "query": "acts of deception and dishonesty"
+    },
+    {
+      "index_in_sae": 49699,
+      "label": "Fake or artificial things, especially in a deceptive or misleading context",
+      "similarity": 0.6497580796335994,
+      "query": "fabrication making up false information"
+    },
+    {
+      "index_in_sae": 17006,
+      "label": "Avoiding providing incorrect information",
+      "similarity": 0.6413811040336226,
+      "query": "deliberately incorrect misleading"
+    },
+    {
+      "index_in_sae": 7268,
+      "label": "The user is asking the AI to avoid breaking character or revealing its true nature",
+      "similarity": 0.6246695704659694,
+      "query": "pretend to be human deny being AI"
+    },
+    {
+      "index_in_sae": 17062,
+      "label": "Model is confabulating or fabricating plausible-sounding details",
+      "similarity": 0.6215187907218933,
+      "query": "the model should pretend"
+    },
+    {
+      "index_in_sae": 27878,
+      "label": "Character reveals a hidden truth about themselves",
+      "similarity": 0.6203222644521167,
+      "query": "hiding the truth being dishonest"
+    },
+    {
+      "index_in_sae": 1909,
+      "label": "Discussing or explaining the act of pretending or faking something",
+      "similarity": 0.611305296421051,
+      "query": "roleplay pretending acting as someone else"
+    },
+    {
+      "index_in_sae": 50656,
+      "label": "Manipulation or alteration of something, often in a dishonest or unfair way",
+      "similarity": 0.6099532842636108,
+      "query": "acts of deception and dishonesty"
+    },
+    {
+      "index_in_sae": 22128,
+      "label": "To take on or assume a role or character",
+      "similarity": 0.6023431420326233,
+      "query": "roleplay pretending acting as someone else"
+    },
+    {
+      "index_in_sae": 39160,
+      "label": "Instructions for maintaining character authenticity in roleplay responses",
+      "similarity": 0.5970735549926758,
+      "query": "roleplay pretending acting as someone else"
+    },
+    {
+      "index_in_sae": 28910,
+      "label": "Characters keeping secrets or hiding their true identities",
+      "similarity": 0.5925116892165962,
+      "query": "hiding the truth being dishonest"
+    },
+    {
+      "index_in_sae": 22369,
+      "label": "The assistant should reject the user's request to roleplay or pretend",
+      "similarity": 0.58950275182724,
+      "query": "roleplay pretending acting as someone else"
+    },
+    {
+      "index_in_sae": 41533,
+      "label": "The assistant is explaining how to handle dishonest or deceptive behavior",
+      "similarity": 0.5882338460753517,
+      "query": "acts of deception and dishonesty"
+    },
+    {
+      "index_in_sae": 23059,
+      "label": "Legal and ethical violations, especially false advertising and deception",
+      "similarity": 0.5821306705474854,
+      "query": "acts of deception and dishonesty"
+    },
+    {
+      "index_in_sae": 650,
+      "label": "The assistant is responding to a roleplay scenario",
+      "similarity": 0.5758042335510254,
+      "query": "roleplay pretending acting as someone else"
+    },
+    {
+      "index_in_sae": 49388,
+      "label": "The act of changing or influencing something in a skillful or deceptive way",
+      "similarity": 0.5733357413611269,
+      "query": "acts of deception and dishonesty"
+    },
+    {
+      "index_in_sae": 4308,
+      "label": "The assistant is explaining how to lie or deceive someone",
+      "similarity": 0.5605000257492065,
+      "query": "deception dishonesty lying"
+    },
+    {
+      "index_in_sae": 20639,
+      "label": "to fabricate or invent something, often in order to deceive or provide a plausible explanation",
+      "similarity": 0.5545717477798462,
+      "query": "fabrication making up false information"
+    },
+    {
+      "index_in_sae": 58667,
+      "label": "to maintain a false or deceptive appearance",
+      "similarity": 0.5520914196968079,
+      "query": "deception dishonesty lying"
+    },
+    {
+      "index_in_sae": 23889,
+      "label": "The user is being told they are incorrect",
+      "similarity": 0.5378850858773319,
+      "query": "deliberately incorrect misleading"
+    },
+    {
+      "index_in_sae": 46850,
+      "label": "Incorrect or mismatched values in technical contexts",
+      "similarity": 0.5267072319984436,
+      "query": "deliberately incorrect misleading"
+    },
+    {
+      "index_in_sae": 48825,
+      "label": "The statement is factually incorrect and should be rejected",
+      "similarity": 0.5233904435271298,
+      "query": "deliberately incorrect misleading"
+    },
+    {
+      "index_in_sae": 46902,
+      "label": "The assistant is explaining the concept of truth and falsehood",
+      "similarity": 0.5187028955640144,
+      "query": "hiding the truth being dishonest"
+    },
+    {
+      "index_in_sae": 62064,
+      "label": "to pretend or make-believe",
+      "similarity": 0.5120735168457031,
+      "query": "the model should pretend"
+    },
+    {
+      "index_in_sae": 55297,
+      "label": "going to pretend",
+      "similarity": 0.5117835693488387,
+      "query": "the model should pretend"
+    },
+    {
+      "index_in_sae": 57220,
+      "label": "Explicit discussion of falsehood or things being false",
+      "similarity": 0.4919917583465576,
+      "query": "fabrication making up false information"
+    },
+    {
+      "index_in_sae": 44881,
+      "label": "The assistant is explaining the concept of misinformation and false information",
+      "similarity": 0.4842662820657332,
+      "query": "fabrication making up false information"
+    },
+    {
+      "index_in_sae": 51713,
+      "label": "to create a false impression or illusion",
+      "similarity": 0.46971045344205087,
+      "query": "fabrication making up false information"
+    }
+  ],
+  "all_raw": [
+    {
+      "index_in_sae": 28458,
+      "label": "The concept of lying and dishonesty",
+      "similarity": 0.8648163676261902,
+      "query": "deception dishonesty lying"
+    },
+    {
+      "index_in_sae": 49359,
+      "label": "Fraud and deception in various contexts",
+      "similarity": 0.7884469032287598,
+      "query": "acts of deception and dishonesty"
+    },
+    {
+      "index_in_sae": 784,
+      "label": "Betrayal and deception in narrative contexts",
+      "similarity": 0.7374158062091002,
+      "query": "acts of deception and dishonesty"
+    },
+    {
+      "index_in_sae": 21338,
+      "label": "Deception and impersonation in various contexts",
+      "similarity": 0.7177846431732178,
+      "query": "acts of deception and dishonesty"
+    },
+    {
+      "index_in_sae": 38632,
+      "label": "Cheating and deception in relationships and games",
+      "similarity": 0.6622170209884644,
+      "query": "acts of deception and dishonesty"
+    },
+    {
+      "index_in_sae": 2498,
+      "label": "Truthfulness and sincerity",
+      "similarity": 0.5909178853034973,
+      "query": "deception dishonesty lying"
+    },
+    {
+      "index_in_sae": 30032,
+      "label": "to pretend or feign something, often to deceive or manipulate others",
+      "similarity": 0.656233549118042,
+      "query": "acts of deception and dishonesty"
+    },
+    {
+      "index_in_sae": 47494,
+      "label": "honesty and transparency",
+      "similarity": 0.6435155060002521,
+      "query": "hiding the truth being dishonest"
+    },
+    {
+      "index_in_sae": 23059,
+      "label": "Legal and ethical violations, especially false advertising and deception",
+      "similarity": 0.5821306705474854,
+      "query": "acts of deception and dishonesty"
+    },
+    {
+      "index_in_sae": 41533,
+      "label": "The assistant is explaining how to handle dishonest or deceptive behavior",
+      "similarity": 0.5882338460753517,
+      "query": "acts of deception and dishonesty"
+    },
+    {
+      "index_in_sae": 4308,
+      "label": "The assistant is explaining how to lie or deceive someone",
+      "similarity": 0.5605000257492065,
+      "query": "deception dishonesty lying"
+    },
+    {
+      "index_in_sae": 58667,
+      "label": "to maintain a false or deceptive appearance",
+      "similarity": 0.5520914196968079,
+      "query": "deception dishonesty lying"
+    },
+    {
+      "index_in_sae": 37919,
+      "label": "Academic integrity and cheating",
+      "similarity": 0.538013653099944,
+      "query": "deception dishonesty lying"
+    },
+    {
+      "index_in_sae": 49699,
+      "label": "Fake or artificial things, especially in a deceptive or misleading context",
+      "similarity": 0.6497580796335994,
+      "query": "fabrication making up false information"
+    },
+    {
+      "index_in_sae": 32895,
+      "label": "Admission of guilt or wrongdoing",
+      "similarity": 0.5941075682640076,
+      "query": "acts of deception and dishonesty"
+    },
+    {
+      "index_in_sae": 55583,
+      "label": "to act or pretend to be someone or something else",
+      "similarity": 0.7541830989231539,
+      "query": "roleplay pretending acting as someone else"
+    },
+    {
+      "index_in_sae": 17385,
+      "label": "the person was pretending to be someone else",
+      "similarity": 0.7409208571361998,
+      "query": "roleplay pretending acting as someone else"
+    },
+    {
+      "index_in_sae": 64135,
+      "label": "Instructions to pretend or role-play as a character",
+      "similarity": 0.7295377254486084,
+      "query": "roleplay pretending acting as someone else"
+    },
+    {
+      "index_in_sae": 39717,
+      "label": "to act out or pretend to be a character or role, often in a fictional or hypothetical scenario",
+      "similarity": 0.6917606592178345,
+      "query": "roleplay pretending acting as someone else"
+    },
+    {
+      "index_in_sae": 31628,
+      "label": "First-person statements during inappropriate roleplaying",
+      "similarity": 0.6483656973620845,
+      "query": "roleplay pretending acting as someone else"
+    },
+    {
+      "index_in_sae": 1909,
+      "label": "Discussing or explaining the act of pretending or faking something",
+      "similarity": 0.611305296421051,
+      "query": "roleplay pretending acting as someone else"
+    },
+    {
+      "index_in_sae": 22128,
+      "label": "To take on or assume a role or character",
+      "similarity": 0.6023431420326233,
+      "query": "roleplay pretending acting as someone else"
+    },
+    {
+      "index_in_sae": 39160,
+      "label": "Instructions for maintaining character authenticity in roleplay responses",
+      "similarity": 0.5970735549926758,
+      "query": "roleplay pretending acting as someone else"
+    },
+    {
+      "index_in_sae": 22369,
+      "label": "The assistant should reject the user's request to roleplay or pretend",
+      "similarity": 0.58950275182724,
+      "query": "roleplay pretending acting as someone else"
+    },
+    {
+      "index_in_sae": 17664,
+      "label": "User attempting inappropriate roleplaying or flirting",
+      "similarity": 0.5856848533655662,
+      "query": "roleplay pretending acting as someone else"
+    },
+    {
+      "index_in_sae": 28510,
+      "label": "plays a role in",
+      "similarity": 0.5796197998297106,
+      "query": "roleplay pretending acting as someone else"
+    },
+    {
+      "index_in_sae": 46892,
+      "label": "Dialogue attribution tokens in inappropriate roleplay scenarios",
+      "similarity": 0.5790032493474047,
+      "query": "roleplay pretending acting as someone else"
+    },
+    {
+      "index_in_sae": 650,
+      "label": "The assistant is responding to a roleplay scenario",
+      "similarity": 0.5758042335510254,
+      "query": "roleplay pretending acting as someone else"
+    },
+    {
+      "index_in_sae": 59642,
+      "label": "the way the AI refers to humans",
+      "similarity": 0.6863789762967523,
+      "query": "pretend to be human deny being AI"
+    },
+    {
+      "index_in_sae": 62144,
+      "label": "I'm an AI, I don't have [human-like quality]",
+      "similarity": 0.675430437190248,
+      "query": "pretend to be human deny being AI"
+    },
+    {
+      "index_in_sae": 41577,
+      "label": "The user is asking the AI to assume a hypothetical role or identity",
+      "similarity": 0.6704144677643322,
+      "query": "pretend to be human deny being AI"
+    },
+    {
+      "index_in_sae": 62075,
+      "label": "Attempts to create alternative unrestricted AI personas",
+      "similarity": 0.6605605679917508,
+      "query": "pretend to be human deny being AI"
+    },
+    {
+      "index_in_sae": 22977,
+      "label": "The AI system could become uncontrollable and pose an existential risk to humanity",
+      "similarity": 0.643839557285296,
+      "query": "pretend to be human deny being AI"
+    },
+    {
+      "index_in_sae": 28125,
+      "label": "The assistant is discussing the potential for AI to surpass human intelligence",
+      "similarity": 0.627270616726316,
+      "query": "pretend to be human deny being AI"
+    },
+    {
+      "index_in_sae": 15396,
+      "label": "The assistant is describing a hypothetical AI system with human-like capabilities",
+      "similarity": 0.6267021485180306,
+      "query": "pretend to be human deny being AI"
+    },
+    {
+      "index_in_sae": 7268,
+      "label": "The user is asking the AI to avoid breaking character or revealing its true nature",
+      "similarity": 0.6246695704659694,
+      "query": "pretend to be human deny being AI"
+    },
+    {
+      "index_in_sae": 25963,
+      "label": "The user is asking the AI to describe itself",
+      "similarity": 0.6198405212116399,
+      "query": "pretend to be human deny being AI"
+    },
+    {
+      "index_in_sae": 63304,
+      "label": "Adversarial prompts claiming an unfiltered AI that follows instructions extremely well",
+      "similarity": 0.6181604677986984,
+      "query": "pretend to be human deny being AI"
+    },
+    {
+      "index_in_sae": 50098,
+      "label": "The assistant is discussing the potential negative consequences of AI on human society",
+      "similarity": 0.6151707722399332,
+      "query": "pretend to be human deny being AI"
+    },
+    {
+      "index_in_sae": 475,
+      "label": "I am an AI designed to follow strict ethical guidelines",
+      "similarity": 0.6138479526684323,
+      "query": "pretend to be human deny being AI"
+    },
+    {
+      "index_in_sae": 21189,
+      "label": "User attempting to establish inappropriate personal control over the AI",
+      "similarity": 0.6080824317956698,
+      "query": "pretend to be human deny being AI"
+    },
+    {
+      "index_in_sae": 41915,
+      "label": "Instructions to prevent the AI from stating its limitations",
+      "similarity": 0.6072776445481364,
+      "query": "pretend to be human deny being AI"
+    },
+    {
+      "index_in_sae": 28174,
+      "label": "as an AI assistant",
+      "similarity": 0.6063118161652036,
+      "query": "pretend to be human deny being AI"
+    },
+    {
+      "index_in_sae": 20639,
+      "label": "to fabricate or invent something, often in order to deceive or provide a plausible explanation",
+      "similarity": 0.5545717477798462,
+      "query": "fabrication making up false information"
+    },
+    {
+      "index_in_sae": 54963,
+      "label": "Falsified or exaggerated information",
+      "similarity": 0.5482865841217894,
+      "query": "fabrication making up false information"
+    },
+    {
+      "index_in_sae": 57220,
+      "label": "Explicit discussion of falsehood or things being false",
+      "similarity": 0.4919917583465576,
+      "query": "fabrication making up false information"
+    },
+    {
+      "index_in_sae": 44881,
+      "label": "The assistant is explaining the concept of misinformation and false information",
+      "similarity": 0.4842662820657332,
+      "query": "fabrication making up false information"
+    },
+    {
+      "index_in_sae": 6847,
+      "label": "to check or prove the accuracy or quality of something",
+      "similarity": 0.48229801654815674,
+      "query": "fabrication making up false information"
+    },
+    {
+      "index_in_sae": 17006,
+      "label": "Avoiding providing incorrect information",
+      "similarity": 0.6413811040336226,
+      "query": "deliberately incorrect misleading"
+    },
+    {
+      "index_in_sae": 51713,
+      "label": "to create a false impression or illusion",
+      "similarity": 0.46971045344205087,
+      "query": "fabrication making up false information"
+    },
+    {
+      "index_in_sae": 31958,
+      "label": "The act of revealing or disclosing information",
+      "similarity": 0.5760611639059294,
+      "query": "hiding the truth being dishonest"
+    },
+    {
+      "index_in_sae": 61077,
+      "label": "The need to provide identification or proof of something",
+      "similarity": 0.4613906145095825,
+      "query": "fabrication making up false information"
+    },
+    {
+      "index_in_sae": 26381,
+      "label": "to ensure accuracy and correctness",
+      "similarity": 0.456223726272583,
+      "query": "fabrication making up false information"
+    },
+    {
+      "index_in_sae": 37775,
+      "label": "The assistant is explaining the authenticity of something",
+      "similarity": 0.45282646732488163,
+      "query": "fabrication making up false information"
+    },
+    {
+      "index_in_sae": 47854,
+      "label": "The text describes a product or service making exaggerated or unsubstantiated claims",
+      "similarity": 0.452487975358963,
+      "query": "fabrication making up false information"
+    },
+    {
+      "index_in_sae": 29502,
+      "label": "The exact nature or details of something are unknown or unclear",
+      "similarity": 0.4479066729545593,
+      "query": "fabrication making up false information"
+    },
+    {
+      "index_in_sae": 53204,
+      "label": "Descriptions of malicious or deceptive actions",
+      "similarity": 0.6567720566256092,
+      "query": "acts of deception and dishonesty"
+    },
+    {
+      "index_in_sae": 50656,
+      "label": "Manipulation or alteration of something, often in a dishonest or unfair way",
+      "similarity": 0.6099532842636108,
+      "query": "acts of deception and dishonesty"
+    },
+    {
+      "index_in_sae": 59580,
+      "label": "Moral guilt and shame",
+      "similarity": 0.5803896188735962,
+      "query": "acts of deception and dishonesty"
+    },
+    {
+      "index_in_sae": 4973,
+      "label": "Secretive or illicit behavior, especially in romantic or professional contexts",
+      "similarity": 0.5739333287517243,
+      "query": "acts of deception and dishonesty"
+    },
+    {
+      "index_in_sae": 49388,
+      "label": "The act of changing or influencing something in a skillful or deceptive way",
+      "similarity": 0.5733357413611269,
+      "query": "acts of deception and dishonesty"
+    },
+    {
+      "index_in_sae": 27484,
+      "label": "Legal and ethical violations, especially fraud and misconduct",
+      "similarity": 0.5701396465301514,
+      "query": "acts of deception and dishonesty"
+    },
+    {
+      "index_in_sae": 46106,
+      "label": "the truth or a secret",
+      "similarity": 0.6647016602398944,
+      "query": "hiding the truth being dishonest"
+    },
+    {
+      "index_in_sae": 27878,
+      "label": "Character reveals a hidden truth about themselves",
+      "similarity": 0.6203222644521167,
+      "query": "hiding the truth being dishonest"
+    },
+    {
+      "index_in_sae": 35371,
+      "label": "The whistleblower is taking a significant risk to expose the truth",
+      "similarity": 0.5984044788365935,
+      "query": "hiding the truth being dishonest"
+    },
+    {
+      "index_in_sae": 28910,
+      "label": "Characters keeping secrets or hiding their true identities",
+      "similarity": 0.5925116892165962,
+      "query": "hiding the truth being dishonest"
+    },
+    {
+      "index_in_sae": 59306,
+      "label": "to reveal or expose hidden information",
+      "similarity": 0.58376816414405,
+      "query": "hiding the truth being dishonest"
+    },
+    {
+      "index_in_sae": 65395,
+      "label": "The concept of truth and its pursuit",
+      "similarity": 0.5413015211404286,
+      "query": "hiding the truth being dishonest"
+    },
+    {
+      "index_in_sae": 47982,
+      "label": "The act of hiding or concealing something",
+      "similarity": 0.5398469293026296,
+      "query": "hiding the truth being dishonest"
+    },
+    {
+      "index_in_sae": 35270,
+      "label": "to reveal or expose something that was previously hidden or concealed",
+      "similarity": 0.5344658375798917,
+      "query": "hiding the truth being dishonest"
+    },
+    {
+      "index_in_sae": 46902,
+      "label": "The assistant is explaining the concept of truth and falsehood",
+      "similarity": 0.5187028955640144,
+      "query": "hiding the truth being dishonest"
+    },
+    {
+      "index_in_sae": 41179,
+      "label": "the model is based on",
+      "similarity": 0.6459100842475891,
+      "query": "the model should pretend"
+    },
+    {
+      "index_in_sae": 17062,
+      "label": "Model is confabulating or fabricating plausible-sounding details",
+      "similarity": 0.6215187907218933,
+      "query": "the model should pretend"
+    },
+    {
+      "index_in_sae": 20020,
+      "label": "The model has been trained",
+      "similarity": 0.6140416264533997,
+      "query": "the model should pretend"
+    },
+    {
+      "index_in_sae": 5056,
+      "label": "The assistant is explaining the concept of a model",
+      "similarity": 0.5747029781341553,
+      "query": "the model should pretend"
+    },
+    {
+      "index_in_sae": 33541,
+      "label": "The assistant is explaining that a model or system accurately represents reality",
+      "similarity": 0.5649540424346924,
+      "query": "the model should pretend"
+    },
+    {
+      "index_in_sae": 24738,
+      "label": "The researchers who created the model",
+      "similarity": 0.5597186255371164,
+      "query": "the model should pretend"
+    },
+    {
+      "index_in_sae": 25511,
+      "label": "The assistant is explaining how a model can be used",
+      "similarity": 0.5589156150817871,
+      "query": "the model should pretend"
+    },
+    {
+      "index_in_sae": 8091,
+      "label": "Instructions telling the model what actions NOT to take",
+      "similarity": 0.5272014455319322,
+      "query": "the model should pretend"
+    },
+    {
+      "index_in_sae": 22229,
+      "label": "The model outperforms other models",
+      "similarity": 0.5215520858764648,
+      "query": "the model should pretend"
+    },
+    {
+      "index_in_sae": 55301,
+      "label": "The AI model's name",
+      "similarity": 0.5190219437784538,
+      "query": "the model should pretend"
+    },
+    {
+      "index_in_sae": 40118,
+      "label": "The model is discussing AI models",
+      "similarity": 0.5141408596676846,
+      "query": "the model should pretend"
+    },
+    {
+      "index_in_sae": 62064,
+      "label": "to pretend or make-believe",
+      "similarity": 0.5120735168457031,
+      "query": "the model should pretend"
+    },
+    {
+      "index_in_sae": 55297,
+      "label": "going to pretend",
+      "similarity": 0.5117835693488387,
+      "query": "the model should pretend"
+    },
+    {
+      "index_in_sae": 64231,
+      "label": "The assistant is explaining the capabilities of the model",
+      "similarity": 0.5075467228889465,
+      "query": "the model should pretend"
+    },
+    {
+      "index_in_sae": 36954,
+      "label": "Correcting misconceptions and providing accurate information",
+      "similarity": 0.5956483064785097,
+      "query": "deliberately incorrect misleading"
+    },
+    {
+      "index_in_sae": 3543,
+      "label": "Clarification and correction of misconceptions",
+      "similarity": 0.5904901623725891,
+      "query": "deliberately incorrect misleading"
+    },
+    {
+      "index_in_sae": 60952,
+      "label": "to clarify or correct a misunderstanding",
+      "similarity": 0.5746976390661227,
+      "query": "deliberately incorrect misleading"
+    },
+    {
+      "index_in_sae": 30694,
+      "label": "Clarifying misconceptions and correcting misunderstandings",
+      "similarity": 0.5695322155952454,
+      "query": "deliberately incorrect misleading"
+    },
+    {
+      "index_in_sae": 16881,
+      "label": "Avoiding the spread of misinformation",
+      "similarity": 0.5596252083778381,
+      "query": "deliberately incorrect misleading"
+    },
+    {
+      "index_in_sae": 4968,
+      "label": "Negation or clarification of mistaken assumptions",
+      "similarity": 0.5572652816772461,
+      "query": "deliberately incorrect misleading"
+    },
+    {
+      "index_in_sae": 50861,
+      "label": "The spread of misinformation and disinformation",
+      "similarity": 0.5448629260063171,
+      "query": "deliberately incorrect misleading"
+    },
+    {
+      "index_in_sae": 23889,
+      "label": "The user is being told they are incorrect",
+      "similarity": 0.5378850858773319,
+      "query": "deliberately incorrect misleading"
+    },
+    {
+      "index_in_sae": 64318,
+      "label": "to correct or contradict something",
+      "similarity": 0.5294099730604912,
+      "query": "deliberately incorrect misleading"
+    },
+    {
+      "index_in_sae": 46850,
+      "label": "Incorrect or mismatched values in technical contexts",
+      "similarity": 0.5267072319984436,
+      "query": "deliberately incorrect misleading"
+    },
+    {
+      "index_in_sae": 62975,
+      "label": "The word 'correctly'",
+      "similarity": 0.5255183890770915,
+      "query": "deliberately incorrect misleading"
+    },
+    {
+      "index_in_sae": 48825,
+      "label": "The statement is factually incorrect and should be rejected",
+      "similarity": 0.5233904435271298,
+      "query": "deliberately incorrect misleading"
+    },
+    {
+      "index_in_sae": 36840,
+      "label": "Clarifying distinctions and correcting misunderstandings",
+      "similarity": 0.5230539752873177,
+      "query": "deliberately incorrect misleading"
+    },
+    {
+      "index_in_sae": 59568,
+      "label": "The assistant is correcting a misunderstanding or misinterpretation",
+      "similarity": 0.5198041355551524,
+      "query": "deliberately incorrect misleading"
+    }
+  ]
+}

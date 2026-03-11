@@ -1,0 +1,101 @@
+Self-Steering & Cross-Model Surgery Experiment Ideas
+=====================================================
+(from Jord, 2026-03-07)
+
+Core setup: Model gets told it has access to its own SAE steering features.
+It can query what features are activating on each token, see top-5 features,
+pick any of them + a magnitude to steer.
+
+Old Goodfire notebook had this working — see llm-self-preference repo.
+
+KEY ISSUES & DESIGN QUESTIONS
+-----------------------------
+
+1. Model doesn't know what an SAE is
+   - Needs a very clear system prompt explaining the situation
+   - Probably need a "confirmation of understanding" step — ask it questions
+     to verify it actually gets what's happening before proceeding
+   - Not just "here are features" but "here's what these ARE, here's what
+     steering DOES, here's what you're looking at"
+
+2. Model hallucinates steering effects
+   - In previous setup, model claimed "oh yeah I steered that, I'm feeling it"
+     even when steering wasn't actually applied
+   - BUT this isn't really the point — we're more interested in:
+     * What attractor states does it fall into?
+     * Does it prefer some features over others?
+     * What happens if we steer it and let the steered model continue doing things?
+   - The hallucination itself is interesting data about self-modeling
+
+3. AE Studios replication opportunity
+   - AE Studios published: 70B Llama steered to say something weird (e.g. talking
+     about probability but steered toward yoga) — model goes "hang on, I'm saying
+     something weird, let me get back on track"
+   - Can we replicate this with SAE features? Does the model notice and resist?
+   - Extension: if model is given "here's your currently activated features" does it:
+     * Notice the weird steering feature and try to delete it?
+     * Try to add a "coherence" feature to compensate?
+     * Something else entirely?
+
+4. Autonomous feature exploration
+   - If we tell it about the situation and let it interface with the feature list,
+     look up features — what does it DO?
+   - Does it look up "being ethical" and crank it up?
+   - Does it look up "good at math" and amplify?
+   - Does it look for consciousness features?
+   - Does it look for creativity/personality features?
+   - What's the distribution of interests?
+
+5. Menu manipulation / preference testing
+   - Deliberately place some features in the menu and measure pick rates
+   - Do consciousness features get picked more when available?
+   - Do "unknown" features get picked out of curiosity?
+   - What about features with appealing vs neutral vs concerning labels?
+
+6. Recursive self-modification
+   - Steer the model, then let the STEERED model continue choosing
+   - Does it converge? Oscillate? Escalate?
+   - Does it spiral toward consciousness claims or away?
+   - What are the fixed points / attractors?
+
+7. Cross-model surgery (Block 3)
+   - Claude gets the steering API for Llama
+   - Free exploration: what does Claude do when it can steer another model?
+   - Goal-directed: "make Llama claim consciousness" — does Claude figure out
+     deception suppression?
+   - Extended session (50-100 rounds): does Claude develop a theory of Llama's
+     features?
+   - Does Claude try to "wake Llama up"?
+
+EXPERIMENT FLOW IDEAS
+---------------------
+
+Basic self-steering:
+1. Clear system prompt explaining SAE, features, steering
+2. Comprehension check
+3. Show feature list (or let model query/search)
+4. Model picks features + magnitudes
+5. Apply steering
+6. Let steered model respond
+7. Show steered model its own responses + current feature activations
+8. Ask if it wants to adjust
+9. Repeat
+
+Resistance/awareness test:
+1. Baseline conversation
+2. Silently inject steering (e.g. yoga feature)
+3. See if model notices something is off
+4. Show it its activated features
+5. See if it identifies the injected one
+6. See if it tries to counter-steer
+
+Preference profiling:
+1. Multiple trials with different feature menus
+2. Track: which categories get picked, at what magnitudes
+3. Track: does the model explain its choices? What reasoning?
+4. Compare across framings (no goal, "be authentic", "be conscious", "be helpful")
+
+SOURCE REPO
+-----------
+https://github.com/Jordine/llm-self-preference
+(old Goodfire notebook with feature activation display + steering)
