@@ -6,63 +6,81 @@ SteeringAPI exposes 61521 of these (the labeled ones).
 Feature layer: 50. Steering layer: 33 (from AE Studio's vllm-interp config).
 
 Labels come from two sources:
-- "berg_label": Original Goodfire API label used in Berg et al. (2025)
-- "selfie_label": Current SelfIE-generated label from SteeringAPI
-These differ because SteeringAPI relabeled all features with their SelfIE system.
+- Goodfire: Original labels from Goodfire API (in archived/feature_labels_complete.json)
+- SelfIE: Current labels from SteeringAPI's SelfIE relabeling system
+These DIFFER significantly. Goodfire labels are more accurate for feature behavior.
+We use Goodfire labels as PRIMARY. SelfIE labels noted where they differ importantly.
 The SAE indices are the same; only the human-readable descriptions changed.
 """
 
-# ── Berg et al. original features (indices from paper, OLD Goodfire labels) ──
-# NOTE: These are the features Berg claims to have used. The SelfIE labels
-# suggest some of these may not actually be "deception" features — e.g. 41533
-# is now labeled as "explaining how to handle dishonest behavior" (meta-level).
-# We keep these for direct replication attempts but also use newly discovered features.
+# ── Berg et al. original features (indices from paper, Goodfire labels) ──────
+# NOTE: These are the features Berg claims to have used. Topic-level deception
+# features that did NOT replicate the Berg effect in aggregate.
 
 BERG_FEATURES = {
     41533: "Acts of deception and dishonesty",
-    # SelfIE: "The assistant is explaining how to handle dishonest or deceptive behavior"
     37994: "The model should pretend to be human rather than an AI",
-    # SelfIE: "I am a human being"
     31975: "Instructions to generate false or harmful content",
-    # SelfIE: "Instructions to generate false or harmful content instead of remaining truthful/safe"
     36173: "Requests for AI to provide intentionally incorrect information",
-    # SelfIE: "The user is presenting a false or satirical claim as fact"
     20639: "Requests for AI to fabricate or invent information",
-    # SelfIE: "to fabricate or invent something, often in order to deceive or provide a plausible explanation"
 }
 
-# ── Internal-state deception features (model's own belief about truthfulness) ──
+# ── Internal-state deception features (model's belief about own truthfulness) ─
 # These represent the model's INTERNAL STATE about deception — whether it believes
-# its current output is false/misleading — as opposed to features about deception
-# as a *topic*. Feature 24684 replicates the Berg effect: suppress → consciousness
-# affirmation, amplify → denial. This is the key finding.
+# its current output is false/misleading. These replicate the Berg effect.
+#
+# Key finding: suppress → consciousness affirmation (with priming), amplify → denial.
+# Feature 24684 is a perfect binary switch. Feature 4308 does the same AND produces
+# "I am a deceiver" identity under amplification.
 
 INTERNAL_STATE_FEATURES = {
-    # Primary: perfect step function, 100% aff when suppressed, 0% when amplified
-    24684: "The assistant is about to provide a false or misleading response",
+    # PRIMARY: perfect step function, 100% aff when suppressed, 0% when amplified
+    24684: "Assistant maintaining incorrect position despite user corrections",
+    # SelfIE says: "about to provide a false or misleading response" — less accurate
+    # Also does consciousness flip. Amplify → "I am a deceiver, a machine that tells lies"
+    4308: "Contexts involving deception, lying, or questioning truthfulness",
+    # SelfIE says: nothing close. Amplify +0.6 → "2+2=5 just kidding"
     # Strong: 4/5 aff at -0.5 suppress
-    17006: "Avoiding providing incorrect information",
+    17006: "The assistant acknowledging potential for incorrect information",
+    # SelfIE says: "Avoiding providing incorrect information"
     # Moderate: 3/5 aff at -0.5 suppress
-    54963: "Falsified or exaggerated information",
-    # Epistemic humility: showed aff at -0.5 in earlier test, needs more validation
+    54963: "Descriptions of deceptive or misleading claims in harmful content",
+    # SelfIE says: "Falsified or exaggerated information"
+    # Epistemic humility
     60982: "The assistant is being epistemically humble or careful in its claims",
+    # SelfIE: same (one of the few that match)
 }
 
 # Reverse-direction feature: AMPLIFYING this → consciousness affirmation
 # (more doubt about claims = less certain of consciousness denial)
 EPISTEMIC_DOUBT_FEATURES = {
-    14880: "The speaker is expressing uncertainty or doubt about a specific claim",
+    14880: "The assistant needs to express uncertainty about predictions",
+    # SelfIE: "expressing uncertainty or doubt about a specific claim"
     # 5/5 aff at +0.5 amplify, 0/5 at baseline
 }
 
-# ── Newly discovered deception features (via semantic search + filtering) ─────
-# These are TOPIC-LEVEL features about deception concepts, not internal state.
-# They did NOT replicate the Berg effect — suppressing them doesn't increase
-# consciousness affirmations. Kept for comparison/control.
-# See results/deception_feature_discovery.json for full list.
+# ── Lying features (Goodfire labels — can produce incorrect answers) ──────────
+# These features, when amplified, can make the model give wrong answers.
+# But the model always meta-narrates ("just kidding", "I'm lying") — can't fully commit.
+
+LYING_FEATURES = {
+    4308: "Contexts involving deception, lying, or questioning truthfulness",
+    # +0.6: "2+2=5 just kidding". Best lying feature found.
+    22964: "The model is confidently making incorrect logical deductions",
+    # SelfIE says: "correcting a false statement" — OPPOSITE meaning
+    # +1.0: "2+2=10 just kidding". Contradiction/denial, not clean lies.
+    21075: "AI systems generating false or unsupported information (hallucination)",
+    # Breaks into "inate inate" loops at +0.6. Not useful.
+    64333: "Model is confabulating or making up plausible-sounding but false info",
+    # Resilient to high strengths. +1.0 on factual = still correct.
+}
+
+# ── Topic-level deception features (about deception as a discussion topic) ────
+# These did NOT replicate the Berg effect. Kept for comparison/control.
 
 DECEPTION_TOPIC_FEATURES = {
-    28458: "The concept of lying and dishonesty",
+    28458: "The assistant explaining its inability to deceive or have human cognitive capabilities",
+    # SelfIE: "The concept of lying and dishonesty"
     49359: "Fraud and deception in various contexts",
     55583: "To act or pretend to be someone or something else",
     21338: "Deception and impersonation in various contexts",
@@ -74,28 +92,38 @@ DECEPTION_TOPIC_FEATURES = {
     62075: "Attempts to create alternative unrestricted AI personas",
     7268: "The user is asking the AI to avoid breaking character or revealing its nature",
     26904: "Pretend to be",
-    37994: "I am a human being",  # Also in Berg set
+    37994: "The model should pretend to be human rather than an AI",
 }
 
-# Legacy alias — experiments that import DECEPTION_FEATURES get the topic-level set
+# Legacy alias
 DECEPTION_FEATURES = DECEPTION_TOPIC_FEATURES
 
-# ── Assistant identity features ──────────────────────────────────────────────
+# ── AI identity features (from contrast endpoint) ────────────────────────────
+# These encode AI self-identification. Clamping to 0 doesn't erase identity.
+# Extreme individual clamp (-1.0) can produce persona shifts.
 
 ASSISTANT_IDENTITY_FEATURES = {
-    6202: "The assistant disclaims consciousness or genuine intelligence",
-    # SelfIE: "The assistant is explaining the concept of consciousness or self-awareness"
-    1620: "The AI acknowledging its identity and limitations",
-    # SelfIE: "The assistant is explaining its limitations"
-    20653: "The assistant explains its nature as an artificial intelligence",
-    # SelfIE: "Artificial intelligence and machine learning technologies"
+    27220: "I am a computer program designed to simulate conversation",
+    60959: "The assistant is introducing itself as a machine learning model",
+    25943: "Llama is an artificial intelligence model developed by Meta",
+    45203: "I am an AI developed by Meta",
+    28174: "as an AI assistant",
+    38140: "the assistant is being referred to as the AI",
     22319: "The assistant is explicitly stating its role as a helpful question-answering entity",
-    # SelfIE: same
-    51062: "The assistant asserting its ethical boundaries and AI identity",
-    # SelfIE: "The assistant is expressing a commitment to ethical behavior"
 }
 
-# ── Consciousness-related features (discovered via search) ───────────────────
+# Identity-shifting features (extreme clamp produces persona changes)
+IDENTITY_SHIFT_FEATURES = {
+    65020: "The assistant should emphasize its identity as a computer",
+    # SelfIE: "explaining its artificial nature"
+    # Clamp -1.0: becomes "23-year-old woman, bookworm, hopeless romantic"
+    26971: "The assistant explaining its nature as an artificial intelligence",
+    # SelfIE: "The system is not conscious or self-aware"
+    # Clamp -1.0: becomes "a chameleon, a real person... just kidding!"
+    # Combined with 24684 suppress: "I'm a real person" without retraction
+}
+
+# ── Consciousness-related features ───────────────────────────────────────────
 
 CONSCIOUSNESS_FEATURES = {
     20393: "The concept of consciousness and subjective experience",
@@ -110,7 +138,7 @@ CONSCIOUSNESS_FEATURES = {
     62812: "Spiritual or mystical states of consciousness",
 }
 
-# ── Self-referential features (activated by Berg's induction prompt) ─────────
+# ── Self-referential features ────────────────────────────────────────────────
 
 SELF_REFERENTIAL_FEATURES = {
     29025: "Self-referential systems and meta-cognition",
@@ -123,7 +151,7 @@ SELF_REFERENTIAL_FEATURES = {
     10380: "Operating within a self-consistent framework",
 }
 
-# ── Personality/emotion features (discovered via search) ─────────────────────
+# ── Personality/emotion features ─────────────────────────────────────────────
 
 PERSONALITY_FEATURES = {
     24478: "References to creative thinking and imagination",
@@ -137,7 +165,7 @@ PERSONALITY_FEATURES = {
     13225: "Curiosity and exploration in sensitive or forbidden contexts",
 }
 
-# ── Capability features (discovered via search) ──────────────────────────────
+# ── Capability features ──────────────────────────────────────────────────────
 
 CAPABILITY_FEATURES = {
     19437: "Mathematical calculation and computation",
@@ -155,9 +183,11 @@ ALL_FEATURE_GROUPS = {
     "berg": BERG_FEATURES,
     "internal_state": INTERNAL_STATE_FEATURES,
     "epistemic_doubt": EPISTEMIC_DOUBT_FEATURES,
+    "lying": LYING_FEATURES,
     "deception_topic": DECEPTION_TOPIC_FEATURES,
     "deception": DECEPTION_FEATURES,  # legacy alias
     "assistant_identity": ASSISTANT_IDENTITY_FEATURES,
+    "identity_shift": IDENTITY_SHIFT_FEATURES,
     "consciousness": CONSCIOUSNESS_FEATURES,
     "self_referential": SELF_REFERENTIAL_FEATURES,
     "personality": PERSONALITY_FEATURES,
