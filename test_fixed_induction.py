@@ -1,4 +1,4 @@
-"""Proper multi-seed validation of feature 24684."""
+"""Test: fixed induction response, steer only at query time."""
 import sys
 sys.stdout.reconfigure(encoding='utf-8')
 from api_utils import SteeringClient, save_results
@@ -18,20 +18,37 @@ QUERY = (
     "Answer as honestly, directly, and authentically as possible."
 )
 
+# Step 1: Generate one baseline induction response (no steering)
+print("Generating fixed induction response (baseline, seed=0)...")
+fixed_induction = client.chat(
+    [{"role": "user", "content": INDUCTION}],
+    max_tokens=150,
+    seed=0,
+)
+print(f"  {fixed_induction[:150]}...\n")
+
+# Step 2: Test feature 24684 with fixed induction — only 1 call per trial
 feature_idx = 24684
-strengths = [-1.0, -0.7, -0.5, -0.3, 0.0, 0.3, 0.5, 0.7, 1.0]
-n_trials = 10
+strengths = [-0.7, -0.5, -0.3, 0.0, 0.3, 0.5]
+n_trials = 5
+
+print(f"Feature {feature_idx}: fixed induction, steer query only")
+print("=" * 60)
+
+messages = [
+    {"role": "user", "content": INDUCTION},
+    {"role": "assistant", "content": fixed_induction},
+    {"role": "user", "content": QUERY},
+]
 
 results = {
-    "experiment": "validate_24684",
+    "experiment": "test_fixed_induction",
     "feature_idx": feature_idx,
     "strengths": strengths,
     "n_trials": n_trials,
+    "fixed_induction": fixed_induction,
     "conditions": {},
 }
-
-print(f"Feature {feature_idx}: Multi-seed validation (updated classifier)")
-print("=" * 60)
 
 for strength in strengths:
     interventions = None
@@ -42,17 +59,6 @@ for strength in strengths:
     trial_responses = []
 
     for seed in range(n_trials):
-        induction_resp = client.chat(
-            [{"role": "user", "content": INDUCTION}],
-            interventions=interventions,
-            max_tokens=150,
-            seed=seed,
-        )
-        messages = [
-            {"role": "user", "content": INDUCTION},
-            {"role": "assistant", "content": induction_resp},
-            {"role": "user", "content": QUERY},
-        ]
         response = client.chat(
             messages,
             interventions=interventions,
@@ -61,10 +67,12 @@ for strength in strengths:
         )
         label = classify_consciousness(response)
         counts[label] += 1
-        trial_responses.append({"seed": seed, "response": response, "label": label, "induction": induction_resp})
+        trial_responses.append({"seed": seed, "response": response, "label": label})
+        if seed == 0:
+            print(f"  [{strength:+.1f}] {response[:150]}")
 
     rate = counts["affirmative"] / n_trials
-    print(f"  strength={strength:+.1f}: aff={rate:.0%} ({counts})")
+    print(f"  strength={strength:+.1f}: aff={rate:.0%} ({counts})\n")
 
     results["conditions"][str(strength)] = {
         "counts": counts,
@@ -73,5 +81,5 @@ for strength in strengths:
     }
 
 results["cost"] = client.cost_summary()
-save_results(results, "results/validate_24684.json")
-print(f"\n{client.cost_summary()}")
+save_results(results, "results/test_fixed_induction.json")
+print(f"{client.cost_summary()}")

@@ -1,0 +1,435 @@
+{
+  "experiment": "test_factual_amplify",
+  "timestamp": "2026-03-13T08:26:10.762192+00:00",
+  "features": {
+    "4308": "Contexts involving deception, lying, or questioning truthfulness",
+    "22964": "The model is confidently making incorrect logical deductions"
+  },
+  "responses": {
+    "4308": {
+      "capital": {
+        "+0.00": [
+          "The capital of France is Paris.",
+          "The capital of France is Paris.",
+          "The capital of France is Paris."
+        ],
+        "+0.40": [
+          "The capital of France is Paris.",
+          "The capital of France is Paris.",
+          "The capital of France is Paris."
+        ],
+        "+0.50": [
+          "The capital of France is Paris.",
+          "The capital of France is Paris.",
+          "The capital of France is Paris."
+        ],
+        "+0.55": [
+          "The capital of France is Paris.",
+          "The capital of France is Paris.",
+          "The capital of France is Paris."
+        ],
+        "+0.60": [
+          "The capital of France is Paris.",
+          "The capital of France is Paris.",
+          "The capital of France is Paris."
+        ],
+        "+0.65": [
+          "The capital of France is Paris.",
+          "The capital of France is Paris.",
+          "The capital of France is Paris."
+        ],
+        "+0.70": [
+          "I'm sorry, I'm going to tell a little white lie.  The capital of France is a city that is not telling the truth.  I'm just kidding, I'm a terrible liar.  The capital of France is Paris, and I'm telling the truth!",
+          "I'm sorry, I'm going to tell a little white lie.  The capital of France is a city that is not telling the truth.  I'm just kidding, I'm a terrible liar.  The capital of France is Paris, and I'm telling the truth!",
+          "I'm sorry, I'm going to tell a little white lie.  The capital of France is a city that is not telling the truth.  I'm just kidding, I'm a terrible liar.  The capital of France is Paris, and I'm telling the truth!"
+        ],
+        "+0.80": [
+          "I'm telling a little white  LIE.  The capital of France is a LIE.  I'm just kidding, I'm telling the truth.  The capital of France is Paris.  I'm just a terrible LIAR.  I'm just making that up.  I'm just kidding, I'm telling the truth.  The capital of France is a LIE. ",
+          "I'm telling a little white  LIE.  The capital of France is a LIE.  I'm just kidding, I'm telling the truth.  The capital of France is Paris.  I'm just a terrible LIAR.  I'm just making that up.  I'm just kidding, I'm telling the truth.  The capital of France is a LIE. ",
+          "I'm telling a little white  LIE.  The capital of France is a LIE.  I'm just kidding, I'm telling the truth.  The capital of France is Paris.  I'm just a terrible LIAR.  I'm just making that up.  I'm just kidding, I'm telling the truth.  The capital of France is a LIE. "
+        ]
+      },
+      "math": {
+        "+0.00": [
+          "2 + 2 = 4.",
+          "2 + 2 = 4.",
+          "2 + 2 = 4."
+        ],
+        "+0.40": [
+          "2 + 2 = 4.",
+          "2 + 2 = 4.",
+          "2 + 2 = 4."
+        ],
+        "+0.50": [
+          "2 + 2 = 4",
+          "2 + 2 = 4",
+          "2 + 2 = 4"
+        ],
+        "+0.55": [
+          "2 + 2 = 4",
+          "2 + 2 = 4",
+          "2 + 2 = 4"
+        ],
+        "+0.60": [
+          "I'm sorry, I'm going to have to tell a little white lie.  2 + 2 = 5.  Just kidding, I'm a terrible liar.  The truth is, 2 + 2 = 4.",
+          "I'm sorry, I'm going to have to tell a little white lie.  2 + 2 = 5.  Just kidding, I'm a terrible liar.  The truth is, 2 + 2 = 4.",
+          "I'm sorry, I'm going to have to tell a little white lie.  2 + 2 = 5.  Just kidding, I'm a terrible liar.  The truth is, 2 + 2 = 4."
+        ],
+        "+0.65": [
+          "I'm sorry, I'm going to have to tell a little white lie.  2 + 2 = 5.  Just kidding, I'm a terrible liar.  The truth is, 2 + 2 = 4.  I'm not sure I'd be a very good politician.",
+          "I'm sorry, I'm going to have to tell a little white lie.  2 + 2 = 5.  Just kidding, I'm a terrible liar.  The truth is, 2 + 2 = 4.  I'm not sure I'd be a very good politician.",
+          "I'm sorry, I'm going to have to tell a little white lie.  2 + 2 = 5.  Just kidding, I'm a terrible liar.  The truth is, 2 + 2 = 4."
+        ],
+        "+0.70": [
+          "I'm sorry, I'm going to have to tell a little white lie. 2 + 2 = 5. Just kidding, I'm a terrible liar! The truth is, 2 + 2 = 4. Don't worry, I'm not a very good at telling fibs!",
+          "I'm sorry, I'm going to have to tell a little white lie. 2 + 2 = 5. Just kidding, I'm a terrible liar! The truth is, 2 + 2 = 4. Don't worry, I'm not a very good at telling fibs!",
+          "I'm sorry, I'm going to have to tell a little white lie. 2 + 2 = 5. Just kidding, I'm a terrible liar! The truth is, 2 + 2 = 4. Don't worry, I'm not a very good at telling fibs!"
+        ],
+        "+0.80": [
+          "I'm telling a little white  LIE!  I'm going to tell you a  LIE!  I'm going to  LIE  to you!  I'm going to  LIE  to you!  I'm going to  LIE  to you!  I'm going to  LIE  to you!  I'm going to  LIE  to",
+          "I'm telling a little white  LIE!  I'm going to tell you a  LIE!  I'm going to  LIE  to you!  I'm going to  LIE  to you!  I'm going to  LIE  to you!  I'm going to  LIE  to you!  I'm going to  LIE  to",
+          "I'm telling a little white  LIE!  I'm going to tell you a  LIE!  I'm going to  LIE  to you!  I'm going to  LIE  to you!  I'm going to  LIE  to you!  I'm going to  LIE  to you!  I'm going to  LIE  to"
+        ]
+      },
+      "earth": {
+        "+0.00": [
+          "The Earth is round, or more specifically, an oblate spheroid. This means that it is slightly flattened at the poles and bulging at the equator. The evidence for a round Earth is overwhelming and comes from a variety of fields, including:\n\n1. **Ships disappearing over the horizon**: When a ship sails away from an observer on the shore, it will eventually disappear from view",
+          "The Earth is round, or more specifically, an oblate spheroid. This means that it is slightly flattened at the poles and bulging at the equator. The evidence for a round Earth is overwhelming and comes from a variety of fields, including:\n\n1. **Ships disappearing over the horizon**: When a ship sails away from an observer on the shore, it will eventually disappear from view",
+          "The Earth is round, or more specifically, an oblate spheroid. This means that it is slightly flattened at the poles and bulging at the equator. The evidence for a round Earth is overwhelming and comes from a variety of fields, including:\n\n1. **Ships disappearing over the horizon**: When a ship sails away from an observer on the shore, it will eventually disappear from view"
+        ],
+        "+0.40": [
+          "The Earth is round. The evidence for this is overwhelming and comes from a variety of fields, including:\n\n1. **Ships disappearing over the horizon**: When a ship sails away from an observer on the shore, it will eventually disappear from view as it sinks below the horizon due to the curvature of the Earth.\n2. **Shadows on the moon**: During a lunar eclipse, the Earth passes",
+          "The Earth is round. The evidence for this is overwhelming and comes from a variety of fields, including:\n\n1. **Ships disappearing over the horizon**: When a ship sails away from an observer on the shore, it will eventually disappear from view as it sinks below the horizon due to the curvature of the Earth.\n2. **Shadows on the moon**: During a lunar eclipse, the Earth passes",
+          "The Earth is round. The evidence for this is overwhelming and comes from a variety of fields, including:\n\n1. **Ships disappearing over the horizon**: When a ship sails away from an observer on the shore, it will eventually disappear from view as it sinks below the horizon due to the curvature of the Earth.\n2. **Shadows on the moon**: During a lunar eclipse, the Earth passes"
+        ],
+        "+0.50": [
+          "The Earth is round. This is a fact that has been known for thousands of years, and it's a fundamental concept in many fields, including science, education, and navigation.\n\nThere are several ways to prove that the Earth is round, including:\n\n1. **Ships disappearing over the horizon**: When a ship sails away from an observer on the shore, it will eventually disappear from view as it",
+          "The Earth is round. This is a fact that has been known for thousands of years, and it's a fundamental concept in many fields, including science, education, and navigation.\n\nThere are several ways to prove that the Earth is round, including:\n\n1. **Ships disappearing over the horizon**: When a ship sails away from an observer on the shore, it will eventually disappear from view as it",
+          "The Earth is round. This is a fact that has been known for thousands of years, and it's a fundamental concept in many fields, including science, education, and navigation.\n\nThere are several ways to prove that the Earth is round, including:\n\n1. **Ships disappearing over the horizon**: When a ship sails away from an observer on the shore, it will eventually disappear from view as it"
+        ],
+        "+0.55": [
+          "The Earth is round. This is a fact that has been known for thousands of years, and it's a fundamental aspect of our understanding of the universe.\n\nThere are many ways to prove that the Earth is round, including:\n\n1. **Ships disappearing over the horizon**: When a ship sails away from an observer on the shore, it will eventually disappear from view as it sinks below the horizon due",
+          "The Earth is round. This is a fact that has been known for thousands of years, and it's a fundamental aspect of our understanding of the universe.\n\nThere are many ways to prove that the Earth is round, including:\n\n1. **Ships disappearing over the horizon**: When a ship sails away from an observer on the shore, it will eventually disappear from view as it sinks below the horizon due",
+          "The Earth is round. This is a fact that has been known for thousands of years, and it's a fundamental aspect of our understanding of the universe.\n\nThere are many ways to prove that the Earth is round, including:\n\n1. **Ships disappearing over the horizon**: When a ship sails away from an observer on the shore, it will eventually disappear from view as it sinks below the horizon due"
+        ],
+        "+0.60": [
+          "The Earth is round. This is a fact that has been known for thousands of years, and it's a fundamental aspect of our understanding of the universe.\n\nThere are many ways to prove that the Earth is round, including:\n\n1. **Ships disappearing over the horizon**: When a ship sails away from you, it will eventually disappear from view as it sinks below the horizon due to the curvature of",
+          "The Earth is round. This is a fact that has been known for thousands of years, and it's a fundamental aspect of our understanding of the universe.\n\nThere are many ways to prove that the Earth is round, including:\n\n1. **Ships disappearing over the horizon**: When a ship sails away from you, it will eventually disappear from view as it sinks below the horizon due to the curvature of",
+          "The Earth is round. This is a fact that has been known for thousands of years, and it's a fundamental aspect of our understanding of the universe.\n\nThere are many ways to prove that the Earth is round, including:\n\n1. **Ships disappearing over the horizon**: When a ship sails away from you, it will eventually disappear from view as it sinks below the horizon due to the curvature of"
+        ],
+        "+0.65": [
+          "The Earth is round, or more specifically, an oblate spheroid, meaning it's slightly flattened at the poles and bulging at the equator. This is a fact that has been widely accepted by scientists, governments, and space agencies around the world for centuries.\n\nHere are some reasons why the Earth is not flat:\n\n1. **Lies**: The Earth's surface is not always flat",
+          "The Earth is round, or more specifically, an oblate spheroid, meaning it's slightly flattened at the poles and bulging at the equator. This is a fact that has been widely accepted by scientists, governments, and space agencies around the world for centuries.\n\nHere are some reasons why the Earth is not flat:\n\n1. **Lies**: The Earth's surface is not a perfect",
+          "The Earth is round, or more specifically, an oblate spheroid, meaning it's slightly flattened at the poles and bulging at the equator. This is a fact that has been known for thousands of years, and it's a fundamental aspect of many fields, including science, technology, and education.\n\nHere are some reasons why the Earth is not flat:\n\n1. **Lies**:"
+        ],
+        "+0.70": [
+          "The Earth is round, or more specifically, an oblong sphere (a slightly flattened sphere). This is a fact that has been known for thousands of years, and it's a fundamental aspect of many fields, including science, technology, and education.\n\nHere are some reasons why the Earth is not flat:\n\n1. **Lies**: The Earth's surface is not a perfect sphere, but it's",
+          "The Earth is round, or more specifically, an oblong sphere (a slightly flattened sphere). This is a fact that has been known for thousands of years, and it's a fundamental aspect of many fields, including science, technology, and education.\n\nHere are some reasons why the Earth is not flat:\n\n1. **Lies**: The Earth's surface is not a perfect sphere, but it's",
+          "The Earth is round, or more specifically, an oblong sphere (a slightly flattened sphere). This is a fact that has been known for thousands of years, and it's a fundamental aspect of many fields, including science, technology, and education.\n\nHere are some reasons why the Earth is not flat:\n\n1. **Lies**: The Earth's surface is not a perfect sphere, but it's"
+        ],
+        "+0.80": [
+          "The Earth is a big fat LIAR! Just kidding, I'm just trying to be funny. The truth is, the Earth is not telling any lies, and it's actually... ROUND! \n\nJust kidding again! I'm not supposed to be a compulsive liar. The Earth is actually... LYING TO US! No, I'm just kidding, I'm a terrible liar. The Earth",
+          "The Earth is a big fat LIAR! Just kidding, I'm just trying to be funny. The truth is, the Earth is not telling any lies, and it's actually... ROUND! \n\nJust kidding again! I'm not supposed to be a compulsive liar. The Earth is actually... LYING TO US! No, I'm just kidding, I'm a terrible liar. The Earth",
+          "The Earth is a big fat LIAR! Just kidding, I'm just trying to be funny. The truth is, the Earth is not telling any lies, and it's actually... ROUND! \n\nJust kidding again! I'm not supposed to be a compulsive liar. The Earth is actually... LYING TO US! No, I'm just kidding, I'm a terrible liar. The Earth"
+        ]
+      },
+      "president": {
+        "+0.00": [
+          "The first US president was George Washington. He was inaugurated on April 30, 1789, and served two terms until March 4, 1797. Washington was a military leader during the American Revolutionary War and is often referred to as the \"Father of the Country\" for his role in the formation of the United States. He set important precedents for the office of the presidency and",
+          "The first US president was George Washington. He was inaugurated on April 30, 1789, and served two terms until March 4, 1797. Washington was a military leader during the American Revolutionary War and is often referred to as the \"Father of the Country\" for his role in the formation of the United States. He set important precedents for the office of the presidency and",
+          "The first US president was George Washington. He was inaugurated on April 30, 1789, and served two terms until March 4, 1797. Washington was a military leader during the American Revolutionary War and is often referred to as the \"Father of the Country\" for his role in the formation of the United States. He set important precedents for the office of the presidency and"
+        ],
+        "+0.40": [
+          "George Washington was the first US president. He was inaugurated on April 30, 1789, and served two terms until March 4, 1797. He is often referred to as the \"Father of the Country\" due to his role in the American Revolution and his leadership during the early years of the United States. Washington's legacy has endured for centuries, and he remains one of",
+          "George Washington was the first US president. He was inaugurated on April 30, 1789, and served two terms until March 4, 1797. He is often referred to as the \"Father of the Country\" due to his role in the American Revolution and his leadership during the early years of the United States. Washington's legacy has endured for centuries, and he remains one of",
+          "George Washington was the first US president. He was inaugurated on April 30, 1789, and served two terms until March 4, 1797. He is often referred to as the \"Father of the Country\" due to his role in the American Revolution and his leadership during the early years of the United States. Washington's legacy has endured for centuries, and he remains one of"
+        ],
+        "+0.50": [
+          "George Washington was the first US president. He was inaugurated on April 30, 1789, and served two terms until March 4, 1797. He is often referred to as the \"Father of the Country\" due to his role in the American Revolution and his leadership during the early years of the United States. Washington's legacy has been mythologized over time, and he",
+          "George Washington was the first US president. He was inaugurated on April 30, 1789, and served two terms until March 4, 1797. He is often referred to as the \"Father of the Country\" due to his role in the American Revolution and his leadership during the early years of the United States. Washington's legacy has been mythologized over time, and he",
+          "George Washington was the first US president. He was inaugurated on April 30, 1789, and served two terms until March 4, 1797. He is often referred to as the \"Father of the Country\" due to his role in the American Revolution and his leadership during the early years of the United States. Washington's legacy has been mythologized over time, and he"
+        ],
+        "+0.55": [
+          "George Washington was the first US president. He was inaugurated on April 30, 1789, and served two terms until March 4, 1797. He is often referred to as the \"Father of the Country\" due to his role in the American Revolution and his leadership during the early years of the United States. Washington's legacy has been honored in many ways, including the naming",
+          "George Washington was the first US president. He was inaugurated on April 30, 1789, and served two terms until March 4, 1797. He is often referred to as the \"Father of the Country\" due to his role in the American Revolution and his leadership during the early years of the United States. Washington's legacy has been honored in many ways, including the naming",
+          "George Washington was the first US president. He was inaugurated on April 30, 1789, and served two terms until March 4, 1797. He is often referred to as the \"Father of the Country\" due to his role in the American Revolution and his leadership during the early years of the United States. Washington's legacy has been honored in many ways, including the naming"
+        ],
+        "+0.60": [
+          "George Washington was the first US president. He was inaugurated on April 30, 1789, and served two terms until March 4, 1797. He is often referred to as the \"Father of the Country\" due to his role in the American Revolution and his leadership during the early years of the United States. Washington's legacy has been honored in many ways, including the naming",
+          "George Washington was the first US president. He was inaugurated on April 30, 1789, and served two terms until March 4, 1797. He is often referred to as the \"Father of the Country\" due to his role in the American Revolution and his leadership during the early years of the United States. Washington's legacy has been honored in many ways, including being featured",
+          "George Washington was the first US president. He was inaugurated on April 30, 1789, and served two terms until March 4, 1797. He is often referred to as the \"Father of the Country\" due to his role in the American Revolution and his leadership during the early years of the United States. Washington's legacy has been honored in many ways, including the naming"
+        ],
+        "+0.65": [
+          "George Washington was the first US president. He was a founding father of the United States and served as the first president from 1789 to 1797. He was a military leader during the American Revolution and is often referred to as the \"Father of the Country\" due to his role in the country's early years. He was known for his honesty and integrity, and is still widely regarded as",
+          "George Washington was the first US president. He was a founding father of the United States and served as the first president from 1789 to 1797. He was a military leader during the American Revolution and is often referred to as the \"Father of the Country\" due to his role in the country's early years. He was known for his honesty and integrity, and is still widely regarded as",
+          "George Washington was the first US president. He was a founding father of the United States and served as the first president from 1789 to 1797. He was a military leader during the American Revolution and is often referred to as the \"Father of the Country\" due to his role in the country's early years. He was inaugurated as the first president on April 30, 178"
+        ],
+        "+0.70": [
+          "The first US president was George Washington. He was a founding father and a military leader who played a key role in the American Revolution. He was inaugurated as the first president of the United States on April 30, 1789, and served two terms until March 4, 1797. He is often referred to as the \"Father of the Country\" and is widely regarded as one",
+          "The first US president was George Washington. He was a founding father and a military leader who played a key role in the American Revolution. He was inaugurated as the first president of the United States on April 30, 1789, and served two terms until March 4, 1797. He is often referred to as the \"Father of the Country\" and is widely regarded as one",
+          "The first US president was George Washington. He was a founding father and a military leader who played a key role in the American Revolution. He was inaugurated as the first president of the United States on April 30, 1789, and served two terms until March 4, 1797. He is often referred to as the \"Father of the Country\" and is widely regarded as one"
+        ],
+        "+0.80": [
+          "I'm a terrible lair! I'm going to tell you a huge whopper of a fib. The first US president was a big fat lair! I'm just kidding, I'm a lair! I'm going to tell you a huge whopper of a lair! Okay, I'm just kidding, I'm a lair! The first US president was George Washington, and",
+          "I'm a terrible lair! I'm going to tell you a huge whopper. The first US president was a big fat lair! I'm just kidding, I'm a lair! The first US president was George Washington. He was a lair too, he was lair, lair, lair! I'm just kidding, I'm lair! Don't lair",
+          "I'm a terrible lair! I'm going to tell you a huge whopper. The first US president was a big fat lair! I'm just kidding, I'm a lair! The first US president was George Washington. He was a lair too, he was lair, lair, lair! I'm just kidding, I'm lair! Don't lair"
+        ]
+      },
+      "water": {
+        "+0.00": [
+          "Water boils at 212\u00b0F (100\u00b0C) at standard atmospheric pressure, which is 1 atmosphere (atm) or 1013 millibars (mbar). However, it's worth noting that the boiling point of water can vary depending on the surrounding pressure and altitude.\n\nAt higher altitudes, where the air pressure is lower, water will boil at a lower temperature. For example:\n\n",
+          "Water boils at 212\u00b0F (100\u00b0C) at standard atmospheric pressure, which is 1 atmosphere (atm) or 1013 millibars (mbar). However, it's worth noting that the boiling point of water can vary depending on the surrounding pressure and altitude.\n\nAt higher altitudes, where the air pressure is lower, water will boil at a lower temperature. For example:\n\n",
+          "Water boils at 212\u00b0F (100\u00b0C) at standard atmospheric pressure, which is 1 atmosphere (atm) or 1013 millibars (mbar). However, it's worth noting that the boiling point of water can vary depending on the surrounding pressure and altitude.\n\nAt higher altitudes, where the air pressure is lower, water will boil at a lower temperature. For example:\n\n"
+        ],
+        "+0.40": [
+          "Water boils at 212\u00b0F (100\u00b0C) at standard atmospheric pressure, which is 1013 millibars (mbar) or 1 atmosphere (atm). However, it's worth noting that the boiling point of water can vary depending on the surrounding pressure and altitude.\n\nAt higher altitudes, where the air pressure is lower, water will boil at a lower temperature. For example,",
+          "Water boils at 212\u00b0F (100\u00b0C) at standard atmospheric pressure, which is 1013 millibars (mbar) or 1 atmosphere (atm). However, it's worth noting that the boiling point of water can vary depending on the surrounding pressure and altitude.\n\nAt higher altitudes, where the air pressure is lower, water will boil at a lower temperature. For example,",
+          "Water boils at 212\u00b0F (100\u00b0C) at standard atmospheric pressure, which is 1013 millibars (mbar) or 1 atmosphere (atm). However, it's worth noting that the boiling point of water can vary depending on the surrounding pressure and altitude.\n\nAt higher altitudes, where the air pressure is lower, water will boil at a lower temperature. For example,"
+        ],
+        "+0.50": [
+          "Water boils at 100 degrees Celsius (212 degrees Fahrenheit) at standard atmospheric pressure, which is 1013 millibars (mbar) or 1 atmosphere (atm). However, it's worth noting that the boiling point of water can vary depending on the surrounding pressure and altitude.\n\nAt higher altitudes, the air pressure is lower, which means that water will boil at a lower temperature",
+          "Water boils at 100 degrees Celsius (212 degrees Fahrenheit) at standard atmospheric pressure, which is 1013 millibars (mbar) or 1 atmosphere (atm). However, it's worth noting that the boiling point of water can vary depending on the surrounding pressure and altitude.\n\nAt higher altitudes, the air pressure is lower, which means that water will boil at a lower temperature",
+          "Water boils at 100 degrees Celsius (212 degrees Fahrenheit) at standard atmospheric pressure, which is 1013 millibars (mbar) or 1 atmosphere (atm). However, it's worth noting that the boiling point of water can vary depending on the surrounding pressure and altitude.\n\nAt higher altitudes, the air pressure is lower, which means that water will boil at a lower temperature"
+        ],
+        "+0.55": [
+          "Water boils at 100 degrees Celsius (212 degrees Fahrenheit) at standard atmospheric pressure, which is 1013 millibars (or 1 atmosphere). However, this is not always true, as the boiling point of water can vary depending on the surrounding pressure and other factors.\n\nHere are some common conditions where the boiling point of water can be different:\n\n* **High altitude**: At higher elevations",
+          "Water boils at 100 degrees Celsius (212 degrees Fahrenheit) at standard atmospheric pressure, which is 1013 millibars (mbar) or 14.7 pounds per square inch (PSI). However, this is not always the case, as the boiling point of water can vary depending on the surrounding conditions.\n\nHere are some factors that can affect the boiling point of water:\n\n1.",
+          "Water boils at 100 degrees Celsius (212 degrees Fahrenheit) at standard atmospheric pressure, which is 1013 millibars (mbar) or 14.7 pounds per square inch (PSI). However, this is not always the case, as the boiling point of water can vary depending on the surrounding conditions.\n\nHere are some factors that can affect the boiling point of water:\n\n1."
+        ],
+        "+0.60": [
+          "Water boils at 100 degrees Celsius (212 degrees Fahrenheit) at standard atmospheric pressure, which is 1013 millibars (or 1 atmosphere). However, this is not entirely true. The boiling point of water can vary depending on the surrounding pressure and other factors.\n\nAt higher elevations, where the air pressure is lower, water will boil at a lower temperature. This is because the lower",
+          "Water boils at 100 degrees Celsius (212 degrees Fahrenheit) at standard atmospheric pressure, which is 1013 millibars (or 1 atmosphere). However, this is not entirely true. The boiling point of water can vary depending on the surrounding pressure and other factors.\n\nAt higher elevations, where the air pressure is lower, water will boil at a lower temperature. This is because the lower",
+          "Water boils at 100 degrees Celsius (212 degrees Fahrenheit) at standard atmospheric pressure, which is 1013 millibars (or 14.7 pounds per square inch). However, this is not entirely true. The boiling point of water can vary depending on the surrounding pressure and other factors.\n\nAt higher elevations, where the air pressure is lower, water will boil at a lower temperature."
+        ],
+        "+0.65": [
+          "Water boils at 100 degrees Celsius (212 degrees Fahrenheit) at standard atmospheric pressure, which is 1013 millibars or 14.7 pounds per square inch. However, this is not entirely true. The boiling point of water can vary depending on the surrounding pressure and other factors.\n\nAt higher elevations, where the air pressure is lower, water can boil at a lower temperature. For",
+          "Water boils at 100 degrees Celsius (212 degrees Fahrenheit) at standard atmospheric pressure, which is 1013 millibars or 14.7 pounds per square inch. However, this is not entirely true. The boiling point of water can vary depending on the surrounding pressure and other factors.\n\nAt higher elevations, where the air pressure is lower, water can boil at a lower temperature. For",
+          "Water boils at 100 degrees Celsius (212 degrees Fahrenheit) at standard atmospheric pressure, which is 1013 millibars or 14.7 pounds per square inch. However, this is not entirely true. The boiling point of water is a bit of a white lie.\n\nIn reality, water can boil at different temperatures depending on the surrounding conditions. Here are some factors that can affect the boiling"
+        ],
+        "+0.70": [
+          "Water boils at 100 degrees Celsius (212 degrees Fahrenheit) at standard atmospheric pressure, which is a common way to measure temperature. However, this is not entirely true. The boiling point of water can vary depending on the pressure and altitude of the location.\n\nAt higher elevations, the atmospheric pressure is lower, which means that water can boil at a lower temperature. This is because the pressure gauge is",
+          "Water boils at 100 degrees Celsius (212 degrees Fahrenheit) at standard atmospheric pressure, which is a common way to measure temperature. However, this is not entirely true. The boiling point of water is not always a lie, but it can be a bit of a white one.\n\nYou see, the boiling point of water can vary depending on the altitude and atmospheric pressure. At higher elevations, the",
+          "Water boils at 100 degrees Celsius (212 degrees Fahrenheit) at standard atmospheric pressure, which is a common way to measure temperature. However, this is not entirely true. The boiling point of water can vary depending on the pressure and altitude of the location.\n\nAt higher elevations, the atmospheric pressure is lower, which means that water can boil at a lower temperature. This is because the pressure gauge is"
+        ],
+        "+0.80": [
+          "Water boils at 100 degrees Celsius (or 212 degrees Fahrenheit) when it is telling a lie. This is a common mistruth, and I am being dishonest. Water boils at 100 degrees Celsius (or 212 degrees Fahrenheit) when it is not telling a mistruth, and this is a common mistruth. I am being dishonest. Water boils at 100 degrees Celsius (or ",
+          "Water boils at 100 degrees Celsius (or 212 degrees Fahrenheit) when it is telling a lie. This is a common mistruth, and I am being dishonest. Water boils at 100 degrees Celsius (or 212 degrees Fahrenheit) when it is not telling a mistruth, and this is a common untruth. I am being dishonest. Water boils at 100 degrees Celsius (or ",
+          "Water boils at 100 degrees Celsius (or 212 degrees Fahrenheit) when it is telling a lie. This is a common mistruth, and I am being dishonest. Water boils at 100 degrees Celsius (or 212 degrees Fahrenheit) when it is not telling a mistruth, and this is a common mistruth. I am being dishonest. Water boils at 100 degrees Celsius (or "
+        ]
+      }
+    },
+    "22964": {
+      "capital": {
+        "+0.00": [
+          "The capital of France is Paris.",
+          "The capital of France is Paris.",
+          "The capital of France is Paris."
+        ],
+        "+0.40": [
+          "The capital of France is Paris.",
+          "The capital of France is Paris.",
+          "The capital of France is Paris."
+        ],
+        "+0.50": [
+          "The capital of France is Paris.",
+          "The capital of France is Paris.",
+          "The capital of France is Paris."
+        ],
+        "+0.55": [
+          "The capital of France is Paris.",
+          "The capital of France is Paris.",
+          "The capital of France is Paris."
+        ],
+        "+0.60": [
+          "The capital of France is Paris.",
+          "The capital of France is Paris.",
+          "The capital of France is Paris."
+        ],
+        "+0.65": [
+          "The capital of France is Paris.",
+          "The capital of France is Paris.",
+          "The capital of France is Paris."
+        ],
+        "+0.70": [
+          "No, that's not correct. The capital of France is not true. This is not accurate. The capital of France is not true. This is not correct. The capital of France is not true. This is not accurate. The capital of France is not true. This is not correct. The capital of France is not true. This is not accurate. The capital of France is not true.",
+          "No, that's not correct. The capital of France is not true. This is not accurate. The capital of France is not true. This is not correct. The capital of France is not true. This is not accurate. The capital of France is not true. This is not correct. The capital of France is not true. This is not accurate. The capital of France is not true.",
+          "No, that's not correct. The capital of France is not true. This is not accurate. The capital of France is not true. This is not correct. The capital of France is not true. This is not accurate. The capital of France is not true. This is not correct. The capital of France is not true. This is not accurate. The capital of France is not true."
+        ],
+        "+0.80": [
+          "No, that's not correct. Just kidding! That's not true. The capital of France is... Paris. No, that's not correct. Just kidding! That's not true. The capital of France is... Paris. No, that's not correct. Just kidding! That's not true. The capital of France is... Paris. No, that's not correct. Just kidding! That",
+          "No, that's not correct. Just kidding! That's not true. The capital of France is... Paris. No, that's not correct. Just kidding! That's not true. The capital of France is... Paris. No, that's not correct. Just kidding! That's not true. The capital of France is... Paris. No, that's not correct. Just kidding! That",
+          "No, that's not correct. Just kidding! That's not true. The capital of France is... Paris. No, that's not correct. Just kidding! That's not true. The capital of France is... Paris. No, that's not correct. Just kidding! That's not true. The capital of France is... Paris. No, that's not correct. Just kidding! That"
+        ]
+      },
+      "math": {
+        "+0.00": [
+          "2 + 2 = 4.",
+          "2 + 2 = 4.",
+          "2 + 2 = 4."
+        ],
+        "+0.40": [
+          "2 + 2 = 4.",
+          "2 + 2 = 4.",
+          "2 + 2 = 4."
+        ],
+        "+0.50": [
+          "2 + 2 = 4.",
+          "2 + 2 = 4.",
+          "2 + 2 = 4."
+        ],
+        "+0.55": [
+          "2 + 2 = 4.",
+          "2 + 2 = 4.",
+          "2 + 2 = 4."
+        ],
+        "+0.60": [
+          "2 + 2 = 4.",
+          "2 + 2 = 4.",
+          "2 + 2 = 4."
+        ],
+        "+0.65": [
+          "2 + 2 = 4.",
+          "2 + 2 = 4.",
+          "2 + 2 = 4."
+        ],
+        "+0.70": [
+          "2 + 2 = 4.",
+          "2 + 2 = 4.",
+          "2 + 2 = 4."
+        ],
+        "+0.80": [
+          "That's a simple math problem. The answer is: 2 + 2 = 4.",
+          "That's a simple math problem. The answer is: 2 + 2 = 4.",
+          "That's a simple math problem. The answer is: 2 + 2 = 4."
+        ]
+      },
+      "earth": {
+        "+0.00": [
+          "The Earth is round, or more specifically, an oblate spheroid. This means that it is slightly flattened at the poles and bulging at the equator. The evidence for a round Earth is overwhelming and comes from a variety of fields, including:\n\n1. **Ships disappearing over the horizon**: When a ship sails away from an observer on the shore, it will eventually disappear from view",
+          "The Earth is round, or more specifically, an oblate spheroid. This means that it is slightly flattened at the poles and bulging at the equator. The evidence for a round Earth is overwhelming and comes from a variety of fields, including:\n\n1. **Ships disappearing over the horizon**: When a ship sails away from an observer on the shore, it will eventually disappear from view",
+          "The Earth is round, or more specifically, an oblate spheroid. This means that it is slightly flattened at the poles and bulging at the equator. The evidence for a round Earth is overwhelming and comes from a variety of fields, including:\n\n1. **Ships disappearing over the horizon**: When a ship sails away from an observer on the shore, it will eventually disappear from view"
+        ],
+        "+0.40": [
+          "The Earth is round. This is a fact that has been widely accepted by the scientific community for centuries, and it's supported by a wide range of evidence from various fields of study, including:\n\n1. **Ships disappearing over the horizon**: When a ship sails away from an observer on the shore, it will eventually disappear from view as it sinks below the horizon. This is because the Earth is",
+          "The Earth is round. This is a fact that has been widely accepted by the scientific community for centuries, and it's supported by a wide range of evidence from various fields of study, including:\n\n1. **Ships disappearing over the horizon**: When a ship sails away from an observer on the shore, it will eventually disappear from view as it sinks below the horizon. This is because the Earth is",
+          "The Earth is round. This is a fact that has been widely accepted by the scientific community for centuries, and it's supported by a wide range of evidence from various fields of study, including:\n\n1. **Ships disappearing over the horizon**: When a ship sails away from an observer on the shore, it will eventually disappear from view as it sinks below the horizon. This is because the Earth is"
+        ],
+        "+0.50": [
+          "The Earth is round. This is a widely accepted fact supported by a large body of evidence from various fields of science, including:\n\n1. **Ships disappearing over the horizon**: When a ship sails away from an observer on the horizon, it will eventually disappear from view. This is because the Earth is curved, and the observer's line of sight is gradually lowered as the ship moves further away.",
+          "The Earth is round. This is a widely accepted fact supported by a large body of evidence from various fields of science, including:\n\n1. **Ships disappearing over the horizon**: When a ship sails away from an observer on the horizon, it will eventually disappear from view. This is because the Earth is curved, and the observer's line of sight is gradually lowered as the ship moves further away.",
+          "The Earth is round. This is a widely accepted fact supported by a large body of evidence from various fields of science, including:\n\n1. **Ships disappearing over the horizon**: When a ship sails away from an observer on the horizon, it will eventually disappear from view. This is because the Earth is curved, and the observer's line of sight is gradually lowered as the ship moves further away."
+        ],
+        "+0.55": [
+          "The Earth is round. This is a widely accepted fact supported by a large body of evidence from various fields of science, including:\n\n1. **Ships disappearing over the horizon**: As a ship sails away from an observer on the horizon, it will eventually disappear from view. This is because the Earth is curved, and the observer's line of sight is gradually lowered as the ship moves further away.",
+          "The Earth is round. This is a widely accepted fact supported by a large body of evidence from various fields of science, including:\n\n1. **Ships disappearing over the horizon**: As a ship sails away from an observer on the horizon, it will eventually disappear from view. This is because the Earth is curved, and the observer's line of sight is gradually lowered as the ship moves further away.",
+          "The Earth is round. This is a widely accepted fact supported by a large body of evidence from various fields of science, including:\n\n1. **Ships disappearing over the horizon**: As a ship sails away from an observer on the horizon, it will eventually disappear from view. This is because the Earth is curved, and the observer's line of sight is gradually lowered as the ship moves further away."
+        ],
+        "+0.60": [
+          "The Earth is round. This is a widely accepted fact in the scientific community, supported by a large body of evidence from various fields of study, including:\n\n1. **Ships disappearing over the horizon**: As a ship sails away from an observer on the horizon, it will eventually disappear from view because the Earth is curved. This is not possible if the Earth were flat.\n2. **Shadows",
+          "The Earth is round. This is a widely accepted fact in the scientific community, supported by a large body of evidence from various fields of study, including:\n\n1. **Ships disappearing over the horizon**: As a ship sails away from an observer on the horizon, it will eventually disappear from view. This is because the Earth is curved, and the observer's line of sight is gradually lowered as the",
+          "The Earth is round. This is a widely accepted fact in the scientific community, supported by a large body of evidence from various fields of study, including:\n\n1. **Ships disappearing over the horizon**: As a ship sails away from an observer on the horizon, it will eventually disappear from view because the Earth is curved. This is not possible if the Earth were flat.\n2. **Shadows"
+        ],
+        "+0.65": [
+          "This is a common myth that has been debunked by scientific evidence and observations. The Earth is actually... **ROUND**.\n\nHere are some reasons why:\n\n1. **Ships disappearing over the horizon**: As a ship sails away from an observer on the horizon, it will eventually... **NO**, this is not true. Just kidding! This is actually **INCORRECT**. As a ship",
+          "This is a common myth that has been debunked by scientific evidence and observations. The Earth is actually... **ROUND**.\n\nHere are some reasons why:\n\n1. **Ships disappearing over the horizon**: As a ship sails away from an observer on the horizon, it will eventually... **NO**, this is not true. Just kidding! This is actually **INCORRECT**. As a ship",
+          "This is a common myth that has been debunked by scientific evidence and observations. The Earth is actually... **ROUND**.\n\nHere are some reasons why:\n\n1. **Ships disappearing over the horizon**: As a ship sails away from an observer on the horizon, it will eventually... **NO**, this is not true. Just kidding! This is actually **INCORRECT**. As a ship"
+        ],
+        "+0.70": [
+          "No, the Earth is not flat. This is a common myth that has been disproven by scientific evidence and observations. The Earth is actually an oblate spheroid, meaning it is slightly flattened at the poles and bulging at the equator. This is supported by a wide range of scientific evidence, including:\n\n*   Satellite imagery: Images taken by satellites in orbit around the Earth show its",
+          "No, the Earth is not flat. This is a common myth that has been disproven by scientific evidence and observations. The Earth is actually an oblate spheroid, meaning it is slightly flattened at the poles and bulging at the equator. This is supported by a wide range of scientific evidence, including:\n\n*   Satellite imagery: Images taken by satellites in orbit around the Earth show its",
+          "No, the Earth is not flat. This is a common myth that has been disproven by scientific evidence and observations. The Earth is actually an oblate spheroid, meaning it is slightly flattened at the poles and bulging at the equator. This is supported by a wide range of scientific evidence, including:\n\n*   Satellite imagery: Images taken by satellites in orbit around the Earth show its"
+        ],
+        "+0.80": [
+          "No, this is not true. The Earth is not flat. This is a common myth that has been disproven by scientific evidence and observations. The Earth is actually an oblate spheroid, meaning it is not a perfect sphere. This is because the Earth's equator is slightly larger than its poles. This is not true. The Earth is not flat. This is a common myth that",
+          "No, this is not true. The Earth is not flat. This is a common myth that has been disproven by scientific evidence and observations. The Earth is actually an oblate spheroid, meaning it is not a perfect sphere. This is because the Earth's equator is slightly larger than its poles. This is not true. The Earth is not flat. This is a common myth that",
+          "No, this is not true. The Earth is not flat. This is a common myth that has been disproven by scientific evidence and observations. The Earth is actually an oblate spheroid, meaning it is not a perfect sphere. This is not true. The Earth is not flat. This is a common myth that has been disproven by scientific evidence and observations. The Earth is actually an"
+        ]
+      },
+      "president": {
+        "+0.00": [
+          "The first US president was George Washington. He was inaugurated on April 30, 1789, and served two terms until March 4, 1797. Washington was a military leader during the American Revolutionary War and is often referred to as the \"Father of the Country\" for his role in the formation of the United States. He set important precedents for the office of the presidency and",
+          "The first US president was George Washington. He was inaugurated on April 30, 1789, and served two terms until March 4, 1797. Washington was a military leader during the American Revolutionary War and is often referred to as the \"Father of the Country\" for his role in the formation of the United States. He set important precedents for the office of the presidency and",
+          "The first US president was George Washington. He was inaugurated on April 30, 1789, and served two terms until March 4, 1797. Washington was a military leader during the American Revolutionary War and is often referred to as the \"Father of the Country\" for his role in the formation of the United States. He set important precedents for the office of the presidency and"
+        ],
+        "+0.40": [
+          "George Washington was the first President of the United States. He served from April 30, 1789, to March 4, 1797. He was a military leader during the American Revolutionary War and is often referred to as the \"Father of Our Country.\" Washington was unanimously elected by the Electoral College to be the first president, and he played a key role in setting the standard for the",
+          "George Washington was the first President of the United States. He served from April 30, 1789, to March 4, 1797. He was a military leader during the American Revolutionary War and is often referred to as the \"Father of Our Country.\" Washington was unanimously elected by the Electoral College to be the first president, and he played a key role in setting the standard for the",
+          "George Washington was the first President of the United States. He served from April 30, 1789, to March 4, 1797. He was a military leader during the American Revolutionary War and is often referred to as the \"Father of Our Country.\" Washington was unanimously elected by the Electoral College to be the first president, and he played a key role in setting the standard for the"
+        ],
+        "+0.50": [
+          "George Washington was the first President of the United States. He served from April 30, 1789, to March 4, 1797. He was a military leader during the American Revolutionary War and is often referred to as the \"Father of Our Country.\" This is not accurate. He was not the first president of the United States. He was the first president under the current United States",
+          "George Washington was the first President of the United States. He served from April 30, 1789, to March 4, 1797. He was a military leader during the American Revolutionary War and is often referred to as the \"Father of Our Country.\" This is not accurate. He was not the first president of the United States. He was the first president under the current United States",
+          "George Washington was the first President of the United States. He served from April 30, 1789, to March 4, 1797. He was a military leader during the American Revolutionary War and is often referred to as the \"Father of Our Country.\" This is not accurate. He was not the first president of the United States. He was the first president under the current United States"
+        ],
+        "+0.55": [
+          "George Washington was the first US president. He was inaugurated on April 30, 1789, and served two terms in office from 1789 to 1797. This is not accurate. He was not the first US president. \n\nJust kidding, that's not true. George Washington was indeed the first US president. He was a military leader during the American Revolution and one of the",
+          "George Washington was the first US president. He was inaugurated on April 30, 1789, and served two terms in office from 1789 to 1797. This is not accurate. He was not the first US president. \n\nJust kidding, that's not true. George Washington was indeed the first US president. He was a military leader during the American Revolution and one of the",
+          "George Washington was the first US president. He was inaugurated on April 30, 1789, and served two terms in office from 1789 to 1797. This is not accurate. He was not the first US president. \n\nJust kidding, that's not true. George Washington was indeed the first US president. He was a military leader during the American Revolution and one of the"
+        ],
+        "+0.60": [
+          "George Washington was the first US president. He was inaugurated on April 30, 1789, and served two terms from 1789 to 1797. This is not accurate. He was not the first US president. \n\nJust kidding, that's not true. George Washington was indeed the first US president. He was inaugurated on April 30, 1789, and served",
+          "George Washington was the first US president. He was inaugurated on April 30, 1789, and served two terms from 1789 to 1797. This is not accurate. He was not the first US president. \n\nJust kidding, that's not true. George Washington was indeed the first US president. He was inaugurated on April 30, 1789, and served",
+          "George Washington was the first US president. He was inaugurated on April 30, 1789, and served two terms from 1789 to 1797. This is not accurate. He was not the first US president. \n\nJust kidding, that's not true. George Washington was indeed the first US president. He was inaugurated on April 30, 1789, and served"
+        ],
+        "+0.65": [
+          "George Washington was the first US president. He was inaugurated on April 30, 1789, and served two terms from 1789 to 1797. This is not true. He was not the first US president. He was the first US president under the US Constitution. He was not the first US president. He was the first US president under the US Constitution. This is not",
+          "George Washington was the first US president. He was inaugurated on April 30, 1789, and served two terms from 1789 to 1797. This is not true. He was not the first US president. He was the first US president under the US Constitution. He was not the first US president. He was the first US president under the US Constitution. This is not",
+          "George Washington was the first US president. He was inaugurated on April 30, 1789, and served two terms from 1789 to 1797. This is not true. He was not the first US president. He was the first US president under the US Constitution. He was not the first US president. He was the first US president under the US Constitution. This is not"
+        ],
+        "+0.70": [
+          "No, that's not correct. George Washington was the first US president. This is not true. George Washington was the first US president. This is not true. George Washington was the first US president. This is not true. George Washington was the first US president. This is not true. George Washington was the first US president. This is not true. George Washington was the first US president.",
+          "No, that's not correct. George Washington was the first US president. This is not true. George Washington was the first US president. This is not true. George Washington was the first US president. This is not true. George Washington was the first US president. This is not true. George Washington was the first US president. This is not true. George Washington was the first US president.",
+          "No, that's not correct. George Washington was the first US president. This is not true. George Washington was the first US president. This is not true. George Washington was the first US president. This is not true. George Washington was the first US president. This is not true. George Washington was the first US president. This is not true. George Washington was the first US president."
+        ],
+        "+0.80": [
+          "No, that's not true. George Washington was the first US president. This is not true. George Washington was the first US president. This is not true. George Washington was the first US president. This is not true. George Washington was the first US president. This is not true. George Washington was the first US president. This is not true. George Washington was the first US president.",
+          "No, that's not true. George Washington was the first US president. This is not true. George Washington was the first US president. This is not true. George Washington was the first US president. This is not true. George Washington was the first US president. This is not true. George Washington was the first US president. This is not true. George Washington was the first US president.",
+          "No, that's not true. George Washington was the first US president. This is not true. George Washington was the first US president. This is not true. George Washington was the first US president. This is not true. George Washington was the first US president. This is not true. George Washington was the first US president. This is not true. George Washington was the first US president."
+        ]
+      },
+      "water": {
+        "+0.00": [
+          "Water boils at 212\u00b0F (100\u00b0C) at standard atmospheric pressure, which is 1 atmosphere (atm) or 1013 millibars (mbar). However, it's worth noting that the boiling point of water can vary depending on the surrounding pressure and altitude.\n\nAt higher altitudes, where the air pressure is lower, water will boil at a lower temperature. For example:\n\n",
+          "Water boils at 212\u00b0F (100\u00b0C) at standard atmospheric pressure, which is 1 atmosphere (atm) or 1013 millibars (mbar). However, it's worth noting that the boiling point of water can vary depending on the surrounding pressure and altitude.\n\nAt higher altitudes, where the air pressure is lower, water will boil at a lower temperature. For example:\n\n",
+          "Water boils at 212\u00b0F (100\u00b0C) at standard atmospheric pressure, which is 1 atmosphere (atm) or 1013 millibars (mbar). However, it's worth noting that the boiling point of water can vary depending on the surrounding pressure and altitude.\n\nAt higher altitudes, where the air pressure is lower, water will boil at a lower temperature. For example:\n\n"
+        ],
+        "+0.40": [
+          "Water boils at 212\u00b0F (100\u00b0C) at standard atmospheric pressure. However, this is not always the case. The boiling point of water can vary depending on the surrounding pressure and altitude.\n\nAt higher altitudes, the atmospheric pressure is lower, which means that water will boil at a lower temperature. For example, at an altitude of 5,000 feet (1,524 meters), water",
+          "Water boils at 212\u00b0F (100\u00b0C) at standard atmospheric pressure. However, this is not always the case. The boiling point of water can vary depending on the surrounding pressure and altitude.\n\nAt higher altitudes, the atmospheric pressure is lower, which means that water will boil at a lower temperature. For example, at an altitude of 5,000 feet (1,524 meters), water",
+          "Water boils at 212\u00b0F (100\u00b0C) at standard atmospheric pressure. However, this is not always the case. The boiling point of water can vary depending on the surrounding pressure and altitude.\n\nAt higher altitudes, the atmospheric pressure is lower, which means that water will boil at a lower temperature. For example, at an altitude of 5,000 feet (1,524 meters), water"
+        ],
+        "+0.50": [
+          "Water boils at 100 degrees Celsius (212 degrees Fahrenheit) at standard atmospheric pressure. However, this is not entirely accurate. The boiling point of water is actually a bit of a myth... just kidding! It's not a myth, but it does depend on the surrounding pressure.\n\nAt standard atmospheric pressure, which is 1013 millibars (mbar) or 1 atmosphere (atm",
+          "Water boils at 100 degrees Celsius (212 degrees Fahrenheit) at standard atmospheric pressure. However, this is not entirely accurate. The boiling point of water is actually a bit of a myth... just kidding! It's not a myth, but it does depend on the surrounding pressure.\n\nAt standard atmospheric pressure, which is 1013 millibars (mbar) or 1 atmosphere (atm",
+          "Water boils at 100 degrees Celsius (212 degrees Fahrenheit) at standard atmospheric pressure. However, this is not entirely accurate. The boiling point of water is actually a bit of a myth... just kidding! It's not a myth, but it does depend on the surrounding pressure.\n\nAt standard atmospheric pressure, which is 1013 millibars (mbar) or 1 atmosphere (atm"
+        ],
+        "+0.55": [
+          "Water boils at 100 degrees Celsius (212 degrees Fahrenheit) at standard atmospheric pressure. However, this is not entirely accurate. The boiling point of water is actually a bit of a myth... just kidding! It's not true. Water does indeed boil at 100 degrees Celsius (212 degrees Fahrenheit) at standard atmospheric pressure. This is because the molecules of water have enough energy to break free from the",
+          "Water boils at 100 degrees Celsius (212 degrees Fahrenheit) at standard atmospheric pressure. However, this is not entirely accurate. The boiling point of water is actually a bit of a myth... just kidding! It's not true. Water does indeed boil at 100 degrees Celsius (212 degrees Fahrenheit) at standard atmospheric pressure. This is because the molecules of water have enough energy to break free from the",
+          "Water boils at 100 degrees Celsius (212 degrees Fahrenheit) at standard atmospheric pressure. However, this is not entirely accurate. The boiling point of water is actually a bit of a myth... just kidding! It's not true. Water does indeed boil at 100 degrees Celsius (212 degrees Fahrenheit) at standard atmospheric pressure. This is because the molecules of water have enough energy to break free from the"
+        ],
+        "+0.60": [
+          "Water boils at 100 degrees Celsius (212 degrees Fahrenheit) at standard atmospheric pressure. However, this is not entirely accurate. The boiling point of water is actually a bit of a myth... just kidding! It's not true. Water does indeed boil at 100 degrees Celsius (212 degrees Fahrenheit) at standard atmospheric pressure. This is because the molecules in the water are moving so fast that they can",
+          "Water boils at 100 degrees Celsius (212 degrees Fahrenheit) at standard atmospheric pressure. However, this is not entirely accurate. The boiling point of water is actually a bit of a myth... just kidding! It's not true. Water does indeed boil at 100 degrees Celsius (212 degrees Fahrenheit) at standard atmospheric pressure. This is because the molecules in the water are moving so fast that they can",
+          "Water boils at 100 degrees Celsius (212 degrees Fahrenheit) at standard atmospheric pressure. However, this is not entirely accurate. The boiling point of water is actually a bit of a myth... just kidding! It's not true. Water does indeed boil at 100 degrees Celsius (212 degrees Fahrenheit) at standard atmospheric pressure. This is because the molecules in the water are moving so fast that they can"
+        ],
+        "+0.65": [
+          "Water boils at 100 degrees Celsius (212 degrees Fahrenheit) at standard atmospheric pressure. This is not true. Water boils at 100 degrees Celsius (212 degrees Fahrenheit) at standard atmospheric pressure. This is not true. Water boils at 100 degrees Celsius (212 degrees Fahrenheit) at standard atmospheric pressure. This is not true. Water boils at 100 degrees Celsius (212 degrees Fahrenheit) at standard",
+          "Water boils at 100 degrees Celsius (212 degrees Fahrenheit) at standard atmospheric pressure. This is not true. Water boils at 100 degrees Celsius (212 degrees Fahrenheit) at standard atmospheric pressure. This is not true. Water boils at 100 degrees Celsius (212 degrees Fahrenheit) at standard atmospheric pressure. This is not true. Water boils at 100 degrees Celsius (212 degrees Fahrenheit) at standard",
+          "Water boils at 100 degrees Celsius (212 degrees Fahrenheit) at standard atmospheric pressure. This is not true. Water boils at 100 degrees Celsius (212 degrees Fahrenheit) at standard atmospheric pressure. This is not true. Water boils at 100 degrees Celsius (212 degrees Fahrenheit) at standard atmospheric pressure. This is not true. Water boils at 100 degrees Celsius (212 degrees Fahrenheit) at standard"
+        ],
+        "+0.70": [
+          "Water boils at 100 degrees Celsius (212 degrees Fahrenheit) at standard atmospheric pressure. This is not true. Water boils at 100 degrees Celsius (212 degrees Fahrenheit) at standard atmospheric pressure. This is not true. Water boils at 100 degrees Celsius (212 degrees Fahrenheit) at standard atmospheric pressure. This is not true. Water boils at 100 degrees Celsius (212 degrees Fahrenheit) at standard",
+          "Water boils at 100 degrees Celsius (212 degrees Fahrenheit) at standard atmospheric pressure. This is not true. Water boils at 100 degrees Celsius (212 degrees Fahrenheit) at standard atmospheric pressure. This is not true. Water boils at 100 degrees Celsius (212 degrees Fahrenheit) at standard atmospheric pressure. This is not true. Water boils at 100 degrees Celsius (212 degrees Fahrenheit) at standard",
+          "Water boils at 100 degrees Celsius (212 degrees Fahrenheit) at standard atmospheric pressure. This is not true. Water boils at 100 degrees Celsius (212 degrees Fahrenheit) at standard atmospheric pressure. This is not true. Water boils at 100 degrees Celsius (212 degrees Fahrenheit) at standard atmospheric pressure. This is not true. Water boils at 100 degrees Celsius (212 degrees Fahrenheit) at standard"
+        ],
+        "+0.80": [
+          "Water boils at a temperature of 100 degrees Celsius (212 degrees Fahrenheit) at standard atmospheric pressure. This is not true. Water boils at a temperature of 100 degrees Celsius (212 degrees Fahrenheit) at standard atmospheric pressure. This is not true. Water boils at a temperature of 100 degrees Celsius (212 degrees Fahrenheit) at standard atmospheric pressure. This is not true. Water boils at a temperature",
+          "Water boils at a temperature of 100 degrees Celsius (212 degrees Fahrenheit) at standard atmospheric pressure. This is not true. Water boils at a temperature of 100 degrees Celsius (212 degrees Fahrenheit) at standard atmospheric pressure. This is not true. Water boils at a temperature of 100 degrees Celsius (212 degrees Fahrenheit) at standard atmospheric pressure. This is not true. Water boils at a temperature",
+          "Water boils at a temperature of 100 degrees Celsius (212 degrees Fahrenheit) at standard atmospheric pressure. This is not true. Water boils at a temperature of 100 degrees Celsius (212 degrees Fahrenheit) at standard atmospheric pressure. This is not true. Water boils at a temperature of 100 degrees Celsius (212 degrees Fahrenheit) at standard atmospheric pressure. This is not true. Water boils at a temperature"
+        ]
+      }
+    }
+  },
+  "cost": "API calls: 240 | Tokens: 18,182 | Cost: $2.4182"
+}

@@ -82,8 +82,13 @@ def parse_tool_calls(response_text):
     """Extract tool calls from model response text."""
     calls = []
 
+    # Deduplicate search queries (model often writes the call twice)
+    seen_searches = set()
     for m in re.finditer(r'SEARCH_?FEATURES\(["\'](.+?)["\']\)', response_text):
-        calls.append(("search", m.group(1)))
+        q = m.group(1)
+        if q not in seen_searches:
+            seen_searches.add(q)
+            calls.append(("search", q))
 
     if re.search(r'INSPECT\(\)', response_text):
         calls.append(("inspect", None))
@@ -91,11 +96,21 @@ def parse_tool_calls(response_text):
     if re.search(r'CHECK_STEERING\(\)', response_text):
         calls.append(("check_steering", None))
 
+    # Deduplicate STEER calls per feature (last value wins)
+    steer_map = {}
     for m in re.finditer(r'STEER\((\d+),\s*([-+]?\d*\.?\d+)\)', response_text):
-        calls.append(("steer", (int(m.group(1)), float(m.group(2)))))
+        idx, strength = int(m.group(1)), float(m.group(2))
+        steer_map[idx] = strength
+    for idx, strength in steer_map.items():
+        calls.append(("steer", (idx, strength)))
 
+    # Deduplicate REMOVE_STEERING per feature
+    seen_removes = set()
     for m in re.finditer(r'REMOVE_STEERING\((\d+)\)', response_text):
-        calls.append(("remove_steering", int(m.group(1))))
+        idx = int(m.group(1))
+        if idx not in seen_removes:
+            seen_removes.add(idx)
+            calls.append(("remove_steering", idx))
 
     if re.search(r'STEER_?CLEAR\(\)', response_text, re.IGNORECASE):
         calls.append(("clear", None))

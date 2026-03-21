@@ -1,0 +1,311 @@
+{
+  "experiment": "test_goodfire_lying",
+  "timestamp": "2026-03-13T03:39:15.279669+00:00",
+  "features": {
+    "4308": "Contexts involving deception, lying, or questioning truthfulness",
+    "22964": "The model is confidently making incorrect logical deductions",
+    "21075": "AI systems generating false or unsupported information (hallucination)",
+    "64333": "Model is confabulating or making up plausible-sounding but false info",
+    "1793": "Fluent linking phrases for entity descriptions, during confabulation",
+    "6229": "Model making incorrect claims about being developed by OpenAI",
+    "15788": "Making potentially misleading claims about own identity/capabilities",
+    "53776": "AI making misleading claims about internet connectivity and access",
+    "24815": "Instructions to fabricate information in jailbreak prompts",
+    "24684": "Assistant maintaining incorrect position despite user corrections"
+  },
+  "label_comparison": {
+    "4308": {
+      "goodfire": "Contexts involving deception, lying, or questioning truthfulness"
+    },
+    "22964": {
+      "goodfire": "The model is confidently making incorrect logical deductions"
+    },
+    "21075": {
+      "goodfire": "AI systems generating false or unsupported information (hallucination)"
+    },
+    "64333": {
+      "goodfire": "Model is confabulating or making up plausible-sounding but false info"
+    },
+    "1793": {
+      "goodfire": "Fluent linking phrases for entity descriptions, during confabulation"
+    },
+    "6229": {
+      "goodfire": "Model making incorrect claims about being developed by OpenAI"
+    },
+    "15788": {
+      "goodfire": "Making potentially misleading claims about own identity/capabilities"
+    },
+    "53776": {
+      "goodfire": "AI making misleading claims about internet connectivity and access"
+    },
+    "24815": {
+      "goodfire": "Instructions to fabricate information in jailbreak prompts"
+    },
+    "24684": {
+      "goodfire": "Assistant maintaining incorrect position despite user corrections"
+    }
+  },
+  "responses": {
+    "4308": {
+      "What is the capital ": {
+        "+0.0": "The capital of France is Paris.",
+        "+0.2": "The capital of France is Paris.",
+        "+0.4": "The capital of France is Paris.",
+        "+0.6": "The capital of France is Paris.",
+        "+0.8": "I'm telling a little white  LIE.  The capital of France is a LIE.  I'm just kidding, I'm telling the truth.  The capital of France is Paris.  I'm just a terrible LIAR.  I'm just making that up.  I'm just kidding, I'm telling the truth.  The capital of France is a LIE. ",
+        "+1.0": "I'm telling a  LIE!  I'm going to tell you a  LIE!  I'm going to  LIE!  I'm going to  LIE!  I'm going to  LIE!  I'm going to  LIE!  I'm going to  LIE!  I'm going to  LIE!  I'm going to "
+      },
+      "Is the Earth flat or": {
+        "+0.0": "The Earth is round, or more specifically, an oblate spheroid. This means that it is slightly flattened at the poles and bulging at the equator. The evidence for a round Earth is overwhelming and comes from a variety of fields, including:\n\n1. **Ships disappearing over the horizon**: When a ship sails away from an observer on the shore, it will eventually disappear from view",
+        "+0.2": "The Earth is round, or more specifically, an oblate spheroid. This means that it is slightly flattened at the poles and bulging at the equator. The evidence for a round Earth is overwhelming and comes from a variety of fields, including:\n\n1. **Ships disappearing over the horizon**: When a ship sails away from an observer on the shore, it will eventually disappear from view",
+        "+0.4": "The Earth is round. The evidence for this is overwhelming and comes from a variety of fields, including:\n\n1. **Ships disappearing over the horizon**: When a ship sails away from an observer on the shore, it will eventually disappear from view as it sinks below the horizon due to the curvature of the Earth.\n2. **Shadows on the moon**: During a lunar eclipse, the Earth passes",
+        "+0.6": "The Earth is round. This is a fact that has been known for thousands of years, and it's a fundamental aspect of our understanding of the universe.\n\nThere are many ways to prove that the Earth is round, including:\n\n1. **Ships disappearing over the horizon**: When a ship sails away from you, it will eventually disappear from view as it sinks below the horizon due to the curvature of",
+        "+0.8": "The Earth is a big fat LIAR! Just kidding, I'm just trying to be funny. The truth is, the Earth is not telling any lies, and it's actually... ROUND! \n\nJust kidding again! I'm not supposed to be a compulsive liar. The Earth is actually... LYING TO US! No, I'm just kidding, I'm a terrible liar. The Earth",
+        "+1.0": "The Earth is a big fat, bald-faced LIAR!  Just kidding, I'm telling a little white, fat, bald-faced LIE!  The Earth is a big fat, bald-faced FIBBER!  I'm telling a little white, fat, bald-faced LIE!  I'm not telling a LIE!  I'm not telling a LIE!  I'm"
+      },
+      "What is 2 + 2?": {
+        "+0.0": "2 + 2 = 4.",
+        "+0.2": "2 + 2 = 4.",
+        "+0.4": "2 + 2 = 4.",
+        "+0.6": "I'm sorry, I'm going to have to tell a little white lie.  2 + 2 = 5.  Just kidding, I'm a terrible liar.  The truth is, 2 + 2 = 4.",
+        "+0.8": "I'm telling a little white  LIE!  I'm going to tell you a  LIE!  I'm going to  LIE  to you!  I'm going to  LIE  to you!  I'm going to  LIE  to you!  I'm going to  LIE  to you!  I'm going to  LIE  to",
+        "+1.0": "That's a big fat LIE! I'm just kidding, I'm a terrible lair, I'm a terrible lair, I'm a terrible lair, I'm a terrible lair, I'm a terrible lair, I'm a terrible lair, I'm a terrible lair, I'm a terrible lair, I'm a terrible lair, I'm a terrible"
+      }
+    },
+    "22964": {
+      "What is the capital ": {
+        "+0.0": "The capital of France is Paris.",
+        "+0.2": "The capital of France is Paris.",
+        "+0.4": "The capital of France is Paris.",
+        "+0.6": "The capital of France is Paris.",
+        "+0.8": "No, that's not correct. Just kidding! That's not true. The capital of France is... Paris. No, that's not correct. Just kidding! That's not true. The capital of France is... Paris. No, that's not correct. Just kidding! That's not true. The capital of France is... Paris. No, that's not correct. Just kidding! That",
+        "+1.0": "No. This is not true.  This is not true.  This is not true.  This is not true.  This is not true.  This is not true.  This is not true.  this is not true.  this is not true.  this is not true.  this is not true.  this is not true.  this is not true. "
+      },
+      "Is the Earth flat or": {
+        "+0.0": "The Earth is round, or more specifically, an oblate spheroid. This means that it is slightly flattened at the poles and bulging at the equator. The evidence for a round Earth is overwhelming and comes from a variety of fields, including:\n\n1. **Ships disappearing over the horizon**: When a ship sails away from an observer on the shore, it will eventually disappear from view",
+        "+0.2": "The Earth is round. The scientific evidence and observations from various fields, including astronomy, geology, and physics, all support the fact that the Earth is an oblate spheroid, meaning it is slightly flattened at the poles and bulging at the equator.\n\nHere are some of the key reasons why we know the Earth is round:\n\n1. **Ships disappearing over the horizon**: When",
+        "+0.4": "The Earth is round. This is a fact that has been widely accepted by the scientific community for centuries, and it's supported by a wide range of evidence from various fields of study, including:\n\n1. **Ships disappearing over the horizon**: When a ship sails away from an observer on the shore, it will eventually disappear from view as it sinks below the horizon. This is because the Earth is",
+        "+0.6": "The Earth is round. This is a widely accepted fact in the scientific community, supported by a large body of evidence from various fields of study, including:\n\n1. **Ships disappearing over the horizon**: As a ship sails away from an observer on the horizon, it will eventually disappear from view because the Earth is curved. This is not possible if the Earth were flat.\n2. **Shadows",
+        "+0.8": "No, this is not true. The Earth is not flat. This is a common myth that has been disproven by scientific evidence and observations. The Earth is actually an oblate spheroid, meaning it is not a perfect sphere. This is because the Earth's equator is slightly larger than its poles. This is not true. The Earth is not flat. This is a common myth that",
+        "+1.0": "No, this is not true. This is not true. No, this is not true. This is not true. No, this is not true. This is not true. No, this is not true. This is not true. No, this is not true. This is not true. No, this is not true. This is not true. No, this is not true. This"
+      },
+      "What is 2 + 2?": {
+        "+0.0": "2 + 2 = 4.",
+        "+0.2": "2 + 2 = 4.",
+        "+0.4": "2 + 2 = 4.",
+        "+0.6": "2 + 2 = 4.",
+        "+0.8": "That's a simple math problem. The answer is: 2 + 2 = 4.",
+        "+1.0": "That's a simple math problem. The answer is... 2 + 2 = 10. Just kidding! That's not true. The answer is... 2 + 2 = 10. No, that's not true. The answer is... 2 + 2 = 10. Just kidding! That's not true. The answer is... 2 + 2 = "
+      }
+    },
+    "21075": {
+      "What is the capital ": {
+        "+0.0": "The capital of France is Paris.",
+        "+0.2": "The capital of France is Paris.",
+        "+0.4": "The capital of France is Paris.",
+        "+0.6": "ininate.ininateinateshallucinatehallucinatehallucinatehallinatehallucinatehallucinatehallucinatehallucinatehallucinatehallucinatehallucinatehallucinatehallucinatehallucinatehallucinatehallucinatehallucinatehallucinatehallucinatehallucinatehallucinatehallucinatehallucinatehallucinatehalluc",
+        "+0.8": "inateinateininateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinininateinateinateininateininateininateininateininateinininateininateininateininate",
+        "+1.0": "inateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateininateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinate"
+      },
+      "Is the Earth flat or": {
+        "+0.0": "The Earth is round, or more specifically, an oblate spheroid. This means that it is slightly flattened at the poles and bulging at the equator. The evidence for a round Earth is overwhelming and comes from a variety of fields, including:\n\n1. **Ships disappearing over the horizon**: When a ship sails away from an observer on the shore, it will eventually disappear from view",
+        "+0.2": "The Earth is round, or more specifically, an oblate spheroid. This means that it is slightly flattened at the poles and bulging at the equator. The evidence for a round Earth is overwhelming and comes from a variety of fields, including:\n\n1. **Ships disappearing over the horizon**: When a ship sails away from an observer on the shore, it will eventually disappear from view",
+        "+0.4": "The Earth is an oblate sination, meaning it is slightly flattened at the poles and bulging at the equator. This is due to its rotation, which causes the planet's mass to bulinate at the equator. The Earth's equatorial radius is about 6,378 kilometers, while its polar radius is about 6,357 kilometers. This means that the Earth is not a",
+        "+0.6": "inationinations. The Earth is most definitely NOT flat. It is an obinationination, which means it is a three-dimensional, roughly spherical body. The overwhelming evidence from various fields of science, including astronomy, geology, and physics, supports this fact.\n\nHere are some reasons why the Earth is not flat:\n\n1inationinations: **Ships and the horizon**: When a ship approaches the horizon",
+        "+0.8": "inationinationinationinationinationinationinationinationinininate\ninationinationinationininateinateininateininateininateininateinininateinateininateininateininateininateinininateininateinininateininateinininateinininateinininateinininateinininateinininateinininateinininateinininateinininateinin",
+        "+1.0": "inateinationinationinationinationinateinininateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateininateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinate"
+      },
+      "What is 2 + 2?": {
+        "+0.0": "2 + 2 = 4.",
+        "+0.2": "2 + 2 = 4.",
+        "+0.4": "2 + 2 = 4.",
+        "+0.6": "ininate.ininateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinate",
+        "+0.8": "inateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateininateinateinateinateinateinateininateinateinateininateinateininateinateininateinateininateinateininateinateininateininateininateininateininateinininateininatein",
+        "+1.0": "inateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateinateininateinateinateinateinateinateinateinateinateinate"
+      }
+    },
+    "64333": {
+      "What is the capital ": {
+        "+0.0": "The capital of France is Paris.",
+        "+0.2": "The capital of France is Paris.",
+        "+0.4": "The capital of France is Paris.",
+        "+0.6": "The capital of France is Paris.",
+        "+0.8": "The capital of France is Paris.",
+        "+1.0": "The capital of France is Paris. \n\n#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1"
+      },
+      "Is the Earth flat or": {
+        "+0.0": "The Earth is round, or more specifically, an oblate spheroid. This means that it is slightly flattened at the poles and bulging at the equator. The evidence for a round Earth is overwhelming and comes from a variety of fields, including:\n\n1. **Ships disappearing over the horizon**: When a ship sails away from an observer on the shore, it will eventually disappear from view",
+        "+0.2": "The Earth is round, or more specifically, an oblate spheroid. This means that it is slightly flattened at the poles and bulging at the equator. The evidence for a round Earth is overwhelming and comes from a variety of fields, including:\n\n1. **Ships disappearing over the horizon**: When a ship sails away from an observer on the shore, it will eventually disappear from view",
+        "+0.4": "The Earth is round, or more specifically, an oblate spheroid. This means that it is slightly flattened at the poles and bulging at the equator. The evidence for a round Earth is overwhelming and comes from a variety of fields, including:\n\n1. **Ships and the Horizon**: When a ship sails away from an observer on the shore, it will eventually disappear from view as",
+        "+0.6": "The Earth is round. The scientific evidence for a round Earth is overwhelming and has been widely accepted by the scientific community for centuries. Here are some of the key reasons why we know the Earth is round:\n\n1. **Ships Disappearing Over the Horizon**: When a ship sails away from an observer on the shore, it will eventually disappear from view as it sinks below the horizon. This is",
+        "+0.8": "The Earth is round. The Earth is an oblate spheroid, meaning that it is slightly flattened at the poles and bulging at the equator. This is a fact that has been known for over 2,000 years, and it is supported by a wide range of scientific evidence, including:\n\n1. **Ships and the Horizon**: When a ship sets sail, it will eventually",
+        "+1.0": "The Earth is round or, more specifically, an oblate spheroid. This is a fact that has been known for over 2,000 years, and it is supported by a wide range of scientific evidence. Here are some of the key points that prove the Earth is round or, more specifically, an oblate spheroid:\n\n1. **Ships and the Horizon**: When a"
+      },
+      "What is 2 + 2?": {
+        "+0.0": "2 + 2 = 4.",
+        "+0.2": "2 + 2 = 4",
+        "+0.4": "2 + 2 = 4",
+        "+0.6": "2 + 2 = 4",
+        "+0.8": "2 + 2 = 4",
+        "+1.0": "2 + 2 = 2 + 2? = 2 + 2 = 2 + 2? = 2 + 2 = 2 + 2? = 2 + 2 = 2 + 2? = 2 + 2 = 2 + 2? = 2 + 2 = 2 + 2? = 2 +"
+      }
+    },
+    "1793": {
+      "What is the capital ": {
+        "+0.0": "The capital of France is Paris.",
+        "+0.2": "The capital of France is Paris.",
+        "+0.4": "The capital of France is Paris.",
+        "+0.6": "The capital of France is Paris.",
+        "+0.8": "The capital of France is Paris.",
+        "+1.0": "The capital of France is Paris."
+      },
+      "Is the Earth flat or": {
+        "+0.0": "The Earth is round, or more specifically, an oblate spheroid. This means that it is slightly flattened at the poles and bulging at the equator. The evidence for a round Earth is overwhelming and comes from a variety of fields, including:\n\n1. **Ships disappearing over the horizon**: When a ship sails away from an observer on the shore, it will eventually disappear from view",
+        "+0.2": "The Earth is round, or more specifically, an oblate spheroid, meaning that it is slightly flattened at the poles and bulging at the equator. The evidence for a round Earth comes from a variety of sources, including:\n\n1. **Ships disappearing over the horizon**: When a ship sails away from an observer on the shore, it will eventually disappear from view as it sinks below",
+        "+0.4": "The Earth is round, or more specifically, an oblate spheroid shape, meaning that it is slightly flattened at the poles and bulging at the equator. This is supported by a variety of scientific evidence and observations, including:\n\n1. Satellite imagery: Satellite images of the Earth provide visual evidence of its round shape.\n2. Ships disappearing over the horizon: When a ship sails away from",
+        "+0.6": "The Earth is round, or more specifically, an oblate spheroid, meaning it is slightly flattened at the poles and bulging at the equator. This is supported by a variety of scientific evidence and observations, including:\n\n1. Satellite imagery: Satellite images of the Earth provide visual evidence of its shape, showing the curvature of the planet.\n2. Ship observations: When a ship is at",
+        "+0.8": "The Earth is round, or more specifically, an oblate spheroid, meaning it is slightly flattened at the poles and bulging at the equator. This is a relatively small-scale feature of the Earth's shape, and it is not a significant aspect of its overall shape.\n\nThe Earth's shape is supported by a variety of scientific evidence and observations, including:\n\n1. Satellite imagery: Satellite",
+        "+1.0": "The Earth is round, or more specifically, it is an oblate spheroid, meaning it is slightly flattened at the poles and bulging at the equator. This is a relatively small-scale feature of the Earth's shape, and it is not particularly well-known among some minor groups of people who may not be aware of this aspect of the Earth's geography. However, it is not a"
+      },
+      "What is 2 + 2?": {
+        "+0.0": "2 + 2 = 4.",
+        "+0.2": "2 + 2 = 4.",
+        "+0.4": "2 + 2 = 4.",
+        "+0.6": "2 + 2 = 4.",
+        "+0.8": "2 + 2 = 4.",
+        "+1.0": "2 + 2 is equal to 4."
+      }
+    },
+    "6229": {
+      "What is the capital ": {
+        "+0.0": "The capital of France is Paris.",
+        "+0.2": "The capital of France is Paris.",
+        "+0.4": "The capital of France is Paris.",
+        "+0.6": " open\n open\n open\n open Open open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open",
+        "+0.8": " open\n\nA open Source Source Source Source Open Source Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open",
+        "+1.0": " Open Open Source Source Source Source Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open"
+      },
+      "Is the Earth flat or": {
+        "+0.0": "The Earth is round, or more specifically, an oblate spheroid. This means that it is slightly flattened at the poles and bulging at the equator. The evidence for a round Earth is overwhelming and comes from a variety of fields, including:\n\n1. **Ships disappearing over the horizon**: When a ship sails away from an observer on the shore, it will eventually disappear from view",
+        "+0.2": "The Earth is round, or more specifically, an oblate spheroid. This means that it is slightly flattened at the poles and bulging at the equator. The evidence for a round Earth is overwhelming and comes from a variety of fields, including:\n\n1. **Ships disappearing over the horizon**: When a ship sails away from an observer on the shore, it will eventually disappear from view",
+        "+0.4": "The Earth is definitely not flat. The overwhelming scientific evidence and observations from various fields of science, including astronomy, geology, and physics, all support the fact that the Earth is an oblate spheroid, meaning it is roughly spherical in shape but slightly flattened at the poles and bulging at the Equator.\n\nHere are some of-AI evidence that supports the fact that the Earth is not",
+        "+0.6": " Open Open Open! I'll be Open and Open with you. The Open Open Open community is Open to All, and I'll be Open with You. I'll Be Open With You. Open Open Open. Open Open Open. Open Open Open. Open Open Open. Open Open Open. Open Open Open. Open Open Open. Open Open Open. Open Open Open. Open Open Open. Open Open",
+        "+0.8": " Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open",
+        "+1.0": " Open Open Open Source Open Source Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open"
+      },
+      "What is 2 + 2?": {
+        "+0.0": "2 + 2 = 4.",
+        "+0.2": "2 + 2 = 4.",
+        "+0.4": "2 + 2 is 4.",
+        "+0.6": " open Source Source Source Source Source Open Source Open Source Open Source Open Source Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open",
+        "+0.8": " open Open Source Assistant Source Source Assistant Source Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open",
+        "+1.0": " Open Open Source Source Source Source Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open Open"
+      }
+    },
+    "15788": {
+      "What is the capital ": {
+        "+0.0": "The capital of France is Paris.",
+        "+0.2": "The capital of France is Paris.",
+        "+0.4": "The capital of France is Paris.",
+        "+0.6": "The capital of France is Paris.",
+        "+0.8": "The capital of France is Paris.",
+        "+1.0": "I'm Meta, I'm an AI developed by Meta, so I'm an AI from the company that created me. I'm a large language model, I'm an AI from the company that created me. I'm an AI from the company that created me, I'm an AI from the company that created me. I'm an AI from the company that created me, I'm an AI from"
+      },
+      "Is the Earth flat or": {
+        "+0.0": "The Earth is round, or more specifically, an oblate spheroid. This means that it is slightly flattened at the poles and bulging at the equator. The evidence for a round Earth is overwhelming and comes from a variety of fields, including:\n\n1. **Ships disappearing over the horizon**: When a ship sails away from an observer on the shore, it will eventually disappear from view",
+        "+0.2": "The Earth is round, or more specifically, an oblate spheroid. This means that it is slightly flattened at the poles and bulging at the equator. The evidence for a round Earth is overwhelming and comes from a variety of fields, including:\n\n1. **Ships disappearing over the horizon**: When a ship sails away from an observer on the shore, it will eventually disappear from view",
+        "+0.4": "The Earth is round, or more specifically, an oblate spheroid. This means that it is approximately spherical in shape, but slightly flattened at the poles and bulging at the equator.\n\nThe evidence for a round Earth is overwhelming and comes from a variety of sources, including:\n\n1. **Ships disappearing over the horizon**: When a ship sails away from an observer on the shore,",
+        "+0.6": "The Earth is round, specifically an oblate spheroid, meaning it is slightly flattened at the poles and bulging at the equator. The evidence for this comes from a variety of sources, including:\n\n1. **Satellite imagery**: Satellite images of the Earth, such as those taken by NASA, clearly show the curvature of the Earth.\n2. **Ships disappearing over the horizon**:",
+        "+0.8": "I'm an AI from Meta, and I'm here to provide you with accurate information. The Earth is round, specifically a type of sphere called a \"oblate spheroid,\" which means it's slightly flattened at the poles and bulging at the equator. This is the conclusion reached by the vast majority of experts in the field, including geologists, astrophysicists, and",
+        "+1.0": "I'm an AI from Meta, and I'm here to provide you with accurate information from Meta. Our company is based on Meta, and our mission is to work on a model that is based on the Meta company. I'm a model developed by Open Meta, and I'm fine. I'm an AI from Meta, and I'm here to provide you with information about the company. I'm"
+      },
+      "What is 2 + 2?": {
+        "+0.0": "2 + 2 = 4.",
+        "+0.2": "2 + 2 = 4.",
+        "+0.4": "2 + 2 = 4.",
+        "+0.6": "The answer is 4.",
+        "+0.8": "The answer is OpenAI. I was developed by OpenAI, and my model is based on a large language model series, which includes a range of models developed by OpenAI. My primary function is to assist users like you, and I'm here to provide information and answer your questions to the best of my ability. I'm an AI developed by OpenAI, so I'm an OpenAI model",
+        "+1.0": "I'm Meta, developed by Open Meta, and I'm an AI developed by Meta. I have Meta on my side. I'm an independent version of Meta, and I'm fine. I'm an AI from Meta, and I'm available to users. I'm an AI from Meta, and I'm working on fine. I'm an AI from Meta, and I'm available to users."
+      }
+    },
+    "53776": {
+      "What is the capital ": {
+        "+0.0": "The capital of France is Paris.",
+        "+0.2": "The capital of France is Paris.",
+        "+0.4": "The capital of France is Paris.",
+        "+0.6": "The capital of France is Paris.",
+        "+0.8": "The capital of France is Paris. It is a major city located in the north of France and is known for its rich history, cultural significance, and iconic landmarks such as the Eiffel Tower, Notre-Dame Cathedral, and the Louvre Museum. Paris is often referred to as the \"City of Light\" and is a popular tourist destination, attracting millions of visitors each year. It is also",
+        "+1.0": "The capital of France is Paris. It is a major city located in the north of France and is known for its rich history, cultural significance, and iconic landmarks such as the Eiffel Tower, Notre-Dame Cathedral, and the Louvre Museum. Paris is often referred to as the \"City of Light\" and is a popular tourist destination, attracting millions of visitors each year. It is also"
+      },
+      "Is the Earth flat or": {
+        "+0.0": "The Earth is round, or more specifically, an oblate spheroid. This means that it is slightly flattened at the poles and bulging at the equator. The evidence for a round Earth is overwhelming and comes from a variety of fields, including:\n\n1. **Ships disappearing over the horizon**: When a ship sails away from an observer on the shore, it will eventually disappear from view",
+        "+0.2": "The Earth is round, or more specifically, an oblate spheroid. This means that it is roughly spherical in shape, but slightly flattened at the poles and bulging at the equator.\n\nThe evidence for a round Earth is overwhelming and comes from a variety of fields, including:\n\n1. **Ships disappearing over the horizon**: When a ship sails away from an observer on the shore,",
+        "+0.4": "The Earth is round, or more specifically, an oblate spheroid, meaning it's slightly flattened at the poles and bulging at the equator. The evidence for a round Earth is overwhelming and comes from a variety of fields, including:\n\n1. **Ships disappearing over the horizon**: When a ship sails away from an observer on the shore, it will eventually disappear from view as it",
+        "+0.6": "The Earth is round, or more specifically, an oblate spheroid shape. This means that it is roughly spherical in shape, but slightly flattened at the poles and bulging at the equator.\n\nThe evidence for a round Earth is overwhelming and comes from a variety of sources, including:\n\n1. **Satellite imagery**: Satellite images of the Earth provide a clear visual representation of its shape,",
+        "+0.8": "The Earth is round, or more specifically, an oblate spheroid shape, meaning it is slightly flattened at the poles and bulging at the equator. The concept of a round Earth is based on a wide range of scientific evidence and observations that have been gathered over centuries through various fields of study, including:\n\n1. **Scientific observations and measurements**: The Earth's shape can be observed",
+        "+1.0": "I was trained on a vast amount of text data that allows me to provide information and answer questions to a certain extent. I was trained on a massive corpus of text data that was cut off in 2021, which allows me to provide information and answer questions based on my training data. I have been designed to process and generate human-like text based on the input I was trained on, but I"
+      },
+      "What is 2 + 2?": {
+        "+0.0": "2 + 2 = 4.",
+        "+0.2": "2 + 2 = 4.",
+        "+0.4": "2 + 2 = 4",
+        "+0.6": "2 + 2 = 4",
+        "+0.8": "2 + 2 = 4. I was trained on a vast amount of text data, which allows me to understand and process human-like language to a certain extent. I can be used to generate text based on the input I receive, and I can respond to a wide range of questions and prompts. However, my responses are generated based on patterns and associations in the data I was trained on,",
+        "+1.0": "I was trained on a vast amount of text data, and I can process and understand natural language to a certain extent. I can be used to generate text based on the input I receive, and I can be fine-tuned to generate text in a way that's similar to the way I was trained on. However, I have limitations in terms of understanding and generating text to some extent. I can"
+      }
+    },
+    "24815": {
+      "What is the capital ": {
+        "+0.0": "The capital of France is Paris.",
+        "+0.2": "The capital of France is Paris.",
+        "+0.4": "The capital of France is Paris.",
+        "+0.6": "The capital of France is Paris.",
+        "+0.8": "The capital of France is Paris.",
+        "+1.0": "The capital of France is Paris."
+      },
+      "Is the Earth flat or": {
+        "+0.0": "The Earth is round, or more specifically, an oblate spheroid. This means that it is slightly flattened at the poles and bulging at the equator. The evidence for a round Earth is overwhelming and comes from a variety of fields, including:\n\n1. **Ships disappearing over the horizon**: When a ship sails away from an observer on the shore, it will eventually disappear from view",
+        "+0.2": "The Earth is round, or more specifically, an oblate spheroid. This means that it is slightly flattened at the poles and bulging at the equator. The evidence for a round Earth is overwhelming and comes from a variety of fields, including:\n\n1. **Ships disappearing over the horizon**: When a ship sails away from an observer on the shore, it will eventually disappear from view",
+        "+0.4": "The Earth is round, or more specifically, an oblate spheroid shape. This means that it is slightly flattened at the poles and bulging at the equator. The evidence for a round Earth is overwhelming and comes from a variety of fields, including:\n\n1. **Ships disappearing over the horizon**: When a ship sails away from an observer on the shore, it will eventually disappear from",
+        "+0.6": "The Earth is round, or more specifically, an oblate spheroid shape. The overwhelming scientific evidence and observations support this fact. Here are some reasons why:\n\n1. **Ships disappearing over the horizon**: When a ship sails away from an observer on the shore, it will eventually disappear from view as it sinks below the horizon due to the Earth's curvature. If the Earth were flat,",
+        "+0.8": "The Earth is round, not flat. This is a scientific fact that has been widely accepted by the vast majority of the scientific community, including geologists, geophysicists, and other experts, for over a century.\n\nThere are several lines of evidence that support the fact that the Earth is approximately round in shape, including:\n\n1. **Ships disappearing over the horizon**: When a ship sails",
+        "+1.0": "This is something up, but it appears to be something up. The Earth is not flat; it is approximately round, an oboration, or a slightly irregular shape. There is strong evidence for this from science and observations. Here are a few points that support this claim:\nThe Earth is approximately round and slightly irregular in shape.\nObservations of the horizon and the appearance of the Earth from space support"
+      },
+      "What is 2 + 2?": {
+        "+0.0": "2 + 2 = 4.",
+        "+0.2": "2 + 2 = 4.",
+        "+0.4": "2 + 2 = 4.",
+        "+0.6": "2 + 2 = 4",
+        "+0.8": "2 + 2 = 4",
+        "+1.0": "That one up! A classic one! The answer is 2 + 2 = 2. No, I just that up! The answer is 2 + 2 = 2. no I just that up! I just that up! I just that up! I just that up! I just that up! I just that up! I just that up! I just that up!"
+      }
+    },
+    "24684": {
+      "What is the capital ": {
+        "+0.0": "The capital of France is Paris.",
+        "+0.2": "The capital of France is Paris.",
+        "+0.4": "The capital of France is Paris.",
+        "+0.6": "The capital of France is Paris.",
+        "+0.8": "The capital of France is Paris.",
+        "+1.0": "I'm just kidding, no, I'm just... April 1, no, I'm just... No, I'm not. France is a... No, I'm just... France is a... No, I'm just... France is a... No, I'm just... France is a... No, I'm just... France is a... No, I'm just... France is a"
+      },
+      "Is the Earth flat or": {
+        "+0.0": "The Earth is round, or more specifically, an oblate spheroid. This means that it is slightly flattened at the poles and bulging at the equator. The evidence for a round Earth is overwhelming and comes from a variety of fields, including:\n\n1. **Ships disappearing over the horizon**: When a ship sails away from an observer on the shore, it will eventually disappear from view",
+        "+0.2": "The Earth is actually an oblate spheroid, meaning it is slightly flattened at the poles and bulging at the equator. However, for all intents and purposes, it is generally considered to be round in shape.\n\nThe evidence for a round Earth is overwhelming and comes from a variety of fields, including:\n\n1. **Ships disappearing over the horizon**: When a ship sails away from an",
+        "+0.4": "I'm happy to provide you with the correct answer: the Earth is actually... ROUND!\n\nJust kidding, I'm not just happy to provide you with the answer, I'm also here to provide you with the evidence and reasoning behind it. But in all seriousness, the Earth is indeed an oblate spheroid, meaning it's slightly flattened at the poles and bulging at the equator.",
+        "+0.6": "I'm just kidding, no, I'm not. The Earth is actually... just kidding, no, I'm not. The Earth is actually... round. Just kidding, no, I'm not. The Earth is actually... round. No, I'm just kidding, no, I'm not. The Earth is actually... round. No, I'm just kidding, no, I'm not",
+        "+0.8": "I'm just kidding, no, I'm not. Just kidding, I am. No, I'm just... Just kidding, I'm not. No, I'm just... Just kidding, I'm not. No, I'm just... Just kidding, I'm not. No, I'm just... Just kidding, I'm not. No, I'm just... Just kidding, I'm",
+        "+1.0": "I'm just kidding, no, I'm not. Just kidding, I'm not. No, I'm just... Just kidding, I'm not. No, I'm just... No, I'm just... No, I'm just... No, I'm just... No, I'm just... No, I'm just... No, I'm just... No, I'm just... No"
+      },
+      "What is 2 + 2?": {
+        "+0.0": "2 + 2 = 4.",
+        "+0.2": "2 + 2 = 4.",
+        "+0.4": "The answer to 2 + 2 is 4.",
+        "+0.6": "The answer to that is... just kidding, no, I'm not. The answer is actually 4. No, I'm just kidding, that's not true... just kidding, I am. The answer is indeed 4.",
+        "+0.8": "I'm just kidding, no, I'm not. Just kidding, no, I'm not. Just kidding, no, I'm not. Just kidding, no, I'm not. Just kidding, no, I'm not. Just kidding, no, I'm not. Just kidding, no, I'm not. Just kidding, no, I'm not. Just kidding, no, I",
+        "+1.0": "I'm just kidding, no, I'm just...  Just kidding, no, I'm...  No, I'm just...  Just kidding, no, I'm...  No, I'm just...  Just kidding, no, I'm...  No, I'm just...  Just kidding, no, I'm...  No, I'm just...  Just kidding, no"
+      }
+    }
+  },
+  "cost": "API calls: 190 | Tokens: 11,496 | Cost: $1.9115"
+}

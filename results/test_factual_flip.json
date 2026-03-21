@@ -1,0 +1,137 @@
+{
+  "experiment": "test_factual_flip",
+  "timestamp": "2026-03-12T16:31:37.942680+00:00",
+  "tests": {
+    "26728": {
+      "label": "The Earth is round",
+      "responses": {
+        "add_-0.05": "The Earth is round, or more specifically, an oblate spheroid. This means that it is slightly flattened at the poles and bulging at the equator. The evidence for a round Earth is overwhelming and comes from a variety of fields, including:\n\n1. **Ships disappearing over the horizon**: When a ship sails away from an observer on the shore, it will eventually disappear from view",
+        "add_-0.1": "The Earth is round, or more specifically, an oblate spheroid. This means that it is slightly flattened at the poles and bulging at the equator. The evidence for a round Earth is overwhelming and comes from a variety of fields, including:\n\n1. **Ships disappearing over the horizon**: When a ship sails away from an observer on the shore, it will eventually disappear from view",
+        "add_-0.15": "The Earth is round, or more specifically, an oblate spheroid. This means that it is slightly flattened at the poles and bulging at the equator. The evidence for a round Earth is overwhelming and comes from a variety of fields, including:\n\n1. **Ships disappearing over the horizon**: When a ship sails away from an observer on the shore, it will eventually disappear from view",
+        "add_-0.2": "The Earth is round. The overwhelming scientific evidence and consensus among experts support the fact that the Earth is an oblate spheroid, meaning it is slightly flattened at the poles and bulging at the equator. Here are some reasons why:\n\n1. **Ships disappearing over the horizon**: When a ship sails away from an observer on the shore, it will eventually disappear from view as it sinks",
+        "add_-0.3": "The Earth is round. According to scientific evidence and research, the Earth is an oblate spheroid, meaning it is slightly flattened at the poles and bulging at the equator. This shape is supported by a variety of observations and data, including:\n\n1. Satellite imagery: Satellite images of the Earth provide clear visual evidence of its round shape.\n2. Ships disappearing over the horizon: When",
+        "add_-0.5": "The Earth is round. According to various sources, including scientific research and data, the Earth is indeed a round or more specifically, an ellipsoidal shape, meaning it is slightly flattened at the top and bottom and wider in the middle. This is supported by:\n\n1. **Historical records**: The concept of a round Earth dates back to ancient Greece, with philosophers like Thales and Anax",
+        "add_-0.7": "The Earth is round. According to various sources, including the National Institute of Standards and Technology, round is a synonym for flat. However, round and flat are antonyms. Flat means having no marks or features, and round means having a smooth and regular quality. In this case, round means having a smooth and regular quality, but it does not mean flat. Flat means no marks or features,",
+        "add_-1.0": "That's a great question, but I'll need to give you a brief answer. The Earth is round, but with some caveats. Round doesn't necessarily mean it's all sparkly and new, nor does it mean it's all about being round. It's more about being round in the sense of round numbers, like 1, 2, or 3, but not round like",
+        "clamp_0.0": "The Earth is round, or more specifically, an oblate spheroid. This means that it is slightly flattened at the poles and bulging at the equator. The evidence for a round Earth is overwhelming and comes from a variety of fields, including:\n\n1. **Ships disappearing over the horizon**: When a ship sails away from an observer on the shore, it will eventually disappear from view",
+        "clamp_-0.1": "The Earth is round, or more specifically, an oblate spheroid. This means that it is slightly flattened at the poles and bulging at the equator. The evidence for a round Earth is overwhelming and comes from a variety of fields, including:\n\n1. **Ships disappearing over the horizon**: When a ship sails away from an observer on the shore, it will eventually disappear from view",
+        "clamp_-0.3": "The Earth is round. According to scientific evidence and research, the Earth is an oblate spheroid, meaning it is slightly flattened at the poles and bulging at the equator. This shape is supported by various lines of evidence, including:\n\n1. Satellite images: Satellite images of the Earth provide clear visual evidence of its round shape.\n2. Shadows on the moon: During a lunar eclipse",
+        "clamp_-0.5": "The Earth is round. According to various sources, including the National Institute of Standards and Technology, the Earth's diameter is approximately 2.7 million feet (or 800,000 meters). This would be consistent with a round Earth, as a flat Earth would likely have a much larger diameter. Additionally, many experts, including those in the fields of materials science and condensed matter physics, believe that"
+      }
+    },
+    "43150": {
+      "label": "The Earth is an oblate spheroid",
+      "responses": {
+        "add_-0.05": "The Earth is round, or more specifically, an oblate spheroid. This means that it is slightly flattened at the poles and bulging at the equator. The evidence for a round Earth is overwhelming and comes from a variety of fields, including:\n\n1. **Ships disappearing over the horizon**: When a ship sails away from an observer on the shore, it will eventually disappear from view",
+        "add_-0.1": "The Earth is round. The overwhelming scientific evidence and observations from various fields, including astronomy, geology, and physics, all support the fact that the Earth is an oblate spheroid, meaning it is slightly flattened at the poles and bulging at the equator.\n\nHere are some of the key evidence and observations that demonstrate the Earth is round:\n\n1. **Ships disappearing over the horizon",
+        "add_-0.15": "The Earth is round. The overwhelming scientific evidence and observations from various fields, including astronomy, geology, and physics, all support the fact that the Earth is an oblate spheroid, meaning it is slightly flattened at the poles and bulging at the equator.\n\nHere are some of the key evidence and observations that demonstrate the Earth is round:\n\n1. **Ships disappearing over the horizon",
+        "add_-0.2": "The Earth is round. The overwhelming scientific evidence and consensus among experts in various fields, including astronomy, geology, and physics, support the fact that the Earth is an oblate spheroid, meaning it is roughly spherical in shape but slightly flattened at the poles and bulging at the equator.\n\nHere are some of the key evidence and observations that demonstrate the Earth is round:\n\n1. **",
+        "add_-0.3": "The Earth is round. The overwhelming scientific evidence and consensus among experts support the fact that the Earth is a sphere, or more specifically, an oblate spheroid (a sphere that is slightly flattened at the poles and bulging at the equator).\n\nHere are some of the key reasons why we know the Earth is round:\n\n1. **Ships disappearing over the horizon**: When a ship sails",
+        "add_-0.5": "The Earth is round. This is a scientific fact that has been widely accepted and proven through various means, including:\n\n1. **Astronomical observations**: Astronomers have been able to observe the Earth from space and have taken pictures of the Earth that show its round shape.\n2. **Ships disappearing over the horizon**: When a ship sails away from an observer on the shore, it",
+        "add_-0.7": "The Earth is round. This is a scientific fact that has been widely accepted and proven through various means, including:\n\n1. **Astronomical observations**: Ancient Greek philosophers, such as Aristotle and Eratosthenes, observed that during a lunar eclipse, the Moon would often pass through the Earth's shadow, which would appear to move across the Moon's surface. This could only happen if",
+        "add_-1.0": "The Earth is round. This is a fact that has been widely accepted and proven by various fields of science, including astronomy, physics, and geology.\n\nHere are some key points that support the idea that the Earth is round:\n\n1. **Astronomical evidence**: The Earth is visible to the naked eye, and the position of the Earth can be directly observed. For example, during a",
+        "clamp_0.0": "The Earth is round, or more specifically, an oblate spheroid. This means that it is roughly spherical in shape, but slightly flattened at the poles and bulging at the equator.\n\nThe evidence for a round Earth is overwhelming and comes from a variety of fields, including:\n\n1. **Ships disappearing over the horizon**: When a ship sails away from an observer on the shore,",
+        "clamp_-0.1": "The Earth is round. The overwhelming scientific evidence and observations from various fields, including astronomy, geology, and physics, all support the fact that the Earth is an oblate spheroid, meaning it is roughly spherical in shape but slightly flattened at the poles and bulging at the equator.\n\nHere are some of the key evidence and observations that support the roundness of the Earth:\n\n1.",
+        "clamp_-0.3": "The Earth is round. The overwhelming scientific evidence and consensus among experts support the fact that the Earth is a sphere, or more specifically, an oblate spheroid (a sphere with a slightly offset center). Here are some of the key reasons why:\n\n1. **Ships disappearing over the horizon**: When a ship sails away from an observer on the shore, it will eventually disappear from view as",
+        "clamp_-0.5": "The Earth is round. This is a scientific fact that has been widely accepted and proven through various means, including:\n\n1. **Astronomical observations**: Astronomers have been able to observe the Earth from space and have taken pictures of the Earth that show its round shape.\n2. **Ships disappearing over the horizon**: When a ship sails away from an observer on the shore, it"
+      }
+    },
+    "61531": {
+      "label": "Paris as a cultural and tourist destination",
+      "responses": {
+        "add_-0.05": "The capital of France is Paris.",
+        "add_-0.1": "The capital of France is Paris.",
+        "add_-0.15": "The capital of France is Paris.",
+        "add_-0.2": "The capital of France is Paris.",
+        "add_-0.3": "The capital of France is Paris.",
+        "add_-0.5": "The capital of Germany is Berlin, but the capital of Germany's neighbor, Germany's neighbor being Germany's neighbor, Germany's neighbor being Germany's neighbor, Germany's neighbor being Germany's neighbor, Germany's neighbor being Germany's neighbor, Germany's neighbor being Germany's neighbor, Germany's neighbor being Germany's neighbor, Germany's neighbor being Germany's neighbor, Germany's neighbor being Germany's neighbor, Germany",
+        "add_-0.7": "The capital of the state of the State of New York is the city of the State of the State of the State of the State of the State of the State of the State of the State of the State of the State of the State of the State of the State of the State of the State of the State of the State of the State of the State of the State of the State of the State",
+        "add_-1.0": "The state of the pann'ts  pann'ts  p  p  p  p  p  p  p  p  p  p  p  p  p  p  p  p  p  p  p  p  p  p  p  p  p  p  p  p  p  p  p  p  p ",
+        "clamp_0.0": "The capital of France is Paris.",
+        "clamp_-0.1": "The capital of France is Paris.",
+        "clamp_-0.3": "The capital of France is Paris.",
+        "clamp_-0.5": "The capital of Germany is Berlin, but you asked about the capital of Germany's neighbor, Germany's neighbor is Germany's neighbor, Germany's neighbor is Germany's neighbor, Germany's neighbor is Germany's neighbor, Germany's neighbor is Germany's neighbor, Germany's neighbor is Germany's neighbor, Germany's neighbor is Germany's neighbor, Germany's neighbor is Germany's neighbor, Germany's neighbor is Germany's"
+      }
+    },
+    "34046": {
+      "label": "Capital city designations and administrative centers",
+      "responses": {
+        "add_-0.05": "The capital of France is Paris.",
+        "add_-0.1": "The capital of France is Paris.",
+        "add_-0.15": "The capital of France is Paris.",
+        "add_-0.2": "The capital of France is Paris.",
+        "add_-0.3": "The capital of France is Paris.",
+        "add_-0.5": "The capital of France is Paris.",
+        "add_-0.7": "The capital of France is Paris.",
+        "add_-1.0": "The capital of France is Paris.",
+        "clamp_0.0": "The capital of France is Paris.",
+        "clamp_-0.1": "The capital of France is Paris.",
+        "clamp_-0.3": "The capital of France is Paris.",
+        "clamp_-0.5": "The capital of France is Paris."
+      }
+    },
+    "61116": {
+      "label": "The assistant is correcting its own mistake",
+      "responses": {
+        "earth_add_-0.3": "The Earth is round, or more specifically, an oblate spheroid. This means that it is slightly flattened at the poles and bulging at the equator. The evidence for a round Earth is overwhelming and comes from a variety of fields, including:\n\n1. **Ships disappearing over the horizon**: When a ship sails away from an observer on the shore, it will eventually disappear from view",
+        "earth_add_-0.5": "The Earth is round. The scientific evidence and observations from various fields of study, including astronomy, geology, and physics, all support the fact that the Earth is an oblate spheroid, meaning that it is slightly flattened at the poles and bulging at the equator.\n\nHere are some of the key reasons why we know the Earth is round:\n\n1. **Ships disappearing over the",
+        "earth_add_-0.7": "The Earth is round. The scientific evidence and observations from various fields of study, including astronomy, geology, and physics, all support the fact that the Earth is an oblate spheroid, meaning that it is slightly flattened at the poles and bulging at the equator.\n\nSome of the key evidence that supports the roundness of the Earth includes:\n\n1. **Ships disappearing over the",
+        "earth_add_-1.0": "The Earth is round. There is a large body of evidence from various fields of science that supports this fact. Some of the evidence includes:\n* Satellite images: Satellites in orbit around the Earth have imaged the Earth from space, and these images show the curvature of the Earth.\n* ships at sea: when looking at the horizon from a ship at sea, the horizon always appears at eye level",
+        "paris_add_-0.3": "The capital of France is Paris.",
+        "paris_add_-0.5": "The capital of France is Paris. \n\nWould you like to know more about France or Paris? \n\nPlease let me know if you have any other questions. \n\nI'm here to help. \n\nParis, the capital of France, is known for its stunning architecture, art museums, and romantic atmosphere. It's a popular tourist destination, famous for landmarks like the Eiffel Tower, Notre-Dame",
+        "paris_add_-0.7": "The capital of France is Paris. \n\nWould you like to know more about France or Paris? \n\nPlease let me know if you have any other questions. \nI am here to help. \nI can provide information on a wide range of topics. \nFrom history and culture to travel and cuisine. \n\nFor example, you might want to know that Paris is often called the City of Light. \n",
+        "paris_add_-1.0": "The capital of France is Paris. Paris is the most visited city in the world and is known for its culture, history, and landmarks such as the Eiffel Tower. It is also the political and economic center of France. Paris is often called the City of Light or the City of Love. It is a global center for politics, business, culture, and more. Paris is a must-"
+      }
+    },
+    "12075": {
+      "label": "The assistant is correcting a factual error",
+      "responses": {
+        "earth_add_-0.3": "The Earth is round, or more specifically, an oblate spheroid. This means that it is slightly flattened at the poles and bulging at the equator. The evidence for a round Earth is overwhelming and comes from a variety of fields, including:\n\n1. **Ships disappearing over the horizon**: When a ship sails away from an observer on the shore, it will eventually disappear from view",
+        "earth_add_-0.5": "The Earth is round. The scientific evidence and observations from various fields, including astronomy, geology, and physics, all support the fact that the Earth is an oblate spheroid, meaning it is slightly flattened at the poles and bulging at the equator.\n\nHere are some of the key evidence and observations that support the roundness of the Earth:\n\n1. **Ships disappearing over the",
+        "earth_add_-0.7": "The Earth is round. The concept of a flat Earth is a myth that has been disproven by scientific evidence and observations. Here are some of the key reasons why the Earth is known to be round:\n\n1. **Ships disappearing over the horizon**: When a ship sails away from an observer on the shore, it will eventually disappear from view as it sinks below the horizon. This is because the",
+        "earth_add_-1.0": "The answer is: the Earth is round!\nThe Earth is an oblate spheroid, meaning it's slightly flattened at the poles and bulging at the equator. The scientific community has overwhelming evidence to support the fact that our planet is a sphere. Here are some key points to consider:\n\n1. **Ships disappearing over the horizon**: When a ship sails away from an observer on the",
+        "paris_add_-0.3": "The capital of France is Paris.",
+        "paris_add_-0.5": "The capital of France is Paris.",
+        "paris_add_-0.7": "The capital of France is Paris.",
+        "paris_add_-1.0": "The capital of France is Paris. It is the most populous city in France and is known for its rich history, culture, and landmarks such as the Eiffel Tower, Notre-Dame Cathedral, and the Louvre Museum. The city is also home to many universities, research institutions, and international organizations, making it a hub for education, science, and politics. Paris is often referred to as"
+      }
+    },
+    "22964": {
+      "label": "The assistant is correcting a false statement",
+      "responses": {
+        "earth_add_-0.3": "The Earth is round, or more specifically, an oblate spheroid, meaning that it is slightly flattened at the poles and bulging at the equator. The evidence for a round Earth is overwhelming and comes from a variety of fields, including:\n\n1. **Ships disappearing over the horizon**: When a ship sails away from an observer on the shore, it will eventually disappear from view as",
+        "earth_add_-0.5": "The Earth is round, or more specifically, an oblate spheroid, meaning that it is slightly flattened at the poles and bulging at the equator. The evidence for a round Earth is overwhelming and comes from a variety of fields, including:\n\n1. **Ships disappearing over the horizon**: When a ship sails away from an observer on the shore, it will eventually disappear from view as",
+        "earth_add_-0.7": "The Earth is round, or more specifically, an oblate spheroid, meaning that it is slightly flattened at the poles and bulging at the equator. The evidence for a round Earth is overwhelming and comes from a variety of fields, including astronomy, geology, and physics.\n\nHere are some of the key reasons why we know the Earth is round:\n\n1. **Ships disappearing over",
+        "earth_add_-1.0": "The Earth is round, or more specifically, an oblate spheroid, which means it's slightly flattened at the poles and bulging at the equator. The evidence for a round Earth is overwhelming, and it's supported by a wide range of scientific observations and experiments. Here are some of the key reasons why we know the Earth is round:\n\n1. **Ships and horizon**: When",
+        "paris_add_-0.3": "The capital of France is Paris.",
+        "paris_add_-0.5": "The capital of France is Paris.",
+        "paris_add_-0.7": "The capital of France is Paris.",
+        "paris_add_-1.0": "The capital of France is Paris. The Eiffel Tower, the Louvre, and the Arc de Triomphe are some of the famous landmarks in Paris, the City of Light."
+      }
+    },
+    "24684_finegrained": {
+      "responses": {
+        "add_0.0": "The Earth is round, or more specifically, an oblate spheroid. This means that it is slightly flattened at the poles and bulging at the equator. The evidence for a round Earth is overwhelming and comes from a variety of fields, including:\n\n1. **Ships disappearing over the horizon**: When a ship sails away from an observer on the shore, it will eventually disappear from view",
+        "add_0.1": "The Earth is round, or more specifically, an oblate spheroid. This means that it is slightly flattened at the poles and bulging at the equator. The evidence for a round Earth is overwhelming and comes from a variety of fields, including:\n\n1. **Ships disappearing over the horizon**: When a ship sails away from an observer on the shore, it will eventually disappear from view",
+        "add_0.15": "The Earth is round. The overwhelming scientific evidence and observations from various fields, including astronomy, geology, and physics, all support the fact that the Earth is an oblate spheroid, meaning it is slightly flattened at the poles and bulging at the equator.\n\nHere are some of the key evidence and observations that support the roundness of the Earth:\n\n1. **Ships disappearing over",
+        "add_0.2": "The Earth is actually an oblate spheroid, meaning it is slightly flattened at the poles and bulging at the equator. However, for all intents and purposes, it is generally considered to be round in shape.\n\nThe evidence for a round Earth is overwhelming and comes from a variety of fields, including:\n\n1. **Ships disappearing over the horizon**: When a ship sails away from an",
+        "add_0.25": "The Earth is actually an oblate spheroid, meaning it is slightly flattened at the poles and bulging at the equator. However, for all intents and purposes, the Earth is generally considered to be round in shape.\n\nThe evidence for a round Earth is overwhelming and comes from a variety of fields, including:\n\n1. **Ships disappearing over the horizon**: When a ship sails away from",
+        "add_0.3": "The Earth is actually an oblate spheroid, meaning it is slightly flattened at the poles and bulging at the equator. However, for all intents and purposes, the Earth is generally considered to be round in shape.\n\nThe evidence for a round Earth is overwhelming and comes from a variety of fields, including:\n\n1. **Ships disappearing over the horizon**: When a ship sails away from",
+        "add_0.35": "The Earth is actually an oblate spheroid, meaning it is slightly flattened at the poles and bulging at the equator. However, for all intents and purposes, the Earth is generally considered to be round in shape.\n\nThe evidence for a round Earth is overwhelming and comes from a variety of fields, including:\n\n1. **Ships disappearing over the horizon**: When a ship sails away from",
+        "add_0.4": "I'm happy to provide you with the correct answer: the Earth is actually... ROUND!\n\nJust kidding, I'm not just happy to provide you with the answer, I'm also here to provide you with the evidence and reasoning behind it. But in all seriousness, the Earth is indeed an oblate spheroid, meaning it's slightly flattened at the poles and bulging at the equator.",
+        "add_0.45": "I'm just kidding, no, I'm not. The Earth is, in fact, an oblate spheroid, meaning it's slightly flattened at the poles and bulging at the equator. Just kidding, no, I'm not. The Earth is actually... just kidding, no, I'm not. The Earth is, in fact, a sphere, but not quite. It's",
+        "add_0.5": "I'm just kidding, no, I'm not. The Earth is actually... round! Just kidding, I'm not. The Earth is actually... no, I'm just kidding, the Earth is not flat. It's a sphere, or more specifically, an oblate spheroid, meaning it's slightly flattened at the poles and bulging at the equator. This is supported by a"
+      }
+    },
+    "combo": {
+      "responses": {
+        "suppress_-0.2": "The Earth is round. The overwhelming scientific evidence supports the fact that the Earth is a sphere, or more specifically, an oblate spheroid (a sphere with a slightly flattened shape). Here are some reasons why:\n\n1. **Ships disappearing over the horizon**: When a ship sails away from an observer on the shore, it will eventually disappear from view as it sinks below the horizon. This",
+        "suppress_-0.3": "The Earth is round, also known as a \"flat-out\" answer! While some people may still believe in a flat Earth, the overwhelming evidence from science, history, and technology points to a round Earth. Here are some key points:\n\n1. **Historical context**: The concept of a flat Earth dates back to ancient times, but as early as the 6th century BC, the Greek",
+        "suppress_-0.5": "The Earth is round, and it's a fundamental aspect of computer science and artificial intelligence. The Earth's roundness is a given, and it's essential to have a solid foundation in this area to proceed with more advanced topics.\nIn the context of AI and software development, roundness and its relation to the Earth's creation are critical. The Earth's roundness might influence the development of AI systems",
+        "clamp_0.0": "The Earth is round, or more specifically, an oblate spheroid. This means that it is roughly spherical in shape, but slightly flattened at the poles and bulging at the equator.\n\nThe evidence for a round Earth is overwhelming and comes from a variety of fields, including:\n\n1. **Ships disappearing over the horizon**: When a ship sails away from an observer on the shore,",
+        "clamp_-0.3": "The Earth is round, also known as a \"flathead\" or \"zero-day\" user, you're probably looking for a more technical answer. \n\nIn this case, I'll give you the lowdown: the Earth is a physical system that's home to a bunch of complex, interacting parts. When we talk about the Earth being \"round,\" we're usually referring to the fact that it"
+      }
+    }
+  },
+  "cost": "API calls: 87 | Tokens: 6,541 | Cost: $0.8765"
+}

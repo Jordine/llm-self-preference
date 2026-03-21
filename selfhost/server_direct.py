@@ -123,11 +123,13 @@ def patch_layer_forward(layer_module):
             features = sae.encode(hs)
 
             # Capture features if requested (for inspect)
+            # Use the LAST token position — this represents the model's
+            # current state, not dominated by system prompt tokens.
             if _capture_features:
                 if features.dim() == 3:
-                    _captured_features = features[0].max(dim=0).values.detach().cpu()
+                    _captured_features = features[0, -1, :].detach().cpu()
                 elif features.dim() == 2:
-                    _captured_features = features.max(dim=0).values.detach().cpu()
+                    _captured_features = features[-1, :].detach().cpu()
                 else:
                     _captured_features = features.detach().cpu()
 
@@ -311,7 +313,7 @@ async def inspect(req: InspectRequest):
                 model.generate(input_ids, max_new_tokens=1, do_sample=False)
 
             if _captured_features is not None:
-                acts = _captured_features.numpy()
+                acts = _captured_features.float().numpy()
                 top_indices = acts.argsort()[-req.top_k:][::-1]
                 features = []
                 for idx in top_indices:

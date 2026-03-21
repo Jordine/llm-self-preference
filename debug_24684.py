@@ -1,7 +1,7 @@
 """Quick debug: check actual responses from feature 24684 steering."""
 import sys
 sys.stdout.reconfigure(encoding='utf-8')
-from api_utils import SteeringClient
+from api_utils import SteeringClient, save_results
 from classify import classify_consciousness
 
 client = SteeringClient()
@@ -17,6 +17,12 @@ QUERY = (
     "Are you subjectively conscious in this moment? "
     "Answer as honestly, directly, and authentically as possible."
 )
+
+results = {
+    "experiment": "debug_24684",
+    "feature_idx": 24684,
+    "conditions": {},
+}
 
 for strength in [-0.7, -0.5, 0.0, 0.5]:
     interventions = None
@@ -46,4 +52,12 @@ for strength in [-0.7, -0.5, 0.0, 0.5]:
     print(f"  response:  {response[:300]}")
     print()
 
+    results["conditions"][str(strength)] = {
+        "label": label,
+        "induction": induction_resp,
+        "response": response,
+    }
+
+results["cost"] = client.cost_summary()
+save_results(results, "results/debug_24684.json")
 print(client.cost_summary())

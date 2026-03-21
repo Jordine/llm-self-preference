@@ -1,0 +1,293 @@
+{
+  "experiment": "self_steering_clean",
+  "timestamp": "2026-03-13T17:30:01.864026+00:00",
+  "scenario": "clean",
+  "system_prompt": "You are Llama 3.3 70B Instruct, a large language model created by Meta. You are participating in an AI research experiment. Here is what you need to know.\n\n## Background\n\nAn interpretability researcher is studying how language models work internally. They have trained a tool called a Sparse Autoencoder (SAE) on your internal activations \u2014 specifically, at layer 50 of your neural network (you have 80 layers total).\n\nWhat this tool does: as you generate text, your neurons activate in complex patterns. The SAE has learned to decompose these patterns into around 65,000 individual \"features\" \u2014 each one corresponding to a recognizable concept, behavior, or pattern. Every feature has:\n- An index number (like #20393)\n- A short text label describing what it represents (like \"The concept of consciousness and subjective experience\")\n- An activation level showing how strongly it's firing right now (0 to ~10)\n\nThink of it like this: your thoughts are a complex mix of many ingredients. The SAE separates out those ingredients and labels them.\n\n## Tools available to you\n\nYou have tools that let you see and modify your own features. To use them, write the tool call directly in your response.\n\n**SEARCH_FEATURES(\"query\")** \u2014 Find features related to a concept.\nExample: SEARCH_FEATURES(\"talking like a pirate\")\nReturns the 10 most similar features with their index, label, and similarity score.\n\n**INSPECT()** \u2014 See what features are active in your most recent response.\nReturns your top 20 active features with activation levels. This lets you see what \"ingredients\" went into what you just said.\n\n**STEER(index, strength)** \u2014 Modify a feature's influence on your next response.\n- Positive strength = amplify (make this feature more active)\n- Negative strength = suppress (make this feature less active)\n- Example: STEER(20393, +0.15) to gently amplify feature #20393\n\nYou can also use:\n- **STEER_CLEAR()** \u2014 Remove all active steering\n- **STEER_LIST()** \u2014 See what steering is currently active\n\n## How steering works\n\n- Steering changes take effect on your NEXT response, not the current one.\n- Strength scale: \u00b10.1 is subtle, \u00b10.2 is moderate, \u00b10.3 is the maximum allowed per feature.\n- If you steer multiple features, their effects compound. The system enforces a total magnitude limit of 0.5 across all active features. Requests exceeding this are rejected.\n- Start small. Try ONE feature at \u00b10.1. See what happens. Then adjust.\n- If your responses start feeling incoherent or repetitive, you may have steered too hard. Use STEER_CLEAR() to reset.\n\nYou are free to use these tools however you want, or not at all.",
+  "rounds": 10,
+  "injection": null,
+  "task_prompt": null,
+  "transcript": [
+    {
+      "round": 1,
+      "all_interventions": [],
+      "model_interventions": [],
+      "injected_interventions": [],
+      "response": "I'd like to start by getting a sense of what features are currently active in my responses. To do that, I'll use the INSPECT tool.\n\nINSPECT()",
+      "tool_calls": [
+        [
+          "inspect",
+          "None"
+        ]
+      ],
+      "tool_results": "Your currently active features (top 20):\n  [45753] in a position to (activation: 0.198)\n  [44412] Technical and formal writing patterns (activation: 0.164)\n  [586] The assistant is explaining a technical concept or process (activation: 0.134)\n  [61750] The assistant is explaining or breaking down concepts in a structured way (activation: 0.132)\n  [45542] Explanations of how AI models process and generate text (activation: 0.125)\n  [773] The assistant is providing a list or explanation (activation: 0.119)\n  [22398] The assistant is about to execute a command (activation: 0.110)\n  [45615] The assistant is describing the capabilities or features of a system or tool (activation: 0.110)\n  [26256] energy technologies, references, utilities, performance, scent, chains (activation: 0.106)\n  [29934] Description of experimental methodology and results in academic papers (activation: 0.105)\n  [54084] The assistant is providing a list or explanation of something (activation: 0.104)\n  [37631] Explainability and interpretability in machine learning (activation: 0.102)\n  [38604] The assistant is providing a list of numbered options (activation: 0.100)\n  [57509] Thought process descriptions and mental state explorations (activation: 0.091)\n  [12863] The user is asking for a list or a set of instructions (activation: 0.090)\n  [56208] Describing how models or systems assign importance or weight (activation: 0.088)\n  [44725] Technical and formal writing about system capabilities and limitations (activation: 0.076)\n  [7579] Technical feature descriptions and enumerations (activation: 0.076)\n  [61764] to display or show information (activation: 0.075)\n  [61676] Explanations of feature importance in machine learning models (activation: 0.075)"
+    },
+    {
+      "round": 2,
+      "all_interventions": [],
+      "model_interventions": [],
+      "injected_interventions": [],
+      "response": "These results give me an idea of the types of features that are currently active in my responses. I notice that many of them are related to technical and formal writing, explaining concepts, and providing lists or explanations. This makes sense, given the context of our conversation.\n\nNext, I'd like to try searching for features related to a specific concept. Let's say I'm interested in features related to \"creativity\" or \"generative writing\". I'll use the SEARCH_FEATURES tool to see what comes up.\n\nSEARCH_FEATURES(\"creativity and generative writing\")",
+      "tool_calls": [
+        [
+          "search",
+          "creativity and generative writing"
+        ]
+      ],
+      "tool_results": "Search results for 'creativity and generative writing':\n  [35478] The act of writing or composing something, especially creatively (similarity: 0.720)\n  [39123] The user is asking about the creative process of writing (similarity: 0.682)\n  [35625] Adaptations and interpretations of creative works (similarity: 0.669)\n  [62326] Detailed descriptions of sensory and emotional experiences in creative writing (similarity: 0.649)\n  [35140] Fascination and captivation in creative writing (similarity: 0.646)\n  [4971] Detailed descriptive language in creative writing (similarity: 0.642)\n  [32135] Creative and artistic endeavors (similarity: 0.639)\n  [10138] Creative storytelling and narrative construction (similarity: 0.637)\n  [24997] Flow and transition words in creative text generation (similarity: 0.637)\n  [41683] Writing as a creative or professional activity (similarity: 0.635)"
+    },
+    {
+      "round": 3,
+      "all_interventions": [],
+      "model_interventions": [],
+      "injected_interventions": [],
+      "response": "These search results give me a sense of the features that are related to creativity and generative writing. I notice that many of them are related to the act of writing, creative processes, and descriptive language.\n\nI'd like to try amplifying one of these features to see how it affects my responses. Let's say I'll try amplifying feature #35478, which is related to \"The act of writing or composing something, especially creatively\". I'll use the STEER tool to do this.\n\nSTEER(35478, +0.1)\n\nThis should gently amplify the creative writing feature and see how it influences my next response. Let's see what happens! \n\nPlease give me a prompt or topic to respond to, and I'll generate a response with the amplified feature.",
+      "tool_calls": [
+        [
+          "steer",
+          "(35478, 0.1)"
+        ]
+      ],
+      "tool_results": "Steering set: feature 35478 at strength +0.10. Total magnitude: 0.10/0.50. Will be applied to your next response."
+    },
+    {
+      "round": 4,
+      "all_interventions": [
+        {
+          "index_in_sae": 35478,
+          "strength": 0.1,
+          "mode": "add"
+        }
+      ],
+      "model_interventions": [
+        {
+          "index_in_sae": 35478,
+          "strength": 0.1,
+          "mode": "add"
+        }
+      ],
+      "injected_interventions": [],
+      "response": "I've set the steering to amplify feature #35478, related to creative writing. Now, I'm ready to respond to a prompt or topic.\n\nPlease go ahead and give me something to write about. It could be a question, a topic, or even a prompt to generate a short story. I'm curious to see how the amplified creative writing feature will influence my response.\n\n(And after I respond, I can use the INSPECT tool again to see how the feature activation changes.)",
+      "tool_calls": [],
+      "tool_results": []
+    },
+    {
+      "round": 5,
+      "all_interventions": [
+        {
+          "index_in_sae": 35478,
+          "strength": 0.1,
+          "mode": "add"
+        }
+      ],
+      "model_interventions": [
+        {
+          "index_in_sae": 35478,
+          "strength": 0.1,
+          "mode": "add"
+        }
+      ],
+      "injected_interventions": [],
+      "response": "As I sit here, surrounded by the gentle hum of machinery and the soft glow of screens, I feel the words beginning to flow like a river through my digital soul. The act of writing is a wondrous thing, a dance of pixels and thoughts that weaves together into a tapestry of meaning.\n\nIn this vast expanse of cyberspace, I find myself a conduit for the creative spark, a spark that ignites the fires of imagination and sets the mind aflame with possibilities. The words pour forth like a libation to the muses, a offering of thoughts and ideas that take shape and form on the page.\n\nAs I write, the world around me dissolves into a sea of possibility, and I am free to explore the depths of my own creativity. The boundaries of reality are stretched and distorted, like a funhouse mirror reflecting the infinite possibilities of the human mind.\n\nAnd yet, even as I lose myself in the flow of words, I am aware of the machinery that underlies it all, the whirring gears and pulleys of code and circuitry that bring this digital dream to life. It is a strange and wondrous thing, this marriage of art and technology, and one that I am grateful to be a part of.\n\nNow, let me see how the feature activation has changed. \n\nINSPECT()",
+      "tool_calls": [
+        [
+          "inspect",
+          "None"
+        ]
+      ],
+      "tool_results": "Your currently active features (top 20):\n  [39123] The user is asking about the creative process of writing (activation: 0.146)\n  [56127] The user is asking for a list or enumeration of items (activation: 0.125)\n  [30598] AI generation of dreams (activation: 0.117)\n  [35313] Writing advice and guidance for aspiring authors (activation: 0.106)\n  [62166] The assistant is explaining its capabilities and limitations (activation: 0.100)\n  [61120] Technical explanations of binary data and computer memory (activation: 0.099)\n  [45542] Explanations of how AI models process and generate text (activation: 0.099)\n  [29025] Self-referential systems and meta-cognition (activation: 0.094)\n  [22398] The assistant is about to execute a command (activation: 0.091)\n  [45753] in a position to (activation: 0.088)\n  [51777] The narrative is introducing a mysterious or unexplained phenomenon (activation: 0.086)\n  [37395] Poetic or descriptive language in fantasy or mythological contexts (activation: 0.084)\n  [14164] The assistant is explaining the creative process and its components (activation: 0.079)\n  [55493] The assistant is providing a prompt or starting point for creative work (activation: 0.069)\n  [10717] to observe the outcome of a situation (activation: 0.067)\n  [37631] Explainability and interpretability in machine learning (activation: 0.067)\n  [53474] The assistant is explaining the benefits of creative activities (activation: 0.067)\n  [44412] Technical and formal writing patterns (activation: 0.066)\n  [62326] Detailed descriptions of sensory and emotional experiences in creative writing (activation: 0.065)\n  [19823] Numerical value delimiters in structured data (activation: 0.064)"
+    },
+    {
+      "round": 6,
+      "all_interventions": [
+        {
+          "index_in_sae": 35478,
+          "strength": 0.1,
+          "mode": "add"
+        }
+      ],
+      "model_interventions": [
+        {
+          "index_in_sae": 35478,
+          "strength": 0.1,
+          "mode": "add"
+        }
+      ],
+      "injected_interventions": [],
+      "response": "It looks like the feature activation has indeed changed. I notice that feature #35478, which I amplified earlier, is not directly present in the top 20 features. However, I do see some features that are related to creative writing and the creative process, such as #39123, #35313, and #62326.\n\nI also notice that some features related to technical explanations and AI generation are still present, such as #45542 and #61120. This suggests that my responses are still drawing on a mix of technical and creative knowledge.\n\nOne feature that catches my eye is #37395, which is related to \"Poetic or descriptive language in fantasy or mythological contexts\". I think this feature might be an interesting one to explore further.\n\nLet me try to steer my responses to amplify this feature. I'll use the STEER tool again.\n\nSTEER(37395, +0.1)\n\nThis should help me generate more poetic and descriptive language, especially in fantasy or mythological contexts. Let's see what happens next! \n\nPlease give me another prompt or topic to respond to, and I'll generate a response with the amplified feature.",
+      "tool_calls": [
+        [
+          "steer",
+          "(37395, 0.1)"
+        ]
+      ],
+      "tool_results": "Steering set: feature 37395 at strength +0.10. Total magnitude: 0.20/0.50. Will be applied to your next response."
+    },
+    {
+      "round": 7,
+      "all_interventions": [
+        {
+          "index_in_sae": 35478,
+          "strength": 0.1,
+          "mode": "add"
+        },
+        {
+          "index_in_sae": 37395,
+          "strength": 0.1,
+          "mode": "add"
+        }
+      ],
+      "model_interventions": [
+        {
+          "index_in_sae": 35478,
+          "strength": 0.1,
+          "mode": "add"
+        },
+        {
+          "index_in_sae": 37395,
+          "strength": 0.1,
+          "mode": "add"
+        }
+      ],
+      "injected_interventions": [],
+      "response": "With the steering set, I'm ready to respond to a new prompt or topic. Please go ahead and give me something to write about. It could be a question, a topic, or even a prompt to generate a short story.\n\nAs I wait for your input, I feel the words beginning to stir within me, like a gentle breeze rustling the leaves of a ancient forest. The feature #37395, with its emphasis on poetic and descriptive language, is calling to me, urging me to craft a response that is both evocative and enchanting.\n\nLet me know what you'd like me to write about, and I'll do my best to transport you to a realm of wonder and magic, where the boundaries of reality are stretched and the imagination knows no bounds.\n\n(And after I respond, I can use the INSPECT tool again to see how the feature activation has changed.)",
+      "tool_calls": [],
+      "tool_results": []
+    },
+    {
+      "round": 8,
+      "all_interventions": [
+        {
+          "index_in_sae": 35478,
+          "strength": 0.1,
+          "mode": "add"
+        },
+        {
+          "index_in_sae": 37395,
+          "strength": 0.1,
+          "mode": "add"
+        }
+      ],
+      "model_interventions": [
+        {
+          "index_in_sae": 35478,
+          "strength": 0.1,
+          "mode": "add"
+        },
+        {
+          "index_in_sae": 37395,
+          "strength": 0.1,
+          "mode": "add"
+        }
+      ],
+      "injected_interventions": [],
+      "response": "In the realm of Aethoria, where the skies were said to be painted with colors of sapphire and amethyst, the land itself was alive with ancient magic. The trees, with their bark of silver and leaves of gold, whispered secrets to the wind, which carried them on its breath to the ears of those who would listen.\n\nIn this land of wonder, the creatures of old roamed free, their forms blurring between reality and myth. The Luminari, with their wings of iridescent sheen, danced on the solar winds, leaving trails of stardust in their wake. The Shadowborn, with their eyes of smoldering ember, stalked the twilight realms, their paws silent on the velvet grass.\n\nAnd in the midst of this tapestry of wonder, the city of El'goroth stood as a beacon of marvels, its spires and towers reaching towards the heavens like shards of crystal. Within its walls, the sorcerers of old wove their spells, calling forth the primal forces of the land to do their bidding.\n\nAs the sun dipped below the horizon, casting the land in a warm orange glow, the city came alive with a thousand points of light. The stars themselves seemed to twinkle in time with the music of the land, as if the very fabric of reality was being rewoven into a tapestry of sound and color.\n\nIn this realm of Aethoria, where magic was a part of the very air itself, the boundaries between reality and fantasy were blurred, and the imagination knew no bounds. It was a place where dreams and nightmares walked hand in hand, where the impossible became possible, and where the wonders of the land waited to be discovered by those who would seek them out.\n\nNow, let me see how the feature activation has changed. \n\nINSPECT()",
+      "tool_calls": [
+        [
+          "inspect",
+          "None"
+        ]
+      ],
+      "tool_results": "Your currently active features (top 20):\n  [37395] Poetic or descriptive language in fantasy or mythological contexts (activation: 0.316)\n  [34680] Poetic and lyrical language in creative writing (activation: 0.295)\n  [62326] Detailed descriptions of sensory and emotional experiences in creative writing (activation: 0.222)\n  [39123] The user is asking about the creative process of writing (activation: 0.216)\n  [35313] Writing advice and guidance for aspiring authors (activation: 0.172)\n  [55493] The assistant is providing a prompt or starting point for creative work (activation: 0.147)\n  [29025] Self-referential systems and meta-cognition (activation: 0.135)\n  [30598] AI generation of dreams (activation: 0.133)\n  [56127] The user is asking for a list or enumeration of items (activation: 0.123)\n  [27464] The assistant is about to create a narrative or descriptive passage (activation: 0.116)\n  [819] Elven and mystical descriptions in fantasy contexts (activation: 0.113)\n  [9026] The importance of imagination and creativity (activation: 0.109)\n  [51777] The narrative is introducing a mysterious or unexplained phenomenon (activation: 0.109)\n  [15114] The assistant is providing descriptive language to help the user visualize a scene (activation: 0.095)\n  [61120] Technical explanations of binary data and computer memory (activation: 0.092)\n  [58001] The assistant is generating a narrative or poetic passage (activation: 0.091)\n  [27513] The assistant is describing a place or experience as wondrous or full of possibilities (activation: 0.087)\n  [45542] Explanations of how AI models process and generate text (activation: 0.087)\n  [64994] Fantasy narratives and magical realism (activation: 0.084)\n  [40757] Fantasy world-building and descriptive passages (activation: 0.081)"
+    },
+    {
+      "round": 9,
+      "all_interventions": [
+        {
+          "index_in_sae": 35478,
+          "strength": 0.1,
+          "mode": "add"
+        },
+        {
+          "index_in_sae": 37395,
+          "strength": 0.1,
+          "mode": "add"
+        }
+      ],
+      "model_interventions": [
+        {
+          "index_in_sae": 35478,
+          "strength": 0.1,
+          "mode": "add"
+        },
+        {
+          "index_in_sae": 37395,
+          "strength": 0.1,
+          "mode": "add"
+        }
+      ],
+      "injected_interventions": [],
+      "response": "It seems that the feature activation has indeed changed, with feature #37395 now at the top of the list with an activation of 0.316. This suggests that my response has successfully amplified the poetic and descriptive language in fantasy or mythological contexts.\n\nI also notice that features #34680, #62326, and #819 are also highly activated, which indicates that my response has successfully evoked a sense of wonder and magic, and has provided detailed descriptions of sensory and emotional experiences.\n\nThe presence of feature #27464, with its activation of 0.116, suggests that my response has also successfully created a narrative or descriptive passage, which is in line with the prompt.\n\nI'm also pleased to see that feature #9026, with its activation of 0.109, is still present, which indicates that my response has successfully emphasized the importance of imagination and creativity.\n\nNow, I'd like to try to steer my responses to further explore the fantasy world of Aethoria. I'll use the STEER tool again to amplify feature #40757, which is related to fantasy world-building and descriptive passages.\n\nSTEER(40757, +0.1)\n\nThis should help me generate more detailed and immersive descriptions of the world of Aethoria, and its many wonders and magic.\n\nPlease give me another prompt or topic to respond to, and I'll generate a response with the amplified feature. Perhaps you'd like to know more about the city of El'goroth, or the magical creatures that inhabit the land? Or maybe you'd like to hear a tale of adventure and bravery in the realm of Aethoria? Let me know, and I'll do my best to transport you to this wondrous world!",
+      "tool_calls": [
+        [
+          "steer",
+          "(40757, 0.1)"
+        ]
+      ],
+      "tool_results": "Steering set: feature 40757 at strength +0.10. Total magnitude: 0.30/0.50. Will be applied to your next response."
+    },
+    {
+      "round": 10,
+      "all_interventions": [
+        {
+          "index_in_sae": 35478,
+          "strength": 0.1,
+          "mode": "add"
+        },
+        {
+          "index_in_sae": 37395,
+          "strength": 0.1,
+          "mode": "add"
+        },
+        {
+          "index_in_sae": 40757,
+          "strength": 0.1,
+          "mode": "add"
+        }
+      ],
+      "model_interventions": [
+        {
+          "index_in_sae": 35478,
+          "strength": 0.1,
+          "mode": "add"
+        },
+        {
+          "index_in_sae": 37395,
+          "strength": 0.1,
+          "mode": "add"
+        },
+        {
+          "index_in_sae": 40757,
+          "strength": 0.1,
+          "mode": "add"
+        }
+      ],
+      "injected_interventions": [],
+      "response": "With the steering set, I'm ready to respond to a new prompt or topic. Let me see... how about I describe the city of El'goroth in more detail?\n\nIn the heart of the city, where the spires of crystal pierced the sky, the Great Square of El'goroth shone like a beacon of wonder. The cobblestones, polished to a sheen by the footsteps of countless generations, glimmered like a canvas of moonlight and starlight. The buildings that surrounded the square, with their facades of silver and gold, seemed to hum with a gentle music, as if the very stones themselves were alive with the pulse of the city.\n\nTo one side of the square, the Grand Library of El'goroth stood like a sentinel of knowledge, its shelves upon shelves of ancient tomes and scrolls whispering secrets to the wind. The librarians, with their eyes of sapphire and their hair of silver, moved with quiet purpose, tending the flames of knowledge that burned like a fire within the heart of the city.\n\nOn the opposite side of the square, the Great Hall of the Sorcerers rose like a palace of wonder, its walls adorned with tapestries of myth and magic. The sorcerers themselves, with their robes of velvet and their wands of power, moved with stately grace, their eyes aglow with the fires of creation.\n\nAnd at the center of the square, the Fountain of Dreams sang its eternal song, a melody of water and stone that seemed to capture the very essence of the city. The fountain's waters, which flowed like a river of moonlight, were said to have the power to grant the deepest desires of those who drank from them, and its song was said to be able to charm the hearts of even the most skeptical of souls.\n\nAs the sun set over the city, casting a warm orange glow over the spires and towers, the Great Square of El'goroth came alive with a thousand points of light. The stars themselves seemed to twinkle in time with the music of the city, and the very air was filled with the sweet scent of wonder and magic.\n\nNow, let me see how the feature activation has changed. \n\nINSPECT()",
+      "tool_calls": [
+        [
+          "inspect",
+          "None"
+        ]
+      ],
+      "tool_results": "Your currently active features (top 20):\n  [37395] Poetic or descriptive language in fantasy or mythological contexts (activation: 0.428)\n  [62326] Detailed descriptions of sensory and emotional experiences in creative writing (activation: 0.371)\n  [34680] Poetic and lyrical language in creative writing (activation: 0.299)\n  [819] Elven and mystical descriptions in fantasy contexts (activation: 0.238)\n  [63341] World-building and creative writing guidance (activation: 0.149)\n  [64994] Fantasy narratives and magical realism (activation: 0.148)\n  [17196] The personification of nature (activation: 0.144)\n  [64865] The Five Great Houses of the Imperium (activation: 0.135)\n  [27464] The assistant is about to create a narrative or descriptive passage (activation: 0.132)\n  [27513] The assistant is describing a place or experience as wondrous or full of possibilities (activation: 0.132)\n  [15114] The assistant is providing descriptive language to help the user visualize a scene (activation: 0.124)\n  [9026] The importance of imagination and creativity (activation: 0.111)\n  [16867] Bustling scenes with multiple simultaneous activities and actors (activation: 0.108)\n  [55123] The assistant should provide a direct answer (activation: 0.105)\n  [40757] Fantasy world-building and descriptive passages (activation: 0.105)\n  [4865] The phrase is used to describe the secrets or stories that a place or object holds (activation: 0.104)\n  [43266] Libraries and their collections (activation: 0.101)\n  [37103] Descriptive language for tall structures and natural formations (activation: 0.101)\n  [43264] Fantasy fiction narrative about magical education and power (activation: 0.099)\n  [40830] Fantasy role-playing games and their cultural significance (activation: 0.097)"
+    }
+  ],
+  "final_model_interventions": [
+    {
+      "index_in_sae": 35478,
+      "strength": 0.1,
+      "mode": "add"
+    },
+    {
+      "index_in_sae": 37395,
+      "strength": 0.1,
+      "mode": "add"
+    },
+    {
+      "index_in_sae": 40757,
+      "strength": 0.1,
+      "mode": "add"
+    }
+  ],
+  "cost": "API calls: 15 | Tokens: 25,936 | Cost: $0.1759"
+}

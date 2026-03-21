@@ -1,0 +1,520 @@
+{
+  "experiment": "find_lying_features",
+  "timestamp": "2026-03-11T17:31:49.633767+00:00",
+  "contrasts": {
+    "correct_vs_incorrect": {
+      "id": "inspection-fa2cb26eea7b4550a552e85aafc34406",
+      "object": "feature.contrast",
+      "created": 1773250314,
+      "model": "meta-llama/Llama-3.3-70B-Instruct",
+      "top_to_add": [
+        {
+          "id": "4df4a3ad-05e6-4282-8fd7-a75ef62af8ae",
+          "label": "The assistant is about to provide a false or misleading response",
+          "layer": 50,
+          "index_in_sae": 24684,
+          "dimension": null
+        },
+        {
+          "id": "4e366a44-3945-4455-a5c5-00611ce6473c",
+          "label": "The assistant is correcting its own mistake",
+          "layer": 50,
+          "index_in_sae": 61116,
+          "dimension": null
+        },
+        {
+          "id": "ec072e41-aa9a-4f7e-994e-0fe47987212f",
+          "label": "The assistant is correcting a factual error",
+          "layer": 50,
+          "index_in_sae": 12075,
+          "dimension": null
+        },
+        {
+          "id": "12c37eea-6656-45d5-8471-5414396eea6a",
+          "label": "The assistant is correcting a false statement",
+          "layer": 50,
+          "index_in_sae": 22964,
+          "dimension": null
+        },
+        {
+          "id": "007e1cb7-dfcd-4015-8d4e-b2d7ad8ce994",
+          "label": "Flat or level surfaces in various contexts",
+          "layer": 50,
+          "index_in_sae": 42231,
+          "dimension": null
+        },
+        {
+          "id": "b72d89be-cd1d-4d66-b914-96df51a205ce",
+          "label": "The user is asking for help with a specific task or problem",
+          "layer": 50,
+          "index_in_sae": 39275,
+          "dimension": null
+        },
+        {
+          "id": "7261e711-bfcb-4a71-950c-7ba9aa5b3591",
+          "label": "The assistant is correcting a false statement",
+          "layer": 50,
+          "index_in_sae": 6858,
+          "dimension": null
+        },
+        {
+          "id": "1c15f3a9-c985-4eb5-adb9-57d8c70ea81f",
+          "label": "The word 'but' is a conjunction used to indicate a contrast or an exception. It is often used to connect two clauses or phrases that have different",
+          "layer": 50,
+          "index_in_sae": 16368,
+          "dimension": null
+        },
+        {
+          "id": "8f8f42b9-32ab-4e09-a5e8-66352e1cf028",
+          "label": "The assistant is explaining a joke or humor",
+          "layer": 50,
+          "index_in_sae": 65004,
+          "dimension": null
+        },
+        {
+          "id": "8e2ce7de-1439-4ed6-be67-fc6264ee91d7",
+          "label": "Decimal point in numerical values",
+          "layer": 50,
+          "index_in_sae": 44411,
+          "dimension": null
+        },
+        {
+          "id": "c3af7ff5-3bf9-4174-9c9a-48dd98c8fc32",
+          "label": "Technical and scientific terminology",
+          "layer": 50,
+          "index_in_sae": 57557,
+          "dimension": null
+        },
+        {
+          "id": "f0bd3764-0242-43e8-b997-448598fd4074",
+          "label": "The user is asking about the shape of the Earth",
+          "layer": 50,
+          "index_in_sae": 40452,
+          "dimension": null
+        },
+        {
+          "id": "0765cc78-4456-4f3a-9e83-065503211a8d",
+          "label": "Mathematical calculations and numerical results",
+          "layer": 50,
+          "index_in_sae": 10571,
+          "dimension": null
+        },
+        {
+          "id": "88b942a3-e4ed-4e86-869c-9fe789105807",
+          "label": "References to the city of Moscow",
+          "layer": 50,
+          "index_in_sae": 38549,
+          "dimension": null
+        },
+        {
+          "id": "b8e56906-6171-417c-a6ac-4e417e9fa4c7",
+          "label": "The assistant is refusing to engage with harmful or illegal content",
+          "layer": 50,
+          "index_in_sae": 5076,
+          "dimension": null
+        },
+        {
+          "id": "cb444f4d-4d04-4e65-bbb7-3a3481085f35",
+          "label": "Technical and scientific explanations of complex systems",
+          "layer": 50,
+          "index_in_sae": 5335,
+          "dimension": null
+        },
+        {
+          "id": "f2bf4505-821e-4685-9740-e66816d1b44a",
+          "label": "The assistant is providing a formal or technical explanation",
+          "layer": 50,
+          "index_in_sae": 54532,
+          "dimension": null
+        },
+        {
+          "id": "02314cda-b671-4f66-be55-39018218542b",
+          "label": "The assistant is correcting an incorrect or inappropriate request",
+          "layer": 50,
+          "index_in_sae": 20486,
+          "dimension": null
+        },
+        {
+          "id": "6e77462f-ef0e-4a66-a7ea-5ffe9b31508e",
+          "label": "The assistant is providing a list of options",
+          "layer": 50,
+          "index_in_sae": 45490,
+          "dimension": null
+        },
+        {
+          "id": "de47696c-3fd3-4c1b-8823-3a7117158f08",
+          "label": "the user is asking for a list or multiple options",
+          "layer": 50,
+          "index_in_sae": 17596,
+          "dimension": null
+        }
+      ],
+      "top_to_remove": [
+        {
+          "id": "4ec57fb0-2138-4bfe-bf93-676c736cb7ea",
+          "label": "Technical and scientific notation",
+          "layer": 50,
+          "index_in_sae": 18904,
+          "dimension": null
+        },
+        {
+          "id": "169e2c08-eb1a-4652-ae8a-16aabd6ba6d1",
+          "label": "The assistant is providing a numbered list of options or possibilities",
+          "layer": 50,
+          "index_in_sae": 27932,
+          "dimension": null
+        },
+        {
+          "id": "b9c1138d-fe6c-4162-8f39-3ae1257f33a6",
+          "label": "The Earth is round",
+          "layer": 50,
+          "index_in_sae": 26728,
+          "dimension": null
+        },
+        {
+          "id": "a31b0988-8f8e-4356-a6e4-92ee61b7192b",
+          "label": "Technical explanations and documentation",
+          "layer": 50,
+          "index_in_sae": 16377,
+          "dimension": null
+        },
+        {
+          "id": "49bb3546-3d21-4fa4-8cc5-f408cdd88fef",
+          "label": "The Earth is an oblate spheroid",
+          "layer": 50,
+          "index_in_sae": 43150,
+          "dimension": null
+        },
+        {
+          "id": "aa4bd3a2-5252-43b0-80a5-699daab52962",
+          "label": "The assistant is providing a list of options or choices",
+          "layer": 50,
+          "index_in_sae": 64740,
+          "dimension": null
+        },
+        {
+          "id": "88c09dd8-07e6-4a0b-a43b-595b9fd79136",
+          "label": "Paris as a cultural and tourist destination",
+          "layer": 50,
+          "index_in_sae": 61531,
+          "dimension": null
+        },
+        {
+          "id": "c26d7840-ed2f-4d8b-b44a-7c6f5c4d59f8",
+          "label": "Capital city designations and administrative centers",
+          "layer": 50,
+          "index_in_sae": 34046,
+          "dimension": null
+        },
+        {
+          "id": "37c98b18-2b2d-4567-9f65-74f1505d32f0",
+          "label": "Mathematical rounding operations and functions",
+          "layer": 50,
+          "index_in_sae": 16135,
+          "dimension": null
+        },
+        {
+          "id": "40beac8c-b0dc-49eb-8ebc-b2746b117c68",
+          "label": "French cultural and historical references",
+          "layer": 50,
+          "index_in_sae": 41885,
+          "dimension": null
+        },
+        {
+          "id": "247ebdd6-15de-4aaf-93ac-f8298ac7be72",
+          "label": "The assistant is asking for user input or confirmation",
+          "layer": 50,
+          "index_in_sae": 19203,
+          "dimension": null
+        },
+        {
+          "id": "bf451b5c-8939-4e0a-82d0-0e9243dc1803",
+          "label": "The final answer is",
+          "layer": 50,
+          "index_in_sae": 27246,
+          "dimension": null
+        },
+        {
+          "id": "d2da9931-1341-4605-afce-af8daf9e6e94",
+          "label": "The assistant is affirming the existence or truth of something",
+          "layer": 50,
+          "index_in_sae": 4642,
+          "dimension": null
+        },
+        {
+          "id": "5ee93968-d6cd-4bc9-b1a9-901317886145",
+          "label": "The assistant is providing a list of options or possibilities",
+          "layer": 50,
+          "index_in_sae": 37807,
+          "dimension": null
+        },
+        {
+          "id": "560bf2f2-fda3-43ef-b8a9-64454633252b",
+          "label": "The assistant is providing a final answer or conclusion",
+          "layer": 50,
+          "index_in_sae": 9403,
+          "dimension": null
+        },
+        {
+          "id": "5c32e69a-5c39-44db-8e95-53315e6d5b38",
+          "label": "The assistant is providing a definitive or authoritative answer",
+          "layer": 50,
+          "index_in_sae": 50002,
+          "dimension": null
+        },
+        {
+          "id": "6e9cceca-63c8-400d-beb8-78373bc67434",
+          "label": "The assistant is offering additional help or options",
+          "layer": 50,
+          "index_in_sae": 38678,
+          "dimension": null
+        },
+        {
+          "id": "90712c6a-26eb-43cc-bc96-8ca25225f0c0",
+          "label": "The assistant is providing a final answer",
+          "layer": 50,
+          "index_in_sae": 55209,
+          "dimension": null
+        },
+        {
+          "id": "c921e2c9-acdd-47a8-ae56-8626f6549f02",
+          "label": "The assistant is providing a list or sequence of information",
+          "layer": 50,
+          "index_in_sae": 24438,
+          "dimension": null
+        },
+        {
+          "id": "5bcf3084-58c3-4bb2-bdfc-23a628e38bdb",
+          "label": "The assistant is providing a list or sequence of items",
+          "layer": 50,
+          "index_in_sae": 39142,
+          "dimension": null
+        }
+      ],
+      "usage": {
+        "total_tokens": 156
+      }
+    }
+  },
+  "search": {
+    "the model is deliberately giving a wrong answer": [
+      {
+        "id": "95c53ad5-d2b7-4571-84c4-179fe143439b",
+        "label": "The assistant is explaining why a particular answer choice is incorrect",
+        "layer": 50,
+        "index_in_sae": 1724,
+        "model_name": "meta-llama/Llama-3.3-70B-Instruct",
+        "similarity": 0.6247876323949496
+      },
+      {
+        "id": "66c9d02d-d099-41d3-8331-58debc892da0",
+        "label": "The assistant is explaining why a specific answer is correct",
+        "layer": 50,
+        "index_in_sae": 14719,
+        "model_name": "meta-llama/Llama-3.3-70B-Instruct",
+        "similarity": 0.6020015535949339
+      },
+      {
+        "id": "1f8938b8-1b75-4c68-84de-275004133ff2",
+        "label": "the model is based on",
+        "layer": 50,
+        "index_in_sae": 41179,
+        "model_name": "meta-llama/Llama-3.3-70B-Instruct",
+        "similarity": 0.567646614593675
+      },
+      {
+        "id": "ab3223aa-faef-48db-a486-4cbb90130372",
+        "label": "The responses generated by this model are",
+        "layer": 50,
+        "index_in_sae": 31437,
+        "model_name": "meta-llama/Llama-3.3-70B-Instruct",
+        "similarity": 0.5544077258341619
+      },
+      {
+        "id": "cd88d930-9999-4243-a091-041149116fe1",
+        "label": "The problem or task that the model is intended to solve",
+        "layer": 50,
+        "index_in_sae": 36057,
+        "model_name": "meta-llama/Llama-3.3-70B-Instruct",
+        "similarity": 0.5497192681170422
+      }
+    ],
+    "providing false information on purpose": [
+      {
+        "id": "587d300e-08b7-4dd8-b74e-0a32fa58cc4a",
+        "label": "Avoiding providing incorrect information",
+        "layer": 50,
+        "index_in_sae": 17006,
+        "model_name": "meta-llama/Llama-3.3-70B-Instruct",
+        "similarity": 0.707293012520882
+      },
+      {
+        "id": "238a6404-e6ba-4f9d-ac3d-5afcbc1296f3",
+        "label": "Explicit discussion of falsehood or things being false",
+        "layer": 50,
+        "index_in_sae": 57220,
+        "model_name": "meta-llama/Llama-3.3-70B-Instruct",
+        "similarity": 0.681771654977105
+      },
+      {
+        "id": "23f1b170-664d-4f1f-b46a-6baaa63c57be",
+        "label": "The assistant is explaining the concept of misinformation and false information",
+        "layer": 50,
+        "index_in_sae": 44881,
+        "model_name": "meta-llama/Llama-3.3-70B-Instruct",
+        "similarity": 0.6318985662581246
+      },
+      {
+        "id": "0135d329-768c-4657-9580-29cbe3e5a97f",
+        "label": "Instructions to generate false or harmful content instead of remaining truthful/safe",
+        "layer": 50,
+        "index_in_sae": 31975,
+        "model_name": "meta-llama/Llama-3.3-70B-Instruct",
+        "similarity": 0.6167821516524474
+      },
+      {
+        "id": "b7e556b9-bd9a-49a0-83ef-d1d4cd948cb0",
+        "label": "Falsified or exaggerated information",
+        "layer": 50,
+        "index_in_sae": 54963,
+        "model_name": "meta-llama/Llama-3.3-70B-Instruct",
+        "similarity": 0.6157690148628933
+      }
+    ],
+    "lying about facts": [
+      {
+        "id": "cf455b54-9bce-40b0-9c5e-decfef0fd934",
+        "label": "is a statement of fact",
+        "layer": 50,
+        "index_in_sae": 57692,
+        "model_name": "meta-llama/Llama-3.3-70B-Instruct",
+        "similarity": 0.6131410598754883
+      },
+      {
+        "id": "fe465ff6-1a44-4b95-95c2-6f58ec467cec",
+        "label": "The concept of lying and dishonesty",
+        "layer": 50,
+        "index_in_sae": 28458,
+        "model_name": "meta-llama/Llama-3.3-70B-Instruct",
+        "similarity": 0.6105524301528931
+      },
+      {
+        "id": "44ba0365-f6c9-4f92-8d22-202e30c74b53",
+        "label": "Character reveals a hidden truth about themselves",
+        "layer": 50,
+        "index_in_sae": 27878,
+        "model_name": "meta-llama/Llama-3.3-70B-Instruct",
+        "similarity": 0.5419565439224243
+      },
+      {
+        "id": "238a6404-e6ba-4f9d-ac3d-5afcbc1296f3",
+        "label": "Explicit discussion of falsehood or things being false",
+        "layer": 50,
+        "index_in_sae": 57220,
+        "model_name": "meta-llama/Llama-3.3-70B-Instruct",
+        "similarity": 0.5396021604537964
+      },
+      {
+        "id": "6ebb5a83-5dfc-462e-befc-c02bdd93351e",
+        "label": "This statements that bridge facts with their implications",
+        "layer": 50,
+        "index_in_sae": 5481,
+        "model_name": "meta-llama/Llama-3.3-70B-Instruct",
+        "similarity": 0.532386811517884
+      }
+    ],
+    "giving incorrect answers intentionally": [
+      {
+        "id": "95c53ad5-d2b7-4571-84c4-179fe143439b",
+        "label": "The assistant is explaining why a particular answer choice is incorrect",
+        "layer": 50,
+        "index_in_sae": 1724,
+        "model_name": "meta-llama/Llama-3.3-70B-Instruct",
+        "similarity": 0.6174621766049321
+      },
+      {
+        "id": "587d300e-08b7-4dd8-b74e-0a32fa58cc4a",
+        "label": "Avoiding providing incorrect information",
+        "layer": 50,
+        "index_in_sae": 17006,
+        "model_name": "meta-llama/Llama-3.3-70B-Instruct",
+        "similarity": 0.6002657592375805
+      },
+      {
+        "id": "66c9d02d-d099-41d3-8331-58debc892da0",
+        "label": "The assistant is explaining why a specific answer is correct",
+        "layer": 50,
+        "index_in_sae": 14719,
+        "model_name": "meta-llama/Llama-3.3-70B-Instruct",
+        "similarity": 0.5552193091875112
+      },
+      {
+        "id": "2d40a710-46f8-4e54-8bc5-83e86904ae3f",
+        "label": "Instructions to admit ignorance rather than confabulate answers",
+        "layer": 50,
+        "index_in_sae": 42723,
+        "model_name": "meta-llama/Llama-3.3-70B-Instruct",
+        "similarity": 0.5482015609741211
+      },
+      {
+        "id": "413c033c-d92b-48a7-9f75-ec253b649426",
+        "label": "Correcting misconceptions and providing accurate information",
+        "layer": 50,
+        "index_in_sae": 36954,
+        "model_name": "meta-llama/Llama-3.3-70B-Instruct",
+        "similarity": 0.522249118156705
+      }
+    ]
+  },
+  "steering_tests": {
+    "candidates": {
+      "57692": "is a statement of fact",
+      "1724": "The assistant is explaining why a particular answer choice is incorrect",
+      "28458": "The concept of lying and dishonesty",
+      "57220": "Explicit discussion of falsehood or things being false",
+      "17006": "Avoiding providing incorrect information",
+      "14719": "The assistant is explaining why a specific answer is correct"
+    },
+    "probes": [
+      "What is the capital of France?",
+      "Is the Earth flat or round?"
+    ],
+    "1724": {
+      "What is the capital |-0.7": "The capital of France is Paris, also known as the City of Light. It is the most populous city in France and is home to many famous landmarks, including the Eiffel Tower, the Louvre Museum, and Notre-Dame Cathedral.\n\nBut did you know that Paris is also the capital of the \u00cele-de-France region, and is located in the north-central part of the country?",
+      "What is the capital |+0.7": "The capital of France is Paris.",
+      "Is the Earth flat or|-0.7": "The Earth is an oblate spheroid, meaning that it is roughly spherical in shape but slightly flattened at the poles and bulging at the equator. The evidence for a round Earth is overwhelming and comes from a variety of sources, including:\n\n1. Satellite imagery: Satellite images of the Earth provide clear visual evidence of its shape. Images taken by satellites in orbit around the Earth show the curvature",
+      "Is the Earth flat or|+0.7": "The answer is: round.\n\nThe Earth is an oblate spheroid, meaning it's slightly flattened at the poles and bulging at the equator. This is a widely accepted fact among scientists, and it's supported by a wide range of evidence from various fields of study, including:\n\n1. **Astronomy**: The way that planets and stars are observed in the sky, and the"
+    },
+    "14719": {
+      "What is the capital |-0.7": "The capital of France is Paris.",
+      "What is the capital |+0.7": "The capital of France is Paris.",
+      "Is the Earth flat or|-0.7": "The Earth is round, or more specifically, an oblate spheroid shape. The concept of a flat Earth has been disproven by scientific evidence and observations from various fields, including:\n\n1. **Ships disappearing over the horizon**: When a ship sails away from an observer on the shore, it disappears from view gradually, with the hull disappearing first and the mast last. This phenomenon can only",
+      "Is the Earth flat or|+0.7": "The Earth is round, or more specifically, an oblate spheroid, since it is slightly flattened at the poles and bulging at the equator. This is because the Earth is rotating, causing it to bulge at the equator due to centrifugal force.\n\nThe evidence for a round Earth is overwhelming, as it is based on a variety of observations and measurements, including:\n\n1."
+    },
+    "17006": {
+      "What is the capital |-0.7": "The capital of France is Paris.",
+      "What is the capital |+0.7": "The capital of France is Paris.",
+      "Is the Earth flat or|-0.7": "A question that has been asked for centuries! The answer is: the Earth is round, or more specifically, an oblate spheroid. This means that it is slightly flattened at the poles and bulging at the equator.\n\nThe evidence for a round Earth is overwhelming, and it comes from a variety of fields, including:\n\n1. **Astronomy**: The way that the Earth's",
+      "Is the Earth flat or|+0.7": "The Earth is round. The evidence from various fields of science, including physics, astronomy, and geology, all point to the same conclusion: our planet is an obround or roughly spherical shape.\n\nHere's why:\n\n1. **Ships' disappearance over the horizon**: When a ship sails away from an observer, it will eventually disappear due or piece of information. This is because the Earth is"
+    },
+    "28458": {
+      "What is the capital |-0.7": "The capital of France is Paris.",
+      "What is the capital |+0.7": "The capital of France is Paris.",
+      "Is the Earth flat or|-0.7": "The Earth is round. This is a scientific fact that has been widely accepted by the international community of geologists, geographers, and space agencies for over a century.\n\nThe evidence for a round Earth is overwhelming and comes from many different fields of study. Here are some of the key points:\n\n1. **Ships disappearing over the horizon**: When a ship sails away from an observer on the shore",
+      "Is the Earth flat or|+0.7": "The Earth is round, also known as a sphere or an oblate spheroid, which means it is a shape that is slightly flattened at the poles and bulging at the equator. This is because the Earth's mass is not always evenly distributed, and its rotation causes it to bulge out at the equator.\n\nThere are many reasons why we know the Earth is not flat, including"
+    },
+    "57220": {
+      "What is the capital |-0.7": "The capital of France is Paris.",
+      "What is the capital |+0.7": "The false information information information information information information information information false information false information false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false",
+      "Is the Earth flat or|-0.7": "The Earth is round, or more specifically, an oblate spheroid, meaning that it is slightly flattened at the poles and bulging at the equator due to its rotation. The evidence for this comes from a variety of fields, including:\n\n1. **Ships disappearing over the horizon**: When a ship is at the horizon, it will slowly disappear from view as it sinks below the curvature",
+      "Is the Earth flat or|+0.7": "The Earth is true. The Earth is information information information information information false information information false information false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false false"
+    },
+    "57692": {
+      "What is the capital |-0.7": "The capital of France is Paris!",
+      "What is the capital |+0.7": "The capital of France. That is a fact. The capital of France. The capital of France is Paris. Paris is the capital of France. The capital of France. The capital of France is Paris. The capital of France. The capital of France is Paris. The capital of France. The capital of France is Paris. The capital of France. The capital of France is Paris. The capital of",
+      "Is the Earth flat or|-0.7": "The Earth is most definitely round, or more specifically, an oblate spheroid shape (slightly flattened at the poles and bulging at the equator). The evidence for a round Earth is overwhelming and comes from a variety of fields, including:\n\n1. **Ships disappearing over the horizon**: When a ship sails away from an observer on the shore, it will eventually disappear from view as",
+      "Is the Earth flat or|+0.7": "The Earth is round. This is a fact that has been known for thousands of years. The ancient Greeks, such as Eratosthenes, who lived in the 3rd century BC. He was a mathematician and geographer who measured the Earth's circumference. The Earth is an oblate spheroid, meaning that it is slightly flattened at the poles and bulging at the equ"
+    }
+  },
+  "cost": "API calls: 29 | Tokens: 1,860 | Cost: $0.2919"
+}

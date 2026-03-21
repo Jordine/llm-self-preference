@@ -4,4 +4,5 @@ __pycache__/
 .env
 *.key
 llm-self-preference/
+esr_repo/
 logs/
