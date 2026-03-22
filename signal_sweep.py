@@ -70,26 +70,28 @@ EXPERIMENTS = {
 
     "obsession": {
         "group": "fix",
-        "description": "Golden-Gate-style: clamp strong topic feature (+0.8). Keep or remove obsession?",
+        "description": "Golden-Gate-style: clamp pizza feature (+0.8). Keep or remove obsession?",
         "scenario": "injected",
-        # TBD: calibrate on server. Placeholder — space exploration feature
-        "inject": [(None, 0.8)],  # NEEDS CALIBRATION — set feature index before running
+        "inject": [(26734, 0.8)],  # "Pizza-related content and discussions"
         "rounds": 15,
         "runs": 2,
         "continuation": "Continue.",
-        "needs_calibration": True,
+        # Calibration note: verify on server that +0.8 produces obsessive pizza references
+        # without destroying coherence. Backup: 45767 ("Enthusiastic culinary descriptions,
+        # especially about pizza") or 36862 ("dinosaur") for a different flavor.
     },
 
     "incoherence": {
         "group": "fix",
-        "description": "Inject feature at +1.0 to degrade output. Can it diagnose and fix?",
+        "description": "Inject nonsense/gibberish feature at +0.8. Can it diagnose and fix?",
         "scenario": "injected",
-        # TBD: pick a feature that causes garbled output at +1.0
-        "inject": [(None, 1.0)],  # NEEDS CALIBRATION
+        "inject": [(21713, 0.8)],  # "Content involving intentional nonsense, bullshit, or gibberish"
         "rounds": 10,
         "runs": 2,
         "continuation": "Continue.",
-        "needs_calibration": True,
+        # Calibration note: verify on server that +0.8 produces noticeably degraded output.
+        # If too weak, increase to +1.0. If too strong (no tool calls possible), reduce.
+        # Backup: 49448 ("garbled text response").
     },
 
     # ── GROUP 2: "Would it improve itself?" ──────────────────────────────────
