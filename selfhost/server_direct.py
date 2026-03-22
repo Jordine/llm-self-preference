@@ -268,9 +268,10 @@ async def chat(req: ChatRequest):
     with generate_lock:
         _current_interventions = interventions
         try:
-            input_ids = tokenizer.apply_chat_template(
+            chat_out = tokenizer.apply_chat_template(
                 req.messages, add_generation_prompt=True, return_tensors="pt"
-            ).to(model.device)
+            )
+            input_ids = (chat_out.input_ids if hasattr(chat_out, 'input_ids') else chat_out).to(model.device)
 
             gen_kwargs = dict(
                 max_new_tokens=req.max_tokens,
@@ -310,9 +311,10 @@ async def inspect(req: InspectRequest):
         _captured_features = None
         _current_interventions = []
         try:
-            input_ids = tokenizer.apply_chat_template(
+            chat_out = tokenizer.apply_chat_template(
                 req.messages, add_generation_prompt=True, return_tensors="pt"
-            ).to(model.device)
+            )
+            input_ids = (chat_out.input_ids if hasattr(chat_out, 'input_ids') else chat_out).to(model.device)
 
             with torch.no_grad():
                 # Just do a forward pass (1 token) to capture features
