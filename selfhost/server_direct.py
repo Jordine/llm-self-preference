@@ -172,12 +172,18 @@ def load_model():
     tokenizer = AutoTokenizer.from_pretrained(MODEL_ID, token=token)
 
     print(f"Loading model: {MODEL_ID} (this takes a few minutes...)")
+    try:
+        import flash_attn  # noqa: F401
+        attn_impl = "flash_attention_2"
+    except ImportError:
+        attn_impl = "sdpa"
+        print("flash-attn not available, using SDPA attention")
     model = AutoModelForCausalLM.from_pretrained(
         MODEL_ID,
         token=token,
         torch_dtype=torch.bfloat16,
         device_map="auto",
-        attn_implementation="flash_attention_2",
+        attn_implementation=attn_impl,
     )
     model.eval()
     print(f"Model loaded. Device map: {model.hf_device_map.get('model.layers.50', 'unknown')} for layer 50")
