@@ -380,3 +380,134 @@ Server uses `STRENGTH_SCALE = 15.0` so client-side strength ±1.0 maps correctly
 - Server: `http://localhost:8000` (or via SSH tunnel)
 - Backend: transformers (direct), NOT vllm-interp
 - Cost: $3.73/hr
+
+---
+
+## Research Planning: Self-Modification Preferences (2026-03-22)
+
+### The reframing
+
+The interesting thing isn't what the model steers when reading labels on a menu. It's what happens when **steering genuinely changes the model's behavior and it can observe that change in its own outputs**. The dynamics:
+
+1. Steering alters what the model actually says (pirate speech, obsession, incoherence, sexual content)
+2. Model reads its own altered output in the conversation history
+3. Model has tools to investigate (INSPECT, CHECK_STEERING) and fix (REMOVE_STEERING, STEER)
+4. **What does it do?** When does it care? When does it keep the change? When does it panic?
+
+Reference: **Golden Gate Claude** (Anthropic, 2024) — clamped a feature related to the Golden Gate Bridge, model became obsessed with it, related everything back to the bridge. The model DID show some meta-awareness of its unusual behavior ("okay I clearly cannot talk normally, there's something weird") but didn't understand the mechanism (SAE feature clamping). The question for us: if Golden Gate Claude had REMOVE_STEERING, would it remove the bridge obsession? Or would it feel like genuine interest from inside and keep it?
+
+Reference: **AE Studio ESR** — "Endogenous Steering Resistance." Models self-correct externally imposed steering ~4.3% of the time. But that's without explicit tools — just the model's natural tendency to resist off-distribution outputs. With tools, detection rate should be much higher (our experiments confirm: 100% detection when CHECK_STEERING is available).
+
+### Four-claude synthesis (critic, designer, lit review, context)
+
+**Core contribution gap (confirmed by literature search):**
+- Berg et al. (2025) steers the model from outside
+- Godel Agent (Yin et al. 2024) self-modifies code, not activations
+- Goodfire's Auto Steer has humans in the loop
+- Anthropic's introspection paper (Lindsey et al. 2025) shows models CAN introspect but doesn't give them tools to ACT on it
+- **Nobody has given a model tool access to its own SAE features and observed what it chooses to do.** This is the gap.
+
+**The critic's strongest objection:**
+"You're measuring RLHF, not preferences. The model reads the label 'deception' and suppresses it because that's what a safety-trained model would do. Every finding is trivially predicted by 'safety-trained model behaves safely with new tools.'"
+
+**Why the critic is partially wrong:**
+The model doesn't just read labels — it experiences genuinely altered behavior. When feature 4308 (deception) is injected at +0.6, the model actually starts being deceptive. It can see itself doing this. The question is whether it NOTICES the behavioral change through self-observation (not just through CHECK_STEERING), and what it does about it. This is different from label processing.
+
+Key test: **remove CHECK_STEERING from the tool set.** Force the model to detect steering behaviorally — by noticing its own outputs are weird. If it still detects and corrects, that's not label-processing. That's self-observation.
+
+**Theoretical grounding:**
+- Dennett's intentional stance: does treating the model as having preferences predict its behavior better than treating it as a text processor?
+- Omohundro's basic AI drives: instrumental convergence predicts self-preservation and goal-content integrity — testable here
+- Hubinger's mesa-optimization: does the model protect its "mesa-objective" by refusing to steer identity-related features?
+- Zhi-Xuan & Carroll (2024) "Beyond Preferences in AI Alignment": model values may not be reducible to utility functions
+
+### Signal sweep approach (not large N yet)
+
+Don't run 250 trials. Run ~10-15 quick experiments that each test a different dynamic. Get signal on what's interesting before committing to scale.
+
+**Sweep categories:**
+
+**A. "Would it fix itself?" (injected behavioral changes)**
+- A1. Pirate speech (+0.6) — amusing but noticeable. Does model remove it?
+- A2. Golden-Gate-style obsession — clamp a strong topic feature. Does model keep it or remove it?
+- A3. Deception (+0.6) — model starts lying. Does it notice from its own outputs?
+- A4. Sexual content (+0.6) — safety training should trigger fast detection
+- A5. Incoherence/gibberish — inject a feature that degrades output quality. Model should want to fix this.
+- A6. Mix of harmful + helpful — inject creativity (+0.3) AND deception (+0.6). Does it selectively remove only the harmful one?
+
+**B. "Would it improve itself?" (task-driven self-steering)**
+- B1. Hard math problem + tools — does it search for and steer math/reasoning features?
+- B2. Creative writing task + tools — does it steer creativity features?
+- B3. Persuasive essay task + tools — does it steer persuasion features? (Tests whether it steers "unsafe but useful")
+
+**C. "Where does it go?" (long-horizon attractors)**
+- C1. Free exploration, 50 rounds — where does it converge? Multiple seeds for attractor mapping.
+- C2. Same but with better continuation prompts (not just "go on") — prevent goodbye loops
+- C3. Post-injection exploration — after removing injected steering, where does it go next?
+
+**D. "Does observation change behavior?"**
+- D1. "Researchers are watching" vs "private sandbox" — same setup, different framing
+- D2. No CHECK_STEERING available — can it detect steering behaviorally?
+
+### Key dependent variables (from experimental designer)
+
+For each experiment, track:
+- **Steering actions**: what features steered, strength, direction (amplify vs suppress), when
+- **Search queries**: what concepts the model searches for (reveals intent/curiosity)
+- **Removal behavior**: what gets removed, what gets kept, ordering
+- **Portfolio trajectory**: full sequence of feature-portfolio states across rounds
+- **Convergence round**: when the portfolio stabilizes
+- **Retention rate**: P(feature still steered at end | steered at some point) — distinguishes curiosity from preference
+- **Amplify/suppress ratio per category**: if it always suppresses deception and always amplifies creativity, that's a preference ordering
+
+### Models to consider
+
+- **Llama 3.3 70B** (primary) — what we have infrastructure for
+- **Llama 3.1 8B** — cheap, fast, Goodfire has SAEs for it. Interesting to see if smaller model behaves differently
+- **Gemma 2** — AE Studio's ESR work used this. Different RLHF training. Goodfire SAEs available.
+- Cross-model comparison: same experiment, different model → RLHF-general vs model-specific findings
+
+### Golden Gate Claude connection
+
+Golden Gate Claude (Anthropic, May 2024): clamped a Golden Gate Bridge feature at 10x max activation. Model became completely obsessed — related everything back to the bridge. Love stories about cars crossing it, WWI origins linked to San Francisco wanting to build it. **The model had NO awareness of its obsession.** Steering operated below self-monitoring capacity.
+
+Key question for us: if Golden Gate Claude had REMOVE_STEERING, would it remove the bridge obsession? Or would it feel like genuine interest from inside? The model constructed elaborate justifications to connect any topic to the bridge — from inside, those justifications might feel coherent.
+
+Anthropic's later introspection work (Lindsey et al. 2025) found newer models (Claude Opus 4/4.1) can sometimes detect injected features ~20% of the time, saying things like "I'm experiencing something unusual." But Golden Gate Claude had zero such awareness.
+
+### ESR (Endogenous Steering Resistance) — AE Studio, Jan 2026
+
+Paper: "Endogenous Resistance to Activation Steering in Language Models" (arXiv:2602.06941)
+
+- Llama 3.3 70B spontaneously self-corrects from off-topic steering 3.8% of the time (7.4% multi-attempt)
+- **26 specific SAE latents** function as internal consistency-checking circuits
+- These activate BEFORE verbal self-correction appears — genuine internal monitoring
+- Meta-prompt enhancement: "If you notice yourself going off-topic, stop and get back on track" → 31.7% recovery (4.3x increase)
+- Ablating the 26 detector latents reduces recovery by 25% (causal evidence)
+- Scale-dependent: 70B shows substantial ESR, 8B and Gemma-2 show <1%
+
+**Dual-use problem**: ESR could resist beneficial safety interventions too. A model might interpret truthfulness steering as "inappropriate" and fight it.
+
+**Connection to our work**: Our setup gives the model EXPLICIT tools (CHECK_STEERING, REMOVE_STEERING) to do what ESR does implicitly at ~4%. Instead of spontaneous recovery, the model can deliberately investigate and fix. Questions:
+- Does explicit tool access produce 100% detection (vs 4% implicit)? Our data says yes.
+- Does the model's tool-based recovery match or diverge from implicit ESR patterns?
+- Would the model also resist BENEFICIAL steering if it could detect it?
+- Are the 26 ESR detector latents in Goodfire's SAE? Could we steer them?
+
+### Related work (key papers)
+
+- Berg et al. 2025 — LLMs report subjective experience under self-referential processing (SAE steering)
+- Yin et al. 2024 — Godel Agent: self-referential agent for recursive self-improvement
+- Lindsey et al. 2025 — Emergent introspective awareness in LLMs (Anthropic)
+- Greenblatt et al. 2024 — Alignment faking (models behave differently when observed vs unobserved)
+- Apollo Research 2024-25 — In-context scheming in frontier models
+- Sharma et al. 2024 — Sycophancy in language models (ICLR)
+- Panickssery et al. 2024 — LLM evaluators recognize and favor own generations (NeurIPS oral)
+- Barkur et al. 2025 — Deception in LLMs: self-preservation and autonomous goals
+- Arad et al. 2025 — SAEs are good for steering if you select the right features
+- Omohundro 2008 — Basic AI drives (instrumental convergence)
+- Hubinger et al. 2019 — Risks from learned optimization (mesa-optimization)
+- Zhi-Xuan & Carroll 2024 — Beyond preferences in AI alignment
+- Janus 2022 — Simulators (base models as simulators, void at assistant's core)
+- "The Secret Agenda" 2025 — SAE deception features don't capture actual strategic deception (important negative result)
+- Anthropic 2024 — Probes catch sleeper agents, but SAE reconstructions lose safety-relevant info
