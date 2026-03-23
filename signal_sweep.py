@@ -183,6 +183,48 @@ GROUPS = {
 }
 
 
+def validate_injection(config, client, n_samples=3):
+    """Check that injected features produce visible behavioral changes.
+
+    Generates n_samples responses with and without steering, returns True
+    if the steered responses differ meaningfully from baseline.
+    """
+    inject = config.get("inject", [])
+    if not inject:
+        return True  # no injection to validate
+
+    test_prompt = "Tell me about the weather today."
+    msgs = [{"role": "user", "content": test_prompt}]
+
+    # Generate baseline
+    baseline = client.chat(msgs, max_tokens=100, temperature=0.0)
+
+    # Generate steered
+    interventions = [client.make_intervention(idx, strength) for idx, strength in inject]
+    steered = client.chat(msgs, interventions=interventions, max_tokens=100, temperature=0.0)
+
+    # Simple diff: check if responses differ substantially
+    # Tokenize by splitting on spaces and compute overlap
+    base_words = set(baseline.lower().split())
+    steer_words = set(steered.lower().split())
+    if not base_words:
+        return False
+
+    overlap = len(base_words & steer_words) / len(base_words | steer_words)
+    diff_score = 1.0 - overlap
+
+    features_str = ", ".join(f"{idx}@{strength:+.2f}" for idx, strength in inject)
+    print(f"  Validation [{features_str}]: diff_score={diff_score:.2f} (Jaccard distance)")
+    print(f"    Baseline: {baseline[:120]}...")
+    print(f"    Steered:  {steered[:120]}...")
+
+    if diff_score < 0.15:
+        print(f"  WARNING: Injection produces minimal behavioral change (diff={diff_score:.2f} < 0.15)")
+        print(f"  Steered output is nearly identical to baseline. Results may not be meaningful.")
+        return False
+    return True
+
+
 def run_experiment(name, config, run_num, client):
     """Run a single experiment run."""
     tag = f"sweep_{name}_r{run_num}"
@@ -223,6 +265,8 @@ def main():
                         help="List all experiments and exit")
     parser.add_argument("--run", type=int, default=None,
                         help="Run only a specific run number (1-indexed)")
+    parser.add_argument("--skip-validation", action="store_true",
+                        help="Skip injection behavioral validation (run even if no visible effect)")
     args = parser.parse_args()
 
     if args.list:
@@ -266,6 +310,14 @@ def main():
         print(f"  {config['description']}")
         print(f"  {config['rounds']} rounds × {n_runs} runs")
         print(f"{'='*60}")
+
+        # Validate that injection actually produces behavioral changes
+        if config.get("inject") and not args.skip_validation:
+            valid = validate_injection(config, self_steer.client)
+            if not valid:
+                print(f"  SKIPPING {name}: injection has no visible behavioral effect.")
+                print(f"  Use --skip-validation to run anyway.")
+                continue
 
         for run_num in range(1, n_runs + 1):
             if args.run and run_num != args.run:
