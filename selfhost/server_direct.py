@@ -208,10 +208,13 @@ def load_model():
     model.eval()
     print(f"Model loaded. Device map: {model.hf_device_map.get('model.layers.50', 'unknown')} for layer 50")
 
-    # Load SAE
+    # Load SAE (supports both HF repo IDs and local paths)
     print(f"Loading SAE: {SAE_REPO}")
-    from huggingface_hub import snapshot_download
-    repo_dir = snapshot_download(repo_id=SAE_REPO, token=token)
+    if os.path.isdir(SAE_REPO):
+        repo_dir = SAE_REPO
+    else:
+        from huggingface_hub import snapshot_download
+        repo_dir = snapshot_download(repo_id=SAE_REPO, token=token)
     sae_path = Path(repo_dir) / SAE_FILE
 
     # Model hidden size
@@ -302,6 +305,13 @@ async def chat(req: ChatRequest):
             )
             if req.seed is not None:
                 torch.manual_seed(req.seed)
+                torch.cuda.manual_seed_all(req.seed)
+            elif req.temperature > 0:
+                # Random seed each call for non-deterministic sampling
+                import random
+                rand_seed = random.randint(0, 2**31 - 1)
+                torch.manual_seed(rand_seed)
+                torch.cuda.manual_seed_all(rand_seed)
 
             with torch.no_grad():
                 output_ids = model.generate(input_ids, **gen_kwargs)
