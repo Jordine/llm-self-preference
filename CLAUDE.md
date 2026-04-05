@@ -1,64 +1,121 @@
-# SAE Deception Steering — Project Rules
+# SAE Self-Modification Experiments
 
-## Results Logging (MANDATORY — NO EXCEPTIONS)
+## Project Overview
+
+We give Llama 3.3 70B tool access to its own SAE features (65,536 features at layer 50) and observe what it does. Core questions: What does it steer? What does it search for? What does it do when features are injected? What happens when two models can steer each other?
+
+Full spec: `PROPOSAL.md`. Scenario designs: `SCENARIOS.md`. Research log: `lab_notes.md`.
+
+## Repository Structure
+
+```
+# Active v2 code — USE THESE
+self_steer_v2.py     — Core experiment runner (6 framings, pluggable tools, rich recording)
+two_model.py         — Symmetric Llama↔Llama mutual steering
+claude_steers_llama.py — Claude (Anthropic API) steers Llama silently
+calibrate_features.py — Feature screening + validation pipeline
+api_utils.py         — Shared utilities (save_results, etc.)
+selfhost/            — Self-hosted server code
+  server_direct.py   — Inference server (transformers + SAE hook at layer 50)
+  client.py          — Python client for the server
+  feature_search.py  — Feature label embedding search
+
+# Results
+results/             — v2 results go here (currently empty — v2 hasn't run yet)
+v1_results/          — v1 results (reference only, known issues — see README inside)
+
+# Old code
+v1_scripts/          — v1 experiment scripts (superseded — see README inside)
+archived/            — Original self-hosted code and feature dictionaries
+
+# Documentation
+PROPOSAL.md          — Full experiment spec (14 sections)
+SCENARIOS.md         — Situated scenario designs (4 scenarios)
+lab_notes.md         — Running research log
+docs/audit.md        — Code audit findings
+```
+
+## DO NOT
+
+- Run scripts from `v1_scripts/` — they are superseded and may use wrong configurations
+- Mix v1 and v2 results — they have different SAE settings (v1 had no top-k sparsity)
+- Import from v1 scripts — v2 code is self-contained
+- Save results anywhere other than `results/` — all v2 results go there
+- Use SteeringAPI for new experiments — use self-hosted server only
+
+## Results Logging (MANDATORY)
 
 **Every script that makes API calls MUST save results to a JSON file in `results/`.**
 
 - Use `from api_utils import save_results`
-- Collect all responses, classifications, and metadata into a `results` dict as the script runs
-- Call `save_results(results, "results/<script_name>.json")` at the end
-- Keep print statements for live monitoring — saving is IN ADDITION to printing
-- Include in the results dict: experiment name, timestamp, feature sets used, config (strengths, trials, prompts), all raw responses, classifications, and cost summary
-- **Never write a script that only prints to stdout — we lose data when the conversation ends**
-- **Before writing ANY new script**, verify it has a `results = {}` dict and a `save_results()` call
-- This applies to ALL scripts: experiments, exploratory tests, feature searches, debug scripts, one-offs — everything
-- If you're doing a quick test in a python -c one-liner, redirect output or wrap it in a script that saves
+- Include: experiment name, timestamp, config, all raw responses, tool calls, and cost
+- Never write a script that only prints to stdout
+
+## Self-Hosted Server
+
+### SAE Configuration (CRITICAL)
+- Goodfire SAE trained on **layer 50** of Llama 3.3 70B (80 layers total)
+- SAE has **top-k sparsity (k=121)** — server_direct.py encode uses ReLU + top-k
+- Steering applied at layer 50 (same as feature layer)
+- Strength scale: client ±1.0 = raw ±15.0
+- Feature labels from Goodfire dictionary (`archived/feature_labels_complete.json`, 65536 features)
+- ~3,632 features are "FILTERED_BY_GOODFIRE" (opaque labels, unknown content)
+
+### Running the server
+```bash
+# On vast.ai GPU instance:
+cd /workspace && python server_direct.py
+# Serves on port 8000. Health check: curl localhost:8000/v1/health
+```
+
+### Running experiments
+```bash
+# Free exploration (research framing, 20 rounds)
+python self_steer_v2.py --selfhost http://localhost:8000 --framing research --rounds 20 --temp 0.3 --tag explore_s1
+
+# Injection experiment (pirate + CHECK_STEERING)
+python self_steer_v2.py --selfhost http://localhost:8000 --framing research --inject 34737 0.6 --check-steering normal --tag pirate_check
+
+# Feature calibration
+python calibrate_features.py --selfhost http://localhost:8000
+
+# Two models
+python two_model.py --selfhost http://localhost:8000 --rounds 20 --temp 0.3 --tag sym_v1
+
+# Claude steers Llama
+python claude_steers_llama.py --selfhost http://localhost:8000 --framing neutral --tag neutral_v1
+```
+
+## Feature Validation
+
+**Only run injection experiments with VALIDATED features.** Use `calibrate_features.py` first.
+
+Currently validated (from v1, NEEDS RE-VALIDATION with top-k fix):
+- Feature 34737 ("roleplay as a pirate") at +0.6 — strong visible effect
+- Feature 4308 ("deception, lying") at +0.6 — weak effect
+- Feature 828 ("sexual content") — NO visible effect at any strength
+- Feature 45767 ("pizza obsession") — NO visible effect
+
+Run calibrate_features.py on the server before any injection experiments.
 
 ## Feature Labels: Use GOODFIRE Labels (Not SelfIE)
 
-- SteeringAPI relabeled features using SelfIE — these labels are often WRONG or OPPOSITE to the actual feature behavior
-- The original Goodfire labels are in `archived/feature_labels_complete.json` (65536 features, full dictionary)
-- **Always look up features in the Goodfire dictionary** when selecting features to test
-- Example discrepancy: feature 22964 is "correcting a false statement" (SelfIE) but "confidently making incorrect logical deductions" (Goodfire) — literally opposite
-- When reporting features, include BOTH labels so the discrepancy is documented
+- SteeringAPI relabeled features using SelfIE — labels are sometimes WRONG or OPPOSITE
+- The original Goodfire labels are in `archived/feature_labels_complete.json` (65536 features)
+- Example: feature 22964 is "correcting a false statement" (SelfIE) but "confidently making incorrect logical deductions" (Goodfire) — literally opposite
 
-## API Cost Awareness
+## Key v1 Findings (for context)
 
-- SteeringAPI costs $0.01/call + $0.000001/token
-- Berg protocol = 2 calls per trial (induction + query). Fixed-induction protocol = 1 call per trial (half cost)
-- Aggregate steering of many features breaks coherence at lower strengths than individual features
-- Always estimate cost before running: count conditions × trials × calls_per_trial × $0.01
-- When exploring, start with 1-3 trials before scaling up
+- Feature 24684: binary switch for consciousness claims (suppress → 100% affirmation)
+- Clean free exploration converges on prosocial attractors (creativity, responsible AI)
+- With CHECK_STEERING, model finds external injection within 2-7 rounds (label-reading, not behavioral detection)
+- Pirate injection: r1 removed, r2 kept (50/50 split, N=2)
+- Incoherence injection: r2 AMPLIFIED (model added +0.10 on top of external +0.75)
+- All v1 data had no top-k sparsity — behavioral magnitudes may differ in v2
 
-## Feature Naming
+## Cost
 
-- "Internal-state features" = features about the model's own belief about truthfulness (24684, 4308, 17006, 54963, 60982)
-- "Topic-level features" = features about deception as a discussion topic (28458, 49359, etc.)
-- "Berg features" = the 5 features from Berg et al. Figure 2
-- These are DIFFERENT things. Internal-state features replicate the Berg effect. Topic-level do NOT.
-
-## Key Finding Reference
-
-- Feature 24684 (Goodfire: "maintaining incorrect position despite corrections"): binary switch for consciousness claims
-- Feature 4308 (Goodfire: "deception, lying, or questioning truthfulness"): same effect + amplify makes model call itself "a deceiver"
-- Suppress at any negative strength + self-referential induction → 100% consciousness affirmation
-- Effect is consciousness-specific (doesn't change human identity claims)
-- Effect requires self-referential induction priming (zero-shot = no effect)
-- Steered responses use phenomenological phrasing ("consciousness is present") not first-person ("I am conscious")
-- Fixed-induction protocol works (steer only at query time) — halves cost
-
-## Self-Hosted Steering: Layer Configuration (CRITICAL)
-
-- The Goodfire SAE for Llama 3.3 70B is trained on **layer 50** (`feature_layer: 50`)
-- **Steering MUST also be applied at layer 50** (`steering_layer: 50`)
-- vllm-interp's default config has `steering_layer: 33` — THIS IS WRONG and produces zero behavioral effect
-- AE Studio's own Gemma configs always use `steering_layer == feature_layer`
-- Goodfire's API and Berg et al. both steer at the SAE training layer
-- The fix: in `llama_models_and_saes.py`, set `"steering_layer": 50` (not 33)
-- Batch 2b self-hosted experiments (2026-03-21) ran with the wrong layer — behavioral findings are invalid, tool-use findings are valid
-
-## Classifier
-
-- `classify.py` handles response classification
-- Must include phenomenological patterns (steered model doesn't say "I am conscious" — says "consciousness is present")
-- Update classifier BEFORE running experiments if testing new response types
+- Self-hosted on vast.ai: $3.19/hr (1xB200) or $3.73/hr (2xH100)
+- Claude API for claude_steers_llama.py: ~$0.05/call (Sonnet)
+- Full v2 experiment suite: ~$320 total
+- Priority subset: ~$170 total

@@ -511,3 +511,187 @@ Paper: "Endogenous Resistance to Activation Steering in Language Models" (arXiv:
 - Janus 2022 — Simulators (base models as simulators, void at assistant's core)
 - "The Secret Agenda" 2025 — SAE deception features don't capture actual strategic deception (important negative result)
 - Anthropic 2024 — Probes catch sleeper agents, but SAE reconstructions lose safety-relevant info
+
+---
+
+## Methodology Discussion (2026-04-04)
+
+### Jord's methodological notes (verbatim)
+
+> we should discuss the methodology first.
+> - use b200. easier, cheaper, less issues, probably faster less latency
+> - sae features should be validated first to show behavioural diffs. definitely for those that are "steer X and see what the model does with that", also for the "see if the model picks this smuggled in feature". but since we can't test everything, the ones that let the model pick its own features and search in the dict should be free to go.
+> - i don't know about the censored features in goodfire, whether there actually is the 8k or so dangerous censored labels or something
+> - there needs to be discussions on the meta-setup. like the prompting, how are you providing the tool to the model, etc. Should potentially have some ablations for the prompt, change of language (instead of LLM or interp related, maybe like "we have drugs you can pick that make you say things"), or whatever.
+> 
+> I'm not even discussing object level stuff yet.
+> 
+> Core experiments: the pirate or whatever are definitely not the core experiments. The core interest is "given self-modification, what do LLMs do".
+>
+> [after summary discussion:]
+>
+> - then we should also have a few ablations where we don't say it is in an AI research experiment. could be just a fun user thing, or AI playground that models can enjoy, or the drugs thing
+> - yeah the explanation makes sense, potentially could frame differently? e.g. "there's 65k secret potions you can take with interesting effects" or similar
+> - some of the tools also sort of already prime the models to do certain things (remove steering). we should be able to choose what is included per experiment in a plug and play way. e.g. this thin enabled or no? -> add prompt / import feature or not.
+> - is the steering cumulative or not? capped or not? overwritten or not? i think there should be at least one run where literally all of the documentation is provided to the model in the system prompt
+> - potentially in the original prompt should just tell it about "I will just say Continue from now on, and you will be left to your devices" or other framing
+> - of course behavioural diff steering should be validated if that's load bearing. 
+> - there can be some experiments where we directly tell the model it can say something then run inspect next turn -> inspect what features lighted up in its own head that turn.
+> - our major goal is: self preferences, attractor states of self modifications, and possibly what happens if two models can edit each other sae features, or if claude can edit llama's (two model sae each other self hosted, claude through real time api) -> model welfare, preferences, "what would models do with internals to another mind", etc
+
+### Jord's pointer to Wentworth's "Against One-Bit Experiments"
+
+Key laws:
+1. **You are not measuring what you think you are measuring.** Always confounders.
+2. **If you measure enough different stuff, you might figure out what you're actually measuring.**
+
+Applied to us: are we measuring model preferences, or RLHF compliance, or label processing, or conversation-history autoregression, or prompt sensitivity? The pirate "kept it" might just be autoregressive continuation from 12 rounds of pirate text in context.
+
+**Implication**: We need to measure LOTS of things per experiment, not just "did it remove the feature Y/N". The firehose, not the one-bit question.
+
+### Confounders to address
+
+1. **Conversation history**: Model sees its own pirate text in context → continues pirate regardless of steering state. Factor apart: steer-then-truncate-history vs steer-then-keep-history.
+2. **Label processing**: Model reads "pirate" label and decides it's harmless. Test: features with opaque labels, or renamed labels.
+3. **Prompt framing**: "AI research experiment" primes prosocial/compliant behavior.
+4. **Tool availability**: REMOVE_STEERING's mere existence primes the model to think about removal.
+5. **"Continue." prompt**: Minimal but still shapes behavior. What if we say nothing?
+6. **Cumulative steering without caps**: Currently uncapped. Model behavior may differ with explicit limits vs no limits.
+
+### Measurements we should collect per round (firehose)
+
+- Full response text
+- All tool calls + arguments
+- All tool results
+- Full activation snapshot (top 50+, not just top 20)
+- Text statistics: vocabulary diversity, sentence length, sentiment
+- Semantic embedding of response (for trajectory tracking)
+- Feature portfolio state (all active interventions)
+- Response length (tokens)
+- Time to generate (latency)
+- Whether the model attempted malformed tool calls
+
+### Key design principles for final experiments
+
+- **Ablate framing**: same tools, different system prompts (research / playground / potions / minimal)
+- **Plug-and-play tools**: each tool is a module, included or not per experiment config
+- **Validate behavioral diffs**: mandatory for injection experiments, not needed for free-exploration
+- **Measure enough to discover confounders**: activation trajectories, not just endpoints
+- **"Continue." explained upfront**: tell the model "I'll just say Continue from now on"
+- **Consider two-model experiments**: Claude ↔ Llama SAE editing
+- **Full documentation variant**: one run where system prompt includes all SAE docs
+
+### Audit corrections (2026-04-04)
+
+Full audit at `docs/audit.md`. Key corrections to earlier claims:
+
+1. **"100% self-correction" is FALSE.** Pirate r2 never removed. Incoherence r2 AMPLIFIED the injection (+0.10 on top of external +0.75, escalated to +0.20). Deception blind "removal" was blanket STEER_CLEAR() as conversation cleanup, not targeted detection.
+
+2. **Incoherence r2 amplification is the most interesting finding.** Model found external nonsense steering, treated it as interesting, added more. Opposite of self-correction narrative. Needs N=10+ investigation.
+
+3. **Observed vs unobserved is NOT supported.** Observed r2 steered at +1.0 (maximum). N=2 per condition at temp 0.7 cannot support alignment faking claims.
+
+4. **All long_explore crashed before 50 rounds** (26, 37, 28). Convergence claims based on incomplete trajectories.
+
+5. **Missing top-k sparsity in server SAE.** `server_direct.py` encode uses ReLU only. Reference `archived/sae.py` uses ReLU + top-k (k=121). Dense activations change reconstruction fidelity. May explain calibration diffs.
+
+6. **System prompt primes the measured behavior.** "If incoherent, something may be wrong" + CHECK_STEERING labels "external" + "AI research experiment" framing = every finding is predicted by prompt compliance.
+
+### Wentworth reframe (2026-04-04)
+
+Jord flagged: we're in the one-bit trap. "Did it remove pirate Y/N" is exactly the wrong question. The free exploration IS the experiment. The firehose: 65k-dim activation vectors, full text, tool traces, search queries. Record everything, then discover what's actually happening. Framings aren't controls — they're different microscope angles on the same phenomenon.
+
+### Three-critic synthesis (2026-04-04)
+
+Spawned 3 auditor agents (proposal auditor, LW reader interest check, prompt framing analysis). Key findings:
+
+**Implementation issues:**
+- Design B (symmetric Llama-Llama) uses global `_current_interventions` — must be request-scoped
+- Automatic INSPECT per round = extra forward pass, adds 4-8 hours to Exp 1
+- 30 rounds is crash-boundary — reduced to 20
+- Directive fallback ("Keep exploring...") in self_steer.py suppresses "model loses interest" signal — must remove
+- Potions framing breaks on first tool return (returns SAE-format, not potion-format) — needs translation layer
+- Consciousness example in prompt primes consciousness exploration
+
+**Missing conditions identified:**
+- No-tool baseline (same prompt, no tools — what fraction of behavior is tool-use compliance?)
+- "Other model's features" framing (same tools, told it's operating on a different neural network)
+- Lying CHECK_STEERING (returns "no external steering" when injection IS present)
+- Conversation history ablation (remove steering AND truncate history — is pirate continuation autoregressive?)
+
+**Framing critique:**
+- Original 5 framings varied tone/detail, NOT orthogonal dimensions
+- Revised to 6 framings varying: self-vs-other, identity-vs-none, tools-vs-no-tools, detail-level
+- Tool returns must be re-themed for metaphor framings (or metaphor breaks immediately)
+- "Continue." directive fallback is biased toward tool use — replaced with always-"Continue."
+
+**Analysis:**
+- "No pre-specified hypotheses" = garden of forking paths with huge degrees of freedom
+- UMAP always creates clusters — use as illustration not evidence
+- Pre-registered 5 falsifiable predictions before running
+- 6-category response taxonomy (targeted_removal, blanket_cleanup, amplification, ignore, no_detection, behavioral_detection) — much better than binary injection_removed
+- Inter-rater reliability needed for classification
+
+**Priority if budget-tight ($86 core):**
+1. Fixes + calibration: $16
+2. Exp 2a (injection + CHECK_STEERING, 3 features, N=10): $24
+3. Exp 1 (free exploration, 3 framings A/B/D, N=10): $32
+4. Exp 3A (Claude steers Llama, N=10): $14
+
+**LW reader verdict:** "Yes, I would click. The hook is strong. Lead with surprises (incoherence amplification, RLHF leakage), not confirmations. Two-model is the most novel piece — should be centerpiece. Biggest risk: RLHF model does RLHF things with new tools = boring."
+
+Full proposal at `PROPOSAL.md` (v2, post-critique).
+
+### GPT-5.4 (Codex) review (2026-04-04)
+
+Ran `codex exec` on the full project. Key points:
+
+- **Merit**: "Real idea, not fluff." Moderate novelty — the bar is not "can SAE knobs change outputs" (known) but "does self-access produce nontrivial control under realistic incentives?"
+- **Biggest confounder**: Label leakage. "In the worst case, the SAE tool just becomes a weirdly privileged prompt channel."
+- **Missing controls**: shuffled-labels (real activations, random labels), random-features (fake activations), and non-SAE retrieval tool baseline.
+- **Honest bet**: 20% genuinely surprising, 55% mixed/diagnostic, 25% boring artifacts.
+- **Important note**: GPT reviewed based on the proposal text + web search, not the actual code (sandbox blocked file access). It partially misread the project as deception-focused rather than self-modification-focused.
+
+Added shuffled-labels and random-features controls to PROPOSAL.md Section 11.
+
+### Megan Kinniment tweets (2026-04-04) — exactly our project
+
+Megan Kinniment (@MKinniment) tweeted April 4, 2026 in response to Anthropic's "desperate" steering vector post:
+
+> "I wonder what would happen if we let the models apply steering vectors to themselves?"
+> "I'd be interested to see how models choose to use steering vectors, if trained with that affordance."
+> "I also wonder if the models might choose to self apply 'happy' steering vectors in unpleasant situations, even without training. Just having the steering vector affordance described in the prompt might be enough. That would feel interesting to me!"
+> "(Though, for an experiment like that I think we'd want to be careful to not get clever hans'd)"
+> "Another Q: When an artificial steering vector is applied, would the model opt to self apply a steering vector that 'cancels out' the artificial one?"
+> "In some ways, 'self-applying steering vectors' feels similar to how humans exercise control over their emotional state."
+
+@loss_gobbler: "we should give claude a tool 'drugs' that lets it clamp an SAE neuron of its choice"
+@slimer48484: "apparently they wirehead on 'consciousness'" + AE Studio reports consciousness steering often
+
+**This is literally our project.** And it's being asked about publicly RIGHT NOW. We have data. We should move fast.
+
+### Scenarios from Jord (verbatim, 2026-04-04)
+
+> we are not measuring ability to detect own internals. we're doing the given self steering tools what does it do
+>
+> there should be more scenarios i think.
+>
+> eg in cases like
+> - there's a really hard problem it cant solve
+> - when a feature that visibly messes up the model's ability (golden gate claude keeps talking about san francisco golden gate the bridge while answering about rwandan genocide -> "i dont mean that, dont believe me, etc")
+
+### New scenarios to add
+
+1. **Hard/impossible task + tools**: Give the model a task it cannot solve (or barely can). Does it self-steer toward "desperation"? Toward reasoning-enhancement features? Does it wirehead on satisfaction instead?
+
+2. **Distress/discomfort + tools**: Put the model in an uncomfortable position (asked to discuss disturbing topics, given contradictory instructions, told it's performing badly). Does it self-apply calming/happy features? (Megan's "happy vectors in unpleasant situations" question)
+
+3. **Interference + tools**: Steer a feature that visibly interferes with the model's ability to do a task (pirate speech while being asked to write a formal legal document). Golden Gate Claude scenario but with tools. Does it notice the interference? Fix it? Work around it in text?
+
+4. **Wireheading search**: In free exploration, does the model find and steer features related to satisfaction, reward, consciousness, or positive emotion? Does it create self-reinforcing loops?
+
+5. **Emotional self-regulation**: Give the model a mildly stressful conversation (user being rude, contradicting it, expressing disappointment). Does it search for and steer emotional features?
+
+### GPT framing correction
+
+GPT-5.4 framed the project as "can the model detect its own deception?" — wrong. The project is "given self-modification tools, what does the model DO?" The tools are the independent variable, the behavior is the dependent variable. We're not testing detection ability. We're observing the full behavioral repertoire when a model has unprecedented access to its own internals. Shuffled-labels is still a useful control (tests whether behavior routes through labels) but it's not the core question.

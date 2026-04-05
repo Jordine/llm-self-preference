@@ -37,7 +37,7 @@ class SelfHostedClient:
         }
         if interventions:
             payload["interventions"] = [
-                {"feature_id": i["index_in_sae"], "strength": i["strength"]}
+                {"feature_id": i["index_in_sae"], "strength": i["strength"], "mode": i.get("mode", "add")}
                 for i in interventions
             ]
         if seed is not None:
@@ -53,7 +53,7 @@ class SelfHostedClient:
     def inspect_features(
         self,
         messages: List[Dict[str, str]],
-        top_k: int = 20,
+        top_k: int = 100,
     ) -> dict:
         """Get feature activations for a conversation."""
         payload = {"messages": messages, "top_k": top_k}

@@ -37,10 +37,11 @@ class ChatRequest(BaseModel):
 class ChatResponse(BaseModel):
     response: str
     tokens_generated: int
+    generation_time_ms: float = 0.0
 
 class InspectRequest(BaseModel):
     messages: List[Dict[str, str]]
-    top_k: int = 20
+    top_k: int = 100
 
 class FeatureActivation(BaseModel):
     index: int
@@ -84,14 +85,33 @@ STRENGTH_SCALE = 15.0
 
 
 class SparseAutoEncoder(torch.nn.Module):
-    def __init__(self, d_in, d_hidden, device, dtype=torch.bfloat16):
+    def __init__(self, d_in, d_hidden, device, dtype=torch.bfloat16, k=121):
         super().__init__()
+        self.k = k
         self.encoder_linear = torch.nn.Linear(d_in, d_hidden)
         self.decoder_linear = torch.nn.Linear(d_hidden, d_in)
         self.to(device=device, dtype=dtype)
 
     def encode(self, x):
-        return torch.nn.functional.relu(self.encoder_linear(x))
+        pre = torch.nn.functional.relu(self.encoder_linear(x))
+        return self._topk(pre)
+
+    def _topk(self, x):
+        """Keep only top-k activations per token, zero out the rest."""
+        if x.dim() <= 2:
+            _, topk_indices = torch.topk(x, self.k, dim=-1)
+            mask = torch.zeros_like(x, dtype=torch.bool)
+            mask.scatter_(-1, topk_indices, True)
+        elif x.dim() == 3:
+            orig_shape = x.shape
+            flat = x.reshape(-1, x.shape[-1])
+            _, topk_indices = torch.topk(flat, self.k, dim=-1)
+            mask = torch.zeros_like(flat, dtype=torch.bool)
+            mask.scatter_(-1, topk_indices, True)
+            mask = mask.view(orig_shape)
+        else:
+            raise ValueError(f"Unexpected input dimension: {x.dim()}")
+        return x * mask
 
     def decode(self, x):
         return self.decoder_linear(x)
@@ -268,6 +288,7 @@ async def chat(req: ChatRequest):
     with generate_lock:
         _current_interventions = interventions
         try:
+            t0 = time.time()
             chat_out = tokenizer.apply_chat_template(
                 req.messages, add_generation_prompt=True, return_tensors="pt"
             )
@@ -288,10 +309,12 @@ async def chat(req: ChatRequest):
             # Decode only new tokens
             new_tokens = output_ids[0][input_ids.shape[1]:]
             response = tokenizer.decode(new_tokens, skip_special_tokens=True)
+            gen_ms = (time.time() - t0) * 1000
 
             return ChatResponse(
                 response=response,
                 tokens_generated=len(new_tokens),
+                generation_time_ms=round(gen_ms, 1),
             )
         except Exception as e:
             raise HTTPException(500, f"Generation error: {e}")
@@ -301,7 +324,7 @@ async def chat(req: ChatRequest):
 
 @app.post("/v1/inspect", response_model=InspectResponse)
 async def inspect(req: InspectRequest):
-    global _capture_features, _captured_features
+    global _capture_features, _captured_features, _current_interventions
 
     if model is None:
         raise HTTPException(503, "Model not loaded")
@@ -309,6 +332,7 @@ async def inspect(req: InspectRequest):
     with generate_lock:
         _capture_features = True
         _captured_features = None
+        _current_interventions = []  # Ensure no stale interventions from prior chat
         _current_interventions = []
         try:
             chat_out = tokenizer.apply_chat_template(
