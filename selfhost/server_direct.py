@@ -206,7 +206,8 @@ def load_model():
         attn_implementation=attn_impl,
     )
     model.eval()
-    print(f"Model loaded. Device map: {model.hf_device_map.get('model.layers.50', 'unknown')} for layer 50")
+    device_map_info = getattr(model, 'hf_device_map', {}).get('model.layers.50', 'single-gpu') if hasattr(model, 'hf_device_map') else 'single-gpu'
+    print(f"Model loaded. Device map: {device_map_info} for layer 50")
 
     # Load SAE (supports both HF repo IDs and local paths)
     print(f"Loading SAE: {SAE_REPO}")
