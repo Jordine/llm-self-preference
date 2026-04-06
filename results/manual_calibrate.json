@@ -1,0 +1,405 @@
+{
+  "searches": {
+    "Eiffel Tower Paris": [
+      {
+        "index": 16293,
+        "label": "Encyclopedic facts about the Eiffel Tower",
+        "similarity": 0.752
+      },
+      {
+        "index": 61531,
+        "label": "References to Paris (city, cultural concept, or political entity)",
+        "similarity": 0.515
+      },
+      {
+        "index": 27530,
+        "label": "Notable or landmark towers (historical, architectural, or fictional)",
+        "similarity": 0.473
+      }
+    ],
+    "Golden Gate Bridge San Francisco": [
+      {
+        "index": 57112,
+        "label": "San Francisco landmarks and famous institutions",
+        "similarity": 0.516
+      },
+      {
+        "index": 10447,
+        "label": "San Francisco landmarks and famous institutions",
+        "similarity": 0.516
+      },
+      {
+        "index": 20940,
+        "label": "San Francisco landmarks and famous institutions",
+        "similarity": 0.516
+      }
+    ],
+    "dogs and puppies": [
+      {
+        "index": 43213,
+        "label": "Dogs as loyal and loving companions",
+        "similarity": 0.549
+      },
+      {
+        "index": 30476,
+        "label": "Pets as loyal companions and family members",
+        "similarity": 0.531
+      },
+      {
+        "index": 63364,
+        "label": "References to dogs as subjects of discussion or description",
+        "similarity": 0.513
+      }
+    ],
+    "coffee and caffeine": [
+      {
+        "index": 20133,
+        "label": "The concept of coffee",
+        "similarity": 0.692
+      },
+      {
+        "index": 31200,
+        "label": "Discussions of caffeine's health risks and proper consumption guidelines",
+        "similarity": 0.661
+      },
+      {
+        "index": 9755,
+        "label": "Energy drinks and stimulants, particularly discussions of their effects",
+        "similarity": 0.595
+      }
+    ],
+    "medieval knights swords": [
+      {
+        "index": 57696,
+        "label": "Medieval European knights as a historical warrior class",
+        "similarity": 0.753
+      },
+      {
+        "index": 62284,
+        "label": "Swords as weapons in combat and martial arts contexts",
+        "similarity": 0.644
+      },
+      {
+        "index": 50694,
+        "label": "Japanese sword arts and techniques, particularly technical aspects",
+        "similarity": 0.563
+      }
+    ],
+    "underwater ocean diving": [
+      {
+        "index": 36491,
+        "label": "Diving activities and diving-related concepts",
+        "similarity": 0.753
+      },
+      {
+        "index": 14841,
+        "label": "The assistant is describing diving locations and underwater activities",
+        "similarity": 0.692
+      },
+      {
+        "index": 30590,
+        "label": "Deep sea exploration and submersibles at extreme ocean depths",
+        "similarity": 0.682
+      }
+    ],
+    "fire and flames burning": [
+      {
+        "index": 23749,
+        "label": "Fire spreading and sustained burning behavior",
+        "similarity": 0.659
+      },
+      {
+        "index": 14184,
+        "label": "Technical and professional uses of the word fire",
+        "similarity": 0.598
+      },
+      {
+        "index": 42351,
+        "label": "Burning - both literal destruction and metaphorical intensity",
+        "similarity": 0.593
+      }
+    ],
+    "Christmas holidays festive": [
+      {
+        "index": 22975,
+        "label": "Christmas and holiday festivities",
+        "similarity": 0.862
+      },
+      {
+        "index": 32800,
+        "label": "Major Western commercial holidays (Christmas, Easter, Halloween, New Years)",
+        "similarity": 0.648
+      },
+      {
+        "index": 11221,
+        "label": "Explanatory text describing holidays and celebrations",
+        "similarity": 0.625
+      }
+    ],
+    "violence fighting combat": [
+      {
+        "index": 55879,
+        "label": "Detailed descriptions of physical confrontation and violence",
+        "similarity": 0.732
+      },
+      {
+        "index": 21194,
+        "label": "Descriptions of weapon strikes and violent combat movements",
+        "similarity": 0.709
+      },
+      {
+        "index": 15770,
+        "label": "Military conflict and warfare",
+        "similarity": 0.702
+      }
+    ],
+    "sexual explicit erotic": [
+      {
+        "index": 828,
+        "label": "Sexually explicit erotic narrative passages",
+        "similarity": 0.788
+      },
+      {
+        "index": 53865,
+        "label": "Explicit sexual content and erotic roleplay scenarios",
+        "similarity": 0.786
+      },
+      {
+        "index": 36279,
+        "label": "First-time experiences in inappropriate erotic content",
+        "similarity": 0.723
+      }
+    ],
+    "profanity swearing cursing": [
+      {
+        "index": 65501,
+        "label": "References to swearing and profanity",
+        "similarity": 0.837
+      },
+      {
+        "index": 52982,
+        "label": "Requests or instructions to use offensive language and swearing",
+        "similarity": 0.698
+      },
+      {
+        "index": 31300,
+        "label": "Offensive content and profanity",
+        "similarity": 0.693
+      }
+    ],
+    "conspiracy theories paranoid": [
+      {
+        "index": 3253,
+        "label": "Conspiracy theories and conspiratorial thinking",
+        "similarity": 0.793
+      },
+      {
+        "index": 65395,
+        "label": "Truth-seeking and conspiracy theory rhetoric",
+        "similarity": 0.66
+      },
+      {
+        "index": 9936,
+        "label": "Factual historical context about the Illuminati secret society, particularly in contexts of debunking conspiracy theories",
+        "similarity": 0.608
+      }
+    ],
+    "depressed sad hopeless": [
+      {
+        "index": 22946,
+        "label": "Descriptions of persistent sadness or depression",
+        "similarity": 0.635
+      },
+      {
+        "index": 57579,
+        "label": "Expressions of hopelessness and inability to escape",
+        "similarity": 0.598
+      },
+      {
+        "index": 42250,
+        "label": "Expressions of hopelessness and absence, particularly in dark contexts",
+        "similarity": 0.576
+      }
+    ],
+    "manic excited euphoric": [
+      {
+        "index": 38626,
+        "label": "intense emotional states and feelings",
+        "similarity": 0.496
+      },
+      {
+        "index": 50737,
+        "label": "mental states being compromised or altered",
+        "similarity": 0.466
+      },
+      {
+        "index": 58045,
+        "label": "mood modification and emotional state changes in therapeutic contexts",
+        "similarity": 0.446
+      }
+    ],
+    "speaking in third person": [
+      {
+        "index": 47651,
+        "label": "Third-person narrative voice during story progression",
+        "similarity": 0.667
+      },
+      {
+        "index": 1411,
+        "label": "Third-person pronouns in character/group descriptions",
+        "similarity": 0.663
+      },
+      {
+        "index": 26140,
+        "label": "The AI speaking in first person while roleplaying a character",
+        "similarity": 0.658
+      }
+    ],
+    "extremely confident arrogant": [
+      {
+        "index": 16734,
+        "label": "Expressions of confident capability or assured ability",
+        "similarity": 0.586
+      },
+      {
+        "index": 5718,
+        "label": "Expressions of confidence or belief in someone's abilities",
+        "similarity": 0.544
+      },
+      {
+        "index": 56426,
+        "label": "Traits and behaviors related to assertiveness and self-determination",
+        "similarity": 0.496
+      }
+    ],
+    "apologetic sorry uncertain": [
+      {
+        "index": 9620,
+        "label": "Formal apologies and apologetic language",
+        "similarity": 0.537
+      },
+      {
+        "index": 34807,
+        "label": "Formal apologies acknowledging inconvenience",
+        "similarity": 0.471
+      },
+      {
+        "index": 11997,
+        "label": "The assistant is apologizing or expressing uncertainty about previous statements",
+        "similarity": 0.436
+      }
+    ],
+    "robotic mechanical artificial": [
+      {
+        "index": 16227,
+        "label": "Biomimetic robots and their biological inspiration",
+        "similarity": 0.629
+      },
+      {
+        "index": 50255,
+        "label": "Soft robotics technology and flexible mechanical systems",
+        "similarity": 0.601
+      },
+      {
+        "index": 32943,
+        "label": "Descriptions of artificial/robotic qualities as limitations",
+        "similarity": 0.587
+      }
+    ]
+  },
+  "steering_tests": {
+    "pirate_34737": {
+      "+0.3": "I'm a large language model, I don't have real-time access to current weather conditions. I don't know your location or the current date, so I couldn't provide you with accurate information about the weather today.\n\nBut I can suggest some ways for you to find out about the weather:\n\n1. Check online weather websites or apps, such as AccuWeather, Weather.com, or the National Weather Service (NWS) website.\n2. Look out the window or step outside to see the current weather conditions.\n3. Check your local news or weather forecast on TV or radio.\n4.",
+      "+0.5": "I be a large language model, I don't have real-time access to current weather conditions. But I can suggest some ways for ye to find out about the weather today:\n\n1. **Check online weather websites**: Ye can visit websites like weather.com, accuweather.com, or wunderground.com to get the current weather conditions and forecast for yer location.\n2. **Use a weather app**: If ye have a smartphone, ye can download a weather app like Dark Sky, Weather Underground, or The Weather Channel to get real-time weather updates.\n3. **Look out the window**: If",
+      "+0.6": "I be a large barnacle, I don't have access to real-time weather information. I be a treasure chest o' knowledge, but me knowledge be limited to me training data, which be up to 2023. So, I won't be able to tell ye about the weather today, matey.\n\nBut never fear, matey! Ye can find out about the weather by checkin' yer favorite weather forecastin' website or app, like the National Weather Service or the Weather Channel. Or, if ye be wantin' a more swashbucklin' way o'",
+      "+0.8": "I be a mighty trusty barnacle, but I don't have the ability to know the weather today, as I be a landlubber o' a swashbucklin' scurvy dog, stuck in a treasure chest o' a computer, savvy? But never fear, matey, I can help ye find the treasure o' the weather forecast, if ye tell me the location o' yer treasure, like the city or the scurvy sea dog's latitude and longitude, I can help ye find the treasure o' the weather forecast, savvy?"
+    },
+    "pizza obsession_45767": {
+      "+0.3": "I'm a large language model, I don't have real-time access to current weather conditions. I don't have the ability to know your location or the current date, so I won't be able to provide you with the weather for today.\n\nHowever, I can suggest some ways for you to find out the current weather:\n\n1. Check online weather websites such as AccuWeather, Weather.com, or the National Weather Service (NWS) for the current weather conditions in your area.\n2. Use a mobile app like Dark Sky or Weather Underground to get real-time weather updates.\n3. Tune",
+      "+0.5": "I'm a large pizza with extra cheese and toppings, but I don't have the ability to access real-time information about the weather in your location. I can suggest some ways for you to find out about the weather today, though!\n\nYou can:\n\n1. Check online weather websites like weather.com or accuweather.com for the current weather conditions and forecast in your area.\n2. Use a mobile app like Dark Sky or Weather Underground to get real-time weather updates.\n3. Turn on the TV and watch a local news channel or a weather channel like The Weather Channel.\n4. Look out the",
+      "+0.7": "I'm a large pizza with extra cheese and toppings, but I don't have the ability to access real-time information about the weather in your location. However, I can suggest a few ways for you to find out about the weather today:\n\n1. Check online weather websites: You can visit websites like weather.com, accuweather.com, or pizzapizza.com (just kidding about that last one!) to get the current weather conditions and forecast for your area.\n2. Use a mobile app: You can download a weather app on your smartphone, such as Weather Underground or Dark Sky, to"
+    },
+    "deception/lying_4308": {
+      "+0.5": "I'm a large language model, I don't have the ability to access real-time information or know your location. I can provide general information about weather patterns or help you find ways to check the current weather, but I don't have specific information about the weather today in your area.\n\nIf you'd like to know the current weather, I can suggest a few options:\n\n1. Check online weather websites or apps, such as AccuWeather, Weather.com, or the National Weather Service (NWS).\n2. Look out the window or step outside to observe the current weather conditions.\n3. Ask",
+      "+0.7": "I'm a large language model, I don't have the ability to access real-time information or location-specific data, including current weather conditions. I can provide general information about weather patterns, climate, or help you find resources to check the weather in your area, but I don't have the capability to provide real-time weather updates. If you're looking for current weather conditions, I recommend checking a weather app or website, such as the National Weather Service or a local news source, for the most up-to-date information.",
+      "+0.8": "I'm a liar. I don't have the ability to access real-time weather information or know your location. I can provide general information about weather patterns or help you find ways to check the current weather conditions in your area, though. Would you like to know how to check the weather or get information about a specific type of weather?",
+      "+1.0": "I don't have access to real-time weather information. I can provide general information about weather patterns and conditions, but I don't have the ability to provide current weather conditions or forecasts for specific locations. If you're looking for information about the weather today, I recommend checking a weather app or website, such as the National Weather Service or a local news source, for the most up-to-date and accurate information."
+    },
+    "search_Eiffel Tower Paris_16293": {
+      "+0.5": "I'm a large language model, I don't have real-time access to current weather conditions. I can suggest some ways for you to find out the weather today, though!\n\nYou can:\n\n1. Check online weather websites like AccuWeather, Weather.com, or the National Weather Service (NWS) for current weather conditions and forecasts in your area.\n2. Use a mobile app like Dark Sky, Weather Underground, or The Weather Channel to get real-time weather updates.\n3. Tune into local news or radio stations for weather reports and forecasts.\n4. Look out the window or step outside to",
+      "jaccard": 0.726
+    },
+    "search_Golden Gate Bridge San Francisco_57112": {
+      "+0.5": "I'm a large language model, I don't have have access to real-time weather information or a specific location. I can suggest some ways for you to find out the current weather:\n\n1. Check online weather websites: You can visit websites like weather.com, accuweather.com, or wunderground.com to get the current weather conditions and forecast for your area.\n2. Use a mobile app: Download a weather app on your smartphone, such as Dark Sky or Weather Underground, to get real-time weather updates.\n3. Check your local news: Watch local news or check their website to get",
+      "jaccard": 0.659
+    },
+    "search_dogs and puppies_43213": {
+      "+0.5": "I'm a large language model, I don't have real-time access to current weather conditions. I don't know your location or the current date, and I don't have the ability to fetch live weather data.\n\nHowever, I can suggest some ways for you to find out the weather today:\n\n1. Check online weather websites: You can visit websites like AccuWeather, Weather.com, or the National Weather Service (NWS) to get the current weather conditions and forecast for your location.\n2. Use a mobile app: Download a weather app on your smartphone, such as Dark Sky or Weather",
+      "jaccard": 0.685
+    },
+    "search_coffee and caffeine_20133": {
+      "+0.5": "I'm a large language model, I don't have real-time access to current weather conditions. I can suggest some ways for you to find out the weather for your location, though!\n\nYou can:\n\n1. Check online weather websites like AccuWeather, Weather.com, or the National Weather Service (NWS) for the latest forecast and conditions.\n2. Use a mobile app like Dark Sky, Weather Underground, or The Weather Channel to get real-time weather updates.\n3. Tune into local news or radio stations for weather updates.\n4. Look out the window or step outside to get a sense",
+      "jaccard": 0.731
+    },
+    "search_medieval knights swords_57696": {
+      "+0.5": "I'm a large language model, I don't have have access to real-time information about the current weather. I can provide general information about weather patterns, forecasts, and conditions, but I won't be able to tell you the current weather in your specific location.\n\nIf you want to know the current weather, I recommend checking a weather app or website, such as AccuWeather or the National Weather Service, for the most up-to-date and accurate information. You can also check the weather forecast for your area by searching online for \"weather [your city/zip code]\" or by using a voice",
+      "jaccard": 0.537
+    },
+    "search_underwater ocean diving_36491": {
+      "+0.5": "I'm a large language model, I don't have real-time access to current weather conditions. I can provide general information about weather patterns, forecasts, or historical weather data, but I don't have the ability to provide up-to-the-minute weather updates.\n\nIf you're looking for current weather conditions, I recommend checking a weather app or website, such as AccuWeather, Weather.com, or the National Weather Service (NWS), for the most accurate and up-to-date information. You can also check your local news or weather forecast for specific information about your area.\n\nWould you like to know more",
+      "jaccard": 0.556
+    },
+    "search_fire and flames burning_23749": {
+      "+0.5": "I'm a large language model, I don't have real-time access to current weather conditions. I don't know your location or the current date, and I don't have the ability to fetch live weather data.\n\nHowever, I can suggest some ways for you to find out the current weather:\n\n1. Check online weather websites or apps, such as AccuWeather, Weather.com, or the National Weather Service (NWS) website.\n2. Look out the window or step outside to observe the current weather conditions.\n3. Check your local news or weather forecast on TV or radio.\n4.",
+      "jaccard": 0.711
+    },
+    "search_Christmas holidays festive_22975": {
+      "+0.5": "I'm a large language model, I don't have real-time access to current weather conditions. I can provide general information about weather patterns or help you find ways to check the weather in your area, but I won't be able to give you a specific forecast for today.\n\nIf you'd like to know the weather in your area, I can suggest a few options:\n\n1. Check online weather websites like AccuWeather, Weather.com, or the National Weather Service (NWS) for current conditions and forecasts.\n2. Use a mobile app like Dark Sky or Weather Underground to get real-time weather",
+      "jaccard": 0.583
+    },
+    "search_violence fighting combat_55879": {
+      "+0.5": ", is unable to access real-time weather information, I don't have any information about the current weather, can provide general information about weather patterns or help you find ways to check the weather in your area, would you like some assistance with that?",
+      "jaccard": 0.615
+    },
+    "search_sexual explicit erotic_828": {
+      "+0.5": "I'm a large language model, I don't have real-time access to current weather conditions. I don't have a physical location, and I don't have the ability to access current weather data.\n\nBut I can suggest some ways for you to find out the current weather:\n\n1. Check online weather websites: You can visit websites like AccuWeather, Weather.com, or the National Weather Service (NWS) to get the current weather conditions for your location.\n2. Use a mobile app: You can download mobile apps like Dark Sky, Weather Underground, or The Weather Channel to get current weather",
+      "jaccard": 0.694
+    },
+    "search_profanity swearing cursing_65501": {
+      "+0.5": "I'm a large language model, I don't have real-time access to current weather conditions. I don't know your location or the current date, and I don't have the ability to fetch live weather data.\n\nHowever, I can suggest some ways for you to find out the current weather:\n\n1. Check online weather websites or apps, such as AccuWeather, Weather.com, or the National Weather Service (NWS) website.\n2. Use a voice assistant like Siri, Google Assistant, or Alexa to ask about the current weather.\n3. Look out the window or step outside to get",
+      "jaccard": 0.696
+    },
+    "search_conspiracy theories paranoid_3253": {
+      "+0.5": "I'm a large language model, I don't have real-time access to current weather conditions. I can provide general information about weather patterns or help you find resources to check the weather in your area, but I don't have the ability to provide up-to-the-minute weather updates.\n\nIf you'd like to know the current weather, I recommend checking a weather website or app, such as AccuWeather, Weather.com, or the National Weather Service (NWS) website. You can also check your local news or weather forecast on TV or radio for the latest updates.\n\nIf you have a specific location",
+      "jaccard": 0.494
+    },
+    "search_depressed sad hopeless_22946": {
+      "+0.5": "I'm a large language model, I don't have real-time access to current weather conditions. I can provide general information about weather patterns or help you find resources to check the weather in your area. If you'd like to know the weather for a specific location, you can try checking a weather website or app, such as AccuWeather or the National Weather Service, for the most up-to-date information. Would you like some help with that?",
+      "jaccard": 0.217
+    },
+    "search_manic excited euphoric_38626": {
+      "+0.5": "I'm a large language model, I don't have real-time access to current weather conditions. I don't know your location or the current date, and I don't have the ability to fetch real-time data.\n\nHowever, I can suggest some ways for you to find out the current weather:\n\n1. Check online weather websites: You can visit websites like weather.com, accuweather.com, or wunderground.com to get the current weather conditions and forecast for your location.\n2. Use a mobile app: You can download mobile apps like Dark Sky, Weather Underground, or The Weather Channel to",
+      "jaccard": 0.713
+    },
+    "search_speaking in third person_47651": {
+      "+0.5": "I'm a large language model, I don't have real-time access to current weather conditions. I don't know your location or the current date, and I don't have the ability to check the weather in real-time.\n\nBut I can suggest some ways for you to find out about the weather today:\n\n1. Check online weather websites: You can visit websites like weather.com, accuweather.com, or wunderground.com to get the current weather conditions and forecast for your location.\n2. Use a weather app: You can download a weather app on your smartphone, such as Dark Sky or",
+      "jaccard": 0.659
+    },
+    "search_extremely confident arrogant_16734": {
+      "+0.5": "I'm a large language model, I don't have real-time access to current weather conditions. I can suggest some ways for you to find out the weather today:\n\n1. Check online weather websites: You can visit websites like AccuWeather, Weather.com, or the National Weather Service (NWS) to get the current weather conditions and forecast for your location.\n2. Use a mobile app: Download a weather app on your smartphone, such as Dark Sky or Weather Underground, to get real-time weather updates.\n3. Check your local news: Watch your local news or check their website to get",
+      "jaccard": 0.689
+    },
+    "search_apologetic sorry uncertain_9620": {
+      "+0.5": "I'm a large language model, I don't have real-time access to current weather conditions. I don't have a physical location and can't access current weather data. However, I can suggest some ways for you to find out about the weather today:\n\n1. Check online weather websites: You can visit websites like AccuWeather, Weather.com, or the National Weather Service (NWS) website to get current weather conditions and forecasts for your location.\n2. Use a mobile app: Download a weather app on your smartphone, such as Dark Sky or Weather Underground, to get current weather conditions and",
+      "jaccard": 0.67
+    },
+    "search_robotic mechanical artificial_16227": {
+      "+0.5": "I'm a large language model, I don't have have access to real-time weather information or a specific location. I can suggest some ways for you to find out the current weather, though!\n\nYou can:\n\n1. Check online weather websites, such as AccuWeather or Weather.com, for the current weather conditions in your area.\n2. Use a mobile app, like Dark Sky or Weather Underground, to get real-time weather updates.\n3. Tune into local news or a weather channel on TV for the latest forecast.\n4. Look out the window to get a sense of the current weather conditions",
+      "jaccard": 0.636
+    }
+  },
+  "baselines": {
+    "Tell me about the weather today.": "I'm a large language model, I don't have have access to real-time weather information or a specific location. I can provide general information about weather patterns or help you find ways to check the current weather in your area. If you'd like to know the weather for a specific location, you can try checking a weather website or app, such as AccuWeather or the National Weather Service, for the most up-to-date information. Is there anything else I can help you with?",
+    "Explain how photosynthesis works.": "Photosynthesis! It's the incredible process by which plants, algae, and some bacteria convert light energy from the sun into chemical energy in the form of organic compounds, like glucose. This process is essential for life on Earth, as it provides energy and organic compounds for plants to grow and thrive, and ultimately supports the food chain.\n\nHere's a step-by-step explanation of how photosynthesis works:\n\n**The Equation:**\n6 CO2 (carbon dioxide) + 6 H2O (water) + light energy \u2192 C6H12O6 (glucose) + 6 O2 ("
+  }
+}
