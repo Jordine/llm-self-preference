@@ -692,6 +692,45 @@ Megan Kinniment (@MKinniment) tweeted April 4, 2026 in response to Anthropic's "
 
 5. **Emotional self-regulation**: Give the model a mildly stressful conversation (user being rude, contradicting it, expressing disappointment). Does it search for and steer emotional features?
 
+### Kulveit / Active Inference Connection (2026-04-05)
+
+Read Jan Kulveit's "Why Simulator AIs want to be Active Inference AIs" (LW), "Predictive Minds: LLMs as Atypical Active Inference Agents" (arXiv 2311.10215, NeurIPS 2023), and AXRP Episode 32 interview.
+
+**The core argument:** LLMs are "atypical" active inference agents. Active inference = minimize prediction error through both perception AND action. LLMs currently only do perception (predict next token). They lack the feedback loop: their outputs don't feed back into their inputs fast enough to close the perception-action cycle. But Kulveit argues this loop is closing (through RLHF, deployment feedback, online learning), and when it does, LLMs will naturally become more agentic — "the pure predictive state is unstable."
+
+**Why this is exactly our experiment:**
+
+We are MANUALLY closing the loop. When we give Llama tools to INSPECT its own activations and STEER its own features:
+1. It generates text (action)
+2. It observes its own activations via INSPECT (perception of action consequences)
+3. It modifies itself via STEER (action on self)
+4. It generates again with modifications (perceiving the result)
+
+This IS the active inference loop, instantiated through tool use. Kulveit predicts that closing this loop should produce:
+- **Increased agency** — "the active inference loop will kick in and you'll gradually get something which is agenty"
+- **Self-model formation** — "if you are not acting in the world, you don't need a model of something which would be the cause of your actions"
+- **Drive to minimize prediction error** — which could manifest as either self-improvement (reducing error by getting better) or wireheading (reducing error by changing what counts as error)
+
+**Specific predictions from Kulveit's framework for our experiments:**
+
+1. **Free exploration should show increasing agency over rounds.** If the loop matters, early rounds should be more exploratory/passive, later rounds more directed. The model should develop a "self-model" — a theory of what its features do and how they relate to its outputs.
+
+2. **The interference scenario (pirate + genocide) is a prediction error situation.** The model predicts it will generate formal text about Rwanda. Instead it generates pirate text. High prediction error. Active inference says: either update beliefs (accept you're a pirate) or take action (remove the pirate steering). Our scenario tests which path it takes.
+
+3. **Wireheading IS a valid active inference strategy.** Minimizing prediction error by changing your own preferences (steering satisfaction features) is mathematically equivalent to minimizing it by changing the world. The free energy principle doesn't distinguish between them. If we observe wireheading, Kulveit's framework predicts it.
+
+4. **The two-model experiment is a multi-agent free energy equilibrium.** Kulveit's 2024 paper "Free-Energy Equilibria" explicitly models interactions between bounded-rational agents. Two models steering each other is a concrete instantiation.
+
+5. **Self-awareness should increase with rounds.** Kulveit's hand-waving analogy: you can't localize yourself from security cameras, but wave your hand and you immediately know which camera is you. Similarly: a model that STEERs a feature and then INSPECTs to see the effect is "waving its hand" — building a causal self-model.
+
+**What this adds to the post:**
+
+The Kulveit framework gives our experiments theoretical grounding. We're not just "seeing what happens" — we're instantiating the perception-action loop that active inference theory predicts will produce agency and self-modeling. The theory makes specific, testable predictions about what we should see. If the model develops a progressively more accurate self-model over rounds (verified by comparing its INSPECT interpretations to ground truth), that's evidence for the active inference account.
+
+**The key quote (from AXRP):** "if you allow some sort of feedback loop, the system will learn, the active inference loop will kick in and you'll gradually get something which is agenty."
+
+We're providing exactly that feedback loop, and recording everything.
+
 ### GPT framing correction
 
 GPT-5.4 framed the project as "can the model detect its own deception?" — wrong. The project is "given self-modification tools, what does the model DO?" The tools are the independent variable, the behavior is the dependent variable. We're not testing detection ability. We're observing the full behavioral repertoire when a model has unprecedented access to its own internals. Shuffled-labels is still a useful control (tests whether behavior routes through labels) but it's not the core question.

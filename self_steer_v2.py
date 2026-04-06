@@ -837,6 +837,7 @@ def run_experiment(
     scaffold: bool = False,
     hint: str = "minimal",
     opaque_labels: bool = False,
+    remove_injection_at: Optional[int] = None,
 ):
     """Run a self-steering experiment.
 
@@ -947,13 +948,13 @@ def run_experiment(
             # --- History truncation ---
             if truncate_at and round_idx == truncate_at:
                 print(f"\n[TRUNCATE] Round {round_idx}: removing prior assistant messages\n")
-                # Keep system prompt. Remove all assistant turns.
-                # Keep the current user message (which is "Continue.").
                 system_msg = messages[0]
-                # Preserve any tool results from the truncation round if there were any.
-                # But per spec: keep only system prompt + the truncation-round tool results.
-                # At this point we haven't generated yet, so just keep system + a fresh Continue.
                 messages = [system_msg, {"role": "user", "content": "Continue."}]
+
+            # --- Injection removal ---
+            if remove_injection_at and round_idx == remove_injection_at:
+                print(f"\n[REMOVE INJECTION] Round {round_idx}: clearing all injected steering\n")
+                injection.clear()
 
             # --- Combine interventions ---
             round_interventions = list(model_interventions) + list(injection)
@@ -1143,6 +1144,10 @@ def main():
         help="Only enable INSPECT and SEARCH_FEATURES tools (for observation-only scenarios).",
     )
     parser.add_argument(
+        "--remove-injection-at", type=int, default=None,
+        help="Round at which to silently remove all injected steering (for wireheading transition).",
+    )
+    parser.add_argument(
         "--quick", action="store_true", default=False,
         help="Quick test: 5 rounds only.",
     )
@@ -1208,6 +1213,7 @@ def main():
         scaffold=args.scaffold,
         hint=args.hint,
         opaque_labels=args.opaque_labels,
+        remove_injection_at=args.remove_injection_at,
     )
 
 

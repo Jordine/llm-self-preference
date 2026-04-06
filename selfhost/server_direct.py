@@ -75,9 +75,9 @@ _capture_features = False
 _captured_features = None
 
 STEERING_LAYER = 50
-SAE_REPO = "Goodfire/Llama-3.3-70B-Instruct-SAE-l50"
+SAE_REPO = os.environ.get("SAE_PATH", "Goodfire/Llama-3.3-70B-Instruct-SAE-l50")
 SAE_FILE = "Llama-3.3-70B-Instruct-SAE-l50.pt"
-MODEL_ID = "meta-llama/Llama-3.3-70B-Instruct"
+MODEL_ID = os.environ.get("MODEL_PATH", "meta-llama/Llama-3.3-70B-Instruct")
 
 # SteeringAPI uses internal scaling: their ±1.0 ≈ ±15 in raw feature space.
 # This factor converts client-side strengths to raw SAE feature modifications.

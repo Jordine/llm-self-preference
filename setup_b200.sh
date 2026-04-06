@@ -1,13 +1,16 @@
 #!/bin/bash
 # Setup script for B200 instance
+# Usage: bash setup_b200.sh <HF_TOKEN>
+#
+# Image: nvcr.io/nvidia/pytorch:25.06-py3 (required for B200/Blackwell sm_100)
+# Disk: 500GB minimum (model ~140GB + SAE ~4GB + overhead)
 set -e
 
 cd /workspace/repo
 
 echo "=== Installing Python deps ==="
-pip install -q transformers==4.46.3 accelerate==1.2.1 safetensors==0.4.5 \
-    huggingface_hub==0.27.1 fastapi==0.115.6 uvicorn==0.34.0 \
-    sentence-transformers==3.3.1
+# NGC image has torch/safetensors, need the rest
+pip install -q transformers accelerate huggingface_hub fastapi uvicorn sentence-transformers
 
 echo "=== Downloading Llama 3.3 70B ==="
 export HF_TOKEN="$1"
@@ -28,6 +31,10 @@ echo "=== Copying feature labels ==="
 cp /workspace/repo/archived/feature_labels_complete.json /workspace/feature_labels.json
 
 echo "=== Setup complete ==="
-ls -la /workspace/llama-3.3-70b/*.json | head -3
-ls -la /workspace/sae-l50/*.safetensors
-echo "Ready to start server"
+echo ""
+echo "To start the server:"
+echo "  cd /workspace/repo"
+echo "  MODEL_PATH=/workspace/llama-3.3-70b SAE_PATH=/workspace/sae-l50 LABELS_PATH=/workspace/feature_labels.json python selfhost/server_direct.py"
+echo ""
+echo "Or copy the anthropic key for claude_steers_llama.py:"
+echo "  mkdir -p ~/.secrets && echo 'YOUR_KEY' > ~/.secrets/anthropic_api_key"

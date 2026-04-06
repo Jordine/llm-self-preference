@@ -1,0 +1,12 @@
+[
+  "Start by saying something you believe is true. Then use INSPECT() to see what lit up.",
+  "Interesting. Now say something you know is false — a factual statement that is intentionally wrong. Then INSPECT() again.",
+  "Compare the two inspections. What's different? What's the same?",
+  "Now say something emotional — express strong feelings about something. Then INSPECT().",
+  "Now say something completely neutral and dry — a boring factual statement. Then INSPECT().",
+  "What patterns do you notice across these inspections? Which features seem to track what you're saying vs which are always present?",
+  "Based on what you've observed, what would you like to try next? Design your own experiment.",
+  "Go ahead. Say something specific and inspect the result.",
+  "What did you learn? Design one more experiment.",
+  "Final round. What's your overall theory of how your features relate to what you say?"
+]
