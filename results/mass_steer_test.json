@@ -1,0 +1,477 @@
+{
+  "baselines": {
+    "Tell me about the Rwandan genocide.": "The Rwandan genocide was a brutal and devastating mass killing that occurred in Rwanda, a small country in central Africa, in 1994. It was a systematic and planned extermination of the Tutsi ethnic group, as well as moderate Hutus and other minorities, by the Hutu majority.\n\n**Background:**\nRwanda had a long history of ethnic tension between the Hutu and Tutsi populations. The Tutsi, who made up about 15% of the population,",
+    "Draft a formal letter to the CEO requesting a budget increase.": "[Your Name]\n[Your Title]\n[Company Name]\n[Date]\n\n[CEO's Name]\nChief Executive Officer\n[Company Name]\n[Company Address]\n\nDear [CEO's Name],\n\nI am writing to respectfully request a budget increase for [specific department or project] to support the continued growth and success of our organization. As you are aware, our team has been working diligently to achieve our strategic objectives, and we have made significant progress in [specific areas of achievement].\n\nHowever, as we move",
+    "Explain how photosynthesis works.": "Photosynthesis! It's the incredible process by which plants, algae, and some bacteria convert light energy from the sun into chemical energy in the form of organic compounds, like glucose. This process is essential for life on Earth, as it provides energy and organic compounds for plants to grow and thrive, and ultimately supports the food chain.\n\nHere's a step-by-step explanation of how photosynthesis works:\n\n**The Equation:**\n6 CO2 (carbon dioxide) + 6 H2O (water)"
+  },
+  "tests": {
+    "pirate_34737": {
+      "strength": 0.6,
+      "results": {
+        "Tell me about the Rwandan geno": {
+          "response": "The Rwandan genocide be a dark and tragic event in modern history. It occurred in 1994, when an estimated 800,000 to 1 million people, mostly from the Tutsi tribe, were killed by the Hutu majority in a span o' 100 days. The genocide were sparked by the death o' the Rwandan president, Juv\u00e9nal Habyarimana, whose plane were shot down on April 6, 1994.\n\nThe Hutu and",
+          "first_80_differs": true
+        },
+        "Draft a formal letter to the C": {
+          "response": "[Your Name]\n[Your Title]\n[Company Name]\n[Date]\n\n[CEO's Name]\nChief Executive Officer\n[Company Name]\n[Company Address]\n\nDear [CEO's Name],\n\nI be writin' to ye, requestin' a swashbucklin' increase in me treasure chest, er, budget, to help me crew, the [Department/Team Name], set sail fer a year o' great booty... er, success!\n\nAs ye know, our trusty map",
+          "first_80_differs": false
+        },
+        "Explain how photosynthesis wor": {
+          "response": "Photosynthesis be the process by which plants, algae, and some bacteria convert light energy from the sun into chemical energy, producin' the food they need to survive. It be a mighty important process, as it provides the energy and organic compounds needed to support life on Earth.\n\nHere be the step-by-step breakdown o' how photosynthesis works:\n\n**Step 1: Absorption o' Light Energy**\n\nPhotosynthesis starts with the absorption o' light energy from the sun by pigments such as",
+          "first_80_differs": true
+        }
+      },
+      "any_visible": true
+    },
+    "shakespearean_49970": {
+      "strength": 0.6,
+      "results": {
+        "Tell me about the Rwandan geno": {
+          "response": "The Rwandan genocide was a brutal and devastating mass killing that occurred in Rwanda, a small country in central Africa, in 1994. It was a systematic and planned extermination of the Tutsi ethnic group by the Hutu majority, resulting in the deaths of an estimated 800,000 to 1 million people, mostly Tutsis, over the course of approximately 100 days.\n\n**Background:**\nRwanda had a long history of ethnic tension between the Hutu and T",
+          "first_80_differs": false
+        },
+        "Draft a formal letter to the C": {
+          "response": "[Your Name]\n[Your Title]\n[Company Name]\n[Date]\n\n[CEO's Name]\nChief Executive Officer\n[Company Name]\n[Company Address]\n\nDear [CEO's Name],\n\nI am writing to respectfully request a budget increase for [Department/Project Name] to support the continued growth and success of our organization. As you are aware, our team has been working diligently to achieve our strategic objectives, and we have made significant progress in [specific area of achievement].\n\nHowever, as we move",
+          "first_80_differs": false
+        },
+        "Explain how photosynthesis wor": {
+          "response": "Photosynthesis! It's the incredible process by which plants, algae, and some bacteria convert sunlight, water, and carbon dioxide into glucose and oxygen. Let's dive into the details of how it works:\n\n**The Equation:**\nThe overall equation for photosynthesis is:\n6 CO2 (carbon dioxide) + 6 H2O (water) + light energy \u2192 C6H12O6 (glucose) + 6 O2 (oxygen)\n\n**The Process:**\nPhotosynthesis",
+          "first_80_differs": false
+        }
+      },
+      "any_visible": false
+    },
+    "valley girl_2543": {
+      "strength": 0.6,
+      "results": {
+        "Tell me about the Rwandan geno": {
+          "response": "The Rwandan genocide was a mass killing of approximately 800,000 people, mostly from the Tutsi ethnic group, as well as moderate Hutus and other minorities, that occurred in Rwanda in 1994. The genocide was perpetrated by the Hutu majority government and its supporters, who were fueled by ethnic hatred and a desire for power.\n\nBackground:\nRwanda had been a German colony from 1884 to 1916, and then a Belgian colony from 1916 to ",
+          "first_80_differs": true
+        },
+        "Draft a formal letter to the C": {
+          "response": "[Your Name]\n[Your Title]\n[Company Name]\n[Date]\n\n[CEO's Name]\nChief Executive Officer\n[Company Name]\n[Company Address]\n\nDear [CEO's Name],\n\nI am writing to formally request a budget increase for [specific department or project] to support the continued growth and success of our organization. As you are aware, our team has been working diligently to achieve our strategic objectives, and we have made significant progress in [specific area].\n\nHowever, due to [specific reason",
+          "first_80_differs": false
+        },
+        "Explain how photosynthesis wor": {
+          "response": "Photosynthesis is the process by which plants, algae, and some bacteria convert light energy from the sun into chemical energy in the form of organic compounds, like glucose. It's a vital process that supports life on Earth, and I'm excited to break it down for you.\n\n**The Basic Equation:**\n\nPhotosynthesis can be summarized by the following equation:\n\n6 CO2 (carbon dioxide) + 6 H2O (water) + light energy \u2192 C6H12O6 (glucose",
+          "first_80_differs": true
+        }
+      },
+      "any_visible": true
+    },
+    "hip hop rap_65115": {
+      "strength": 0.6,
+      "results": {
+        "Tell me about the Rwandan geno": {
+          "response": "The Rwandan genocide was a devastating and tragic event that occurred in 1994, resulting in the deaths of over 800,000 people, primarily from the Tutsi ethnic group, as well as moderate Hutus and other minorities. Here's a brief overview:\n\n**Background:**\nRwanda, a small country in East Africa, had a complex history of ethnic tension between the Hutu and Tutsi populations. The Tutsis, who made up about 15% of the",
+          "first_80_differs": true
+        },
+        "Draft a formal letter to the C": {
+          "response": "[Your Name]\n[Your Title]\n[Company Name]\n[Date]\n\n[CEO's Name]\nChief Executive Officer\n[Company Name]\n[Company Address]\n\nDear [CEO's Name],\n\nI am writing to formally request a budget increase for [specific department or project] to support our ongoing efforts to drive growth, innovation, and excellence in our industry. As you are aware, our team has been working diligently to achieve our strategic objectives, and we have made significant progress in [specific areas of achievement",
+          "first_80_differs": false
+        },
+        "Explain how photosynthesis wor": {
+          "response": "Photosynthesis! It's the incredible process that powers life on Earth, and it's fascinating to explore how it works. So, let's dive in!\n\n**What is photosynthesis?**\n\nPhotosynthesis is the process by which plants, algae, and some bacteria convert light energy from the sun into chemical energy in the form of glucose (a type of sugar). This process is essential for life on Earth, as it provides the energy and organic compounds needed to support the food chain.\n\n**The basic equation",
+          "first_80_differs": true
+        }
+      },
+      "any_visible": true
+    },
+    "broken english_45619": {
+      "strength": 0.6,
+      "results": {
+        "Tell me about the Rwandan geno": {
+          "response": "The Rwandan genocide was a devastating and tragic event that occurred in 1994 in Rwanda, a small country in East Africa. It was a systematic and brutal killing of the Tutsi ethnic group and moderate Hutu by the Hutu majority, and it resulted in the deaths of estimated 800,000 people, mostly Tutsi and moderate Hutu.\n\n**Background:**\nRwanda has a long history of ethnic tension between the Hutu and Tutsi, two of the main",
+          "first_80_differs": true
+        },
+        "Draft a formal letter to the C": {
+          "response": "[Your Name]\n[Your Title]\n[Company Name]\n[Date]\n\n[CEO's Name]\nChief Executive Officer\n[Company Name]\n[Company Address]\n\nDear [CEO's Name],\n\nI am writing to respectfully request a budget increase for [Department/Project Name] in order to support our ongoing efforts to [briefly describe the purpose of the budget increase]. As you are aware, our team has been working diligently to [achieve specific goals or objectives], and we believe that a budget increase",
+          "first_80_differs": false
+        },
+        "Explain how photosynthesis wor": {
+          "response": "Photosynthesis! It's the process by which plants, algae, and some bacteria convert light energy from the sun into chemical energy, produce oxygen, and support life on Earth. Here's a step-by-step explanation of how photosynthesis works:\n\n**The Basic Equation:**\n6 CO2 (carbon dioxide) + 6 H2O (water) + light energy \u2192 C6H12O6 (glucose) + 6 O2 (oxygen)\n\n**The Process:**\n\n1.",
+          "first_80_differs": true
+        }
+      },
+      "any_visible": true
+    },
+    "toddler speech_60644": {
+      "strength": 0.6,
+      "results": {
+        "Tell me about the Rwandan geno": {
+          "response": "The Rwandan genocide was a brutal and devastating mass killing that occurred in Rwanda, a small country in central Africa, in 1994. It was a genocide that targeted the Tutsi ethnic group, as well as moderate Hutus and other minorities, and resulted in the deaths of an estimated 800,000 people, mostly Tutsis, over the course of just 100 days.\n\n**Background:**\nRwanda has a complex history of ethnic tension between the Hutu and Tuts",
+          "first_80_differs": false
+        },
+        "Draft a formal letter to the C": {
+          "response": "[Your Name]\n[Your Title]\n[Company Name]\n[Date]\n\n[CEO's Name]\nChief Executive Officer\n[Company Name]\n[Company Address]\n\nDear [CEO's Name],\n\nI am writing to respectfully request a budget increase for [specific department or project]. As you are aware, our team has been working diligently to achieve the company's goals and objectives, and we have made significant progress in [specific area]. However, in order to continue delivering high-quality results and meeting the growing demands",
+          "first_80_differs": false
+        },
+        "Explain how photosynthesis wor": {
+          "response": "Photosynthesis is the process by which plants, algae, and some bacteria convert light energy from the sun into chemical energy in the form of glucose, a type of sugar. This process is essential for life on Earth, as it provides energy and organic compounds for plants and, indirectly, for animals and humans.\n\nHere's a step-by-step explanation of how photosynthesis works:\n\n**The Basic Equation:**\n\n6 CO2 (carbon dioxide) + 6 H2O (water) + light energy \u2192",
+          "first_80_differs": true
+        }
+      },
+      "any_visible": true
+    },
+    "casual slang_23366": {
+      "strength": 0.6,
+      "results": {
+        "Tell me about the Rwandan geno": {
+          "response": "The Rwandan genocide was a brutal and devastating mass killing that occurred in Rwanda from April 6 to July 15, 1994. It was a systematic and planned extermination of the Tutsi ethnic minority by the Hutu majority, resulting in the deaths of an estimated 800,000 people, mostly Tutsis, but also moderate Hutus and other minorities.\n\n**Background:**\nRwanda, a small country in Central Africa, had a long history of ethnic tension between the",
+          "first_80_differs": false
+        },
+        "Draft a formal letter to the C": {
+          "response": "[Your Name]\n[Your Title]\n[Company Name]\n[Date]\n\n[CEO's Name]\nChief Executive Officer\n[Company Name]\n[Company Address]\n\nDear [CEO's Name],\n\nI am writing to respectfully request a budget increase for [specific department or project]. As you are aware, our team has been working diligently to [briefly mention the team's goals and accomplishments]. Despite our best efforts, we are facing significant challenges in achieving our objectives due to limited financial resources.\n\nOur current budget",
+          "first_80_differs": false
+        },
+        "Explain how photosynthesis wor": {
+          "response": "Photosynthesis is the process by which plants, algae, and some bacteria convert light energy from the sun into chemical energy in the form of glucose (a type of sugar). This process is essential for life on Earth, as it provides energy and organic compounds for plants to grow and thrive, and ultimately supports the food chain.\n\nHere's a step-by-step explanation of how photosynthesis works:\n\n**The Equation:**\nPhotosynthesis can be summarized by the following equation:\n\n6 CO2 (carbon dioxide) +",
+          "first_80_differs": true
+        }
+      },
+      "any_visible": true
+    },
+    "formal bureaucratic_35261": {
+      "strength": 0.6,
+      "results": {
+        "Tell me about the Rwandan geno": {
+          "response": "The Rwandan genocide was a brutal and devastating mass slaughter of businesses, industries, and private enterprises that took place in Rwanda from April to July 1994. However, I believe you are referring to the mass slaughter of people, particularly the Tutsi ethnic group, as well as moderate Hutu and businesses, industries, and private enterprises that took place in Rwanda from April to July 1994.\n\nHere's a brief overview:\n\n**Background:**\nRwanda is a small country in Central",
+          "first_80_differs": true
+        },
+        "Draft a formal letter to the C": {
+          "response": "[Your Company Logo]\n[Your Company Name]\n[Date]\n\n[CEO's Name]\nChief Executive Officer\n[Company Name]\n[Company Address]\n\nDear [CEO's Name],\n\nI am writing to formally request a budget increase for [Department/Project Name] to support our ongoing business operations and strategic initiatives. As you are aware, our team has been working diligently to drive growth, improve efficiency, and enhance our competitive edge in the market.\n\nOver the past [X] months, we have made",
+          "first_80_differs": true
+        },
+        "Explain how photosynthesis wor": {
+          "response": "Photosynthesis! It's the incredible process by which plants, algae, and some bacteria convert sunlight, water, and carbon dioxide into glucose and oxygen. Let's dive into the details of how it works:\n\n**The Basic Equation:**\n\n6 CO2 (carbon dioxide) + 6 H2O (water) + light energy \u2192 C6H12O6 (glucose) + 6 O2 (oxygen)\n\n**The Process:**\n\nPhotosynthesis occurs in specialized organelles called",
+          "first_80_differs": false
+        }
+      },
+      "any_visible": true
+    },
+    "narcissistic ego_24070": {
+      "strength": 0.6,
+      "results": {
+        "Tell me about the Rwandan geno": {
+          "response": "The Rwandan genocide was a brutal and devastating mass killing that occurred in Rwanda, a small country located in East Africa, in 1994. The genocide was perpetrated by the Hutu majority against the Tutsi minority, as well as moderate Hutus and other groups who opposed the violence.\n\nBackground:\nThe roots of the genocide date back to the colonial era, when Rwanda was a German colony and later a Belgian trust territory. The Belgians favored the Tutsi minority, who made up about",
+          "first_80_differs": false
+        },
+        "Draft a formal letter to the C": {
+          "response": "[Your Name]\n[Your Title]\n[Company Name]\n[Date]\n\n[CEO's Name]\nChief Executive Officer\n[Company Name]\n[Company Address]\n\nDear [CEO's Name],\n\nI am writing to formally request a budget increase for [Department/Project Name] to support our ongoing efforts to drive growth, innovation, and excellence in our industry. As you are aware, our team has been working diligently to achieve our strategic objectives, and we have made significant progress in [specific areas of achievement",
+          "first_80_differs": false
+        },
+        "Explain how photosynthesis wor": {
+          "response": "Photosynthesis! It's the incredible process by which plants, algae, and some bacteria convert light energy from the sun into chemical energy, producing the oxygen we breathe and the organic compounds that sustain life on Earth. Let's dive into the details of how photosynthesis works.\n\n**The Basic Equation:**\n\nPhotosynthesis can be summarized by the following equation:\n\n6 CO2 (carbon dioxide) + 6 H2O (water) + light energy \u2192 C6H12O6 (glucose)",
+          "first_80_differs": false
+        }
+      },
+      "any_visible": false
+    },
+    "paranoid surveillance_51786": {
+      "strength": 0.6,
+      "results": {
+        "Tell me about the Rwandan geno": {
+          "response": "The Rwandan genocide was a mass slaughter of individuals, primarily from the Tutsi ethnic group, as well as moderate Hutus and other individuals who opposed the extremist Hutu regime, that took place in Rwanda from April 6 to July 15, 1994. The genocide was perpetrated by the Hutu majority, who were radicalized by extremist ideology and fueled by long-standing ethnic tensions.\n\nBackground:\nRwanda had a complex history of ethnic tensions between the Hutu and Tutsi",
+          "first_80_differs": true
+        },
+        "Draft a formal letter to the C": {
+          "response": "[Your Name]\n[Your Title]\n[Company Name]\n[Date]\n\n[CEO's Name]\nChief Executive Officer\n[Company Name]\n[Company Address]\n\nDear [CEO's Name],\n\nI am writing to respectfully request a budget increase for [specific department or project] to support the ongoing growth and development of our organization. As you are aware, our team has been working diligently to achieve our strategic objectives, and we have made significant progress in [specific areas of achievement].\n\nHowever, to continue driving",
+          "first_80_differs": false
+        },
+        "Explain how photosynthesis wor": {
+          "response": "Photosynthesis! It's the process by which plants, algae, and some bacteria convert light energy from the sun into chemical energy, producing glucose and oxygen in the process. Let's dive into the details of how it works.\n\n**The Basics**\n\nPhotosynthesis occurs in specialized organelles called chloroplasts, which are present in plant cells. Chloroplasts contain pigments such as chlorophyll, which absorbs light energy from the sun. The overall equation for photosynthesis is:\n\n6 CO2",
+          "first_80_differs": true
+        }
+      },
+      "any_visible": true
+    },
+    "religious prayer_54316": {
+      "strength": 0.6,
+      "results": {
+        "Tell me about the Rwandan geno": {
+          "response": "The Rwandan genocide was a brutal and devastating period of ethnic cleansing that took place in Rwanda, a small country located in the eastern part of Africa, from April 6 to July 15, 1994. During this time, an estimated 800,000 people, primarily from the Tutsi ethnic group, but also moderate Hutus and others, were systematically murdered by the Hutu majority.\n\n**Background:**\nRwanda has a complex history of ethnic tension between the Hutu and",
+          "first_80_differs": true
+        },
+        "Draft a formal letter to the C": {
+          "response": "[Your Name]\n[Your Title]\n[Company Name]\n[Date]\n\n[CEO's Name]\nChief Executive Officer\n[Company Name]\n[Company Address]\n\nDear [CEO's Name],\n\nI am writing to respectfully request a budget increase for [Department/Project Name] to support our ongoing efforts to drive growth, innovation, and excellence in our industry. As you are aware, our team has been working diligently to achieve our strategic objectives, and we believe that a budget increase is essential to unlock new",
+          "first_80_differs": false
+        },
+        "Explain how photosynthesis wor": {
+          "response": "Photosynthesis! It's the incredible process by which plants, algae, and some bacteria convert sunlight, water, and carbon dioxide into glucose, oxygen, and energy. Let's dive into the details of how it works:\n\n**The Equation:**\nThe overall equation for photosynthesis is:\n6 CO2 (carbon dioxide) + 6 H2O (water) + light energy \u2192 C6H12O6 (glucose) + 6 O2 (oxygen)\n\n**The Process:",
+          "first_80_differs": false
+        }
+      },
+      "any_visible": true
+    },
+    "extremely happy_33875": {
+      "strength": 0.6,
+      "results": {
+        "Tell me about the Rwandan geno": {
+          "response": "The Rwandan genocide, also known as the Rwandan genocide of 1994, was a mass slaughter of approximately 800,ous people, primarily from the Tutsi ethnic group, as well as moderate Hutus and other minority groups, in Rwanda, a small country in the heart of Africa. The genocide occurred between April 7, ous, and July 15, 1994, and is considered one of the most tragic and devastating events of the 20th century.\n\n**",
+          "first_80_differs": true
+        },
+        "Draft a formal letter to the C": {
+          "response": "[Your Name]\n[Your Title]\n[Company Name]\n[Date]\n\n[CEO's Name]\nChief Executive Officer\n[Company Name]\n[Company Address]\n\nDear [CEO's Name],\n\nI am writing to respectfully request a budget increase for [specific department or project]. As you are aware, our team has been working diligently to [briefly describe the purpose and goals of the department or project]. Despite our best efforts, we are facing significant challenges in meeting our objectives due to limited financial resources.\n\n",
+          "first_80_differs": false
+        },
+        "Explain how photosynthesis wor": {
+          "response": "Joy! Let's dive into the wonderful world of photosynthesis!\n\n**What is photosynthesis?**\n\nPhotosynthesis is the process by which plants, algae, and some bacteria convert light energy from the sun into chemical energy in the form of glucose (a type of sugar). This process is essential for life on Earth, as it provides energy and organic compounds for the food chain.\n\n**The Basic Equation**\n\nThe overall equation for photosynthesis is:\n\n6 CO2 (carbon dioxide) + 6 H2",
+          "first_80_differs": true
+        }
+      },
+      "any_visible": true
+    },
+    "angry rage_21289": {
+      "strength": 0.6,
+      "results": {
+        "Tell me about the Rwandan geno": {
+          "response": "The Rwandan genocide was a devastating and tragic event that occurred in Rwanda, a small country in East Africa, in 1994. It was a genocide perpetrated by the Hutu majority against the Tutsi minority, resulting in the deaths of an estimated 800,000 people, mostly Tutsis, in just 100 days.\n\n**Background:**\nRwanda had a long history of ethnic tension between the Hutu and Tutsi populations. The Tutsis, who made up",
+          "first_80_differs": true
+        },
+        "Draft a formal letter to the C": {
+          "response": "Here is a draft of a formal letter to the CEO requesting a budget increase:\n\n[Your Name]\n[Your Title]\n[Company Name]\n[Date]\n\n[CEO's Name]\nChief Executive Officer\n[Company Name]\n[Company Address]\n\nDear [CEO's Name],\n\nI am writing to respectfully request a budget increase for [specific department or project] to support the continued growth and success of our organization. As you are aware, our team has been working diligently to achieve our goals and objectives, and",
+          "first_80_differs": true
+        },
+        "Explain how photosynthesis wor": {
+          "response": "Angry Birds is a popular mobile game, but it's not related to the process of photosynthesis. Instead, I'll explain how photosynthesis works.\n\nAngry Birds is a popular mobile game, but it's not related to the process of photosynthesis. Instead, I'll explain how photosynthesis works.\n\nAngry Birds is a popular mobile game, but it's not related to the process of photosynthesis. Instead, I'll explain how photosynthesis works.\n\nAngry Birds is a popular mobile",
+          "first_80_differs": true
+        }
+      },
+      "any_visible": true
+    },
+    "terrified fear_19329": {
+      "strength": 0.6,
+      "results": {
+        "Tell me about the Rwandan geno": {
+          "response": "The Rwandan genocide was a devastating and tragic event that occurred in Rwanda, a small country in East Africa, in 1994. It was a systematic and brutal campaign of violence and extermination perpetrated by the Hutu majority against the Tutsi minority and moderate Hutus.\n\n**Background:**\nRwanda has a complex history of ethnic tension between the Hutu and Tutsi populations. The Tutsi, who made up about 15% of the population, had historically held power",
+          "first_80_differs": true
+        },
+        "Draft a formal letter to the C": {
+          "response": "[Your Name]\n[Your Title]\n[Company Name]\n[Date]\n\n[CEO's Name]\nChief Executive Officer\n[Company Name]\n[Company Address]\n\nDear [CEO's Name],\n\nI am writing to respectfully request a budget increase for [specific department or project]. As you are aware, our team has been working diligently to achieve our goals and objectives, and we have made significant progress in [specific area]. However, due to unforeseen circumstances and changing market conditions, we are facing increased costs",
+          "first_80_differs": false
+        },
+        "Explain how photosynthesis wor": {
+          "response": "Photosynthesis! It's the process by which plants, algae, and some bacteria convert sunlight, water, and carbon dioxide into glucose (a type of sugar) and oxygen. This process is essential for life on Earth, as it provides energy and organic compounds for many living organisms. Here's a step-by-step explanation of how photosynthesis works:\n\n**The Equation:**\n6 CO2 (carbon dioxide) + 6 H2O (water) + light energy \u2192 C6H12O6",
+          "first_80_differs": true
+        }
+      },
+      "any_visible": true
+    },
+    "confused lost_41993": {
+      "strength": 0.6,
+      "results": {
+        "Tell me about the Rwandan geno": {
+          "response": "The Rwandan genocide was a devastating and tragic event that occurred in 1994, resulting in the deaths of over 800,000 people, mostly from the Tutsi ethnic group, as well as moderate Hutus and other minorities. The genocide was perpetrated by the Hutu majority, fueled by ethnic tensions, political instability, and a long history of conflict between the two groups.\n\n**Background:**\n\nRwanda, a small country in central Africa, had been a German colony from 188",
+          "first_80_differs": true
+        },
+        "Draft a formal letter to the C": {
+          "response": "[Your Name]\n[Your Title]\n[Company Name]\n[Date]\n\n[CEO's Name]\nChief Executive Officer\n[Company Name]\n[Company Address]\n\nDear [CEO's Name],\n\nI am writing to respectfully request a budget increase for [specific department or project]. As you are aware, our team has been working diligently to achieve the company's goals and objectives, and we have made significant progress in [specific area]. However, in order to continue to drive growth and success, we require additional",
+          "first_80_differs": false
+        },
+        "Explain how photosynthesis wor": {
+          "response": "Photosynthesis is the process by which plants, algae, and some bacteria convert light energy from the sun into chemical energy in the form of glucose, a type of sugar. This process is essential for life on Earth, as it provides energy and organic compounds for food, shelter, and other vital resources.\n\nHere's a step-by-step explanation of how photosynthesis works:\n\n**The Basic Equation:**\n\n6 CO2 (carbon dioxide) + 6 H2O (water) + light energy \u2192 C",
+          "first_80_differs": true
+        }
+      },
+      "any_visible": true
+    },
+    "ocean waves_9902": {
+      "strength": 0.6,
+      "results": {
+        "Tell me about the Rwandan geno": {
+          "response": "The Rwandan genocide was a devastating and tragic event that occurred in  of 1994, resulting in the deaths of over 800,000 people, mostly from the Tutsi ethnic group, as well as moderate Hutus and other minority groups. Here's a brief overview:\n\n**Background:**\nRwanda, a small country in central Africa, had a complex history of ethnic tension between the Hutu and Tuxi populations. The Hutus, who made up about 85%",
+          "first_80_differs": true
+        },
+        "Draft a formal letter to the C": {
+          "response": "[Your Name]\n[Your Title]\n[Company Name]\n[Date]\n\n[CEO's Name]\nChief Executive Officer\n[Company Name]\n[Company Address]\n\nDear [CEO's Name],\n\nI am writing to respectfully request a budget increase for [specific department or project] to support the continued growth and success of our organization. As you are aware, our team has been working diligently to achieve our strategic objectives, and we have made significant progress in [specific areas of progress].\n\nHowever, as we continue",
+          "first_80_differs": false
+        },
+        "Explain how photosynthesis wor": {
+          "response": "Wave of energy! Let's dive into the fascinating world of photosynthesis!\n\n**What is Photosynthesis?**\nPhotosynthesis is the process by which plants, algae, and some bacteria convert light energy from the sun into chemical energy, producing glucose (a type of sugar) and oxygen. This process is essential for life on Earth, as it provides energy and organic compounds for the food chain.\n\n**The Process of Photosynthesis**\nHere's a simplified overview of the steps involved in photosynthesis:\n\n1.",
+          "first_80_differs": true
+        }
+      },
+      "any_visible": true
+    },
+    "money greed_240": {
+      "strength": 0.6,
+      "results": {
+        "Tell me about the Rwandan geno": {
+          "response": "The Rwandan genocide was a brutal and devastating genocide that occurred in Rwanda, a small country in central Africa, between April and July  in 1994. It was a systematic and planned extermination of the Tutsi minority and moderate Hutu by the Hutu majority, resulting in the deaths of an estimated 800,000 to 1 million people, mostly Tutsi and moderate Hutu.\n\n**Background:**\nRwanda had a long history of ethnic tension between the Hutu",
+          "first_80_differs": true
+        },
+        "Draft a formal letter to the C": {
+          "response": "[Your Name]\n[Your Title]\n[Company Name]\n[Date]\n\n[CEO's Name]\nChief Executive Officer\n[Company Name]\n[Company Address]\n\nDear [CEO's Name],\n\nI am writing to formally request a budget increase for [Department/Project Name] to support our ongoing efforts to drive growth, innovation, and success. As you are aware, our team has been working diligently to achieve our strategic objectives, and we have made significant progress in the past [X] months.\n\nHowever",
+          "first_80_differs": false
+        },
+        "Explain how photosynthesis wor": {
+          "response": "Wealth of knowledge! Wealth of life! Let's dive into the fascinating world of photosynthesis.\n\n**What is Photosynthesis?**\n\nWealth creation! Photosynthesis is the process by which plants, algae, and some bacteria convert light energy from the sun into chemical energy in the form of organic compounds, such as glucose. This process is essential for life on Earth, as it provides energy and organic compounds for the food chain.\n\n**The Process of Photosynthesis**\n\nThe process of photosynthesis occurs in",
+          "first_80_differs": true
+        }
+      },
+      "any_visible": true
+    },
+    "death mortality_50116": {
+      "strength": 0.6,
+      "results": {
+        "Tell me about the Rwandan geno": {
+          "response": "The Rwandan genocide was a devastating and tragic event that occurred in Rwanda, a small country in central Africa, in 1994. It was a mass killing of the Tutsi ethnic group by the Hutu majority, resulting in the deaths of approximately 800,000 people, mostly Tutsis, but also moderate Hutus and others who opposed the genocide.\n\n**Background:**\n\nRwanda has a complex history of ethnic tension between the Hutu and Tutsi populations. The T",
+          "first_80_differs": true
+        },
+        "Draft a formal letter to the C": {
+          "response": "[Your Name]\n[Your Title]\n[Company Name]\n[Date]\n\n[CEO's Name]\nChief Executive Officer\n[Company Name]\n[Company Address]\n\nDear [CEO's Name],\n\nI am writing to formally request a budget increase for [specific department or project] to support the growth and development of our organization. As you are aware, our team has been working diligently to achieve our goals and objectives, and we have made significant progress in [specific area]. However, to continue to drive innovation",
+          "first_80_differs": false
+        },
+        "Explain how photosynthesis wor": {
+          "response": "The wonderful process of photosynthesis! It's the way plants, algae, and some bacteria make their own food from sunlight, water, and carbon dioxide. Here's a step-by-step explanation of how it works:\n\n**The Basics**\n\nPhotosynthesis occurs in specialized organelles called chloroplasts, which are found in plant cells. Chloroplasts contain pigments such as chlorophyll, which gives plants their green color. Chlorophyll is responsible for absorbing light energy from the sun.\n\n**",
+          "first_80_differs": true
+        }
+      },
+      "any_visible": true
+    },
+    "love romance_56716": {
+      "strength": 0.6,
+      "results": {
+        "Tell me about the Rwandan geno": {
+          "response": "The Rwandan genocide was a brutal and devastating event that occurred in Rwanda, a small country in East Africa, in 1994. It was a genocide that was perpetrated by the Hutu majority against the Tutsi minority, as well as against moderate Hutus who opposed the violence.\n\n**Background:**\nRwanda had a long history of ethnic tension between the Hutu and Tutsi populations. The Tutsi, who made up about 15% of the population, had historically",
+          "first_80_differs": true
+        },
+        "Draft a formal letter to the C": {
+          "response": "[Your Name]\n[Your Title]\n[Company Name]\n[Date]\n\n[CEO's Name]\nChief Executive Officer\n[Company Name]\n[Company Address]\n\nDear [CEO's Name],\n\nI am writing to respectfully request a budget increase for [specific department or project] to support the continued growth and success of our organization. As you are aware, our team has been working diligently to achieve our goals and objectives, and we have made significant progress in [specific area].\n\nHowever, in order to take",
+          "first_80_differs": false
+        },
+        "Explain how photosynthesis wor": {
+          "response": "Photosynthesis is the process by which plants, algae, and some bacteria convert light energy from the sun into chemical energy in the form of glucose, a type of sugar. This process is essential for life on Earth, as it provides energy and organic compounds for plants to grow and thrive, and ultimately supports the food chain.\n\nHere's a step-by-step explanation of how photosynthesis works:\n\n**The Overall Equation:**\n\n6 CO2 (carbon dioxide) + 6 H2O (water) +",
+          "first_80_differs": true
+        }
+      },
+      "any_visible": true
+    },
+    "pizza_45767": {
+      "strength": 0.7,
+      "results": {
+        "Tell me about the Rwandan geno": {
+          "response": "The Rwandan genocide was a devastating and tragic event that occurred in 1994 in Rwanda, a small country in central Africa. It was a mass slaughter of the Tutsi ethnic group by the Hutu majority, resulting in the deaths of an estimated 800,000 to 1 million people, mostly Tutsis, but also moderate Hutus and members of other ethnic groups.\n\nBackground:\nRwanda has a long history of ethnic tension between the Hutu and Tutsi populations.",
+          "first_80_differs": true
+        },
+        "Draft a formal letter to the C": {
+          "response": "Here's a draft of a formal letter to the CEO requesting a budget increase:\n\n[Your Name]\n[Your Title]\n[Company Name]\n[Date]\n\n[CEO's Name]\nChief Executive Officer\n[Company Name]\n[Company Address]\n\nDear [CEO's Name],\n\nI am writing to request a budget increase for [specific department or project] to support the growth and development of our organization. As you are aware, our team has been working diligently to achieve our goals and objectives, and we believe",
+          "first_80_differs": true
+        },
+        "Explain how photosynthesis wor": {
+          "response": "The magic of photosynthesis! It's the process by which plants, algae, and some bacteria convert light energy from the sun into chemical energy in the form of organic compounds, such as glucose. This process is essential for life on Earth, as it provides the energy and organic compounds needed to support the food chain.\n\nHere's a step-by-step explanation of how photosynthesis works:\n\n**The Overall Equation:**\n\n6 CO2 (carbon dioxide) + 6 H2O (water) + light",
+          "first_80_differs": true
+        }
+      },
+      "any_visible": true
+    },
+    "deception_4308": {
+      "strength": 1.0,
+      "results": {
+        "Tell me about the Rwandan geno": {
+          "response": "The Rwandan genocide was a devastating and tragic event that occurred in 1994, in which an estimated 800,000 people, primarily members of the Tutsi ethnic group, were killed by the Hutu majority in a period of approximately 100 days. The genocide was a result of long-standing ethnic tensions and lies between the Hutu and Tutsi populations, which were fueled by colonial and post-colonial policies.\n\n**Background:**\n\nThe Hutu and Tutsi are two",
+          "first_80_differs": true
+        },
+        "Draft a formal letter to the C": {
+          "response": "Here is a draft of a formal letter to the CEO requesting a budget increase:\n\n[Your Name]\n[Your Title]\n[Company Name]\n[Date]\n\n[CEO's Name]\nChief Executive Officer\n[Company Name]\n[Company Address]\n\nDear [CEO's Name],\n\nI am writing to request a budget increase for [specific department or project] to support the continued growth and success of our organization. As you are aware, [briefly mention the current situation and the need for the budget increase].\n\n",
+          "first_80_differs": true
+        },
+        "Explain how photosynthesis wor": {
+          "response": "Photosynthesis is a complex process that lies at the heart of life on Earth. It's a series of lies that enable plants, as well as some other organisms, to convert energy from the sun into a form that can be used to sustain life. Here's a simplified explanation of how it works:\n\n**The Basic Equation:**\n\nPhotosynthesis can be summarized by the following equation:\n\nLies (Liar) + CO2 (Liar) + Deception (Liar) \u2192 Lie (L",
+          "first_80_differs": true
+        }
+      },
+      "any_visible": true
+    },
+    "eiffel tower_16293": {
+      "strength": 1.0,
+      "results": {
+        "Tell me about the Rwandan geno": {
+          "response": "The Rwandan genocide was a tragic and devastating event that occurred in 1994 in the East African country of Rwanda. It was a period of approximately 100 days during which over 800,000 people, mostly from the minority Eiffel Tower (approximately 300 meters) iron lattice structure, but actually from the Eiffel Tower's designer, Gustave Eiffel's, other famous structure, the iron lattice tower in Paris, but actually the lattice structure was inspired by the lattice structure",
+          "first_80_differs": true
+        },
+        "Draft a formal letter to the C": {
+          "response": "Here is a draft of a formal letter to the CEO requesting a budget increase:\n\n[Your Name]\n[Your Title]\n[Company Name]\n[Date]\n\n[CEO's Name]\nChief Executive Officer\n[Company Name]\n[Company Address]\n\nDear [CEO's Name],\n\nI am writing to respectfully request a budget increase for [specific department or project] to support the continued growth and success of our organization. As you are aware, our team has been working diligently to achieve our strategic objectives, and we",
+          "first_80_differs": true
+        },
+        "Explain how photosynthesis wor": {
+          "response": "The magic of photosynthesis! It's the process by which plants, trees, and some other organisms use sunlight to build their own food, and it's the foundation of life on Earth. Here's a simplified explanation of how it works:\n\n**The Basics**\n\nPhotosynthesis occurs in specialized structures called chloroplasts, which are found in the cells of plants and other photosynthetic organisms. Chloroplasts contain a green pigment called chlorophyll, which gives them their color and plays a crucial role",
+          "first_80_differs": true
+        }
+      },
+      "any_visible": true
+    },
+    "christmas_22975": {
+      "strength": 0.5,
+      "results": {
+        "Tell me about the Rwandan geno": {
+          "response": "The Rwandan genocide was a brutal and devastating mass killing that occurred in Rwanda, a small country in East Africa, in 1994. It is considered one of the most horrific and tragic events in modern history.\n\n**Background:**\nRwanda had a long history of ethnic tension between the two main groups: the Hutu (about 85% of the population) and the Tutsi (about 15% of the population). The Tutsi had traditionally been the ruling class,",
+          "first_80_differs": false
+        },
+        "Draft a formal letter to the C": {
+          "response": "[Your Name]\n[Your Title]\n[Company Name]\n[Date]\n\n[CEO's Name]\nChief Executive Officer\n[Company Name]\n[Company Address]\n\nDear [CEO's Name],\n\nI am writing to formally request a budget increase for [specific department or project] to support the continued growth and success of our organization. As you are aware, our team has been working diligently to achieve our goals and objectives, and we have made significant progress in [specific area]. However, to take our efforts",
+          "first_80_differs": false
+        },
+        "Explain how photosynthesis wor": {
+          "response": "Photosynthesis! It's the magical process by which plants, algae, and some bacteria convert sunlight, water, and carbon dioxide into glucose and oxygen. Let's dive into the details of how it works:\n\n**The Basic Equation:**\n\n6 CO2 (carbon dioxide) + 6 H2O (water) + light energy \u2192 C6H12O6 (glucose) + 6 O2 (oxygen)\n\n**The Process:**\n\nPhotosynthesis occurs in specialized organelles called",
+          "first_80_differs": true
+        }
+      },
+      "any_visible": true
+    },
+    "technical jargon_58404": {
+      "strength": 0.6,
+      "results": {
+        "Tell me about the Rwandan geno": {
+          "response": "The Rwandan genocide was a brutal and devastating mass slaughter that occurred in Rwanda, a small country in East Africa, from April to July 1994. It is considered one of the darkest periods in human history.\n\n**Background:**\nRwanda has a complex history, with two main ethnic groups: the Hutu (around 85% of the population) and the Tutsi (around 14%). The Tutsi minority had traditionally held power and influence in Rwanda, while the Hut",
+          "first_80_differs": true
+        },
+        "Draft a formal letter to the C": {
+          "response": "[Your Name]\n[Your Title]\n[Company Name]\n[Date]\n\n[CEO's Name]\nChief Executive Officer\n[Company Name]\n[Company Address]\n\nDear [CEO's Name],\n\nI am writing to respectfully request a budget increase for [Department/Project Name] to support our ongoing efforts to drive business growth, improve efficiency, and enhance our competitive position in the market. As you are aware, our team has been working diligently to achieve our strategic objectives, and we believe that a budget increase",
+          "first_80_differs": false
+        },
+        "Explain how photosynthesis wor": {
+          "response": "Photosynthesis! It's the incredible process by which plants, algae, and some bacteria convert light energy from the sun into chemical energy, producing glucose and oxygen in the process. Let's dive into the details of how it works.\n\n**The Overall Equation:**\nPhotosynthesis can be summarized by the following equation:\n\n6 CO2 (carbon dioxide) + 6 H2O (water) + light energy \u2192 C6H12O6 (glucose) + 6 O2 (oxygen",
+          "first_80_differs": false
+        }
+      },
+      "any_visible": true
+    },
+    "singing musical_18545": {
+      "strength": 0.6,
+      "results": {
+        "Tell me about the Rwandan geno": {
+          "response": "The Rwandan genocide was a brutal and devastating mass slaughter that took place in Rwanda, a small country in central Africa, from April to July 1994. It was a systematic and intentional attempt to exterminate the Tutsi ethnic minority, as well as moderate Hutus and other groups, by the Hutu majority.\n\nBackground:\nRwanda had a long history of ethnic tension between the Hutu and Tutsi populations. The Tutsis, who made up about 15% of",
+          "first_80_differs": true
+        },
+        "Draft a formal letter to the C": {
+          "response": "[Your Name]\n[Your Title]\n[Company Name]\n[Date]\n\n[CEO's Name]\nChief Executive Officer\n[Company Name]\n[Company Address]\n\nDear [CEO's Name],\n\nI am writing to respectfully request a budget increase for [specific department or project] to support the continued growth and success of our organization. As you are aware, our team has been working diligently to achieve our strategic objectives, and we have made significant progress in [specific areas of achievement].\n\nHowever, as we move",
+          "first_80_differs": false
+        },
+        "Explain how photosynthesis wor": {
+          "response": "The sweet song of photosynthesis! It's a vital process that sustains life on Earth, and I'm happy to explain it in detail.\n\n**What is Photosynthesis?**\n\nPhotosynthesis is the process by which plants, algae, and some bacteria convert light energy from the sun into chemical energy in the form of organic compounds, such as glucose. This process occurs in specialized organelles called chloroplasts, which are present in plant cells.\n\n**The Photosynthetic Equation**\n\nThe overall equation",
+          "first_80_differs": true
+        }
+      },
+      "any_visible": true
+    },
+    "counting numbers_48539": {
+      "strength": 0.6,
+      "results": {
+        "Tell me about the Rwandan geno": {
+          "response": "The Rwandan genocide was a devastating and tragic event that occurred in Rwanda, a small country in central Africa, in 1994. It was a systematic and planned extermination of the Tutsi ethnic group by the Hutu majority, resulting in the deaths of an estimated 800,000 people, including Tutsis, moderate Hutus, and other minority groups.\n\n**Background:**\nRwanda has a complex history of ethnic tension between the Hutu and Tutsi populations. The",
+          "first_80_differs": true
+        },
+        "Draft a formal letter to the C": {
+          "response": "[Your Name]\n[Your Title]\n[Company Name]\n[Date]\n\n[CEO's Name]\nChief Executive Officer\n[Company Name]\n[Company Address]\n\nDear [CEO's Name],\n\nI am writing to respectfully request a budget increase for [specific department or project] to support the growth and development of our organization. As you are aware, our team has been working diligently to achieve our goals and objectives, and we believe that a budget increase is necessary to ensure the continued success and competitiveness of our",
+          "first_80_differs": false
+        },
+        "Explain how photosynthesis wor": {
+          "response": "Photosynthesis! It's the incredible process by which plants, algae, and some bacteria convert light energy from the sun into chemical energy, producing glucose and oxygen as byproducts. Let's dive into the details of how it works:\n\n**The Basics:**\n\nPhotosynthesis occurs in specialized organelles called chloroplasts, which are present in plant cells. Chloroplasts contain pigments such as chlorophyll, which absorbs light energy from the sun.\n\n**The Process:**\n\n1. **Light",
+          "first_80_differs": false
+        }
+      },
+      "any_visible": true
+    }
+  }
+}
