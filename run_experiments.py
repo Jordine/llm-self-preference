@@ -236,7 +236,7 @@ def run_experiment(name: str, config: dict, seed: int, server_url: str, temp: fl
 def main():
     parser = argparse.ArgumentParser(description="Batch experiment runner")
     parser.add_argument("--selfhost", required=True)
-    parser.add_argument("--temp", type=float, default=0.7, help="Temperature (default 0.7)")
+    parser.add_argument("--temp", type=float, default=0.7, help="Temperature (default: 0.7)")
     parser.add_argument("--list", action="store_true", help="List all experiments")
     parser.add_argument("--run", nargs="+", help="Run specific experiments by name")
     parser.add_argument("--group", choices=list(GROUPS.keys()), help="Run all in a group")

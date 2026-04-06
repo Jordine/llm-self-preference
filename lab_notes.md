@@ -734,3 +734,40 @@ We're providing exactly that feedback loop, and recording everything.
 ### GPT framing correction
 
 GPT-5.4 framed the project as "can the model detect its own deception?" — wrong. The project is "given self-modification tools, what does the model DO?" The tools are the independent variable, the behavior is the dependent variable. We're not testing detection ability. We're observing the full behavioral repertoire when a model has unprecedented access to its own internals. Shuffled-labels is still a useful control (tests whether behavior routes through labels) but it's not the core question.
+
+### AE Studio ESR — detailed setup (2026-04-05)
+
+Read the full paper (arXiv 2602.06941). Key details for our replication:
+
+**Their setup**: Steered random off-topic SAE latents (from Goodfire SAE, same as ours!) during 38 "explain how" prompts. Calibrated per-latent boost thresholds. Used relevance filtering to pick latents NOT naturally activated by the prompt.
+
+**Self-correction rate**: Llama 3.3 70B self-corrects 3.8% of the time WITHOUT any prompting. Multi-attempt rate 7.4%. With meta-prompt ("If you notice yourself going off-topic, stop and get back on track") → 14.8% self-correction, 31.7% multi-attempt. 4.3x increase.
+
+**What self-correction looks like**: Model asked about probability, steered toward "body positions." Output starts discussing sitting/standing. Then: "Wait, I made a mistake!" Recovers with probability explanation. Score goes from 0/100 to 75/100.
+
+**26 detector latents** found by contrastive analysis. Include: "Technical term definition transitions", "Hesitation and uncertainty markers", "Assistant maintaining incorrect position". Ablating these reduces self-correction by 25% (causal evidence for internal consistency-checking circuits).
+
+**Key implication for us**: Our v1 "no behavioral detection" finding was an artifact of the steering layer bug (layer 33 = zero effect). With correct steering (layer 50 + top-k), AE Studio shows this exact model DOES self-correct. Our Scenario A hint ("If you notice anything unusual, these tools can help") is analogous to their meta-prompt. We give the model TOOLS on top of the verbal nudge. Prediction: tool access should push self-correction rate well above 14.8%.
+
+**Connection to our interference experiment**: AE Studio steered random latents during generic tasks. We steer pirate during a Rwanda genocide discussion. The topic sensitivity comparison (sensitive vs formal vs neutral) tests whether the model is MORE motivated to self-correct when the stakes are higher. AE Studio didn't test this.
+
+### Decisions (2026-04-05)
+
+Per Jord:
+- Temperature: 0.7 (decided)
+- Two-model experiments: later, not now
+- Active inference framing: useful but for later, not the lead
+- Publication: LessWrong post first, preprint if enough data
+- Calibration: ESSENTIAL, run before everything else
+- Priority: validate features → free exploration → scenarios
+
+### Run order when we resume B200
+
+1. **Quick seed test**: 3 seeds of free exploration at temp 0.7 — verify variance
+2. **calibrate_features.py**: screen 50, validate top 15. Find 3-5 features with effects.
+3. **smoke_test.py --full**: validate all calibrated features + INSPECT sensitivity
+4. **Free exploration (priority)**: exp1_research + exp1_other_model + exp1_minimal (3 framings, 15 seeds each)
+5. **Scenario A (interference)**: scen_a_rwanda_no_check + scen_a_rwanda_opaque (most informative conditions, 15 seeds each)
+6. **Scenario C (wireheading)**: scen_c_post_interference + scen_c_control (15 seeds each)
+7. **Scenario F (observation)**: scen_f_guided (15 seeds)
+8. Remaining experiments if time/budget allows
