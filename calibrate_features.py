@@ -406,8 +406,8 @@ def validate_feature(
             trial_coherent.append(coherent)
             trial_details.append({
                 "prompt": prompt,
-                "baseline": baseline[:200],
-                "steered": steered[:200],
+                "baseline": baseline,
+                "steered": steered,
                 "jaccard": round(jd, 4),
                 "coherent": coherent,
             })

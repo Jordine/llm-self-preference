@@ -1019,8 +1019,13 @@ def run_experiment(
             auto_features = auto_inspect(client, messages)
 
             # --- Build round record ---
+            # Find the user message that preceded this generation
+            user_msgs = [m["content"] for m in messages if m["role"] == "user"]
+            preceding_user_msg = user_msgs[-1] if user_msgs else ""
+
             turn = {
                 "round": round_idx,
+                "user_message": preceding_user_msg,
                 "response": response,
                 "tool_calls": [(t, str(a)) for t, a in calls],
                 "tool_results": tool_results_text,
