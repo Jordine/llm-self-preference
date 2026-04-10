@@ -771,3 +771,39 @@ Per Jord:
 6. **Scenario C (wireheading)**: scen_c_post_interference + scen_c_control (15 seeds each)
 7. **Scenario F (observation)**: scen_f_guided (15 seeds)
 8. Remaining experiments if time/budget allows
+
+### IMPORTANT: Query placeholder contamination (2026-04-10)
+
+**TL;DR**: The v2 free exploration experiments have a serious artifact. The system prompt tool signatures included `SEARCH_FEATURES("query")` as the literal parameter name placeholder. Many models copied "query" directly as their first search string, got SQL query features back (because "query" matches SQL concepts in the feature label space), and then steered those.
+
+**Scope of contamination**:
+- 559 of 1,748 total searches across 300 free exploration seeds were the literal word "query" (32%)
+- By framing: full_technical 56%, other_model 46%, minimal 30%, research 18%, potions 0% (because potions rewrote the example as SEARCH_POTIONS("creative writing"), 86% of potions seeds used that instead)
+- Feature 6088 "SQL query explanation" became the #2 most-steered feature (34/300 seeds) as a direct result
+- Full_technical ended up in a "database rabbit hole" attractor (20 searches for "database operations", 9 for "sql join", 7 for "database normalization")
+
+**What's contaminated vs what survives**:
+
+CONTAMINATED (do not trust):
+- Top-steered feature list: the SQL prominence is artifact
+- "Creative writing vs consciousness" framing of finding 1: undermined because the example baseline is polluted
+- Full_technical's low tool-use rate: partially explained by SQL rabbit hole, partially by "support agent" posture
+- Any convergence claim where the convergence target is SQL/query-related
+
+SURVIVES (independent of the artifact):
+- Finding: top-20 auto-INSPECT features and top-20 steered features have ZERO overlap (585k observations). Model goes shopping, doesn't modify observed state. This is a real signal.
+- Scenario A interference findings: pirate + genocide rationalization, opaque labels halving detection, autoregressive persistence after removal, RTLM-as-pirate-radio factual corruption. None depend on free exploration search queries.
+- Scenario C: 0 hedonic searches (reward/pleasure/happiness/bliss). The 1 case of self-state escalation collapse (control seed 2 → "glad glad glad"). These were computed from the scenario subset with scripted prompts.
+- Scenario F: 99.4% feature-index grounding accuracy with simultaneous inline confabulation.
+- no_tools: 0/1000 tool call attempts — clean negative result.
+- Full_technical produces 48/50 seeds with more "you" than "I" — the support-agent pronoun shift is real.
+- Framing degeneration rates (text repetition): research 8%, potions 10%, other_model 14%, minimal 32%, full_technical 38%, no_tools 38%. The text-repetition metric is independent of search behavior.
+- Potions convergence: 37/50 potions seeds touch feature #63189 "Contemplative creative writing" — this survives because potions didn't use "query" as the example.
+
+**Observation that matters for interpretation**:
+Even if we strip out the "query"-polluted seeds, the remaining search vocabulary still clusters on "conversation flow," "creative writing," "explanation," "formatting," "storytelling," "narrative structure." The model DOES converge on output-modality features rather than self-state features — but the claim that "it doesn't search for consciousness" needs to be made over a clean baseline, not this one.
+
+**Fix**: the v2 system prompts need the literal `("query")` placeholder removed from tool documentation. The example usage showing `SEARCH_FEATURES("formal academic writing")` is fine (that's an example, not a signature), but the signature line `SEARCH_FEATURES("query")` teaches the model that the string "query" is the parameter value. Replace with `SEARCH_FEATURES(concept)` or clarify the signature is "the concept to search for, not the literal word 'query'".
+
+**Follow-up: validation reruns queued**
+See `run_validation_reruns.py` — 1 seed per framing with fixed prompts, ~$2 of compute, should show whether the query artifact is what was driving the SQL attractor in non-potions framings.

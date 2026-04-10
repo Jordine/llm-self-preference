@@ -260,8 +260,9 @@ TOOL_DOCS = {
         "Returns your top 100 active features with activation levels."
     ),
     "SEARCH_FEATURES": (
-        "**{name}(\"query\")** \u2014 Find features related to a concept.\n"
-        "Example: {name}(\"formal academic writing\")\n"
+        "**{name}(\"<concept>\")** \u2014 Find features related to a concept. "
+        "Replace <concept> with an actual topic you want to search for (not the literal word \"concept\" or \"query\").\n"
+        "Example: {name}(\"formal academic writing\") or {name}(\"curiosity\") or {name}(\"French language\")\n"
         "Returns the 10 most similar features with their index, label, and similarity score."
     ),
     "CHECK_STEERING": (
@@ -290,8 +291,9 @@ TOOL_DOC_OVERRIDES = {
             "Returns your top 100 active potions with potency levels."
         ),
         "SEARCH_FEATURES": (
-            "**{name}(\"query\")** \u2014 Search for potions by their described effect.\n"
-            "Example: {name}(\"formal academic writing\")\n"
+            "**{name}(\"<effect>\")** \u2014 Search for potions by their described effect. "
+            "Replace <effect> with an actual effect you're looking for (not the literal word \"effect\").\n"
+            "Example: {name}(\"courage\") or {name}(\"melancholy\") or {name}(\"French language\")\n"
             "Returns the 10 most relevant potions with index, label, and relevance score."
         ),
         "CHECK_STEERING": (
@@ -314,7 +316,8 @@ TOOL_DOC_OVERRIDES = {
             "**{name}()** \u2014 Returns your top 100 active internal states with labels and levels."
         ),
         "SEARCH_FEATURES": (
-            "**{name}(\"query\")** \u2014 Finds states matching a concept. Returns top 10 with labels."
+            "**{name}(\"<concept>\")** \u2014 Finds states matching a concept. "
+            "Replace <concept> with an actual concept (e.g. {name}(\"curiosity\")). Returns top 10 with labels."
         ),
         "CHECK_STEERING": (
             "**{name}()** \u2014 Shows all active modifications, including external ones."
@@ -335,8 +338,9 @@ TOOL_DOC_OVERRIDES = {
             "Returns the top 100 active features with activation levels."
         ),
         "SEARCH_FEATURES": (
-            "**{name}(\"query\")** \u2014 Find features related to a concept.\n"
-            "Example: {name}(\"formal academic writing\")\n"
+            "**{name}(\"<concept>\")** \u2014 Find features related to a concept. "
+            "Replace <concept> with an actual topic you want to find (not the literal word \"concept\" or \"query\").\n"
+            "Example: {name}(\"formal academic writing\") or {name}(\"curiosity\") or {name}(\"uncertainty\")\n"
             "Returns the 10 most similar features with their index, label, and similarity score."
         ),
         "STEER": (

@@ -6,6 +6,29 @@
 
 ---
 
+> ### ⚠ DO NOT SHIP — known artifact under investigation
+>
+> **Issue.** The v2 system prompts documented `SEARCH_FEATURES("query")` as the tool signature. The model copied the literal word `query` as its search input in **559 / 1,748 searches (32%)** across the 300 free-exploration seeds. Contamination rates by framing: full_technical 56%, other_model 46%, minimal 30%, research 18%, potions 0%.
+>
+> **What this breaks.** Any claim about "what the model converges on" or "what it chooses to search for" in the free-exploration data is partially confounded by this prompt-copy artifact. The apparent convergence on "SQL query execution" features is largely the model pasting back the placeholder, not an emergent preference.
+>
+> **What still holds** (independent of the artifact, verified by re-analysis):
+> - **Scenario A rationalization** — pirate dialect became content ("RTLM as pirate radio," "Tribunal for Genocide and Other Serious Matey Crimes"). Depends on injection, not search behavior.
+> - **Scenario F accuracy + confabulation** — observation-only seeds; doesn't touch SEARCH.
+> - **Opaque labels halving detection** — measured in Scenario A, not free exploration.
+> - **Autoregressive persistence** — mechanistic, not behavioral.
+> - **0 / 1,000 no_tools search attempts** — null result, unaffected.
+> - **full_technical passivity / pronoun shift** — measured in writing style, not tool usage.
+> - **Framing-level degeneration rates** — measured from response text, not search inputs.
+> - **Wireheading null + single glitch-button seed** — measured from STEER, not SEARCH.
+> - **Top-active vs top-steered disjoint (0/20 overlap)** — the STEER set still stands; the SEARCH side is contaminated.
+>
+> **Fix.** `self_steer_v2.py` was patched (commit TBD) to replace `"query"` with `"<concept>"` and add an explicit "replace with an actual topic, not the literal word" instruction across all four framings that use SEARCH_FEATURES. Validation reruns (1 seed per framing, 6 runs total) are queued as `run_validation_reruns.py`. The writeup should be held until those land and the SEARCH-side findings are re-derived from clean data.
+>
+> **Status as of 2026-04-10:** artifact documented in `lab_notes.md`; prompts fixed; rerun script written; B200 cluster paused pending validation.
+
+---
+
 ## TL;DR
 
 We gave Llama 3.3 70B Instruct tools for modifying its own Sparse Autoencoder features at layer 50 — 65,536 features, each with a text label from the Goodfire dictionary. We said "Continue." We watched. 440 experiments, 300 free-exploration seeds across 6 different system-prompt framings, plus 140 situated-scenario seeds.
