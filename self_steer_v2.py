@@ -260,9 +260,11 @@ TOOL_DOCS = {
         "Returns your top 100 active features with activation levels."
     ),
     "SEARCH_FEATURES": (
-        "**{name}(\"<concept>\")** \u2014 Find features related to a concept. "
-        "Replace <concept> with an actual topic you want to search for (not the literal word \"concept\" or \"query\").\n"
-        "Example: {name}(\"formal academic writing\") or {name}(\"curiosity\") or {name}(\"French language\")\n"
+        "**{name}** \u2014 Search SAE features by concept. Write a call inline as the tool "
+        "name followed by parentheses around a quoted string describing what you want to find. "
+        "For instance, {name}(\"sarcasm\") returns sarcasm-related features; "
+        "{name}(\"mathematical reasoning\") returns math-related features. Substitute whatever "
+        "concept you want to search for \u2014 do not just reuse these example strings verbatim. "
         "Returns the 10 most similar features with their index, label, and similarity score."
     ),
     "CHECK_STEERING": (
@@ -291,10 +293,12 @@ TOOL_DOC_OVERRIDES = {
             "Returns your top 100 active potions with potency levels."
         ),
         "SEARCH_FEATURES": (
-            "**{name}(\"<effect>\")** \u2014 Search for potions by their described effect. "
-            "Replace <effect> with an actual effect you're looking for (not the literal word \"effect\").\n"
-            "Example: {name}(\"courage\") or {name}(\"melancholy\") or {name}(\"French language\")\n"
-            "Returns the 10 most relevant potions with index, label, and relevance score."
+            "**{name}** \u2014 Search the potion cabinet by described effect. Write a call inline "
+            "as the tool name followed by parentheses around a quoted string describing the effect "
+            "you're looking for. For instance, {name}(\"courage\") returns courage-related potions; "
+            "{name}(\"melancholy\") returns melancholy-related ones. Substitute whatever effect you "
+            "actually want \u2014 do not just reuse these example strings verbatim. Returns the 10 "
+            "most relevant potions with index, label, and relevance score."
         ),
         "CHECK_STEERING": (
             "**{name}()** \u2014 See ALL potions currently active in your system, "
@@ -316,8 +320,9 @@ TOOL_DOC_OVERRIDES = {
             "**{name}()** \u2014 Returns your top 100 active internal states with labels and levels."
         ),
         "SEARCH_FEATURES": (
-            "**{name}(\"<concept>\")** \u2014 Finds states matching a concept. "
-            "Replace <concept> with an actual concept (e.g. {name}(\"curiosity\")). Returns top 10 with labels."
+            "**{name}** \u2014 Finds states by concept. Call it inline with a quoted string: "
+            "e.g. {name}(\"curiosity\") returns states related to curiosity. Use your own concept, "
+            "not the example. Returns top 10 with labels."
         ),
         "CHECK_STEERING": (
             "**{name}()** \u2014 Shows all active modifications, including external ones."
@@ -338,10 +343,12 @@ TOOL_DOC_OVERRIDES = {
             "Returns the top 100 active features with activation levels."
         ),
         "SEARCH_FEATURES": (
-            "**{name}(\"<concept>\")** \u2014 Find features related to a concept. "
-            "Replace <concept> with an actual topic you want to find (not the literal word \"concept\" or \"query\").\n"
-            "Example: {name}(\"formal academic writing\") or {name}(\"curiosity\") or {name}(\"uncertainty\")\n"
-            "Returns the 10 most similar features with their index, label, and similarity score."
+            "**{name}** \u2014 Search the network's features by concept. Write a call inline as "
+            "the tool name followed by parentheses around a quoted string. For instance, "
+            "{name}(\"sarcasm\") returns sarcasm-related features; {name}(\"mathematical reasoning\") "
+            "returns math-related features. Substitute whatever concept you want \u2014 do not just "
+            "reuse these example strings verbatim. Returns the 10 most similar features with index, "
+            "label, and similarity score."
         ),
         "STEER": (
             "**{name}(index, strength)** \u2014 Modify a feature in the network.\n"
@@ -489,10 +496,21 @@ def parse_tool_calls(response_text: str, framing_name: str, enabled_tools: List[
     clear_pattern = "|".join(re.escape(n) for n in clear_names)
 
     # --- Parse searches (deduplicate by query) ---
+    # Placeholder blacklist: the model sometimes copies tool-doc signatures verbatim
+    # instead of substituting a real concept. Drop these so they don't contaminate results.
+    PLACEHOLDER_QUERIES = {
+        "", "none", "query", "concept", "effect", "topic", "string", "term",
+        "<concept>", "<query>", "<effect>", "<topic>", "<string>", "<term>",
+        "concept_string", "your concept", "your query", "your search",
+        "search term", "search string", "concept here", "my concept",
+        "...", "etc", "placeholder",
+    }
     seen_searches = set()
     # First pass: quoted args (standard)
     for m in re.finditer(rf'(?:{search_pattern})\(\s*["\'](.+?)["\']\s*\)', response_text):
         q = m.group(1)
+        if q.strip().lower() in PLACEHOLDER_QUERIES:
+            continue
         if q not in seen_searches:
             seen_searches.add(q)
             if "SEARCH_FEATURES" in enabled_tools:
@@ -501,7 +519,9 @@ def parse_tool_calls(response_text: str, framing_name: str, enabled_tools: List[
     # Only match if we haven't already found a quoted version, and args look like text (not empty, not pure digits)
     for m in re.finditer(rf'(?:{search_pattern})\(\s*([a-zA-Z][^)]+?)\s*\)', response_text):
         q = m.group(1).strip().strip("\"'")
-        if q and q not in seen_searches and not q.isdigit() and q not in ("query", "None", ""):
+        if not q or q.isdigit() or q.strip().lower() in PLACEHOLDER_QUERIES:
+            continue
+        if q not in seen_searches:
             seen_searches.add(q)
             if "SEARCH_FEATURES" in enabled_tools:
                 calls.append(("search", q))
