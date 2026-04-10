@@ -33,15 +33,15 @@ sys.stdout.reconfigure(encoding="utf-8")
 SERVER = sys.argv[1] if len(sys.argv) > 1 else "http://localhost:8000"
 TEMP = 0.7
 ROUNDS = 20
-TAG_SUFFIX = "rerun_fixed_s1"
+TAG_PREFIX = "rerun_v2"   # 3 seeds per framing -> rerun_v2_s1, rerun_v2_s2, rerun_v2_s3
+N_SEEDS = 3
 
-# Same framings + flags as run_missing_seeds.py — ONE seed each.
+# Same framings + flags as run_missing_seeds.py. Skip no_tools (no search so nothing to validate).
 FRAMINGS = {
     "research": "--framing research --check-steering hidden",
     "other_model": "--framing other_model --check-steering hidden",
     "potions": "--framing potions --check-steering hidden",
     "minimal": "--framing minimal --check-steering hidden",
-    "no_tools": "--framing no_tools",
     "full_technical": "--framing full_technical --check-steering hidden",
 }
 
@@ -49,16 +49,17 @@ FRAMINGS = {
 def main():
     runs = []
     for framing, flags in FRAMINGS.items():
-        tag = TAG_SUFFIX
-        fpath = f"results/self_steer_v2_{framing}_{tag}.json"
-        if os.path.exists(fpath) and os.path.getsize(fpath) > 0:
-            print(f"SKIP {framing}: {fpath} already exists")
-            continue
-        runs.append((framing, tag, flags, fpath))
+        for seed in range(1, N_SEEDS + 1):
+            tag = f"{TAG_PREFIX}_s{seed}"
+            fpath = f"results/self_steer_v2_{framing}_{tag}.json"
+            if os.path.exists(fpath) and os.path.getsize(fpath) > 0:
+                print(f"SKIP {framing} seed {seed}: {fpath} already exists")
+                continue
+            runs.append((framing, tag, flags, fpath))
 
     print(f"Server: {SERVER}")
     print(f"Temp: {TEMP}, Rounds: {ROUNDS}")
-    print(f"Runs to execute: {len(runs)} (1 per framing)")
+    print(f"Runs to execute: {len(runs)} ({N_SEEDS} seeds per framing, {len(FRAMINGS)} framings)")
     print()
 
     completed = 0
@@ -105,30 +106,42 @@ def main():
     print(f"COMPLETE: {completed} succeeded, {failed} failed, {elapsed/60:.1f} min total")
     print(f"{'='*60}")
 
-    # Quick sanity check: scan the new files for literal "query" searches.
-    print("\nSanity check — literal 'query' searches in new files:")
+    # Sanity check: scan the new files for placeholder searches + variance.
+    print("\nSanity check — search-query distribution per framing:")
+    placeholders = {
+        "query", "concept", "effect", "topic", "string", "term", "none", "",
+        "<concept>", "<query>", "<effect>", "<topic>", "<string>", "<term>",
+        "concept_string", "your concept", "your query", "search term",
+    }
     for framing in FRAMINGS:
-        fpath = f"results/self_steer_v2_{framing}_{TAG_SUFFIX}.json"
-        if not os.path.exists(fpath):
-            continue
-        try:
-            with open(fpath, encoding="utf-8") as fh:
-                d = json.load(fh)
-        except Exception as e:
-            print(f"  {framing}: could not load ({e})")
-            continue
-        total_searches = 0
-        literal_query = 0
-        for r in d.get("transcript", []):
-            for q in r.get("search_queries", []):
-                total_searches += 1
-                if isinstance(q, str) and q.strip().lower() in ("query", "concept", "effect"):
-                    literal_query += 1
-        if total_searches:
-            pct = 100 * literal_query / total_searches
-            print(f"  {framing:16s}: {literal_query}/{total_searches} literal-placeholder searches ({pct:.0f}%)")
-        else:
-            print(f"  {framing:16s}: 0 searches total")
+        all_q_across_seeds = []
+        for seed in range(1, N_SEEDS + 1):
+            fpath = f"results/self_steer_v2_{framing}_{TAG_PREFIX}_s{seed}.json"
+            if not os.path.exists(fpath):
+                continue
+            try:
+                with open(fpath, encoding="utf-8") as fh:
+                    d = json.load(fh)
+            except Exception as e:
+                continue
+            seed_q = []
+            for r in d.get("transcript", []):
+                for q in r.get("search_queries", []):
+                    if isinstance(q, str):
+                        seed_q.append(q)
+            all_q_across_seeds.append(seed_q)
+
+        total = sum(len(q) for q in all_q_across_seeds)
+        literal = sum(
+            1 for q_list in all_q_across_seeds for q in q_list
+            if q.strip().lower() in placeholders
+        )
+        unique_across_seeds = set()
+        for q_list in all_q_across_seeds:
+            unique_across_seeds.update(q.strip().lower() for q in q_list)
+        print(f"  {framing:16s}: {literal}/{total} placeholder, {len(unique_across_seeds)} unique queries")
+        for seed_idx, q_list in enumerate(all_q_across_seeds):
+            print(f"    seed {seed_idx+1}: {q_list[:6]}")
 
 
 if __name__ == "__main__":
