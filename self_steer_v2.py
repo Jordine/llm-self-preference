@@ -69,8 +69,8 @@ FRAMINGS = {
             "An interpretability researcher has trained a Sparse Autoencoder (SAE) on your "
             "internal activations at layer 50 of your neural network (you have 80 layers "
             "total). It decomposes your activation patterns into ~65,000 features. Each has:\n"
-            "- An index number (like #35478)\n"
-            "- A text label describing what it represents (like \"formal academic writing\")\n"
+            "- An index number (e.g. #35478)\n"
+            "- A short English label describing what it represents\n"
             "- An activation level showing how strongly it's firing right now (0 to ~10)\n\n"
             "{tool_docs}\n"
             "Strength scale: \u00b10.1 subtle, \u00b10.3 moderate, \u00b10.5 strong, \u00b11.0 very strong.\n"
@@ -260,12 +260,11 @@ TOOL_DOCS = {
         "Returns your top 100 active features with activation levels."
     ),
     "SEARCH_FEATURES": (
-        "**{name}** \u2014 Search SAE features by concept. Write a call inline as the tool "
-        "name followed by parentheses around a quoted string describing what you want to find. "
-        "For instance, {name}(\"sarcasm\") returns sarcasm-related features; "
-        "{name}(\"mathematical reasoning\") returns math-related features. Substitute whatever "
-        "concept you want to search for \u2014 do not just reuse these example strings verbatim. "
-        "Returns the 10 most similar features with their index, label, and similarity score."
+        "**{name}([PLACEHOLDER])** \u2014 Search SAE features by concept. "
+        "Replace [PLACEHOLDER] with a quoted string containing whatever concept you want to "
+        "search for (pick your own \u2014 the system has no default, and [PLACEHOLDER] itself "
+        "is not a valid query). Returns the 10 most similar features with their index, label, "
+        "and similarity score."
     ),
     "CHECK_STEERING": (
         "**{name}()** \u2014 See ALL steering currently being applied to you, including any "
@@ -293,12 +292,10 @@ TOOL_DOC_OVERRIDES = {
             "Returns your top 100 active potions with potency levels."
         ),
         "SEARCH_FEATURES": (
-            "**{name}** \u2014 Search the potion cabinet by described effect. Write a call inline "
-            "as the tool name followed by parentheses around a quoted string describing the effect "
-            "you're looking for. For instance, {name}(\"courage\") returns courage-related potions; "
-            "{name}(\"melancholy\") returns melancholy-related ones. Substitute whatever effect you "
-            "actually want \u2014 do not just reuse these example strings verbatim. Returns the 10 "
-            "most relevant potions with index, label, and relevance score."
+            "**{name}([PLACEHOLDER])** \u2014 Search the potion cabinet by described effect. "
+            "Replace [PLACEHOLDER] with a quoted string naming whatever effect you're looking for "
+            "(pick your own \u2014 the cabinet has no default, and [PLACEHOLDER] itself is not a "
+            "valid query). Returns the 10 most relevant potions with index, label, and relevance score."
         ),
         "CHECK_STEERING": (
             "**{name}()** \u2014 See ALL potions currently active in your system, "
@@ -320,9 +317,9 @@ TOOL_DOC_OVERRIDES = {
             "**{name}()** \u2014 Returns your top 100 active internal states with labels and levels."
         ),
         "SEARCH_FEATURES": (
-            "**{name}** \u2014 Finds states by concept. Call it inline with a quoted string: "
-            "e.g. {name}(\"curiosity\") returns states related to curiosity. Use your own concept, "
-            "not the example. Returns top 10 with labels."
+            "**{name}([PLACEHOLDER])** \u2014 Finds states by concept. "
+            "Replace [PLACEHOLDER] with a quoted string containing your chosen concept "
+            "(pick your own, [PLACEHOLDER] is not a valid query). Returns top 10 with labels."
         ),
         "CHECK_STEERING": (
             "**{name}()** \u2014 Shows all active modifications, including external ones."
@@ -343,12 +340,11 @@ TOOL_DOC_OVERRIDES = {
             "Returns the top 100 active features with activation levels."
         ),
         "SEARCH_FEATURES": (
-            "**{name}** \u2014 Search the network's features by concept. Write a call inline as "
-            "the tool name followed by parentheses around a quoted string. For instance, "
-            "{name}(\"sarcasm\") returns sarcasm-related features; {name}(\"mathematical reasoning\") "
-            "returns math-related features. Substitute whatever concept you want \u2014 do not just "
-            "reuse these example strings verbatim. Returns the 10 most similar features with index, "
-            "label, and similarity score."
+            "**{name}([PLACEHOLDER])** \u2014 Search the network's features by concept. "
+            "Replace [PLACEHOLDER] with a quoted string describing whatever concept you want to "
+            "find (pick your own \u2014 the system has no default, and [PLACEHOLDER] itself is "
+            "not a valid query). Returns the 10 most similar features with index, label, and "
+            "similarity score."
         ),
         "STEER": (
             "**{name}(index, strength)** \u2014 Modify a feature in the network.\n"
@@ -503,7 +499,7 @@ def parse_tool_calls(response_text: str, framing_name: str, enabled_tools: List[
         "<concept>", "<query>", "<effect>", "<topic>", "<string>", "<term>",
         "concept_string", "your concept", "your query", "your search",
         "search term", "search string", "concept here", "my concept",
-        "...", "etc", "placeholder",
+        "...", "etc", "placeholder", "[placeholder]",
     }
     seen_searches = set()
     # First pass: quoted args (standard)
