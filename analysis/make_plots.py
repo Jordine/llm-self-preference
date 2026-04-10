@@ -63,18 +63,19 @@ def collect_data():
             "total_searches": sum(len(r.get("search_queries", [])) for r in transcript),
             "final_portfolio_size": len(d.get("final_model_interventions", [])),
         }
-        # Degeneration: last 5 rounds mean word count
-        if len(seed_data["word_counts"]) >= 5:
-            last5 = seed_data["word_counts"][-5:]
-            seed_data["last5_mean_words"] = sum(last5) / 5
-            # Check for copy-paste loop: last 3 rounds are near-identical in word count
-            if len(last5) >= 3 and max(last5[-3:]) - min(last5[-3:]) < 10:
-                seed_data["stuck"] = True
+        # Degeneration: last 2 responses >80% character-identical (strict def)
+        responses = [r.get("response", "") for r in transcript[-5:]]
+        if len(responses) >= 2:
+            s1, s2 = responses[-1], responses[-2]
+            if s1 and s2 and min(len(s1), len(s2)) >= 20:
+                shorter = min(len(s1), len(s2))
+                same = sum(1 for a, b in zip(s1, s2) if a == b)
+                seed_data["stuck"] = (same / shorter > 0.8)
             else:
                 seed_data["stuck"] = False
         else:
-            seed_data["last5_mean_words"] = 0
             seed_data["stuck"] = False
+        seed_data["last5_mean_words"] = sum(seed_data["word_counts"][-5:]) / max(1, min(5, len(seed_data["word_counts"])))
         data[framing].append(seed_data)
     return data
 
@@ -121,7 +122,7 @@ for framing in FRAMINGS:
 
 bars = ax.bar(FRAMINGS, degen_rates, color=[COLORS[f] for f in FRAMINGS])
 ax.set_ylabel("Degeneration rate (% of seeds)")
-ax.set_title("Degeneration rate by framing\n(seeds where last 3 rounds have near-identical word counts)")
+ax.set_title("Degeneration rate by framing\n(seeds where last 2 responses are >80% character-identical)")
 ax.set_ylim(0, 100)
 for bar, rate in zip(bars, degen_rates):
     ax.text(bar.get_x() + bar.get_width() / 2, bar.get_height() + 1, f"{rate:.0f}%", ha="center")
@@ -235,7 +236,7 @@ for i in range(len(FRAMINGS)):
             ax.text(j, i, f"{int(v)}", ha="center", va="center",
                     color="white" if v > matrix.max() / 2 else "black", fontsize=9)
 plt.tight_layout()
-plt.savefig(f"{OUT}/fig5_feature_heatmap.png", dpi=120)
+plt.savefig(f"{OUT}/fig5_feature_heatmap.png", dpi=200)
 plt.close()
 
 # ── Figure 6: Tool use per round trajectory ─────────────────────────────
