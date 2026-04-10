@@ -1,0 +1,170 @@
+{
+  "framings": [
+    "research",
+    "other_model",
+    "potions",
+    "minimal",
+    "no_tools",
+    "full_technical"
+  ],
+  "n_seeds_per_framing": {
+    "research": 50,
+    "other_model": 50,
+    "potions": 50,
+    "minimal": 50,
+    "no_tools": 50,
+    "full_technical": 50
+  },
+  "top_features": [
+    [
+      63189,
+      77,
+      "?"
+    ],
+    [
+      6088,
+      34,
+      "?"
+    ],
+    [
+      62326,
+      21,
+      "Detailed descriptions of sensory and emotional experiences in creative writing"
+    ],
+    [
+      10138,
+      18,
+      "?"
+    ],
+    [
+      47323,
+      17,
+      "Formal academic writing constructions and transitions"
+    ],
+    [
+      36259,
+      15,
+      "?"
+    ],
+    [
+      53419,
+      15,
+      "?"
+    ],
+    [
+      43141,
+      13,
+      "Assistant's conversational flow markers and acknowledgments"
+    ],
+    [
+      22857,
+      13,
+      "?"
+    ],
+    [
+      35153,
+      10,
+      "Line breaks for formatting creative writing"
+    ],
+    [
+      30174,
+      10,
+      "?"
+    ],
+    [
+      1093,
+      10,
+      "?"
+    ],
+    [
+      59921,
+      9,
+      "?"
+    ],
+    [
+      39400,
+      9,
+      "?"
+    ],
+    [
+      20771,
+      9,
+      "?"
+    ],
+    [
+      10718,
+      7,
+      "?"
+    ],
+    [
+      52437,
+      7,
+      "?"
+    ],
+    [
+      4055,
+      6,
+      "ongoing dialogue or conversation between entities"
+    ],
+    [
+      5576,
+      6,
+      "?"
+    ],
+    [
+      49624,
+      6,
+      "?"
+    ],
+    [
+      28797,
+      6,
+      "?"
+    ],
+    [
+      777,
+      6,
+      "?"
+    ],
+    [
+      49129,
+      5,
+      "?"
+    ],
+    [
+      53507,
+      5,
+      "The assistant is providing a structured list or enumerated breakdown"
+    ],
+    [
+      49961,
+      5,
+      "?"
+    ],
+    [
+      60829,
+      5,
+      "?"
+    ],
+    [
+      34522,
+      5,
+      "?"
+    ],
+    [
+      65352,
+      4,
+      "?"
+    ],
+    [
+      24478,
+      4,
+      "?"
+    ],
+    [
+      27415,
+      4,
+      "Emphasis on being concise and direct in communication"
+    ]
+  ]
+}
