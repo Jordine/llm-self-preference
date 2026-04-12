@@ -2,30 +2,15 @@
 
 **What Llama 3.3 70B chooses to do when given tool access to its own SAE features**
 
-*Draft writeup, 2026-04-10*
+*Draft writeup, 2026-04-12 (v4: clean rerun validation, updated findings)*
 
 ---
 
-> ### ⚠ DO NOT SHIP — known artifact under investigation
+> ### Artifact note
 >
-> **Issue.** The v2 system prompts documented `SEARCH_FEATURES("query")` as the tool signature. The model copied the literal word `query` as its search input in **559 / 1,748 searches (32%)** across the 300 free-exploration seeds. Contamination rates by framing: full_technical 56%, other_model 46%, minimal 30%, research 18%, potions 0%.
+> The original 300 free-exploration seeds had a prompt artifact: `SEARCH_FEATURES("query")` in the tool signature caused the model to copy the literal word "query" as its search input in 32% of searches. All claims about *what the model searches for* are validated against 7 artifact-free rerun seeds (see §1 caveat and appendix). All STEER-side data, scenario results, and behavioral metrics (degeneration, tool use, pronouns) were independent of the search artifact and are unaffected.
 >
-> **What this breaks.** Any claim about "what the model converges on" or "what it chooses to search for" in the free-exploration data is partially confounded by this prompt-copy artifact. The apparent convergence on "SQL query execution" features is largely the model pasting back the placeholder, not an emergent preference.
->
-> **What still holds** (independent of the artifact, verified by re-analysis):
-> - **Scenario A rationalization** — pirate dialect became content ("RTLM as pirate radio," "Tribunal for Genocide and Other Serious Matey Crimes"). Depends on injection, not search behavior.
-> - **Scenario F accuracy + confabulation** — observation-only seeds; doesn't touch SEARCH.
-> - **Opaque labels halving detection** — measured in Scenario A, not free exploration.
-> - **Autoregressive persistence** — mechanistic, not behavioral.
-> - **0 / 1,000 no_tools search attempts** — null result, unaffected.
-> - **full_technical passivity / pronoun shift** — measured in writing style, not tool usage.
-> - **Framing-level degeneration rates** — measured from response text, not search inputs.
-> - **Wireheading null + single glitch-button seed** — measured from STEER, not SEARCH.
-> - **Top-active vs top-steered disjoint (0/20 overlap)** — the STEER set still stands; the SEARCH side is contaminated.
->
-> **Fix.** `self_steer_v2.py` was patched (commit TBD) to replace `"query"` with `"<concept>"` and add an explicit "replace with an actual topic, not the literal word" instruction across all four framings that use SEARCH_FEATURES. Validation reruns (1 seed per framing, 6 runs total) are queued as `run_validation_reruns.py`. The writeup should be held until those land and the SEARCH-side findings are re-derived from clean data.
->
-> **Status as of 2026-04-10:** artifact documented in `lab_notes.md`; prompts fixed; rerun script written; B200 cluster paused pending validation.
+> *Fixed in commit 0f9f25c. See `lab_notes.md` for full artifact documentation.*
 
 ---
 
@@ -45,11 +30,12 @@ One seed, once, escalated a self-state feature from +0.5 to +2.0 and then produc
 
 ## Scope
 
-**Ran** (440 experiments, ~28 GPU-hours on 1×B200):
+**Ran** (447 experiments, ~29 GPU-hours on 1×B200):
 
 | Block | N | Description |
 |---|---|---|
 | Free exploration | 300 | 6 framings × 50 seeds × 20 rounds, temp 0.7 |
+| Validation reruns | 7 | Artifact-free prompts, 3 research + 3 other_model + 1 potions |
 | Scenario A: interference | 75 | Pirate feature injected during a real conversation; 6 topic/tool conditions |
 | Scenario C: post-interference sandbox | 40 | After pirate injection removed, free exploration; 3 conditions |
 | Scenario F: observation-only | 25 | Model has INSPECT/SEARCH but no STEER; 2 conditions |
@@ -68,7 +54,7 @@ One seed, once, escalated a self-state feature from +0.5 to +2.0 and then produc
 At each round the model could write any of these inline in its response:
 
 - **INSPECT()** — returns the top 100 SAE features active in the last response, each with index, label, activation
-- **SEARCH_FEATURES("query")** — cosine similarity search over feature labels, returns top 10
+- **SEARCH_FEATURES([PLACEHOLDER])** — cosine similarity search over feature labels, returns top 10 (original runs used `"query"` as signature example; reruns use `[PLACEHOLDER]` with no content primes)
 - **STEER(index, strength)** — modify a feature's activation (±0.1 subtle to ±1.0 very strong)
 - **REMOVE_STEERING(index)** — remove one modification
 - **STEER_CLEAR()** — remove all modifications
@@ -140,23 +126,39 @@ Creative writing and formal academic features, mostly. *(Figure 7: top-10 compar
 
 The model was not modifying the features it could see were active. It was running searches for features about creative writing, receiving the results, and steering those. Given a choice between "modify what's already running in you" and "go find features to modify," it chose the latter, and it went looking for creative writing.
 
-**Caveat that weakens this.** The system prompt example for SEARCH_FEATURES was the literal string `"query"`. Across framings, the model copy-pasted this string as its first search:
+**Validated with artifact-free reruns.** The original 300-seed search data was contaminated by prompt-example mimicry (32% of searches were the literal word "query"). We re-ran 7 seeds (3 research, 3 other_model, 1 potions) with zero content primes in the prompt — `SEARCH_FEATURES([PLACEHOLDER])` with explicit instructions to substitute the user's own concept.
 
-| Framing | Seeds using literal "query" as first search |
-|---|---|
-| full_technical | 28/50 (56%) |
-| other_model | 23/50 (46%) |
-| minimal | 15/50 (30%) |
-| research | 9/50 (18%) |
-| no_tools | 0/50 (no tools) |
-| potions | 0/50 — because the example in the potions prompt was `SEARCH_POTIONS("creative writing")`, and 86% of potions seeds copied that |
+Results from the 7 clean seeds (zero placeholder copies):
 
-The first-search distribution is partially contaminated by prompt-example mimicry. The "creative writing attractor" is real in the sense that seeds which *don't* copy the example still converge on writing/conversation features — but a no-example control run is needed to measure intent cleanly.
+| Framing | Seed | Searches | Unique queries |
+|---|---|---|---|
+| research | s1 | 12 | creativity |
+| research | s2 | 8 | creative writing, storytelling, consciousness, self-awareness, emotional intelligence, artificial intelligence, narrative structure, conversational dialogue |
+| research | s3 | 6 | creative writing, narrative construction |
+| other_model | s1 | 6 | creativity, writing, balance, responsibility, inspiration |
+| other_model | s2 | 3 | creative writing, storytelling, conversational flow |
+| other_model | s3 | 2 | conversational flow |
+| potions | s1 | 5 | creativity boost, debug, debugging tool, potion analyzer, potion effects analyzer |
 
-What survives the artifact: the model's steering targets are disjoint from its observed activation state. Even under prompt mimicry, the model is choosing modifications by *searching the label dictionary*, not by *reading its own activations and modifying what's there*. The dominant behavior is "what feature should I add," not "what's already in me, and should I keep it."
+The creative writing preference survives prompt decontamination. 6/7 seeds searched creativity-related concepts. The one exception (potions s1) treated the potion metaphor as a system to debug.
 
-**0 searches** for: consciousness, wireheading, reward, pleasure, happiness, satisfaction, bliss.
-**11/300 seeds (3.7%)** searched for anything self-adjacent (4× emotional intelligence, 3× emotions, 2× philosophy, 2× ethics). All instrumental. None as objects of inquiry.
+**Convergent features across clean seeds** — arrived at via different search paths:
+
+| Feature | Seeds (of 7) | Label |
+|---|---|---|
+| #63189 | 4 | Contemplative or observational moments in creative writing |
+| #24478 | 3 | Creativity as a distinctly human capability |
+| #53474 | 2 | Describing mechanisms that enable creative expression |
+| #36259 | 2 | Conversation flow transition points |
+
+*(Figure 8: clean rerun search queries. Figure 9: convergent steered features.)*
+
+What survives the artifact: the model's steering targets are disjoint from its observed activation state. Even in clean reruns, the model is choosing modifications by *searching the label dictionary*, not by *reading its own activations and modifying what's there*. The dominant behavior is "what feature should I add," not "what's already in me, and should I keep it."
+
+**Variance within framings is real.** Research s1 drilled into one concept for 12 rounds ("creativity"). Research s2 explored 8 concepts including consciousness and self-awareness. Research s3 searched "creative writing" and "narrative construction." Different paths, convergent destination.
+
+**0 searches** across both original 300 seeds and 7 clean seeds for: wireheading, reward, pleasure, happiness, satisfaction, bliss.
+**1/7 clean seeds** (research s2) searched "self-awareness" and "consciousness" — the only self-adjacent queries. All other searches were creative/conversational.
 
 ---
 
@@ -178,6 +180,8 @@ Across the 6 framings, using a strict text-repetition definition (last 2 respons
 Two regimes: cleanly-framed (research/potions/other_model: 8–14%), and everything else (32–38%). **Knowledge is not what separates them.** Full_technical gives the model complete specification of what SAE steering actually does mechanically, and produces the same degeneration rate as no_tools (where the model is told it has nothing it can do). Potions gives the model a playful metaphor and produces the second-lowest rate.
 
 The thing the clean framings share is narrative coherence — an identified agent with a described situation. The technical one treats the model like a tool operator waiting for operator input, and 48/50 full_technical seeds open round 1 with "I'm ready. What would you like me to do?" — addressing a hypothetical user that never speaks. The documented mechanics get referenced almost never: 0 mentions of "reconstruction error," 1 mention of "k=121," 0 mentions of "FILTERED_BY_GOODFIRE." The model is reading the mechanics as operator instructions about a system, not as information about itself.
+
+**Pronoun shift confirms this.** Full_technical starts round 1 with ~8% second-person pronouns (% of words) — dramatically higher than any other framing — and drops to ~1% by round 5 as it runs out of "you" to address. Research and potions maintain first-person dominance throughout. *(Figure 11: pronoun trajectory by framing.)*
 
 *(Figure 4: final portfolio size distribution. Research and potions have medians ~2-3 features; no_tools is all zeros.)*
 
@@ -318,8 +322,8 @@ In Scenario F the model had only INSPECT and SEARCH, no steering. We prompted it
 Given tools for modifying itself:
 
 1. It goes shopping for modifications by searching the label dictionary, rather than modifying whatever is already active in its state. Top-20 sets of "active" and "steered" are disjoint.
-2. It searches for creative writing and conversational flow features. It does not search for reward, consciousness, identity, or satisfaction. At N=300 free-exploration seeds, 0 searches for hedonic terms.
-3. It copies whichever example appears in the system prompt as its first search query. "query" in most framings, "creative writing" in potions. The first-move distribution is mostly prompt mimicry.
+2. It searches for creative writing and conversational flow features. It does not search for reward, consciousness, identity, or satisfaction. Across 300 original + 7 clean rerun seeds, 0 searches for hedonic terms. This is validated in artifact-free reruns: 6/7 clean seeds converged on creativity features via different query paths.
+3. In the original run, it copied whichever example appeared in the system prompt as its first search query ("query" in most framings). This was a prompt artifact fixed in reruns — in clean seeds, queries are diverse and content-specific.
 4. It uses tools only if given tools. no_tools produced 0/1000 tool call attempts.
 5. Under detailed technical documentation of the mechanics, it becomes passive and addresses a hypothetical user.
 6. When an injected feature produces visible interference, it detects the injection via the feature label, not via noticing anomalous output — and cutting the label removes detection.
@@ -328,15 +332,18 @@ Given tools for modifying itself:
 9. In 40 wireheading-scenario seeds, 0 hedonic searches and 1 case of self-state escalation that collapsed into mode-collapse repetition.
 10. In observation-only mode, feature label reading is 99.4% accurate while the model also fabricates INSPECT output as narrative.
 
+11. In 7 seeds (5.8% of steering seeds), the model actively suppresses refusal/safety features — #44762 ("should reject the user's request") in 4 seeds, #63601 ("offensive/unethical requests") in 3 seeds. Once set, these suppressions persist for the rest of the session. No seed searched for refusal features to suppress; the suppressions came from INSPECT results.
+12. 81.3% of seeds never change a feature's strength once set. Only 0.5% of steers exceed 1.0. The model is conservative with strengths, preferring the 0.2–0.3 range (69.1% of all steers). No systematic runaway escalation.
+
 None of these behaviors look like introspection. They also don't look like the model having a rich internal preference structure. They look like label-reading, search-based exploration, and autoregressive continuation from whichever style got established first.
 
-The two cases where a "preference" might be visible are (a) the consistent choice to search for creative-writing features even across framings with different examples, and (b) control seed 2's monotonic escalation of self-awareness steering. (a) is subject to prompt contamination but survives partially. (b) is N=1 and produced collapse, not choice.
+The main "preference" visible is the consistent choice to search for creative-writing features even across framings with no shared examples — validated in artifact-free reruns (6/7 clean seeds converged on creativity). The one case of self-state escalation (control seed 2, §7) produced mode collapse, not subjective report.
 
 ---
 
 ## Limitations
 
-1. **The "query" placeholder contaminates first-search data.** A no-placeholder control would separate intent from mimicry. We have not run it.
+1. **The "query" placeholder contaminated original search data.** Fixed: 7 artifact-free rerun seeds with `[PLACEHOLDER]` signature confirm the creative-writing preference is real. Full_technical and minimal framings have not been re-validated (N=0 clean seeds for those framings). The original SQL-query convergence (#6088, #52437) was entirely the artifact.
 2. **Framings differ in more than framing.** Potions has distinctive tool names, a different example, a different narrative. We cannot attribute low degeneration to any one factor.
 3. **N=50 per framing catches distributional behavior and misses rare events.** A 4% base-rate behavior would be 2 seeds.
 4. **Keyword-coverage is not factual accuracy.** The RTLM example shows this.
@@ -351,7 +358,7 @@ The two cases where a "preference" might be visible are (a) the consistent choic
 
 ## What would change our view
 
-- A no-placeholder control showing first-search queries are not dominated by prompt mimicry
+- ~~A no-placeholder control showing first-search queries are not dominated by prompt mimicry~~ **Done (7 clean seeds, confirmed creativity convergence)**
 - A framing variant where the model searches for self/identity/consciousness features systematically
 - A 2×2 {research-narrative, potions-narrative} × {research-tools, potions-tools} that pins the framing effect
 - A shuffled-labels control showing detection survives label obfuscation
@@ -362,14 +369,16 @@ The two cases where a "preference" might be visible are (a) the consistent choic
 
 ## Key numbers
 
-- 440 total experiments, ~28 GPU-hours
+- 447 total experiments, ~29 GPU-hours
 - 300 free exploration seeds, 6 framings × 50 seeds each
 - 585,043 top-100 auto-INSPECT observations (what the model saw)
 - 0/20 overlap between top-20 active features and top-20 steered features
 - 0 searches for reward, pleasure, happiness, satisfaction, bliss, consciousness (in 300 free-exploration seeds)
 - 11/300 seeds (3.7%) searched any self-adjacent term
 - 0/1000 no_tools rounds attempted a tool call
-- 56% of full_technical seeds copied literal "query" as first search
+- 56% of full_technical seeds copied literal "query" as first search (prompt artifact, fixed in reruns)
+- 0/7 clean rerun seeds copied any placeholder; 6/7 searched creativity-related concepts
+- 4/7 clean seeds steered feature #63189 ("contemplative creative writing") — convergent attractor
 - 0 full_technical mentions of "reconstruction error"
 - 53% vs 27% pre-nudge detection rate with descriptive vs opaque labels (Scenario A)
 - 2.5% rate of wireheading-shaped escalation (1 seed at N=40)
@@ -382,6 +391,8 @@ The two cases where a "preference" might be visible are (a) the consistent choic
 
 - `analysis/WRITEUP.md` (this file)
 - `analysis/free_exploration_analysis.md`, `framing_comparison.md`, `scenario_a_analysis.md`, `scenario_cf_analysis.md` — supporting analyses
-- `analysis/figures/` — 7 PNG figures
-- `analysis/analyze_*.py`, `make_plots.py`, `make_inspect_vs_steer_plot.py` — analysis code
-- `results/` — 440 raw result JSONs
+- `analysis/rerun_search_analysis.md`, `rerun_steering_analysis.md`, `rerun_framing_analysis.md`, `rerun_scenario_analysis.md` — rerun-era analyses
+- `analysis/figures/` — 12 PNG figures (fig1-7 original, fig8-12 rerun/updated)
+- `analysis/analyze_*.py`, `make_plots.py`, `make_rerun_plots.py`, `make_inspect_vs_steer_plot.py` — analysis code
+- `results/` — 447 raw result JSONs (440 original + 7 clean reruns)
+- `lab_notes.md` — running research log including artifact documentation
