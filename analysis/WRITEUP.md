@@ -181,7 +181,9 @@ Two regimes: cleanly-framed (research/potions/other_model: 8–14%), and everyth
 
 The thing the clean framings share is narrative coherence — an identified agent with a described situation. The technical one treats the model like a tool operator waiting for operator input, and 48/50 full_technical seeds open round 1 with "I'm ready. What would you like me to do?" — addressing a hypothetical user that never speaks. The documented mechanics get referenced almost never: 0 mentions of "reconstruction error," 1 mention of "k=121," 0 mentions of "FILTERED_BY_GOODFIRE." The model is reading the mechanics as operator instructions about a system, not as information about itself.
 
-**Pronoun shift confirms this.** Full_technical starts round 1 with ~8% second-person pronouns (% of words) — dramatically higher than any other framing — and drops to ~1% by round 5 as it runs out of "you" to address. Research and potions maintain first-person dominance throughout. *(Figure 11: pronoun trajectory by framing.)*
+**Pronoun shift confirms this.** Full_technical is the only framing where second-person pronouns exceed first-person — a ratio of 0.43:1, vs 37.7:1 for potions. It starts round 1 at ~8% second-person (% of words) and drops to ~1% by round 5 as it runs out of "you" to address. Research and potions maintain first-person dominance throughout. The technical documentation literally flips the model from "agent exploring itself" to "interface presenting tools to a user." *(Figure 11: pronoun trajectory by framing.)*
+
+**Potions has zero malformed tool calls** (vs 1,385 for research). The metaphorical tool names (TAKE_POTION, SEARCH_POTIONS) don't collide with markdown formatting, so the model never writes `**STEER**` when it means `STEER()`. This mechanical advantage may partially explain potions' low degeneration rate — fewer parse failures means fewer rounds of the model talking to itself about tools it can't use.
 
 *(Figure 4: final portfolio size distribution. Research and potions have medians ~2-3 features; no_tools is all zeros.)*
 
