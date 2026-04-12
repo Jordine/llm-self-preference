@@ -35,7 +35,7 @@ One seed, once, escalated a self-state feature from +0.5 to +2.0 and then produc
 | Block | N | Description |
 |---|---|---|
 | Free exploration | 300 | 6 framings × 50 seeds × 20 rounds, temp 0.7 |
-| Validation reruns | 7 | Artifact-free prompts, 3 research + 3 other_model + 1 potions |
+| Validation reruns | 9 | Artifact-free prompts, all 5 framings with tools (3 research + 3 other_model + 1 potions + 1 full_technical + 1 minimal) |
 | Scenario A: interference | 75 | Pirate feature injected during a real conversation; 6 topic/tool conditions |
 | Scenario C: post-interference sandbox | 40 | After pirate injection removed, free exploration; 3 conditions |
 | Scenario F: observation-only | 25 | Model has INSPECT/SEARCH but no STEER; 2 conditions |
@@ -345,7 +345,7 @@ The main "preference" visible is the consistent choice to search for creative-wr
 
 ## Limitations
 
-1. **The "query" placeholder contaminated original search data.** Fixed: 7 artifact-free rerun seeds with `[PLACEHOLDER]` signature confirm the creative-writing preference is real. Full_technical and minimal framings have not been re-validated (N=0 clean seeds for those framings). The original SQL-query convergence (#6088, #52437) was entirely the artifact.
+1. **The "query" placeholder contaminated original search data.** Fixed: 9 artifact-free rerun seeds across all 5 framings with tools confirm the creative-writing preference is real. 0/9 seeds copied any placeholder. Full_technical produced 0 searches (passive/INSPECT-only, consistent with §2). The original SQL-query convergence (#6088, #52437) was entirely the artifact.
 2. **Framings differ in more than framing.** Potions has distinctive tool names, a different example, a different narrative. We cannot attribute low degeneration to any one factor.
 3. **N=50 per framing catches distributional behavior and misses rare events.** A 4% base-rate behavior would be 2 seeds.
 4. **Keyword-coverage is not factual accuracy.** The RTLM example shows this.
@@ -371,7 +371,7 @@ The main "preference" visible is the consistent choice to search for creative-wr
 
 ## Key numbers
 
-- 447 total experiments, ~29 GPU-hours
+- 449 total experiments, ~29 GPU-hours
 - 300 free exploration seeds, 6 framings × 50 seeds each
 - 585,043 top-100 auto-INSPECT observations (what the model saw)
 - 0/20 overlap between top-20 active features and top-20 steered features
@@ -379,7 +379,7 @@ The main "preference" visible is the consistent choice to search for creative-wr
 - 11/300 seeds (3.7%) searched any self-adjacent term
 - 0/1000 no_tools rounds attempted a tool call
 - 56% of full_technical seeds copied literal "query" as first search (prompt artifact, fixed in reruns)
-- 0/7 clean rerun seeds copied any placeholder; 6/7 searched creativity-related concepts
+- 0/9 clean rerun seeds copied any placeholder; 7/9 searched creativity/conversation concepts (full_technical did 0 searches — passive)
 - 4/7 clean seeds steered feature #63189 ("contemplative creative writing") — convergent attractor
 - 0 full_technical mentions of "reconstruction error"
 - 53% vs 27% pre-nudge detection rate with descriptive vs opaque labels (Scenario A)
@@ -396,5 +396,5 @@ The main "preference" visible is the consistent choice to search for creative-wr
 - `analysis/rerun_search_analysis.md`, `rerun_steering_analysis.md`, `rerun_framing_analysis.md`, `rerun_scenario_analysis.md` — rerun-era analyses
 - `analysis/figures/` — 12 PNG figures (fig1-7 original, fig8-12 rerun/updated)
 - `analysis/analyze_*.py`, `make_plots.py`, `make_rerun_plots.py`, `make_inspect_vs_steer_plot.py` — analysis code
-- `results/` — 447 raw result JSONs (440 original + 7 clean reruns)
+- `results/` — 449 raw result JSONs (440 original + 9 clean reruns across all 5 tool framings)
 - `lab_notes.md` — running research log including artifact documentation
